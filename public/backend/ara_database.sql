@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 10, 2022 at 09:46 AM
+-- Generation Time: Jan 10, 2022 at 01:54 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.11
 
@@ -20,6 +20,20 @@ SET time_zone = "+00:00";
 --
 -- Database: `ara_database`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `account`
+--
+
+CREATE TABLE `account` (
+  `account_id` int(11) NOT NULL,
+  `account_table` varchar(100) NOT NULL,
+  `account_keterangan` varchar(255) NOT NULL,
+  `account_username` varchar(255) NOT NULL,
+  `account_password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -145,6 +159,19 @@ CREATE TABLE `olimpiade` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `panitia_login`
+--
+
+CREATE TABLE `panitia_login` (
+  `panitia_login_id` int(11) NOT NULL,
+  `panitia_login_username` varchar(255) NOT NULL,
+  `panitia_login_password` varchar(255) NOT NULL,
+  `panitia_login_date_login` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `webinar`
 --
 
@@ -170,6 +197,12 @@ CREATE TABLE `webinar` (
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `account`
+--
+ALTER TABLE `account`
+  ADD PRIMARY KEY (`account_id`);
 
 --
 -- Indexes for table `ctf`
@@ -204,6 +237,12 @@ ALTER TABLE `olimpiade`
   ADD UNIQUE KEY `olim_id` (`olim_id`,`olim_nama_tim`,`olim_email_ketua`);
 
 --
+-- Indexes for table `panitia_login`
+--
+ALTER TABLE `panitia_login`
+  ADD PRIMARY KEY (`panitia_login_id`);
+
+--
 -- Indexes for table `webinar`
 --
 ALTER TABLE `webinar`
@@ -213,6 +252,12 @@ ALTER TABLE `webinar`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `account`
+--
+ALTER TABLE `account`
+  MODIFY `account_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `ctf`
@@ -237,6 +282,12 @@ ALTER TABLE `kti_iot`
 --
 ALTER TABLE `olimpiade`
   MODIFY `olim_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `panitia_login`
+--
+ALTER TABLE `panitia_login`
+  MODIFY `panitia_login_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `webinar`
