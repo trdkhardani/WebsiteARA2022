@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+$blue: #161175;
+$pink: #cf65a3;
+
+@mixin radial {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient($pink 100%, $pink 0%);
+  filter: blur(90px);
+}
+
+body {
+  background: $blue;
+  height: 100vh;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+.radial-1 {
+  @include radial();
+  top: -5%;
+  left: -5%;
+}
+
+.radial-2 {
+  @include radial();
+  bottom: 0%;
+  right: -2%;
+}
+
+.ring {
+  top: 0;
+  left: 0;
+}
+
+.moon {
+  bottom: 0;
+  right: 0;
+}
+
+main {
+  .option {
+    letter-spacing: 3px;
+    font-family: Roboto;
+    height: 1.4rem;
+    line-height: 1.4rem;
+    overflow: hidden;
+
+    li {
+      list-style: none;
+      position: relative;
+      top: 0;
+      animation: slide 15s steps(5) infinite;
+
+      span {
+        position: relative;
+        line-height: 1.4rem;
+      }
+
+      span::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 115%;
+        background-color: $blue;
+        border-left: 2px solid #fff;
+        animation: typing 3s steps(16) infinite;
+      }
+
+      @keyframes typing {
+        40%,
+        60% {
+          left: calc(100% + 1rem);
+        }
+        100% {
+          left: 0;
+        }
+      }
+    }
+
+    @keyframes slide {
+      100% {
+        top: -7rem;
+      }
+    }
+  }
+
+  h1 {
+    font-family: Asap;
+    letter-spacing: 5px;
+  }
+
+  p {
+    font-family: Roboto;
+  }
+
+  p.footer {
+    letter-spacing: 4px;
+  }
+}
+
+@media (max-width: 992px) {
+  @mixin radial {
+    width: 200px;
+    height: 200px;
+  }
+
+  .radial-1 {
+    @include radial();
+  }
+
+  .radial-2 {
+    @include radial();
+  }
+
+  @mixin object {
+    width: 150px;
+    height: 150px;
+  }
+
+  .ring {
+    @include object();
+  }
+
+  .moon {
+    @include object();
+  }
+}
+
+@media (max-width: 590px) {
+  .radial-1 {
+    top: -20%;
+    left: -20%;
+  }
+
+  .moon {
+    filter: blur(3px);
+  }
+}

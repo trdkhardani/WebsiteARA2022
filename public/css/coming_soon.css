@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+body {
+  background: #161175;
+  height: 100vh;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+.radial-1 {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(#cf65a3 100%, #cf65a3 0%);
+  -webkit-filter: blur(90px);
+          filter: blur(90px);
+  top: -5%;
+  left: -5%;
+}
+
+.radial-2 {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(#cf65a3 100%, #cf65a3 0%);
+  -webkit-filter: blur(90px);
+          filter: blur(90px);
+  bottom: 0%;
+  right: -2%;
+}
+
+.ring {
+  top: 0;
+  left: 0;
+}
+
+.moon {
+  bottom: 0;
+  right: 0;
+}
+
+main .option {
+  letter-spacing: 3px;
+  font-family: Roboto;
+  height: 1.4rem;
+  line-height: 1.4rem;
+  overflow: hidden;
+}
+
+main .option li {
+  list-style: none;
+  position: relative;
+  top: 0;
+  -webkit-animation: slide 15s steps(5) infinite;
+          animation: slide 15s steps(5) infinite;
+}
+
+main .option li span {
+  position: relative;
+  line-height: 1.4rem;
+}
+
+main .option li span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 115%;
+  background-color: #161175;
+  border-left: 2px solid #fff;
+  -webkit-animation: typing 3s steps(16) infinite;
+          animation: typing 3s steps(16) infinite;
+}
+
+@-webkit-keyframes typing {
+  40%,
+  60% {
+    left: calc(100% + 1rem);
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes typing {
+  40%,
+  60% {
+    left: calc(100% + 1rem);
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@-webkit-keyframes slide {
+  100% {
+    top: -7rem;
+  }
+}
+
+@keyframes slide {
+  100% {
+    top: -7rem;
+  }
+}
+
+main h1 {
+  font-family: Asap;
+  letter-spacing: 5px;
+}
+
+main p {
+  font-family: Roboto;
+}
+
+main p.footer {
+  letter-spacing: 4px;
+}
+
+@media (max-width: 992px) {
+  .radial-1 {
+    width: 200px;
+    height: 200px;
+  }
+  .radial-2 {
+    width: 200px;
+    height: 200px;
+  }
+  .ring {
+    width: 150px;
+    height: 150px;
+  }
+  .moon {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 590px) {
+  .radial-1 {
+    top: -20%;
+    left: -20%;
+  }
+  .moon {
+    -webkit-filter: blur(3px);
+            filter: blur(3px);
+  }
+}
+/*# sourceMappingURL=coming_soon.css.map */
