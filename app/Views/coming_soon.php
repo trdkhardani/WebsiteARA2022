@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ARA 2022</title>
+  <title>ARA HMIT ITS 2022</title>
   <meta name="description" content="Mendorong Inovasi dan Pembangunan Infrastruktur Teknologi untuk Indonesia">
   <meta name="keywords" content="ARA, A Renewal Agent, Teknologi Informasi, Institut Teknologi Sepuluh Nopember">
   <meta name="author" content="Divisi Website ARA 2022">
@@ -33,10 +33,10 @@
       </div>
       <img src="<?= base_url() ?>/images/rocket.svg" alt="Rocket Icon" width="130" class="mb-5">
       <h1 class="mb-5">COMING SOON!</h1>
-      <p class="footer">
-        <i class="far fa-copyright"></i>
+      <a class="footer" href="https://www.instagram.com/ara_its/" target="_blank">
+        <i class="fab fa-instagram"></i>
         ARA 2022
-      </p>
+      </a>
     </div>
   </main>
 

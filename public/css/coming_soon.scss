@@ -96,12 +96,19 @@ main {
     letter-spacing: 5px;
   }
 
-  p {
+  a.footer {
+    text-decoration: none;
+    color: #fff;
     font-family: Roboto;
+    letter-spacing: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
   }
 
-  p.footer {
-    letter-spacing: 4px;
+  a.footer:hover {
+    color: $pink;
+    font-size: 1.2rem;
+    font-weight: bold;
   }
 }
 
@@ -111,10 +118,7 @@ main {
     height: 200px;
   }
 
-  .radial-1 {
-    @include radial();
-  }
-
+  .radial-1,
   .radial-2 {
     @include radial();
   }
@@ -124,10 +128,7 @@ main {
     height: 150px;
   }
 
-  .ring {
-    @include object();
-  }
-
+  .ring,
   .moon {
     @include object();
   }
@@ -135,11 +136,7 @@ main {
 
 @media (max-width: 590px) {
   .radial-1 {
-    top: -20%;
-    left: -20%;
-  }
-
-  .moon {
-    filter: blur(3px);
+    top: -35%;
+    left: -35%;
   }
 }

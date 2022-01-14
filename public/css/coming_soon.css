@@ -111,27 +111,29 @@ main h1 {
   letter-spacing: 5px;
 }
 
-main p {
+main a.footer {
+  text-decoration: none;
+  color: #fff;
   font-family: Roboto;
+  letter-spacing: 4px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
-main p.footer {
-  letter-spacing: 4px;
+main a.footer:hover {
+  color: #cf65a3;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 @media (max-width: 992px) {
-  .radial-1 {
-    width: 200px;
-    height: 200px;
-  }
+  .radial-1,
   .radial-2 {
     width: 200px;
     height: 200px;
   }
-  .ring {
-    width: 150px;
-    height: 150px;
-  }
+  .ring,
   .moon {
     width: 150px;
     height: 150px;
@@ -140,12 +142,8 @@ main p.footer {
 
 @media (max-width: 590px) {
   .radial-1 {
-    top: -20%;
-    left: -20%;
-  }
-  .moon {
-    -webkit-filter: blur(3px);
-            filter: blur(3px);
+    top: -35%;
+    left: -35%;
   }
 }
 /*# sourceMappingURL=coming_soon.css.map */
