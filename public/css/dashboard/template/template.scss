@@ -1,6 +1,15 @@
 @import "../../general/rule";
 
+body {
+  background: linear-gradient(180deg, #533ba9 0%, #9b53a6 100%);
+}
+
 h1 {
   @include heading-1();
   color: $red-light;
+}
+
+.sidebar {
+  background: rgba(255, 255, 255, 0.38);
+  box-shadow: 1px 0 10px rgba(0, 0, 0, 0.3);
 }

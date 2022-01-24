@@ -1,7 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Open+Sans&display=swap");
+body {
+  background: -webkit-gradient(linear, left top, left bottom, from(#533ba9), to(#9b53a6));
+  background: linear-gradient(180deg, #533ba9 0%, #9b53a6 100%);
+}
+
 h1 {
   font-family: "Merriweather Sans", sans-serif;
   font-size: 64px;
   color: #fa5d8a;
+}
+
+.sidebar {
+  background: rgba(255, 255, 255, 0.38);
+  -webkit-box-shadow: 1px 0 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 1px 0 10px rgba(0, 0, 0, 0.3);
 }
 /*# sourceMappingURL=template.css.map */
