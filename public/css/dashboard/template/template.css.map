@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACAA,OAAO,CAAC,+FAAI;ADEZ,AAAA,EAAE,CAAC;ECCD,WAAW,EAAE,+BAA+B;EAK5C,SAAS,EAAE,IAAI;EDJf,KAAK,ECyCK,OAAO;CDxClB",
+    "sources": [
+        "template.scss",
+        "../../general/rule.scss"
+    ],
+    "names": [],
+    "file": "template.css"
+}

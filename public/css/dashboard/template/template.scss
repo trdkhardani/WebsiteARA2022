@@ -1,0 +1,6 @@
+@import "../../general/rule";
+
+h1 {
+  @include heading-1();
+  color: $red-light;
+}

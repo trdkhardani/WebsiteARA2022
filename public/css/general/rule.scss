@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Open+Sans&display=swap");
+
+@mixin heading-family {
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+@mixin heading-1 {
+  @include heading-family();
+  font-size: 64px;
+}
+
+@mixin heading-2 {
+  @include heading-family();
+  font-size: 26px;
+}
+
+@mixin heading-3 {
+  @include heading-family();
+  font-size: 24px;
+}
+
+@mixin body-family {
+  font-family: "Open Sans", sans-serif;
+}
+
+@mixin body-1 {
+  @include body-family();
+  font-size: 24px;
+}
+
+@mixin body-2 {
+  @include body-family();
+  font-size: 20px;
+}
+
+@mixin body-3 {
+  @include body-family();
+  font-size: 16px;
+}
+
+$ungu: #311175;
+$ungu-dark: #a861ff;
+$ungu-light: #f43fe4;
+$white: #fff;
+$nila: #ffe9e9;
+$red-light: #fa5d8a;
+$biru-dark: #161175;
+$biru: #2862fa;
+$biru-light: #abe9da;
