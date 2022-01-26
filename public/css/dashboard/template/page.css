@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap&family=Merriweather+Sans&family=Open+Sans&display=swap");
+h3 {
+  color: #60f1d7;
+}
+
+.card-dashboard {
+  background: linear-gradient(180.6deg, rgba(255, 255, 255, 0.14) 57.37%, rgba(255, 255, 255, 0) 128.61%);
+  border-radius: 14px;
+  padding: 10px;
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  margin-bottom: 20px;
+  font-family: "Open Sans", sans-serif;
+  z-index: 2;
+  border: 2px solid #a861ff;
+}
+
+.card-dashboard h4 {
+  color: #60f1d7;
+}
+
+.card-dashboard ul {
+  list-style-type: none;
+  margin-bottom: 0;
+}
+
+.card-dashboard ul li {
+  padding: 5px;
+}
+
+.card-dashboard ul li a {
+  color: #60f1d7;
+}
+
+.card-dashboard ul li button {
+  background: linear-gradient(113.74deg, #1b85c4 -21.46%, #674cb4 227.79%);
+  border-radius: 28px;
+  padding: 10px 50px;
+}
+
+.important {
+  color: #60f1d7;
+}
+
+#container-belum-lulus {
+  width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  #container-belum-lulus {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #container-belum-lulus {
+    width: 85%;
+  }
+}
+
+#container-img-belum-lulus {
+  background: linear-gradient(93.95deg, rgba(255, 255, 255, 0.08) 0.72%, rgba(255, 255, 255, 0) 134.61%);
+  border-radius: 15px 15px 0 0;
+}
+
+#container-text-belum-lulus {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 0 0 15px 15px;
+}
+/*# sourceMappingURL=page.css.map */

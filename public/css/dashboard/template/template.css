@@ -1,18 +1,140 @@
-@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Asap&family=Merriweather+Sans&family=Open+Sans&display=swap");
 body {
-  background: -webkit-gradient(linear, left top, left bottom, from(#533ba9), to(#9b53a6));
-  background: linear-gradient(180deg, #533ba9 0%, #9b53a6 100%);
+  background: url("../../../images/dashboard/background-2.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-h1 {
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 64px;
-  color: #fa5d8a;
+#float_1 {
+  right: 0;
+  top: 30%;
+}
+
+#float_2 {
+  right: 10%;
+  top: 40%;
 }
 
 .sidebar {
   background: rgba(255, 255, 255, 0.38);
   -webkit-box-shadow: 1px 0 10px rgba(0, 0, 0, 0.3);
           box-shadow: 1px 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar button {
+  font-size: 25px;
+}
+
+.sidebar button:focus {
+  outline: none !important;
+}
+
+.sidebar h1 {
+  font-family: "Asap", sans-serif;
+  padding: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar ul li {
+  cursor: pointer;
+}
+
+.sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-family: "Asap", sans-serif;
+  font-weight: 600;
+  display: block;
+  padding: 20px;
+}
+
+.sidebar ul li a img {
+  width: 20px;
+  height: 18px;
+}
+
+.sidebar ul li.active,
+.sidebar ul li:hover {
+  background-color: #dfdfdf;
+}
+
+.sidebar ul li.active a,
+.sidebar ul li:hover a {
+  color: #000;
+}
+
+@media screen and (max-width: 992px) {
+  .sidebar {
+    display: none;
+  }
+  .sidebar.responsive {
+    display: block;
+    position: fixed;
+    z-index: 2;
+    background-color: #311175;
+  }
+}
+
+.content {
+  overflow: auto;
+}
+
+.content nav {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.content nav button {
+  font-size: 25px;
+}
+
+.content nav button:focus {
+  outline: none !important;
+}
+
+.content nav h2 {
+  font-family: "Asap", sans-serif;
+  margin: 0;
+}
+
+.content nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.content nav ul li {
+  margin: 0 15px;
+  font-family: "Asap", sans-serif;
+}
+
+.content nav ul li a {
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+}
+
+.content nav ul li a:hover {
+  color: #cecece;
+}
+
+#btn-logout {
+  background-color: #311175;
+  color: white;
+}
+
+#btn-logout:hover {
+  background-color: #260f58;
+}
+
+#floating-button {
+  bottom: 5%;
+  right: 5%;
+  background-color: #311175;
+  border: 2px solid #a861ff;
 }
 /*# sourceMappingURL=template.css.map */
