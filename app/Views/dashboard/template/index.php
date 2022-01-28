@@ -17,37 +17,71 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- template css -->
   <link rel="stylesheet" href="<?= base_url() ?>/css/dashboard/template/template.css">
+  <!-- child css -->
+  <?= $this->renderSection("child-css") ?>
 </head>
 
-<body class="d-flex h-100">
-  <!-- sidebar -->
-  <div class="sidebar h-100 p-3">
-    <h1>Sidebar</h1>
-    <ul>
-      <li><a href="">Home</a></li>
-      <li><a href="">Submission</a></li>
-      <li><a href="">Member Team</a></li>
-    </ul>
-  </div>
-  <!-- /end sidebar -->
+<body class="d-flex position-relative h-100">
+  <!-- modal handler -->
+  <?= $this->include("dashboard/template/modal"); ?>
+  <!-- /end modal handler -->
 
-  <!-- content -->
-  <div class="content p-3">
-    <nav class="d-flex justify-content-between">
-      <h1>KTI Internet Of Things</h1>
-      <ul>
-        <li><a href="">Nama Tim</a></li>
-        <li><a href="">Logout</a></li>
-      </ul>
-    </nav>
+  <!-- floating object -->
+  <?= $this->include("dashboard/template/floating-object"); ?>
+  <!-- /end floating object -->
+
+  <!-- SIDEBAR -->
+  <?= $this->renderSection("sidebar"); ?>
+  <!-- /end SIDEBAR -->
+
+  <!-- CONTENT -->
+  <div class="content text-white h-100 w-100">
+
+    <!-- navbar -->
+    <?= $this->include("dashboard/template/navbar"); ?>
+    <!-- /end navbar -->
+
+    <!-- main -->
     <main>
-      <?= $this->renderSection("content"); ?>
+      <div class="p-4">
+        <?= $this->renderSection("content"); ?>
+        <p class="text-center mt-5 text-secondary"><i class="far fa-copyright"></i> ARA 2022</p>
+      </div>
     </main>
+    <!-- /end main -->
+
   </div>
-  <!-- /end contnet -->
+  <!-- /end CONTENT -->
+
+  <!-- floating button -->
+  <?= $this->include("dashboard/template/floating-button"); ?>
+  <!-- /end floating button -->
 
   <!-- bundle bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+  <!-- template js -->
+  <script>
+    function logout() {
+      // destroy sesinya
+      window.location.href = "<?= base_url(); ?>"
+    }
+
+    const btnOpenSide = document.getElementById("btn-open-side");
+    const btnCloseSide = document.getElementById("btn-close-side");
+    const sidebar = document.getElementById("sidebar-menu");
+
+    btnOpenSide.addEventListener("click", () => {
+      sidebar.classList.add("responsive");
+    });
+
+    btnCloseSide.addEventListener("click", () => {
+      sidebar.classList.remove("responsive");
+    })
+  </script>
+
+  <!-- child js -->
+  <?= $this->renderSection("child-js"); ?>
 </body>
 
 </html>
