@@ -4,6 +4,12 @@
   font-family: "Merriweather Sans", sans-serif;
 }
 
+@mixin heading-title {
+  @include heading-family();
+  font-size: 20px;
+  font-weight: bolder;
+}
+
 @mixin heading-1 {
   @include heading-family();
   font-size: 64px;
