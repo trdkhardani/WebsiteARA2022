@@ -8,4 +8,9 @@ class Home extends BaseController
   {
     return view('landing_page/home');
   }
+
+  public function details()
+  {
+    return view('landing_page/detail-per-event');
+  }
 }

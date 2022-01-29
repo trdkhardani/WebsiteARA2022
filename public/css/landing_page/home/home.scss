@@ -153,6 +153,12 @@ footer {
   }
 }
 
+@media only screen and (max-width: 992px) {
+  .navbar-2 {
+    margin-top: 28px;
+  }
+}
+
 @media only screen and (max-width: 767px) {
   main section {
     justify-content: center;

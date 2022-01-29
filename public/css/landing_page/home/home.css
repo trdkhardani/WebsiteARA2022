@@ -162,6 +162,12 @@ footer .sosial-media i {
   -webkit-text-fill-color: transparent;
 }
 
+@media only screen and (max-width: 992px) {
+  .navbar-2 {
+    margin-top: 28px;
+  }
+}
+
 @media only screen and (max-width: 767px) {
   main section {
     -webkit-box-pack: center;

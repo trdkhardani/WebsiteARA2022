@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Open+Sans&display=swap");
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+body {
+  background: url("../../../images/bg-detail-per-event.png");
+  background-size: cover;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+
+nav {
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+}
+
+.nav-gradient {
+  background-color: #161175;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+i {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+
+h1,
+.h1 {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 64px;
+}
+
+h2 .h2 {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 26px;
+}
+
+h3 .h3 {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 24px;
+}
+
+small .small {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+main {
+  margin-top: 200px;
+}
+
+@media only screen and (max-width: 768px) {
+  main {
+    margin-top: 0;
+  }
+}
+
+.btn-outline-secondary {
+  border-color: #fff;
+}
+
+.gerigi {
+  margin-top: -50px;
+}
+
+section {
+  margin-bottom: 150px;
+}
+
+.sosial-media {
+  background-color: #abe9d2;
+  width: 68px;
+  height: 68px;
+  display: block;
+  position: relative;
+}
+
+.sosial-media i {
+  color: #161175;
+  font-size: 24px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#carousel-HMIT .carousel-control-prev {
+  position: absolute;
+  left: -100px;
+  font-weight: bolder;
+  bottom: 15vh;
+}
+
+#carousel-HMIT .carousel-control-next {
+  position: absolute;
+  right: -100px;
+  font-weight: bolder;
+  bottom: 15vh;
+}
+
+@media only screen and (max-width: 576px) {
+  #carousel-HMIT .carousel-control-prev {
+    left: -50px;
+    bottom: 25vh;
+  }
+  #carousel-HMIT .carousel-control-next {
+    right: -50px;
+    bottom: 25vh;
+  }
+}
+
+footer {
+  background-color: #311175;
+}
+
+footer p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+}
+
+footer .h1 {
+  background: -webkit-gradient(linear, left top, right top, from(#ff628f), to(#7a75d9));
+  background: linear-gradient(to right, #ff628f 0%, #7a75d9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+footer .sosial-media,
+footer .ke-atas {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(25%, #fff), color-stop(75%, #ffe9e9));
+  background: linear-gradient(180deg, #fff 25%, #ffe9e9 75%);
+}
+
+footer .sosial-media i {
+  background: -webkit-gradient(linear, left bottom, left top, from(#533ba9), to(#9b53a6));
+  background: linear-gradient(to top, #533ba9, #9b53a6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media only screen and (max-width: 992px) {
+  .navbar-2 {
+    margin-top: 28px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  main section {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main section:nth-child(odd) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  background-color: #fff;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
+}
+
+.event {
+  padding: 10px 40px;
+  position: relative;
+  width: 50%;
+}
+
+.event::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -12px;
+  background-color: white;
+  top: 0px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.kiri {
+  left: 0;
+}
+
+.kanan {
+  left: 50%;
+}
+
+.kanan::before {
+  left: -13px;
+}
+
+.isi-event {
+  padding: 20px 30px;
+  background-color: rgba(236, 239, 241, 0.04);
+  position: relative;
+  border-radius: 6px;
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 1px;
+  border-image-source: radial-gradient(white 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+@media screen and (max-width: 768px) {
+  .timeline::before {
+    left: 28px;
+  }
+  .event {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  .event::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+  .kiri::before,
+  .kanan::before {
+    left: 15px;
+  }
+  .kanan {
+    left: 0%;
+  }
+}
+
+.isi-event p:first-child {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+}
+/*# sourceMappingURL=event.css.map */

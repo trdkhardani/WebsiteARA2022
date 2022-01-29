@@ -34,7 +34,7 @@
                     <a class="nav-link" href="#">Webinar</a>
                 </div>
             </div>
-            <div class="collapse navbar-collapse col-4 text-center" id="navbarNavAltMarkup">
+            <div class="collapse navbar-collapse col-4 text-center navbar-2" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto">
                     <a class="nav-link mx-4" aria-current="page" href="#">Login</a>
                     <a class="btn btn-outline-secondary nav-link px-4 rounded-pill" href="#">Daftar</a>
@@ -113,9 +113,9 @@
             <h2 class="h1 text-center font-weight-bold mt-4">HMIT ITS</h2>
             <p class="text-center my-5 py-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet diam a libero vulputate, nec dapibus enim vestibulum. Praesent id metus luctus, venenatis ex eget, tincidunt massa. Pellentesque a ullamcorper sapien.</p>
             <div class="mx-auto text-center d-flex justify-content-center">
-                <a class="sosial-media mx-2 rounded-circle" href=""><i class="fab fa-instagram"></i></a>
-                <a class="sosial-media mx-2 rounded-circle" href=""><i class="fab fa-line"></i></a>
-                <a class="sosial-media mx-2 rounded-circle" href=""><i class="fab fa-linkedin-in"></i></a>
+                <a class="sosial-media mx-2 rounded-circle" href="" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a class="sosial-media mx-2 rounded-circle" href="" target="_blank"><i class="fab fa-line"></i></a>
+                <a class="sosial-media mx-2 rounded-circle" href="" target="_blank"><i class="fab fa-linkedin-in"></i></a>
             </div>
             <div id="carousel-HMIT" class="w-75 mx-auto my-5 carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
