@@ -33,9 +33,6 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
-// Dashboard
-$routes->get('/dashboard/user/iot', 'Dashboard/User_kti_iot::index');
-
 /*
  * --------------------------------------------------------------------
  * Additional Routing
