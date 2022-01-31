@@ -18,10 +18,10 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-2">
         <div class="container-fluid row px-5">
-            <div class="py-1 col-4">
-                <img src="<?= base_url() ?>/images/ara-putih.svg" alt="Rocket Icon" height="70" class="">
+            <div class="col-4">
+                <a href="<?= base_url() ?>"><img src="<?= base_url() ?>/images/ara-putih.svg" alt="Rocket Icon" height="50" class=""></a>
             </div>
             <button class="navbar-toggler col-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -32,9 +32,10 @@
                     <a class="nav-link" href="#">IOT</a>
                     <a class="nav-link" href="#">Olimpiade</a>
                     <a class="nav-link" href="#">Webinar</a>
+                    <a class="nav-link" href="#">Expo</a>
                 </div>
             </div>
-            <div class="collapse navbar-collapse col-4 text-center" id="navbarNavAltMarkup">
+            <div class="collapse navbar-collapse col-4 text-center navbar-2" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto">
                     <a class="nav-link mx-4" aria-current="page" href="#">Login</a>
                     <a class="btn btn-outline-secondary nav-link px-4 rounded-pill" href="#">Daftar</a>
@@ -113,9 +114,9 @@
             <h2 class="h1 text-center font-weight-bold mt-4">HMIT ITS</h2>
             <p class="text-center my-5 py-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet diam a libero vulputate, nec dapibus enim vestibulum. Praesent id metus luctus, venenatis ex eget, tincidunt massa. Pellentesque a ullamcorper sapien.</p>
             <div class="mx-auto text-center d-flex justify-content-center">
-                <a class="sosial-media mx-2 rounded-circle" href=""><i class="fab fa-instagram"></i></a>
-                <a class="sosial-media mx-2 rounded-circle" href=""><i class="fab fa-line"></i></a>
-                <a class="sosial-media mx-2 rounded-circle" href=""><i class="fab fa-linkedin-in"></i></a>
+                <a class="sosial-media mx-2 rounded-circle" href="" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a class="sosial-media mx-2 rounded-circle" href="" target="_blank"><i class="fab fa-line"></i></a>
+                <a class="sosial-media mx-2 rounded-circle" href="" target="_blank"><i class="fab fa-linkedin-in"></i></a>
             </div>
             <div id="carousel-HMIT" class="w-75 mx-auto my-5 carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">

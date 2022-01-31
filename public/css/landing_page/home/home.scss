@@ -153,6 +153,12 @@ footer {
   }
 }
 
+@media only screen and (max-width: 992px) {
+  .navbar-2 {
+    margin-top: 28px;
+  }
+}
+
 @media only screen and (max-width: 767px) {
   main section {
     justify-content: center;
@@ -160,5 +166,9 @@ footer {
 
   main section:nth-child(odd) {
     flex-direction: column-reverse;
+  }
+
+  .navbar-toggler {
+    padding: 0;
   }
 }
