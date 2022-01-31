@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Asap&family=Merriweather+Sans&family=Open+Sans&display=swap");
 html,
 body {
   margin: 0;
@@ -253,5 +253,9 @@ footer .sosial-media i {
 .isi-event p:first-child {
   font-family: "Open Sans", sans-serif;
   font-size: 20px;
+}
+
+.isi-event p:first-child .navbar-toggler {
+  padding: 0;
 }
 /*# sourceMappingURL=event.css.map */

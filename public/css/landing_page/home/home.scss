@@ -167,4 +167,8 @@ footer {
   main section:nth-child(odd) {
     flex-direction: column-reverse;
   }
+
+  .navbar-toggler {
+    padding: 0;
+  }
 }

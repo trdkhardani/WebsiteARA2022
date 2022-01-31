@@ -242,4 +242,8 @@ footer {
 
 .isi-event p:first-child {
   @include body-2;
+
+  .navbar-toggler {
+    padding: 0;
+  }
 }

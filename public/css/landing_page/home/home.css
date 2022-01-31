@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Asap&family=Merriweather+Sans&family=Open+Sans&display=swap");
 html,
 body {
   margin: 0;
@@ -179,6 +179,9 @@ footer .sosial-media i {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
+  }
+  .navbar-toggler {
+    padding: 0;
   }
 }
 /*# sourceMappingURL=home.css.map */
