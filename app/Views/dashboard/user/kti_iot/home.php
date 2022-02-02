@@ -1,11 +1,5 @@
 <?= $this->extend("dashboard/template/index"); ?>
 
-<!-- child-css -->
-<?= $this->section("child-css") ?>
-<link rel="stylesheet" href="<?= base_url() ?>/css/dashboard/template/page.css">
-<?= $this->endSection(); ?>
-<!-- /end child-css -->
-
 <!-- sidebar -->
 <?= $this->section("sidebar"); ?>
 <div class="sidebar h-100" id="sidebar-menu">
@@ -29,19 +23,9 @@
 <?= $this->endSection(); ?>
 <!-- /end sidebar -->
 
-<!-- title nav -->
-<?= $this->section("title-nav"); ?>
-KTI Internet Of Things
-<?= $this->endSection(); ?>
-<!-- /end title nav -->
-
 <!-- content -->
 <?= $this->section("content"); ?>
-<h2 class="d-block d-lg-none">KTI Internet Of Things</h2>
-<p class="d-block d-lg-none">Tim IT'03</p>
-<hr class="d-block d-lg-none">
 <h3 class="mb-3">Informasi Umum</h3>
-
 <!-- guide book -->
 <div class="card-dashboard">
   <h4>Guide Book</h4>
@@ -49,7 +33,6 @@ KTI Internet Of Things
     <li><i class="fas fa-book"></i> Link: <a href="https://drive.ara.guide.book.com" target="_blank">https://drive.ara.guide.book.com</a></li>
   </ul>
 </div>
-
 <!-- data tim -->
 <div class="card-dashboard">
   <h4>Data Tim</h4>
