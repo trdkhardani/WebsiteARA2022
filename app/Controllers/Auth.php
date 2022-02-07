@@ -8,7 +8,11 @@ class Auth extends BaseController
 {
   public function registrasi_kti()
   {
-    return view('auth/regist_kti');
+    session();
+    $data = [
+      'validation' => \Config\Services::validation()
+    ];
+    return view('auth/regist_kti', $data);
   }
 
   public function registrasi_ctf()
@@ -18,7 +22,11 @@ class Auth extends BaseController
 
   public function registrasi_olim()
   {
-    return view('auth/regist_olim');
+    session();
+    $data = [
+      'validation' => \Config\Services::validation()
+    ];
+    return view('auth/regist_olim', $data);
   }
 
   public function registrasi_expo()
