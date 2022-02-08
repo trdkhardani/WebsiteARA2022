@@ -15,6 +15,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="<?= base_url() ?>/css/landing_page/home/home.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
 </head>
 
 <body>
@@ -45,7 +49,7 @@
     </nav>
 
     <main class="text-white">
-        <section class="container row align-items-center mx-auto position-relatve">
+        <section data-aos="fade-up" class="container row align-items-center mx-auto position-relatve">
             <div class="col-md-6">
                 <h1>A Renewal Agent</h1>
                 <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet diam a libero vulputate, nec dapibus enim vestibulum. Praesent id metus luctus, venenatis ex eget, tincidunt massa. Pellentesque a ullamcorper sapien.</p>
@@ -59,7 +63,7 @@
                 <img src="<?= base_url() ?>/images/gerigi-2.svg" alt="" class="col-3">
             </div>
         </section>
-        <section class="container row mx-auto align-items-center">
+        <section data-aos="fade-left" class="container row mx-auto align-items-center">
             <div class="col-md-6">
                 <img src="<?= base_url() ?>/images/manusia-laptop.svg" alt="" width="450">
             </div>
@@ -69,7 +73,7 @@
                 <a href="#" class="btn btn-primary px-4 py-2 mt-4 rounded-pill">Selengkapnya <i class="fas fa-chevron-right ps-2"></i> </a>
             </div>
         </section>
-        <section class="container row mx-auto align-items-center">
+        <section data-aos="fade-right" class="container row mx-auto align-items-center">
             <div class="col-md-6">
                 <h2 class="h1">Olimpiade</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet diam a libero vulputate, nec dapibus enim vestibulum. Praesent id metus luctus, venenatis ex eget, tincidunt massa. Pellentesque a ullamcorper sapien.</p>
@@ -79,7 +83,7 @@
                 <img src="<?= base_url() ?>/images/winner.svg" alt="" width="600" class="ms-auto">
             </div>
         </section>
-        <section class="container row mx-auto align-items-center">
+        <section data-aos="fade-left" class="container row mx-auto align-items-center">
             <div class="col-md-6">
                 <img src="<?= base_url() ?>/images/misterius.svg" alt="" width="720">
             </div>
@@ -89,7 +93,7 @@
                 <a href="#" class="btn btn-primary px-4 py-2 mt-4 rounded-pill">Selengkapnya <i class="fas fa-chevron-right ps-2"></i> </a>
             </div>
         </section>
-        <section class="container row mx-auto align-items-center">
+        <section data-aos="fade-right" class="container row mx-auto align-items-center">
             <div class="col-md-6">
                 <h2 class="h1">IOT</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet diam a libero vulputate, nec dapibus enim vestibulum. Praesent id metus luctus, venenatis ex eget, tincidunt massa. Pellentesque a ullamcorper sapien.</p>
@@ -99,7 +103,7 @@
                 <img src="<?= base_url() ?>/images/nambang-wifi.svg" alt="" width="440" class="ms-auto">
             </div>
         </section>
-        <section class="container row mx-auto align-items-center">
+        <section data-aos="fade-left" class="container row mx-auto align-items-center">
             <div class="col-md-6">
                 <img src="<?= base_url() ?>/images/future-robot.svg" alt="" width="370">
             </div>
@@ -109,7 +113,7 @@
                 <a href="#" class="btn btn-primary px-4 py-2 mt-4 rounded-pill">Selengkapnya <i class="fas fa-chevron-right ps-2"></i> </a>
             </div>
         </section>
-        <section class="container bg-light px-5 py-5" style="--bs-bg-opacity: .27; border-radius: 79px">
+        <section data-aos="zoom-in-up" data-aos-duration="3000" class="container bg-light px-5 py-5" style="--bs-bg-opacity: .27; border-radius: 79px">
             <small class="mx-auto d-block text-center fw-bold">Diselenggarakan Oleh</small>
             <h2 class="h1 text-center font-weight-bold mt-4">HMIT ITS</h2>
             <p class="text-center my-5 py-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet diam a libero vulputate, nec dapibus enim vestibulum. Praesent id metus luctus, venenatis ex eget, tincidunt massa. Pellentesque a ullamcorper sapien.</p>
@@ -143,7 +147,7 @@
                 </button>
             </div>
         </section>
-        <section class="container">
+        <section data-aos="fade-up" class="container">
             <small class="h3 mx-auto mb-5 d-block text-center fw-bold">Sponsored by</small>
             <div class="row justify-content-center mx-auto" style="max-width: 768px">
                 <img class="col-4" src="<?= base_url() ?>/images/HMIT 1.png" alt="">
@@ -153,7 +157,7 @@
                 <img class="col-4" src="<?= base_url() ?>/images/HMIT 1.png" alt="">
             </div>
         </section>
-        <footer class="container-fluid py-5">
+        <footer data-aos="fade-up" data-aos-duration="3000" class="container-fluid py-5">
             <img class="mx-auto py-5" src="<?= base_url() ?>/images/ara-gradient.svg" alt="" width="250">
             <p class="h1 text-center fw-bold">#ARA2022</p>
             <p class="text-center mt-5">Connect With Us</p>
@@ -170,6 +174,10 @@
         </footer>
     </main>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="<?= base_url() ?>/js/landing_page/script.js"></script>
 </body>
