@@ -17,9 +17,9 @@ class Verify extends BaseController
     public function verify_registrasi_kti()
     {
         // Rules validasi dan custom error message
-        $fieldError = 'field harus diisi';
-        $imgSizeError = 'melebihi batas max 1 mb';
-        $imgTypeError = 'file bukan gambar';
+        $fieldError = 'Field harus diisi';
+        $imgSizeError = 'Melebihi batas max 1mb';
+        $imgTypeError = 'File bukan gambar';
         $validation_rules = [
             'nama_tim' => [
                 'label' => 'nama_tim',
@@ -270,9 +270,9 @@ class Verify extends BaseController
     public function verify_registrasi_olim()
     {
         // Rules validasi dan custom error message
-        $fieldError = 'field harus diisi';
-        $imgSizeError = 'melebihi batas max 1 mb';
-        $imgTypeError = 'file bukan gambar';
+        $fieldError = 'Field harus diisi';
+        $imgSizeError = 'Melebihi batas max 1mb';
+        $imgTypeError = 'File bukan gambar';
         $validation_rules = [
             'nama_tim' => [
                 'label' => 'nama_tim',

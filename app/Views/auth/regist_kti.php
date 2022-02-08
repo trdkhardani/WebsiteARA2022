@@ -33,7 +33,7 @@
       <p><b><span class="text-danger">*</span> Wajib diisi</b></p>
     </header>
     <main>
-      <form action="/Verify/verify_registrasi_kti" method="POST" enctype="multipart/form-data">
+      <form action="<?= base_url() ?>/Verify/verify_registrasi_kti" method="POST" enctype="multipart/form-data">
         <!-- tim -->
         <div class="mb-4">
           <div class="mb-3">
