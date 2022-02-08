@@ -675,21 +675,21 @@ class Verify extends BaseController
             'nama'  => [
                 'label' => 'nama',
                 'rules' => 'required',
-                'erros' => [
+                'errors' => [
                     'required'  => 'nama harus diisi'
                 ]
             ],
             'asal_institusi'  => [
                 'label' => 'asal_institusi',
                 'rules' => 'required',
-                'erros' => [
+                'errors' => [
                     'required'  => 'asal institusi harus diisi'
                 ]
             ],
             'email'  => [
                 'label' => 'email',
                 'rules' => 'required|is_unique[expo.expo_email]',
-                'erros' => [
+                'errors' => [
                     'required'  => 'email harus diisi',
                     'is_unique' => 'email sudah terdaftar'
                 ]
@@ -698,7 +698,7 @@ class Verify extends BaseController
                 'label' => 'whatsapp',
                 'rules' => 'required|numeric',
                 'erros' => [
-                    'required'  => 'email harus diisi',
+                    'required'  => 'whatsapp harus diisi',
                     'whatsapp'  => 'field whatsapp harus diisi dengan nomer yang benar'
                 ]
             ],

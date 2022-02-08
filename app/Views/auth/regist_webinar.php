@@ -33,7 +33,7 @@
       <p><b><span class="text-danger">*</span> Wajib diisi</b></p>
     </header>
     <main>
-      <form action="../Verify/verify_registrasi_webinar" method="POST" enctype="multipart/form-data">
+      <form action="<?= base_url() ?>/Verify/verify_registrasi_webinar" method="POST" enctype="multipart/form-data">
         <div class="mb-3">
           <label for="nama" class="form-label">Nama <span class="text-danger">*<?= '<br>' . $validation->getError('nama') ?></span></label>
           <input type="text" class="form-control" id="nama" name="nama">
