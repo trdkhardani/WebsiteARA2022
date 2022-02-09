@@ -49,7 +49,7 @@
     </nav>
 
     <main class="text-white">
-        <section data-aos="fade-up" class="container row align-items-center mx-auto position-relatve">
+        <section data-aos-duration="1500" data-aos="fade-up" class="container row align-items-center mx-auto position-relatve">
             <div class="col-md-6">
                 <h1>A Renewal Agent</h1>
                 <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet diam a libero vulputate, nec dapibus enim vestibulum. Praesent id metus luctus, venenatis ex eget, tincidunt massa. Pellentesque a ullamcorper sapien.</p>
@@ -63,8 +63,8 @@
                 <img src="<?= base_url() ?>/images/gerigi-2.svg" alt="" class="col-3">
             </div>
         </section>
-        <section data-aos="fade-left" class="container row mx-auto align-items-center">
-            <div class="col-md-6">
+        <section data-aos-duration="1500" data-aos="fade-left" class="container row mx-auto align-items-center">
+            <div data-aos="zoom-in-right" data-aos-duration="1500" class="col-md-6">
                 <img src="<?= base_url() ?>/images/manusia-laptop.svg" alt="" width="450">
             </div>
             <div class="col-md-6">
@@ -73,8 +73,8 @@
                 <a href="#" class="btn btn-primary px-4 py-2 mt-4 rounded-pill">Selengkapnya <i class="fas fa-chevron-right ps-2"></i> </a>
             </div>
         </section>
-        <section data-aos="fade-right" class="container row mx-auto align-items-center">
-            <div class="col-md-6">
+        <section data-aos-anchor-placement="top-center" data-aos-duration="1500" data-aos="fade-right" class="container row mx-auto align-items-center">
+            <div data-aos="zoom-in-right" data-aos-duration="1500" class="col-md-6">
                 <h2 class="h1">Olimpiade</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet diam a libero vulputate, nec dapibus enim vestibulum. Praesent id metus luctus, venenatis ex eget, tincidunt massa. Pellentesque a ullamcorper sapien.</p>
                 <a href="#" class="btn btn-primary px-4 py-2 mt-4 rounded-pill">Selengkapnya <i class="fas fa-chevron-right ps-2"></i> </a>
@@ -83,8 +83,8 @@
                 <img src="<?= base_url() ?>/images/winner.svg" alt="" width="600" class="ms-auto">
             </div>
         </section>
-        <section data-aos="fade-left" class="container row mx-auto align-items-center">
-            <div class="col-md-6">
+        <section data-aos-anchor-placement="top-center" data-aos-duration="1500" data-aos="fade-left" class="container row mx-auto align-items-center">
+            <div data-aos="zoom-in-right" data-aos-duration="1500" class="col-md-6">
                 <img src="<?= base_url() ?>/images/misterius.svg" alt="" width="720">
             </div>
             <div class="col-md-6 ms-auto">
@@ -93,8 +93,8 @@
                 <a href="#" class="btn btn-primary px-4 py-2 mt-4 rounded-pill">Selengkapnya <i class="fas fa-chevron-right ps-2"></i> </a>
             </div>
         </section>
-        <section data-aos="fade-right" class="container row mx-auto align-items-center">
-            <div class="col-md-6">
+        <section data-aos-anchor-placement="top-center" data-aos-duration="1500" data-aos="fade-right" class="container row mx-auto align-items-center">
+            <div data-aos="zoom-in-right" data-aos-duration="1500" class="col-md-6">
                 <h2 class="h1">IOT</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet diam a libero vulputate, nec dapibus enim vestibulum. Praesent id metus luctus, venenatis ex eget, tincidunt massa. Pellentesque a ullamcorper sapien.</p>
                 <a href="#" class="btn btn-primary px-4 py-2 mt-4 rounded-pill">Selengkapnya <i class="fas fa-chevron-right ps-2"></i> </a>
@@ -103,8 +103,8 @@
                 <img src="<?= base_url() ?>/images/nambang-wifi.svg" alt="" width="440" class="ms-auto">
             </div>
         </section>
-        <section data-aos="fade-left" class="container row mx-auto align-items-center">
-            <div class="col-md-6">
+        <section data-aos-anchor-placement="top-center" data-aos-duration="1500" data-aos="fade-left" class="container row mx-auto align-items-center">
+            <div data-aos="zoom-in-right" data-aos-duration="1500" class="col-md-6">
                 <img src="<?= base_url() ?>/images/future-robot.svg" alt="" width="370">
             </div>
             <div class="col-md-6">
@@ -113,7 +113,7 @@
                 <a href="#" class="btn btn-primary px-4 py-2 mt-4 rounded-pill">Selengkapnya <i class="fas fa-chevron-right ps-2"></i> </a>
             </div>
         </section>
-        <section data-aos="zoom-in-up" data-aos-duration="3000" class="container bg-light px-5 py-5" style="--bs-bg-opacity: .27; border-radius: 79px">
+        <section data-aos-duration="1500" data-aos="zoom-in-up" data-aos-duration="3000" class="container bg-light px-5 py-5" style="--bs-bg-opacity: .27; border-radius: 79px">
             <small class="mx-auto d-block text-center fw-bold">Diselenggarakan Oleh</small>
             <h2 class="h1 text-center font-weight-bold mt-4">HMIT ITS</h2>
             <p class="text-center my-5 py-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet diam a libero vulputate, nec dapibus enim vestibulum. Praesent id metus luctus, venenatis ex eget, tincidunt massa. Pellentesque a ullamcorper sapien.</p>
@@ -147,7 +147,7 @@
                 </button>
             </div>
         </section>
-        <section data-aos="fade-up" class="container">
+        <section data-aos-duration="1500" data-aos="fade-up" class="container">
             <small class="h3 mx-auto mb-5 d-block text-center fw-bold">Sponsored by</small>
             <div class="row justify-content-center mx-auto" style="max-width: 768px">
                 <img class="col-4" src="<?= base_url() ?>/images/HMIT 1.png" alt="">
