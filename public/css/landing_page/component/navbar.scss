@@ -1,0 +1,20 @@
+nav {
+  transition: all 0.6s ease-in-out;
+}
+
+.nav-gradient {
+  // background: linear-gradient(120deg, #523aa8 0%, #161175 100%);
+  background-color: #161175;
+}
+
+@media only screen and (max-width: 767px) {
+  .navbar-toggler {
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .navbar-2 {
+    margin-top: 28px;
+  }
+}

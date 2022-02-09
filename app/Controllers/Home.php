@@ -6,16 +6,43 @@ class Home extends BaseController
 {
   public function index()
   {
-    return view('landing_page/home');
+    $data['title'] = 'Home';
+    return view('landing_page/pages/information/home', $data);
   }
 
-  public function details()
+  public function registrasi()
   {
-    return view('landing_page/detail-per-event');
+    $data['title'] = 'Pilih Registrasi';
+    return view('landing_page/pages/auth/registration', $data);
   }
 
-  public function registration()
+  public function ctf()
   {
-    return view('landing_page/registration');
+    $data['title'] = 'Capture The Flag';
+    return view('landing_page/pages/information/ctf', $data);
+  }
+
+  public function olimpiade()
+  {
+    $data['title'] = 'Olimpiade';
+    return view('landing_page/pages/information/olimpiade', $data);
+  }
+
+  public function iot()
+  {
+    $data['title'] = 'Internet of Things';
+    return view('landing_page/pages/information/iot', $data);
+  }
+
+  public function webinar()
+  {
+    $data['title'] = 'Webinar';
+    return view('landing_page/pages/information/webinar', $data);
+  }
+
+  public function expo()
+  {
+    $data['title'] = 'Webinar';
+    return view('landing_page/pages/information/expo', $data);
   }
 }

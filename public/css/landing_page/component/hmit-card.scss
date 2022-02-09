@@ -1,0 +1,27 @@
+#carousel-HMIT {
+  .carousel-control-prev {
+    position: absolute;
+    left: -100px;
+    font-weight: bolder;
+    bottom: 15vh;
+  }
+
+  .carousel-control-next {
+    position: absolute;
+    right: -100px;
+    font-weight: bolder;
+    bottom: 15vh;
+  }
+
+  @media only screen and (max-width: 576px) {
+    .carousel-control-prev {
+      left: -50px;
+      bottom: 25vh;
+    }
+
+    .carousel-control-next {
+      right: -50px;
+      bottom: 25vh;
+    }
+  }
+}

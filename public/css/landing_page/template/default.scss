@@ -1,0 +1,92 @@
+@import "../../general/rule";
+@import "../component/navbar";
+@import "../component/footer";
+
+html,
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  background-size: cover !important;
+  @include body-3;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+i {
+  @include body-3;
+}
+
+h1,
+.h1 {
+  @include heading-1;
+}
+
+h2 .h2 {
+  @include heading-2;
+}
+
+h3 .h3 {
+  @include heading-3;
+}
+
+small .small {
+  @include heading-title;
+}
+
+main {
+  overflow: hidden;
+  margin-top: 200px;
+
+  @media only screen and (max-width: 768px) {
+    margin-top: 0;
+  }
+}
+
+.btn-outline-secondary {
+  border-color: #fff;
+}
+
+section {
+  margin-bottom: 150px;
+}
+
+.sosial-media {
+  background-color: #abe9d2;
+  width: 68px;
+  height: 68px;
+  display: block;
+  position: relative;
+
+  i {
+    color: $biru-dark;
+    font-size: 24px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  #daftar {
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  main section {
+    justify-content: center;
+  }
+
+  main section:nth-child(odd) {
+    flex-direction: column-reverse;
+  }
+}
