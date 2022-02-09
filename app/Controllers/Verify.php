@@ -5,6 +5,9 @@ namespace App\Controllers;
 use App\Controllers;
 use App\Models\Model_Kti_iot;
 use App\Models\Model_Olimpiade;
+use App\Models\Model_ctf;
+use App\Models\Model_expo;
+use App\Models\Model_webinar;
 use Config\Services;
 
 class Verify extends BaseController
@@ -13,6 +16,9 @@ class Verify extends BaseController
     {
         $this->model_olimpiade = new Model_Olimpiade();
         $this->model_kti = new Model_Kti_iot();
+        $this->model_ctf = new Model_ctf();
+        $this->model_webinar = new Model_webinar();
+        $this->model_expo = new Model_Expo();
     }
     public function verify_registrasi_kti()
     {
@@ -251,9 +257,200 @@ class Verify extends BaseController
         return redirect()->to('/Auth/finish_regist');
     }
 
-    public function registrasi_ctf()
+    public function verify_registrasi_ctf()
     {
-        return view('auth/regist_ctf');
+        $rules = [
+            'nama_tim'  => [
+                'label'     => 'nama_tim',
+                'rules'     => 'required|is_unique[ctf.ctf_nama_tim]',
+                'errors'    => [
+                    'required'  => 'nama tim harus diisi',
+                    'is_unique' => 'nama tim sudah terdaftar, silahkan isi dengan nama tim yang lain'
+                ]
+            ],
+            'asal_institusi'  => [
+                'label'     => 'asal_institusi',
+                'rules'     => 'required',
+                'errors'    => [
+                    'required'  => 'asal institusi tim harus diisi'
+                ]
+            ],
+            'nama_ketua'  => [
+                'label'     => 'nama_ketua',
+                'rules'     => 'required',
+                'errors'    => [
+                    'required'  => 'nama ketua tim harus diisi'
+                ]
+            ],
+            'email_ketua'  => [
+                'label'     => 'email_ketua',
+                'rules'     => 'required|is_unique[ctf.ctf_email_ketua]',
+                'errors'    => [
+                    'required'  => 'email ketua tim harus diisi',
+                    'is_unique' => 'email tersebut sudah terdaftar, silahkan isi email yang lain'
+                ]
+            ],
+            'wa_ketua'  => [
+                'label'     => 'wa_ketua',
+                'rules'     => 'required|numeric',
+                'errors'    => [
+                    'required'  => 'whatsapp ketua harus diisi',
+                    'numeric'   => 'harap isi dengan nomer yang benar'
+                ]
+            ],
+            'ktm_ketua'  => [
+                'label'     => 'ktm_ketua',
+                'rules'     => 'uploaded[ktm_ketua]|is_image[ktm_ketua]|max_size[ktm_ketua, 1024]',
+                'errors'    => [
+                    'uploaded'  => 'field harus diisi',
+                    'is_image'  => 'harap isi dengan file gambar',
+                    'max_size'  => 'ukuran maksimal gambar adalah 1024 kb'
+                ]
+            ],
+            'ig_ara_ketua'  => [
+                'label'     => 'ig_ara_ketua',
+                'rules'     => 'uploaded[ig_ara_ketua]|is_image[ig_ara_ketua]|max_size[ig_ara_ketua, 1024]',
+                'errors'    => [
+                    'uploaded'  => 'field harus diisi',
+                    'is_image'  => 'harap isi dengan file gambar',
+                    'max_size'  => 'ukuran maksimal gambar adalah 1024 kb'
+                ]
+            ],
+            'ig_hmit_ketua'  => [
+                'label'     => 'ig_hmit_ketua',
+                'rules'     => 'uploaded[ig_hmit_ketua]|is_image[ig_hmit_ketua]|max_size[ig_hmit_ketua, 1024]',
+                'errors'    => [
+                    'uploaded'  => 'field harus diisi',
+                    'is_image'  => 'harap isi dengan file gambar',
+                    'max_size'  => 'ukuran maksimal gambar adalah 1024 kb'
+                ]
+            ],
+            'nama_anggota_1'  => [
+                'label'     => 'nama_anggota_1',
+                'rules'     => 'required',
+                'errors'    => [
+                    'required'  => 'nama anggota 1 harus diisi'
+                ]
+            ],
+            'ktm_anggota_1'  => [
+                'label'     => 'ktm_anggota_1',
+                'rules'     => 'uploaded[ktm_anggota_1]|is_image[ktm_anggota_1]|max_size[ktm_anggota_1, 1024]',
+                'errors'    => [
+                    'uploaded'  => 'field harus diisi',
+                    'is_image'  => 'harap isi dengan file gambar',
+                    'max_size'  => 'ukuran maksimal gambar adalah 1024 kb'
+                ]
+            ],
+            'ig_ara_anggota_1'  => [
+                'label'     => 'ig_ara_anggota_1',
+                'rules'     => 'uploaded[ig_ara_anggota_1]|is_image[ig_ara_anggota_1]|max_size[ig_ara_anggota_1, 1024]',
+                'errors'    => [
+                    'uploaded'  => 'field harus diisi',
+                    'is_image'  => 'harap isi dengan file gambar',
+                    'max_size'  => 'ukuran maksimal gambar adalah 1024 kb'
+                ]
+            ],
+            'ig_hmit_anggota_1'  => [
+                'label'     => 'ig_hmit_anggota_1',
+                'rules'     => 'uploaded[ig_hmit_anggota_1]|is_image[ig_hmit_anggota_1]|max_size[ig_hmit_anggota_1, 1024]',
+                'errors'    => [
+                    'uploaded'  => 'field harus diisi',
+                    'is_image'  => 'harap isi dengan file gambar',
+                    'max_size'  => 'ukuran maksimal gambar adalah 1024 kb'
+                ]
+            ],
+            'ktm_anggota_2'  => [
+                'label'     => 'ktm_anggota_2',
+                'rules'     => 'is_image[ktm_anggota_2]|max_size[ktm_anggota_2, 1024]',
+                'errors'    => [
+                    'is_image'  => 'harap isi dengan file gambar',
+                    'max_size'  => 'ukuran maksimal gambar adalah 1024 kb'
+                ]
+            ],
+            'ig_ara_anggota_2'  => [
+                'label'     => 'ig_ara_anggota_2',
+                'rules'     => 'is_image[ig_ara_anggota_2]|max_size[ig_ara_anggota_2, 1024]',
+                'errors'    => [
+                    'is_image'  => 'harap isi dengan file gambar',
+                    'max_size'  => 'ukuran maksimal gambar adalah 1024 kb'
+                ]
+            ],
+            'ig_hmit_anggota_2'  => [
+                'label'     => 'ig_hmit_anggota_2',
+                'rules'     => 'is_image[ig_hmit_anggota_2]|max_size[ig_hmit_anggota_2, 1024]',
+                'errors'    => [
+                    'is_image'  => 'harap isi dengan file gambar',
+                    'max_size'  => 'ukuran maksimal gambar adalah 1024 kb'
+                ]
+            ],
+            'bukti_bayar'  => [
+                'label'     => 'bukti_bayar',
+                'rules'     => 'uploaded[bukti_bayar]|is_image[bukti_bayar]|max_size[bukti_bayar, 1024]',
+                'errors'    => [
+                    'uploaded'  => 'field harus diisi',
+                    'is_image'  => 'harap isi dengan file gambar',
+                    'max_size'  => 'ukuran maksimal gambar adalah 1024 kb'
+                ]
+            ]
+        ];
+
+        if(!$this->validate($rules))
+        {
+            $validation = \Config\Services::validation();
+            return redirect()->to('auth/registrasi_ctf')->withInput(); 
+        }
+        
+        if(!empty($this->request->getVar('nama_anggota_2')))
+        {
+            $data = [
+                'ctf_jumlah_anggota'    => 3, 
+                'ctf_nama_anggota_2'    => $this->request->getVar('nama_anggota_2'),
+                'ctf_suket_anggota_2'   => $this->moveFile('uploads/ctf/ktm', $this->request->getFile('ktm_anggota_2')),
+                'ctf_ig_ara_anggota_2'  => $this->moveFile('uploads/ctf/ig_ara', $this->request->getFile('ig_ara_anggota_2')),
+                'ctf_ig_hmit_anggota_2' => $this->moveFile('uploads/ctf/ig_hmit', $this->request->getFile('ig_hmit_anggota_2')),
+                'ctf_nama_tim'          => $this->request->getVar('nama_tim'), 
+                'ctf_email_ketua '      => $this->request->getVar('email_ketua'), 
+                'ctf_nama_ketua'        => $this->request->getVar('nama_ketua'), 
+                'ctf_nama_anggota_1'    => $this->request->getVar('nama_anggota_1'), 
+                'ctf_suket_ketua'       => $this->moveFile('uploads/ctf/ktm', $this->request->getFile('ktm_ketua')), 
+                'ctf_suket_anggota_1'   => $this->moveFile('uploads/ctf/ktm', $this->request->getFile('ktm_anggota_1')),  
+                'ctf_ig_ara_ketua'      => $this->moveFile('uploads/ctf/ig_ara', $this->request->getFile('ig_ara_ketua')),
+                'ctf_ig_ara_anggota_1'  => $this->moveFile('uploads/ctf/ig_hmit', $this->request->getFile('ig_hmit_ketua')),
+                'ctf_ig_hmit_ketua '    => $this->moveFile('uploads/ctf/ig_ara', $this->request->getFile('ig_ara_anggota_1')), 
+                'ctf_ig_hmit_anggota_1 '=> $this->moveFile('uploads/ctf/ig_hmit', $this->request->getFile('ig_hmit_anggota_1')), 
+                'ctf_intitusi'          => $this->request->getVar('asal_institusi'), 
+                'ctf_contact'           => $this->request->getVar('wa_ketua'), 
+                'ctf_status_final'      => 0,
+                'ctf_bukti_bayar'       => $this->moveFile('uploads/ctf/bukti_bayar', $this->request->getFile('bukti_bayar')), 
+                'ctf_status'            => 0
+            ];
+        }
+        else
+        {
+            $data = [
+                'ctf_nama_tim'          => $this->request->getVar('nama_tim'), 
+                'ctf_email_ketua '      => $this->request->getVar('email_ketua'), 
+                'ctf_nama_ketua'        => $this->request->getVar('nama_ketua'), 
+                'ctf_nama_anggota_1'    => $this->request->getVar('nama_anggota_1'), 
+                'ctf_suket_ketua'       => $this->moveFile('uploads/ctf/ktm', $this->request->getFile('ktm_ketua')), 
+                'ctf_suket_anggota_1'   => $this->moveFile('uploads/ctf/ktm', $this->request->getFile('ktm_anggota_1')),  
+                'ctf_ig_ara_ketua'      => $this->moveFile('uploads/ctf/ig_ara', $this->request->getFile('ig_ara_ketua')),
+                'ctf_ig_ara_anggota_1'  => $this->moveFile('uploads/ctf/ig_hmit', $this->request->getFile('ig_hmit_ketua')),
+                'ctf_ig_hmit_ketua '    => $this->moveFile('uploads/ctf/ig_ara', $this->request->getFile('ig_ara_anggota_1')), 
+                'ctf_ig_hmit_anggota_1 '=> $this->moveFile('uploads/ctf/ig_hmit', $this->request->getFile('ig_hmit_anggota_1')), 
+                'ctf_intitusi'          => $this->request->getVar('asal_institusi'), 
+                'ctf_contact'           => $this->request->getVar('wa_ketua'), 
+                'ctf_status_final'      => 0,
+                'ctf_bukti_bayar'       => $this->moveFile('uploads/ctf/bukti_bayar', $this->request->getFile('bukti_bayar')), 
+                'ctf_status'            => 0,
+                'ctf_jumlah_anggota'    => 2
+            ];
+        }
+
+        
+
+        $this->model_ctf->save($data);
+        return redirect()->to('/Auth/finish_regist');
     }
 
     // Memindahkan dan men-generate nama random file
@@ -472,14 +669,213 @@ class Verify extends BaseController
         return redirect()->to('/Auth/finish_regist');
     }
 
-    public function registrasi_expo()
+    public function verify_registrasi_expo()
     {
-        return view('auth/regist_expo');
+        $rules = [
+            'nama'  => [
+                'label' => 'nama',
+                'rules' => 'required',
+                'errors' => [
+                    'required'  => 'nama harus diisi'
+                ]
+            ],
+            'asal_institusi'  => [
+                'label' => 'asal_institusi',
+                'rules' => 'required',
+                'errors' => [
+                    'required'  => 'asal institusi harus diisi'
+                ]
+            ],
+            'email'  => [
+                'label' => 'email',
+                'rules' => 'required|is_unique[expo.expo_email]',
+                'errors' => [
+                    'required'  => 'email harus diisi',
+                    'is_unique' => 'email sudah terdaftar'
+                ]
+            ],
+            'whatsapp'  => [
+                'label' => 'whatsapp',
+                'rules' => 'required|numeric',
+                'erros' => [
+                    'required'  => 'whatsapp harus diisi',
+                    'whatsapp'  => 'field whatsapp harus diisi dengan nomer yang benar'
+                ]
+            ],
+            'share_post' => [
+                'label'     => 'share_post',
+                'rules'     => 'uploaded[share_post]|is_image[share_post]|max_size[share_post, 1024]',
+                'errors'    => [
+                    'uploaded'  => 'field harus diisi',
+                    'is_image'  => 'field harus diisi dengan gambar',
+                    'max_size'  => 'ukuran gambar maksimal 1024 kb'
+                ]
+            ],
+            'follow_ig_ara' => [
+                'label'     => 'follow_ig_ara',
+                'rules'     => 'uploaded[follow_ig_ara]|is_image[share_post]|max_size[share_post, 1024]',
+                'errors'    => [
+                    'uploaded'  => 'field harus diisi',
+                    'is_image'  => 'field harus diisi dengan gambar',
+                    'max_size'  => 'ukuran gambar maksimal 1024 kb'
+                ]
+            ],
+            'follow_ig_hmit' => [
+                'label'     => 'follow_ig_hmit',
+                'rules'     => 'uploaded[follow_ig_hmit]|is_image[share_post]|max_size[share_post, 1024]',
+                'errors'    => [
+                    'uploaded'  => 'field harus diisi',
+                    'is_image'  => 'field harus diisi dengan gambar',
+                    'max_size'  => 'ukuran gambar maksimal 1024 kb'
+                ]
+            ],   
+            'post_twibbon' => [
+                'label'     => 'post_twibbon',
+                'rules'     => 'uploaded[post_twibbon]|is_image[share_post]|max_size[share_post, 1024]',
+                'errors'    => [
+                    'uploaded'  => 'field harus diisi',
+                    'is_image'  => 'field harus diisi dengan gambar',
+                    'max_size'  => 'ukuran gambar maksimal 1024 kb'
+                ]
+            ] 
+        ];
+
+        if(!$this->validate($rules))
+        {
+            $validation = \Config\Services::validation();
+            return redirect()->to('auth/registrasi_expo')->withInput(); 
+        }
+
+        $data = [
+            'expo_nama'     => $this->request->getVar('nama'), 
+            'expo_email'    => $this->request->getVar('email'), 
+            'expo_contact'  => $this->request->getVar('whatsapp'), 
+            'expo_institusi'=> $this->request->getVar('asal_institusi'), 
+            'expo_status'   => 0, 
+            'expo_twibbon'  => $this->moveFile('uploads/expo/post_twibbon', $this->request->getFile('post_twibbon')), 
+            'expo_poster'   => $this->moveFile('uploads/expo/share_post', $this->request->getFile('share_post')), 
+            'expo_ig_hmit'  => $this->moveFile('uploads/expo/follow_ig_hmit', $this->request->getFile('follow_ig_hmit')), 
+            'expo_ig_ara'   => $this->moveFile('uploads/expo/follow_ig_ara', $this->request->getFile('follow_ig_ara')) 
+            //'expo_sponsor'  => $this->moveFile('uploads/expo/post_twibbon', $this->request->getFile('post_twibbon'))
+        ];
+
+        $this->model_expo->save($data);
+        return redirect()->to('/Auth/finish_regist');
     }
 
-    public function registrasi_webinar()
+    public function verify_registrasi_webinar()
     {
-        return view('auth/regist_webinar');
+        $rules = [
+            'nama' => [
+                'label'     => 'nama',
+                'rules'     => 'required',
+                'errors'    => [
+                    'required'  => 'Nama harus diisi'
+                ]
+            ],
+            'email' => [
+                'label'     => 'email',
+                'rules'     => 'required|is_unique[webinar.webinar_email]',
+                'errors'    => [
+                    'required'  => 'Email harus diisi',
+                    'is_unique' => 'Email sudah terdaftar'
+                ]
+            ],
+            'asal_institusi' => [
+                'label'     => 'asal_institusi',
+                'rules'     => 'required',
+                'errors'    => [
+                    'required'  => 'instansi harus diisi',
+                ]
+            ],
+            'whatsapp' => [
+                'label'     => 'whatsapp',
+                'rules'     => 'required|numeric',
+                'errors'    => [
+                    'required'  => 'instansi harus diisi',
+                    'numeric'   => 'field whatsapp harus diisi dengan nomer yang benar'
+                ]
+            ],
+            'share_post' => [
+                'label'     => 'share_post',
+                'rules'     => 'uploaded[share_post]|is_image[share_post]|max_size[share_post, 1024]',
+                'errors'    => [
+                    'uploaded'  => 'field harus diisi',
+                    'is_image'  => 'field harus diisi dengan gambar',
+                    'max_size'  => 'ukuran gambar maksimal 1024 kb'
+                ]
+            ],
+            'follow_ig_ara' => [
+                'label'     => 'follow_ig_ara',
+                'rules'     => 'uploaded[follow_ig_ara]|is_image[follow_ig_ara]|max_size[follow_ig_ara, 1024]',
+                'errors'    => [
+                    'uploaded'  => 'field harus diisi',
+                    'is_image'  => 'field harus diisi dengan gambar',
+                    'max_size'  => 'ukuran gambar maksimal 1024 kb'
+                ]
+            ],
+            'follow_ig_hmit' => [
+                'label'     => 'follow_ig_hmit',
+                'rules'     => 'uploaded[follow_ig_hmit]|is_image[follow_ig_hmit]|max_size[follow_ig_hmit, 1024]',
+                'errors'    => [
+                    'uploaded'  => 'field harus diisi',
+                    'is_image'  => 'field  harus diisi dengan gambar',
+                    'max_size'  => 'ukuran gambar maksimal 1024 kb'
+                ]
+            ],
+            'subs_yt_it' => [
+                'label'     => 'subs_yt_it',
+                'rules'     => 'uploaded[subs_yt_it]|is_image[subs_yt_it]|max_size[subs_yt_it, 1024]',
+                'errors'    => [
+                    'uploaded'  => 'field harus diisi',
+                    'is_image'  => 'field harus diisi dengan gambar',
+                    'max_size'  => 'ukuran gambar maksimal 1024 kb'
+                ]
+            ],
+            'share_group[]' => [
+                'label'     => 'share_group[]',
+                'rules'     => 'is_image[share_group]|max_size[share_group, 1024]|count_image_2[share_group]',
+                'errors'    => [
+                    'is_image'  => 'field harus diisi dengan gambar',
+                    'max_size'  => 'ukuran gambar maksimal 1024 kb',
+                    'count_image_2' => 'field ini harus diisi dengan 2 gambar'
+                ]
+            ],
+            'post_twibbon' => [
+                'label'     => 'post_twibbon',
+                'rules'     => 'uploaded[post_twibbon]|is_image[post_twibbon]|max_size[post_twibbon, 1024]',
+                'errors'    => [
+                    'uploaded'  => 'field harus diisi',
+                    'is_image'  => 'field harus diisi dengan gambar',
+                    'max_size'  => 'ukuran gambar maksimal 1024 kb'
+                ]
+            ]
+        ];
+
+        if(!$this->validate($rules))
+        {   
+            
+            $validation = \Config\Services::validation();
+            return redirect()->to('auth/registrasi_webinar')->withInput(); 
+        }
+
+        $data = [
+            'webinar_nama'      => $this->request->getVar('nama'), 
+            'webinar_email'     => $this->request->getVar('email'), 
+            'webinar_contact'   => $this->request->getVar('whatsapp'), 
+            'webinar_instansi'  => $this->request->getVar('asal_institusi'), 
+            'webinar_status'    => 0, 
+            'webinar_story'     => $this->moveFile('uploads/webinar/story', $this->request->getFile('share_post')), 
+            'webinar_ig_ara'    => $this->moveFile('uploads/webinar/ig_ara', $this->request->getFile('follow_ig_ara')), 
+            'webinar_ig_hmit'   => $this->moveFile('uploads/webinar/ig_hmit', $this->request->getFile('follow_ig_hmit')), 
+            'webinar_subscribe' => $this->moveFile('uploads/webinar/subs', $this->request->getFile('subs_yt_it')),
+            'webinar_share_1'   => $this->moveFile('uploads/webinar/share_1', $this->request->getFile('share_group.0')), 
+            'webinar_share_2'   => $this->moveFile('uploads/webinar/share_2', $this->request->getFile('share_group.1')), 
+            'webinar_twibbon'   => $this->moveFile('uploads/webinar/post_twibbon', $this->request->getFile('post_twibbon'))
+        ];
+
+        $this->model_webinar->save($data);
+        return redirect()->to('/Auth/finish_regist');
     }
 
     public function login()

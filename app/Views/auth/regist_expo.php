@@ -33,38 +33,38 @@
       <p><b><span class="text-danger">*</span> Wajib diisi</b></p>
     </header>
     <main>
-      <form action="" method="POST">
+      <form action="<?= base_url() ?>/Verify/verify_registrasi_expo" method="POST" enctype="multipart/form-data">
         <div class="mb-3">
-          <label for="nama" class="form-label">Nama <span class="text-danger">*</span></label>
-          <input type="text" class="form-control" id="nama">
+          <label for="nama" class="form-label">Nama <span class="text-danger">*<?= '<br>' . $validation->getError('nama') ?></span></label>
+          <input type="text" class="form-control" id="nama" name="nama">
         </div>
         <div class="mb-3">
-          <label for="asal_institusi" class="form-label">Asal Institusi <span class="text-danger">*</span></label>
-          <input type="text" class="form-control" id="asal_institusi">
+          <label for="asal_institusi" class="form-label">Asal Institusi <span class="text-danger">*<?= '<br>' . $validation->getError('asal_institusi') ?></span></label>
+          <input type="text" class="form-control" id="asal_institusi" name="asal_institusi">
         </div>
         <div class="mb-3">
-          <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
-          <input type="email" class="form-control" id="email">
+          <label for="email" class="form-label">Email <span class="text-danger">*<?= '<br>' . $validation->getError('email') ?></span></label>
+          <input type="email" class="form-control" id="email" name="email">
         </div>
         <div class="mb-3">
-          <label for="whatsapp" class="form-label">Whatsapp <span class="text-danger">*</span></label>
-          <input type="text" class="form-control" id="whatsapp">
+          <label for="whatsapp" class="form-label">Whatsapp <span class="text-danger">*<?= '<br>' . $validation->getError('whatsapp') ?></span></label>
+          <input type="text" class="form-control" id="whatsapp" name="whatsapp">
         </div>
         <div class="mb-3">
-          <label for="share_post" class="form-label">Share Post Expo IT <span class="text-danger">*</span></label>
-          <input class="form-control" type="file" id="share_post">
+          <label for="share_post" class="form-label">Share Post Expo IT <span class="text-danger">*<?= '<br>' . $validation->getError('share_post') ?></span></label>
+          <input class="form-control" type="file" id="share_post" name="share_post">
         </div>
         <div class="mb-3">
-          <label for="follow_ig_ara" class="form-label">Follow IG ARA <span class="text-danger">*</span></label>
-          <input class="form-control" type="file" id="follow_ig_ara">
+          <label for="follow_ig_ara" class="form-label">Follow IG ARA <span class="text-danger">*<?= '<br>' . $validation->getError('follow_ig_ara') ?></span></label>
+          <input class="form-control" type="file" id="follow_ig_ara" name="follow_ig_ara">
         </div>
         <div class="mb-3">
-          <label for="follow_ig_hmit" class="form-label">Follow IG HMIT <span class="text-danger">*</span></label>
-          <input class="form-control" type="file" id="follow_ig_hmit">
+          <label for="follow_ig_hmit" class="form-label">Follow IG HMIT <span class="text-danger">*<?= '<br>' . $validation->getError('follow_ig_hmit') ?></span></label>
+          <input class="form-control" type="file" id="follow_ig_hmit" name="follow_ig_hmit">
         </div>
         <div class="mb-3">
-          <label for="post_twibbon" class="form-label">Post Twibbon</label>
-          <input class="form-control" type="file" id="post_twibbon">
+          <label for="post_twibbon" class="form-label">Post Twibbon</label> <span class="text-danger">*<?= '<br>' . $validation->getError('post_twibbon') ?></span>
+          <input class="form-control" type="file" id="post_twibbon" name="post_twibbon">
         </div>
         <div class="mb-5">
           <button class="btn btn-submit text-white d-block mx-auto">Submit</button>
