@@ -6,6 +6,11 @@ use App\Controllers\BaseController;
 
 class User_expo extends BaseController
 {
+  public function __construct()
+  {
+    $this->session = session();
+  }
+
   public function home()
   {
     $data["lomba"] = "Expo";

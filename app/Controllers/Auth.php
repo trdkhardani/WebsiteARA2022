@@ -41,6 +41,10 @@ class Auth extends BaseController
 
   public function login()
   {
+    session();
+    $data = [
+      'validation' => \Config\Services::validation()
+    ];
     return view('auth/login');
   }
 
