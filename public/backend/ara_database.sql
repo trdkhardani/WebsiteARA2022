@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 10, 2022 at 01:54 PM
--- Server version: 10.4.21-MariaDB
--- PHP Version: 8.0.11
+-- Generation Time: Feb 09, 2022 at 07:51 AM
+-- Server version: 10.4.19-MariaDB
+-- PHP Version: 8.0.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `ara_database`
+-- Database: `ara_website2`
 --
 
 -- --------------------------------------------------------
@@ -61,6 +61,7 @@ CREATE TABLE `ctf` (
   `ctf_intitusi` varchar(255) NOT NULL,
   `ctf_contact` varchar(255) NOT NULL,
   `ctf_status_final` tinyint(1) NOT NULL DEFAULT 0,
+  `ctf_bukti_bayar` varchar(255) NOT NULL,
   `ctf_status` tinyint(1) NOT NULL DEFAULT 0,
   `ctf_date_created` datetime NOT NULL DEFAULT current_timestamp(),
   `ctf_date_updated` datetime NOT NULL DEFAULT current_timestamp()
@@ -120,7 +121,12 @@ CREATE TABLE `kti_iot` (
   `iot_status_penyisihan` tinyint(1) NOT NULL DEFAULT 0,
   `iot_status_final` tinyint(1) NOT NULL DEFAULT 0,
   `iot_kti_paper` varchar(255) NOT NULL,
-  `iot_status` tinyint(1) NOT NULL DEFAULT 0,
+  `iot_status_konfirmasi_abstrak` tinyint(1) NOT NULL DEFAULT 0,
+  `iot_status_konfirmasi_full_paper` tinyint(1) NOT NULL DEFAULT 0,
+  `iot_status_konfirmasi_final` tinyint(1) NOT NULL DEFAULT 0,
+  `iot_pembayaran` varchar(255) NOT NULL,
+  `iot_pembayaran_full_paper` varchar(255) DEFAULT NULL,
+  `iot_pembayaran_final` varchar(255) DEFAULT NULL,
   `iot_date_created` datetime NOT NULL DEFAULT current_timestamp(),
   `iot_date_updated` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -150,6 +156,7 @@ CREATE TABLE `olimpiade` (
   `olim_ig_hmit_anggota_1` varchar(255) NOT NULL,
   `olim_ig_hmit_anggota_2` varchar(255) NOT NULL,
   `olim_institusi` varchar(255) NOT NULL,
+  `olim_pembayaran` varchar(255) NOT NULL,
   `olim_status_final` tinyint(1) NOT NULL DEFAULT 0,
   `olim_status` tinyint(1) NOT NULL DEFAULT 0,
   `olim_date_created` datetime NOT NULL DEFAULT current_timestamp(),
@@ -263,13 +270,13 @@ ALTER TABLE `account`
 -- AUTO_INCREMENT for table `ctf`
 --
 ALTER TABLE `ctf`
-  MODIFY `ctf_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ctf_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `expo`
 --
 ALTER TABLE `expo`
-  MODIFY `expo_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `expo_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `kti_iot`
@@ -293,7 +300,7 @@ ALTER TABLE `panitia_login`
 -- AUTO_INCREMENT for table `webinar`
 --
 ALTER TABLE `webinar`
-  MODIFY `webinar_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `webinar_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
