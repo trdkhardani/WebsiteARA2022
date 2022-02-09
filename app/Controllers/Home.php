@@ -42,7 +42,7 @@ class Home extends BaseController
 
   public function expo()
   {
-    $data['title'] = 'Webinar';
+    $data['title'] = 'ExpoIT';
     return view('landing_page/pages/information/expo', $data);
   }
 }
