@@ -13,4 +13,9 @@ class Home extends BaseController
   {
     return view('landing_page/detail-per-event');
   }
+
+  public function registration()
+  {
+    return view('landing_page/registration');
+  }
 }

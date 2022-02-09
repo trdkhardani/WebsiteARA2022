@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap&family=Merriweather+Sans&family=Open+Sans&display=swap");
+html,
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  background: url("../../../images/registration-bg.png");
+  background-size: cover;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+
+nav {
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+}
+
+.nav-gradient {
+  background-color: #161175;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+i {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+
+h1,
+.h1 {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 64px;
+}
+
+h2 .h2 {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 26px;
+}
+
+h3 .h3 {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 24px;
+}
+
+small .small {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+main {
+  overflow: hidden;
+  margin-top: 200px;
+}
+
+main section:nth-child(4) img {
+  position: relative;
+  position: relative;
+}
+
+main section:nth-child(4) img {
+  position: relative;
+  left: -100px;
+}
+
+@media only screen and (max-width: 768px) {
+  main section:nth-child(4) img,
+  main section:nth-child(4) {
+    position: static;
+  }
+}
+
+.btn-outline-secondary {
+  border-color: #fff;
+}
+
+.gerigi {
+  margin-top: -50px;
+}
+
+section {
+  margin-bottom: 150px;
+}
+
+.sosial-media {
+  background-color: #abe9d2;
+  width: 68px;
+  height: 68px;
+  display: block;
+  position: relative;
+}
+
+.sosial-media i {
+  color: #161175;
+  font-size: 24px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#carousel-HMIT .carousel-control-prev {
+  position: absolute;
+  left: -100px;
+  font-weight: bolder;
+  bottom: 15vh;
+}
+
+#carousel-HMIT .carousel-control-next {
+  position: absolute;
+  right: -100px;
+  font-weight: bolder;
+  bottom: 15vh;
+}
+
+@media only screen and (max-width: 576px) {
+  #carousel-HMIT .carousel-control-prev {
+    left: -50px;
+    bottom: 25vh;
+  }
+  #carousel-HMIT .carousel-control-next {
+    right: -50px;
+    bottom: 25vh;
+  }
+}
+
+footer {
+  background-color: #311175;
+}
+
+footer p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+}
+
+footer .h1 {
+  background: -webkit-gradient(linear, left top, right top, from(#ff628f), to(#7a75d9));
+  background: linear-gradient(to right, #ff628f 0%, #7a75d9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+footer .sosial-media,
+footer .ke-atas {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(25%, #fff), color-stop(75%, #ffe9e9));
+  background: linear-gradient(180deg, #fff 25%, #ffe9e9 75%);
+}
+
+footer .sosial-media i {
+  background: -webkit-gradient(linear, left bottom, left top, from(#533ba9), to(#9b53a6));
+  background: linear-gradient(to top, #533ba9, #9b53a6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media only screen and (max-width: 992px) {
+  .navbar-2 {
+    margin-top: 28px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  main section {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main section:nth-child(odd) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .navbar-toggler {
+    padding: 0;
+  }
+}
+
+section img {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 63px;
+}
+
+.bulat-pink {
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(110% 110% at 13.18% 13.86%, #dccfd3 0%, #9f11d0 100%);
+  position: fixed;
+  left: 189px;
+  top: 670px;
+  z-index: -9999999;
+  -webkit-filter: blur(6px);
+          filter: blur(6px);
+}
+
+.bulat-merah {
+  width: 36px;
+  height: 36px;
+  background: radial-gradient(110% 110% at 13.18% 13.86%, #fa5d8a 0%, #d01148 100%);
+  position: fixed;
+  left: 392px;
+  top: 479px;
+  z-index: -9999999;
+  -webkit-filter: blur(6px);
+          filter: blur(6px);
+}
+
+.bulat-merah-2 {
+  width: 36px;
+  height: 36px;
+  background: radial-gradient(110% 110% at 13.18% 13.86%, #fa5d8a 0%, #d01148 100%);
+  position: fixed;
+  left: 1219px;
+  top: 522px;
+  z-index: -9999999;
+  -webkit-filter: blur(6px);
+          filter: blur(6px);
+}
+
+.bulat-biru {
+  width: 66px;
+  height: 66px;
+  background: radial-gradient(110% 110% at 13.18% 13.86%, #dccfd3 0%, #115ed0 100%);
+  position: fixed;
+  left: 1405px;
+  top: 333px;
+  z-index: -9999999;
+  -webkit-filter: blur(6px);
+          filter: blur(6px);
+}
+/*# sourceMappingURL=registration.css.map */
