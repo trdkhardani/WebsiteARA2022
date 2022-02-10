@@ -31,7 +31,7 @@
         </div>
         <form action="/Verify/verify_login" method="POST">
           <div class="mb-3">
-            <label for="username" class="form-label"><span class="text-danger"><?= session()->getFlashdata('msg'); ?></span></label>
+            <label for="username" class="form-label"><span class="text-warning"><?= session()->getFlashdata('msg'); ?></span></label>
             <input type="text" class="form-control shadow-none" placeholder="Username" name="username" required>
           </div>
           <div class="mb-5">

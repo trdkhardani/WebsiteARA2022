@@ -912,7 +912,7 @@ class Verify extends BaseController
                     return redirect()->to('/dashboard/Admin_olim/list_team');
                     break;
                 default:
-                    session()->setFlashdata('msg', 'username atau password salah!');
+                    session()->setFlashdata('msg', 'Username atau password salah!');
                     return redirect()->to('/Auth/login')->withInput();
                     break;
             }
@@ -948,7 +948,7 @@ class Verify extends BaseController
                     break;
             }
         } else {
-            session()->setFlashdata('msg', 'username atau password salah!');
+            session()->setFlashdata('msg', 'Username atau password salah!');
             return redirect()->to('/Auth/login')->withInput();
         }
     }
