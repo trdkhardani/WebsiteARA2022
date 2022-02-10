@@ -45,4 +45,9 @@ class Home extends BaseController
     $data['title'] = 'ExpoIT';
     return view('landing_page/pages/information/expo', $data);
   }
+
+  public function registration()
+  {
+    return view('landing_page/registration');
+  }
 }

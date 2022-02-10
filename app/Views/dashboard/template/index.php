@@ -17,8 +17,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- template css -->
   <link rel="stylesheet" href="<?= base_url() ?>/css/dashboard/template/template.css">
-  <!-- child css -->
-  <?= $this->renderSection("child-css") ?>
 </head>
 
 <body class="d-flex position-relative h-100">
@@ -44,8 +42,11 @@
     <!-- main -->
     <main>
       <div class="p-4">
+        <h2 class="d-block d-lg-none"><?= $lomba ?></h2>
+        <p class="d-block d-lg-none"><?= $nama ?></p>
+        <hr class="d-block d-lg-none">
         <?= $this->renderSection("content"); ?>
-        <p class="text-center mt-5 text-secondary"><i class="far fa-copyright"></i> ARA 2022</p>
+        <p class="text-center mt-5 text-white"><i class="far fa-copyright"></i> ARA 2022</p>
       </div>
     </main>
     <!-- /end main -->
@@ -79,9 +80,6 @@
       sidebar.classList.remove("responsive");
     })
   </script>
-
-  <!-- child js -->
-  <?= $this->renderSection("child-js"); ?>
 </body>
 
 </html>
