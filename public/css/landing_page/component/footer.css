@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap&family=Merriweather+Sans&family=Open+Sans&display=swap");
+footer {
+  background-color: #311175;
+}
+
+footer p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+}
+
+footer .h1 {
+  background: -webkit-gradient(linear, left top, right top, from(#ff628f), to(#7a75d9));
+  background: linear-gradient(to right, #ff628f 0%, #7a75d9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+footer .sosial-media,
+footer .ke-atas {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(25%, #fff), color-stop(75%, #ffe9e9));
+  background: linear-gradient(180deg, #fff 25%, #ffe9e9 75%);
+}
+
+footer .sosial-media i {
+  background: -webkit-gradient(linear, left bottom, left top, from(#533ba9), to(#9b53a6));
+  background: linear-gradient(to top, #533ba9, #9b53a6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/*# sourceMappingURL=footer.css.map */

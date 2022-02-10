@@ -1,0 +1,95 @@
+@import "../../template/default.scss";
+
+body {
+  background: url("../../../../images/bg-detail-per-event.png");
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  background-color: #fff;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
+}
+
+.event {
+  padding: 10px 40px;
+  position: relative;
+  width: 50%;
+}
+
+.event::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -12px;
+  background-color: white;
+  top: 0px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.kiri {
+  left: 0;
+}
+
+.kanan {
+  left: 50%;
+}
+
+.kanan::before {
+  left: -13px;
+}
+
+.isi-event {
+  padding: 20px 30px;
+  background-color: rgba(236, 239, 241, 0.04);
+  position: relative;
+  border-radius: 6px;
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 1px;
+  border-image-source: radial-gradient(rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+@media screen and (max-width: 768px) {
+  .timeline::before {
+    left: 28px;
+  }
+
+  .event {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  .event::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  .kiri::before,
+  .kanan::before {
+    left: 15px;
+  }
+
+  .kanan {
+    left: 0%;
+  }
+}
+
+.isi-event p:first-child {
+  @include body-2;
+}
