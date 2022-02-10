@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 07, 2022 at 04:58 PM
--- Server version: 10.4.21-MariaDB
--- PHP Version: 8.0.11
+-- Generation Time: Feb 09, 2022 at 07:51 AM
+-- Server version: 10.4.19-MariaDB
+-- PHP Version: 8.0.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `ara_database`
+-- Database: `ara_website2`
 --
 
 -- --------------------------------------------------------
@@ -118,11 +118,14 @@ CREATE TABLE `kti_iot` (
   `iot_ig_hmit_anggota_1` varchar(255) NOT NULL,
   `iot_ig_hmit_anggota_2` varchar(255) NOT NULL,
   `iot_abstrak` varchar(255) NOT NULL,
+  `iot_kti_paper` varchar(255) NOT NULL,
   `iot_status_penyisihan` tinyint(1) NOT NULL DEFAULT 0,
   `iot_status_final` tinyint(1) NOT NULL DEFAULT 0,
-  `iot_kti_paper` varchar(255) NOT NULL,
-  `iot_status` tinyint(1) NOT NULL DEFAULT 0,
-  `iot_pembayaran` varchar(255) NOT NULL,
+  `iot_pembayaran_full_paper` varchar(255) DEFAULT NULL,
+  `iot_pembayaran_final` varchar(255) DEFAULT NULL,
+  `iot_status_konfirmasi_abstrak` tinyint(1) NOT NULL DEFAULT 0,
+  `iot_status_konfirmasi_full_paper` tinyint(1) NOT NULL DEFAULT 0,
+  `iot_status_konfirmasi_final` tinyint(1) NOT NULL DEFAULT 0,
   `iot_date_created` datetime NOT NULL DEFAULT current_timestamp(),
   `iot_date_updated` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
