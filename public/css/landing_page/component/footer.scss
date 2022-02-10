@@ -1,0 +1,26 @@
+@import "../../general/rule";
+
+footer {
+  background-color: $ungu;
+
+  p {
+    @include body-2;
+  }
+
+  .h1 {
+    background: linear-gradient(to right, #ff628f 0%, #7a75d9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .sosial-media,
+  .ke-atas {
+    background: linear-gradient(180deg, #fff 25%, #ffe9e9 75%);
+  }
+
+  .sosial-media i {
+    background: linear-gradient(to top, #533ba9, #9b53a6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

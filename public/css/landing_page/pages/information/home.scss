@@ -1,0 +1,36 @@
+@import "../../template/default.scss";
+@import "../../component/hmit-card.scss";
+
+body {
+  background: url("../../../../images/bg-home.png");
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+main {
+  section:nth-child(4) img {
+    position: relative;
+    position: relative;
+  }
+
+  section:nth-child(4) img {
+    position: relative;
+    left: -100px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    margin-top: 0;
+
+    section:nth-child(4) img,
+    section:nth-child(4) {
+      position: static;
+    }
+  }
+}
+
+.gerigi {
+  margin-top: -50px;
+}
