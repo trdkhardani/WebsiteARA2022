@@ -6,6 +6,10 @@ use App\Controllers\BaseController;
 
 class Admin_olim extends BaseController
 {
+  public function __construct()
+  {
+    $this->session = session();
+  }
   public function list_team()
   {
     $data["lomba"] = "Olimpiade";

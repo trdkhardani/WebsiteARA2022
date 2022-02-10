@@ -6,6 +6,10 @@ use App\Controllers\BaseController;
 
 class User_ctf extends BaseController
 {
+  public function __construct()
+  {
+    $this->session = session();
+  }
   public function home()
   {
     $data["lomba"] = "Capture The Flag";

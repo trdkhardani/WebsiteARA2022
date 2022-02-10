@@ -29,12 +29,13 @@
           <h1>Login</h1>
           <p>Silahkan isi username dan password anda untuk login</p>
         </div>
-        <form action="" method="POST">
+        <form action="/Verify/verify_login" method="POST">
           <div class="mb-3">
-            <input type="text" class="form-control shadow-none" placeholder="Username">
+            <label for="username" class="form-label"><span class="text-danger"><?= session()->getFlashdata('msg'); ?></span></label>
+            <input type="text" class="form-control shadow-none" placeholder="Username" name="username" required>
           </div>
           <div class="mb-5">
-            <input type="password" class="form-control shadow-none" placeholder="Password">
+            <input type="password" class="form-control shadow-none" placeholder="Password" name="password" required>
           </div>
           <button class="btn d-block mx-auto">Login</button>
         </form>

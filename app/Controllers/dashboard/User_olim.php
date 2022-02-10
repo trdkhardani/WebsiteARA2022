@@ -6,6 +6,10 @@ use App\Controllers\BaseController;
 
 class User_olim extends BaseController
 {
+  public function __construct()
+  {
+    $this->session = session();
+  }
   public function home()
   {
     $data["lomba"] = "Olimpiade";
