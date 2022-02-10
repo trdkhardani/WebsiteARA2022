@@ -12,7 +12,7 @@
 <section data-aos-duration="1500" data-aos="fade-up" class="container row align-items-center mx-auto position-relatve">
     <div class="col-md-6">
         <h1>A Renewal Agent</h1>
-        <p class="mt-4">ARA (A Renewal Agent) 2022 adalah kegiatan yang diselenggarakan oleh HMIT (Himpunan Mahasiswa Teknologi Informasi) ITS periode 2020-2021 yang dimana event ini akan menjadi media untuk menyalurkan minat di bidang IT (teknologi informasi) bagi siswa SMA/SMK dan mahasiswa..</p>
+        <p class="mt-4">ARA (A Renewal Agent) 2022 adalah kegiatan yang diselenggarakan oleh HMIT (Himpunan Mahasiswa Teknologi Informasi) ITS periode 2020-2021 yang dimana event ini akan menjadi media untuk menyalurkan minat di bidang IT (teknologi informasi) bagi siswa SMA/SMK dan mahasiswa.</p>
         <a href="#" class="btn btn-primary px-4 py-3 mt-4 rounded-pill">Selengkapnya tentang ARA</a>
     </div>
     <div class="col-md-6">
@@ -36,7 +36,7 @@
 <section data-aos-anchor-placement="top-center" data-aos-duration="1500" data-aos="fade-right" class="container row mx-auto align-items-center">
     <div data-aos="zoom-in-right" data-aos-duration="1500" class="col-md-6">
         <h2 class="h1">Olimpiade</h2>
-        <p>Olimpiade ARA 2022 adalah olimpiade dengan topik IoT dan Cyber Security (keamanan siber). .</p>
+        <p>Olimpiade ARA 2022 adalah olimpiade dengan topik IoT dan Cyber Security (keamanan siber).</p>
         <a href="#" class="btn btn-primary px-4 py-2 mt-4 rounded-pill">Selengkapnya <i class="fas fa-chevron-right ps-2"></i> </a>
     </div>
     <div class="col-md-6">
@@ -56,7 +56,7 @@
 <section data-aos-anchor-placement="top-center" data-aos-duration="1500" data-aos="fade-right" class="container row mx-auto align-items-center">
     <div data-aos="zoom-in-right" data-aos-duration="1500" class="col-md-6">
         <h2 class="h1">IOT</h2>
-        <p>Kompetisi ide inovatif dalam rangkaian acara ARA 2022 merupakan lomba dengan mekanisme yang hampir serupa dengan Lomba Karya Tulis Ilmiah. Peserta diharapkan dapat menuangkan idenya dalam bentuk karya tulis ilmiah dengan topik utama Internet of Things</p>
+        <p>Kompetisi ide inovatif dalam rangkaian acara ARA 2022 merupakan lomba dengan mekanisme yang hampir serupa dengan Lomba Karya Tulis Ilmiah. Peserta diharapkan dapat menuangkan idenya dalam bentuk karya tulis ilmiah dengan topik utama Internet of Things.</p>
         <a href="#" class="btn btn-primary px-4 py-2 mt-4 rounded-pill">Selengkapnya <i class="fas fa-chevron-right ps-2"></i> </a>
     </div>
     <div class="col-md-6">
