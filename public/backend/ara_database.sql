@@ -118,20 +118,14 @@ CREATE TABLE `kti_iot` (
   `iot_ig_hmit_anggota_1` varchar(255) NOT NULL,
   `iot_ig_hmit_anggota_2` varchar(255) NOT NULL,
   `iot_abstrak` varchar(255) NOT NULL,
+  `iot_kti_paper` varchar(255) NOT NULL,
   `iot_status_penyisihan` tinyint(1) NOT NULL DEFAULT 0,
   `iot_status_final` tinyint(1) NOT NULL DEFAULT 0,
-  `iot_kti_paper` varchar(255) NOT NULL,
-<<<<<<< HEAD
-  `iot_status` tinyint(1) NOT NULL DEFAULT 0,
-  `iot_pembayaran` varchar(255) NOT NULL,
-=======
+  `iot_pembayaran_full_paper` varchar(255) DEFAULT NULL,
+  `iot_pembayaran_final` varchar(255) DEFAULT NULL,
   `iot_status_konfirmasi_abstrak` tinyint(1) NOT NULL DEFAULT 0,
   `iot_status_konfirmasi_full_paper` tinyint(1) NOT NULL DEFAULT 0,
   `iot_status_konfirmasi_final` tinyint(1) NOT NULL DEFAULT 0,
-  `iot_pembayaran` varchar(255) NOT NULL,
-  `iot_pembayaran_full_paper` varchar(255) DEFAULT NULL,
-  `iot_pembayaran_final` varchar(255) DEFAULT NULL,
->>>>>>> 80b882b1087ec2d90c663068a636ba7068043e2b
   `iot_date_created` datetime NOT NULL DEFAULT current_timestamp(),
   `iot_date_updated` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
