@@ -7,22 +7,22 @@
   <h1 class="fw-bold text-white">Dashboard</h1>
   <ul>
     <li class="">
-      <a href="<?= base_url() ?>/dashboard/admin_kti_iot/list_abstrak"><img class="me-2" src="<?= base_url() ?>/images/dashboard/home.svg" alt="Icon"> List Team Abstrak</a>
+      <a href="<?= base_url() ?>/dashboard/admin_kti_iot/list_abstrak"><i class="fas fa-list"></i> List Team Abstrak</a>
     </li>
     <li class="active">
-      <a href="<?= base_url() ?>/dashboard/admin_kti_iot/konfirmasi_abstrak"><img class="me-2" src="<?= base_url() ?>/images/dashboard/submission.svg" alt="Icon"> Konfirmasi Abstrak</a>
+      <a href="<?= base_url() ?>/dashboard/admin_kti_iot/konfirmasi_abstrak"><i class="fas fa-check-circle"></i> Konfirmasi Abstrak</a>
     </li>
     <li class="">
-      <a href="<?= base_url() ?>/dashboard/admin_kti_iot/list_fullpaper"><img class="me-2" src="<?= base_url() ?>/images/dashboard/submission.svg" alt="Icon"> List Team Full Paper</a>
+      <a href="<?= base_url() ?>/dashboard/admin_kti_iot/list_fullpaper"><i class="fas fa-list"></i> List Team Full Paper</a>
     </li>
     <li class="">
-      <a href="<?= base_url() ?>/dashboard/admin_kti_iot/konfirmasi_fullpaper"><img class="me-2" src="<?= base_url() ?>/images/dashboard/people.svg" alt="Icon"> Konfirmasi Full Paper</a>
+      <a href="<?= base_url() ?>/dashboard/admin_kti_iot/konfirmasi_fullpaper"><i class="fas fa-check-circle"></i> Konfirmasi Full Paper</a>
     </li>
     <li class="">
-      <a href="<?= base_url() ?>/dashboard/admin_kti_iot/list_final"><img class="me-2" src="<?= base_url() ?>/images/dashboard/people.svg" alt="Icon"> List Team Final</a>
+      <a href="<?= base_url() ?>/dashboard/admin_kti_iot/list_final"><i class="fas fa-list"></i> List Team Final</a>
     </li>
     <li class="">
-      <a href="<?= base_url() ?>/dashboard/admin_kti_iot/konfirmasi_final"><img class="me-2" src="<?= base_url() ?>/images/dashboard/people.svg" alt="Icon"> Konfirmasi Final</a>
+      <a href="<?= base_url() ?>/dashboard/admin_kti_iot/konfirmasi_final"><i class="fas fa-check-circle"></i> Konfirmasi Final</a>
     </li>
   </ul>
 </div>

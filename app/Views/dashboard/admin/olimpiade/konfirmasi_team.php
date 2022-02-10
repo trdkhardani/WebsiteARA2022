@@ -7,10 +7,10 @@
   <h1 class="fw-bold text-white">Dashboard</h1>
   <ul>
     <li class="">
-      <a href="<?= base_url() ?>/dashboard/admin_olim/list_team"><img class="me-2" src="<?= base_url() ?>/images/dashboard/home.svg" alt="Icon"> List Team</a>
+      <a href="<?= base_url() ?>/dashboard/admin_olim/list_team"><i class="fas fa-list"></i> List Team</a>
     </li>
     <li class="active">
-      <a href="<?= base_url() ?>/dashboard/admin_olim/konfirmasi_team"><img class="me-2" src="<?= base_url() ?>/images/dashboard/submission.svg" alt="Icon"> Konfirmasi Team</a>
+      <a href="<?= base_url() ?>/dashboard/admin_olim/konfirmasi_team"><i class="fas fa-check-circle"></i> Konfirmasi Team</a>
     </li>
   </ul>
 </div>

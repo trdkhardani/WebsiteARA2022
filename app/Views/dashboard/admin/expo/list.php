@@ -7,10 +7,11 @@
   <h1 class="fw-bold text-white">Dashboard</h1>
   <ul>
     <li class="active">
-      <a href="<?= base_url() ?>/dashboard/admin_expo/list"><img class="me-2" src="<?= base_url() ?>/images/dashboard/home.svg" alt="Icon"> List</a>
+      <a href="<?= base_url() ?>/dashboard/admin_expo/list"><i class="fas fa-list"></i> List</a>
     </li>
     <li class="">
-      <a href="<?= base_url() ?>/dashboard/admin_expo/konfirmasi"><img class="me-2" src="<?= base_url() ?>/images/dashboard/submission.svg" alt="Icon"> Konfirmasi</a>
+      <a href="<?= base_url() ?>/dashboard/admin_expo/konfirmasi"><i class="fas fa-check-circle"></i> Konfirmasi</a>
+    </li>
     </li>
   </ul>
 </div>
