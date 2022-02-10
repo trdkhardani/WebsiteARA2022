@@ -3,22 +3,27 @@
 namespace App\Controllers;
 
 use App\Controllers;
+use App\Models\Model_Account;
 use App\Models\Model_Kti_iot;
 use App\Models\Model_Olimpiade;
 use App\Models\Model_ctf;
 use App\Models\Model_expo;
 use App\Models\Model_webinar;
+use App\Models\Model_Panitia;
 use Config\Services;
 
 class Verify extends BaseController
 {
     public function __construct()
     {
+        $this->session = session();
         $this->model_olimpiade = new Model_Olimpiade();
         $this->model_kti = new Model_Kti_iot();
         $this->model_ctf = new Model_ctf();
         $this->model_webinar = new Model_webinar();
         $this->model_expo = new Model_Expo();
+        $this->model_panitia = new Model_Panitia();
+        $this->model_account = new Model_Account();
     }
     public function verify_registrasi_kti()
     {
@@ -234,22 +239,25 @@ class Verify extends BaseController
             'iot_suket_anggota_1' => $renamed_ktm_anggota_1,
             'iot_suket_anggota_2' => $renamed_ktm_anggota_2,
             'iot_contact' => $this->request->getVar('wa_ketua'),
+            'iot_institusi' => $this->request->getVar('asal_institusi'),
+            'iot_story_ketua' => $renamed_share_ketua,
+            'iot_story_anggota_1' => $renamed_share_anggota_1,
+            'iot_story_anggota_2' => $renamed_share_anggota_2,
             'iot_ig_ara_ketua' => $renamed_ig_ara_ketua,
             'iot_ig_ara_anggota_1' => $renamed_ig_ara_anggota_1,
             'iot_ig_ara_anggota_2' => $renamed_ig_ara_anggota_2,
             'iot_ig_hmit_ketua' => $renamed_ig_hmit_ketua,
             'iot_ig_hmit_anggota_1' => $renamed_ig_hmit_anggota_1,
             'iot_ig_hmit_anggota_2' => $renamed_ig_hmit_anggota_2,
-            'iot_story_ketua' => $renamed_share_ketua,
-            'iot_story_anggota_1' => $renamed_share_anggota_1,
-            'iot_story_anggota_2' => $renamed_share_anggota_2,
-            'iot_institusi' => $this->request->getVar('asal_institusi'),
             'iot_abstrak' => null,
             'iot_kti_paper' => null,
-            'iot_status' => 0,
             'iot_status_penyisihan' => 0,
             'iot_status_final' => 0,
-            'iot_pembayaran' => 0
+            'iot_pembayaran_full_paper' => null,
+            'iot_pembayaran_final' => null,
+            'iot_status_konfirmasi_abstrak' => 0,
+            'iot_status_konfirmasi_full_paper' => 0,
+            'iot_status_konfirmasi_final' => 0
         ];
 
         // Insert ke db dan redirect ke finish regist
@@ -878,9 +886,74 @@ class Verify extends BaseController
         return redirect()->to('/Auth/finish_regist');
     }
 
-    public function login()
+    public function verify_login()
     {
-        return view('auth/login');
+        $username = $this->request->getVar('username');
+        $password = $this->request->getVar('password');
+        // Cek akun di panitia lalu di account
+        if ($query = $this->model_panitia->getPanitia($username, $password)) {
+            $ses_data = [
+                'is_admin' => true,
+                'username' => $query[$this->model_panitia->panitia_username]
+            ];
+            $this->session->set($ses_data);
+            // Panitia, ganti nama di case & $ses_admin nanti sesuai format nama admin
+            switch ($query[$this->model_panitia->panitia_username]) {
+                case 'Admin ctf':
+                    return redirect()->to('/dashboard/Admin_ctf/list_team');
+                    break;
+                case 'Admin expo':
+                    return redirect()->to('/dashboard/Admin_expo/list');
+                    break;
+                case 'Admin webinar':
+                    return redirect()->to('/dashboard/Admin_webinar/list');
+                    break;
+                case 'Admin kti iot':
+                    return redirect()->to('/dashboard/Admin_kti_iot/list_abstrak');
+                    break;
+                case 'Admin olim':
+                    return redirect()->to('/dashboard/Admin_olim/list_team');
+                    break;
+                default:
+                    session()->setFlashdata('msg', 'Username atau password salah!');
+                    return redirect()->to('/Auth/login')->withInput();
+                    break;
+            }
+        } elseif ($query = $this->model_account->getAccount($username, $password)) {
+            // User adalah account (peserta)
+            $ses_data = [
+                'is_admin' => false,
+                'username' => $query[$this->model_account->account_username],
+                'role' => $query[$this->model_account->account_table],
+                'keterangan' => $query[$this->model_account->account_keterangan]
+            ];
+            $this->session->set($ses_data);
+            // Redirect sesuai account_table di account
+            switch ($query[$this->model_account->account_table]) {
+                case 'ctf':
+                    return redirect()->to('/dashboard/User_ctf/home');
+                    break;
+                case 'expo':
+                    return redirect()->to('/dashboard/User_home/home');
+                    break;
+                case 'kti_iot':
+                    return redirect()->to('/dashboard/User_kti_iot/home');
+                    break;
+                case 'olimpiade':
+                    return redirect()->to('/dashboard/User_olim/home');
+                    break;
+                case 'webinar':
+                    return redirect()->to('/dashboard/User_webinar/home');
+                    break;
+                default:
+                    session()->setFlashdata('msg', 'username atau password salah!');
+                    return redirect()->to('/Auth/login')->withInput();
+                    break;
+            }
+        } else {
+            session()->setFlashdata('msg', 'Username atau password salah!');
+            return redirect()->to('/Auth/login')->withInput();
+        }
     }
 
     public function finish_regist()
