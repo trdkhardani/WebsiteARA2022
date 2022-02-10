@@ -26,6 +26,7 @@
 <!-- content -->
 <?= $this->section("content"); ?>
 <h3 class="mb-3">Abstrak</h3>
+
 <!-- informasi abstrak -->
 <div class="card-dashboard">
   <h4>Informasi Abstrak</h4>
@@ -35,26 +36,36 @@
   </ul>
 </div>
 <!-- pengumpulan abstrak -->
-<div class="card-dashboard">
-  <h4>Pengumpulan Abstrak</h4>
-  <ul>
-    <li><i class="fas fa-exclamation-triangle"></i> Pastikan anda sudah menginputkan file yang benar. File hanya bisa diinputkan satu kali.</li>
-    <li>
-      <form action="" method="POST">
-        <div class="mb-4">
-          <input class="form-control" type="file" name="abstrak">
-        </div>
-        <button type="submit" class="btn d-block mx-auto text-white">Submit</button>
-      </form>
-    </li>
-  </ul>
-</div>
+<?php if (session()->getFlashdata('msg')) : ?>
+  <div class="card-dashboard">
+    <h4 class="text-danger text-center">Desain alert messagenya ganti:v<?= session()->getFlashdata('msg'); ?></h4>
+  </div>
+<?php endif; ?>
+
+<?php if ($abstrak) : ?>
+  <div class="card-dashboard">
+    <h4>Pengumpulan Abstrak</h4>
+    <ul>
+      <li><i class="fas fa-exclamation-triangle"></i> Pastikan anda sudah menginputkan file yang benar. File hanya bisa diinputkan satu kali.</li>
+      <li>
+        <form action="dashboard/User_kti_iot/verify_abstrak" method="POST" enctype="multipart/form-data">
+          <div class="mb-4">
+            <input class="form-control" type="file" name="abstrak">
+          </div>
+          <button type="submit" class="btn d-block mx-auto text-white">Submit</button>
+        </form>
+      </li>
+    </ul>
+  </div>
+<?php endif; ?>
 <!-- sudah mengumpulkan abstrak -->
-<div class="card-dashboard">
-  <h4>Pengumpulan Abstrak</h4>
-  <ul>
-    <li><i class="fas fa-thumbs-up"></i> Terima kasih sudah mengumpulkan Abstrak. Pantau terus Instagram ARA untuk mengecek hasilnya.</li>
-  </ul>
-</div>
+<?php if (!$abstrak) : ?>
+  <div class="card-dashboard">
+    <h4>Pengumpulan Abstrak</h4>
+    <ul>
+      <li><i class="fas fa-thumbs-up"></i> Terima kasih sudah mengumpulkan Abstrak. Pantau terus Instagram ARA untuk mengecek hasilnya.</li>
+    </ul>
+  </div>
+<?php endif; ?>
 <?= $this->endSection(); ?>
 <!-- /end content -->
