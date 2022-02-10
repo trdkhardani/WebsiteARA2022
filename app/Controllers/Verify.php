@@ -239,22 +239,25 @@ class Verify extends BaseController
             'iot_suket_anggota_1' => $renamed_ktm_anggota_1,
             'iot_suket_anggota_2' => $renamed_ktm_anggota_2,
             'iot_contact' => $this->request->getVar('wa_ketua'),
+            'iot_institusi' => $this->request->getVar('asal_institusi'),
+            'iot_story_ketua' => $renamed_share_ketua,
+            'iot_story_anggota_1' => $renamed_share_anggota_1,
+            'iot_story_anggota_2' => $renamed_share_anggota_2,
             'iot_ig_ara_ketua' => $renamed_ig_ara_ketua,
             'iot_ig_ara_anggota_1' => $renamed_ig_ara_anggota_1,
             'iot_ig_ara_anggota_2' => $renamed_ig_ara_anggota_2,
             'iot_ig_hmit_ketua' => $renamed_ig_hmit_ketua,
             'iot_ig_hmit_anggota_1' => $renamed_ig_hmit_anggota_1,
             'iot_ig_hmit_anggota_2' => $renamed_ig_hmit_anggota_2,
-            'iot_story_ketua' => $renamed_share_ketua,
-            'iot_story_anggota_1' => $renamed_share_anggota_1,
-            'iot_story_anggota_2' => $renamed_share_anggota_2,
-            'iot_institusi' => $this->request->getVar('asal_institusi'),
             'iot_abstrak' => null,
             'iot_kti_paper' => null,
-            'iot_status' => 0,
             'iot_status_penyisihan' => 0,
             'iot_status_final' => 0,
-            'iot_pembayaran' => 0
+            'iot_pembayaran_full_paper' => null,
+            'iot_pembayaran_final' => null,
+            'iot_status_konfirmasi_abstrak' => 0,
+            'iot_status_konfirmasi_full_paper' => 0,
+            'iot_status_konfirmasi_final' => 0
         ];
 
         // Insert ke db dan redirect ke finish regist
