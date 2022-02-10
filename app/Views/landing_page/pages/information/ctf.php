@@ -47,4 +47,6 @@
 
 <?= $this->include('landing_page/component/HMIT-card') ?>
 
+<?= $this->include("landing_page/component/sponsor"); ?>
+
 <?= $this->endSection('') ?>

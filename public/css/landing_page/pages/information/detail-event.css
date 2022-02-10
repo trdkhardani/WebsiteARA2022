@@ -153,6 +153,36 @@ section {
   }
 }
 
+#carousel-HMIT .carousel-control-prev-icon {
+  position: absolute;
+  left: -100px;
+  font-weight: bolder;
+}
+
+#carousel-HMIT .carousel-control-next-icon {
+  position: absolute;
+  right: -100px;
+  font-weight: bolder;
+}
+
+@media only screen and (max-width: 992px) {
+  #carousel-HMIT .carousel-control-prev-icon {
+    left: -50px;
+  }
+  #carousel-HMIT .carousel-control-next-icon {
+    right: -50px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  #carousel-HMIT .carousel-control-prev-icon {
+    left: -50px;
+  }
+  #carousel-HMIT .carousel-control-next-icon {
+    right: -50px;
+  }
+}
+
 body {
   background: url("../../../../images/bg-detail-per-event.png");
 }
