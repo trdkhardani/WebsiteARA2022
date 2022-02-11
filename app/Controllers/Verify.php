@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Controllers;
+//use App\Controllers\email_controller;
 use App\Models\Model_Account;
 use App\Models\Model_Kti_iot;
 use App\Models\Model_Olimpiade;
@@ -24,6 +25,7 @@ class Verify extends BaseController
         $this->model_expo = new Model_Expo();
         $this->model_panitia = new Model_Panitia();
         $this->model_account = new Model_Account();
+        //$this->email_controller = new email_controller();
     }
     public function verify_registrasi_kti()
     {
@@ -260,6 +262,11 @@ class Verify extends BaseController
             'iot_status_konfirmasi_final' => 0
         ];
 
+        //template email isi aja subject sama messagenya
+        //$subject;
+        //$message;
+        //$this->sendemail($data['iot_email_ketua'], $message, $subject);
+
         // Insert ke db dan redirect ke finish regist
         $this->model_kti->save($data_kti);
         return redirect()->to('/Auth/finish_regist');
@@ -455,7 +462,10 @@ class Verify extends BaseController
             ];
         }
 
-        
+        //template email isi aja subject sama messagenya
+        //$subject;
+        //$message;
+        //$this->sendemail($data['ctf_email_ketua'], $message, $subject);
 
         $this->model_ctf->save($data);
         return redirect()->to('/Auth/finish_regist');
@@ -672,6 +682,11 @@ class Verify extends BaseController
             'olim_status' => 0
         ];
 
+        //template email isi aja subject sama messagenya
+        //$subject;
+        //$message;
+        //$this->sendemail($data['olim_email_ketua'], $message, $subject);
+
         // Insert ke db dan redirect ke finish regist
         $this->model_olimpiade->save($data_olim);
         return redirect()->to('/Auth/finish_regist');
@@ -767,12 +782,18 @@ class Verify extends BaseController
             //'expo_sponsor'  => $this->moveFile('uploads/expo/post_twibbon', $this->request->getFile('post_twibbon'))
         ];
 
+        //template email isi aja subject sama messagenya
+        //$subject;
+        //$message;
+        //$this->sendemail($data['expo_email'], $message, $subject);
+        
         $this->model_expo->save($data);
         return redirect()->to('/Auth/finish_regist');
     }
 
     public function verify_registrasi_webinar()
     {
+        //var_dump($this->request->getVar('event'));
         $rules = [
             'nama' => [
                 'label'     => 'nama',
@@ -802,15 +823,6 @@ class Verify extends BaseController
                 'errors'    => [
                     'required'  => 'instansi harus diisi',
                     'numeric'   => 'field whatsapp harus diisi dengan nomer yang benar'
-                ]
-            ],
-            'share_post' => [
-                'label'     => 'share_post',
-                'rules'     => 'uploaded[share_post]|is_image[share_post]|max_size[share_post, 1024]',
-                'errors'    => [
-                    'uploaded'  => 'field harus diisi',
-                    'is_image'  => 'field harus diisi dengan gambar',
-                    'max_size'  => 'ukuran gambar maksimal 1024 kb'
                 ]
             ],
             'follow_ig_ara' => [
@@ -860,20 +872,72 @@ class Verify extends BaseController
             ]
         ];
 
+        if($this->request->getVar('event') == 'CTF')
+        {
+            $rules2 = [
+                'share_post_ctf' => [
+                    'label'     => 'share_post_ctf',
+                    'rules'     => 'uploaded[share_post_ctf]|is_image[share_post_ctf]|max_size[share_post_ctf, 1024]',
+                    'errors'    => [
+                        'uploaded'  => 'field harus diisi',
+                        'is_image'  => 'field harus diisi dengan gambar',
+                        'max_size'  => 'ukuran gambar maksimal 1024 kb'
+                    ]
+                ],
+            ];
+        }
+        else if($this->request->getVar('event') == 'IoT')
+        {
+            $rules2 = [
+                'share_post_iot' => [
+                    'label'     => 'share_post_ctf',
+                    'rules'     => 'uploaded[share_post_iot]|is_image[share_post_iot]|max_size[share_post_iot, 1024]',
+                    'errors'    => [
+                        'uploaded'  => 'field harus diisi',
+                        'is_image'  => 'field harus diisi dengan gambar',
+                        'max_size'  => 'ukuran gambar maksimal 1024 kb'
+                    ]
+                ],
+            ];
+        }
+        else
+        {
+            $rules2 = [
+                'share_post_iot' => [
+                    'label'     => 'share_post_iot',
+                    'rules'     => 'uploaded[share_post_iot]|is_image[share_post_iot]|max_size[share_post_iot, 1024]',
+                    'errors'    => [
+                        'uploaded'  => 'field harus diisi',
+                        'is_image'  => 'field harus diisi dengan gambar',
+                        'max_size'  => 'ukuran gambar maksimal 1024 kb'
+                    ]
+                ],
+                'share_post_ctf' => [
+                    'label'     => 'share_post_ctf',
+                    'rules'     => 'uploaded[share_post_ctf]|is_image[share_post_ctf]|max_size[share_post_ctf, 1024]',
+                    'errors'    => [
+                        'uploaded'  => 'field harus diisi',
+                        'is_image'  => 'field harus diisi dengan gambar',
+                        'max_size'  => 'ukuran gambar maksimal 1024 kb'
+                    ]
+                ],
+            ];
+        }
+        $rules = array_merge($rules, $rules2);
         if(!$this->validate($rules))
         {   
-            
             $validation = \Config\Services::validation();
             return redirect()->to('auth/registrasi_webinar')->withInput(); 
         }
 
         $data = [
+            'webinar_event'     => $this->request->getVar('event'), 
             'webinar_nama'      => $this->request->getVar('nama'), 
             'webinar_email'     => $this->request->getVar('email'), 
             'webinar_contact'   => $this->request->getVar('whatsapp'), 
             'webinar_instansi'  => $this->request->getVar('asal_institusi'), 
             'webinar_status'    => 0, 
-            'webinar_story'     => $this->moveFile('uploads/webinar/story', $this->request->getFile('share_post')), 
+            //'webinar_story'     => $this->moveFile('uploads/webinar/story', $this->request->getFile('share_post')), 
             'webinar_ig_ara'    => $this->moveFile('uploads/webinar/ig_ara', $this->request->getFile('follow_ig_ara')), 
             'webinar_ig_hmit'   => $this->moveFile('uploads/webinar/ig_hmit', $this->request->getFile('follow_ig_hmit')), 
             'webinar_subscribe' => $this->moveFile('uploads/webinar/subs', $this->request->getFile('subs_yt_it')),
@@ -882,6 +946,74 @@ class Verify extends BaseController
             'webinar_twibbon'   => $this->moveFile('uploads/webinar/post_twibbon', $this->request->getFile('post_twibbon'))
         ];
 
+        if($this->request->getVar('event') == 'CTF')
+        {
+            $data2 = [
+                'webinar_post_ctf' => $this->moveFile('uploads/webinar/post_ctf', $this->request->getFile('share_post_ctf'))
+            ];
+            $subject = "[Confirmation] Webinar Capture The Flag";
+            $message = "Dear {$data['webinar_nama']} from {$data['webinar_instansi']} ,<br>
+                        <br>
+                        Thank you for registering for our event, \"Webinar Capture The Flag.\"<br>
+                        <br>
+                        Hereby, we've received your submission. We'll check the completeness of the requirements that have been submitted.<br>
+                        <br>
+                        This is the confirmation email, and you will receive an invitation email one day before the event is held.<br>
+                        <br>
+                        Thank you.<br>
+                        <br>
+                        --<br>
+                        Best regards,<br>
+                        <br>
+                        A Renewal Agents 2022";
+        }
+        else if($this->request->getVar('event') == 'IoT')
+        {
+            $data2 = [
+                'webinar_post_iot' => $this->moveFile('uploads/webinar/post_iot', $this->request->getFile('share_post_iot'))
+            ];
+            $subject = "[Confirmation] Webinar Internet of Things";
+            $message = "Dear ${data['webinar_nama']} from ${data['webinar_instansi']} ,</br>
+            </br>
+            Thank you for registering for our event, \"Webinar Internet of Things.\"<br>
+            <br>
+            Hereby, we've received your submission. We'll check the completeness of the requirements that have been submitted.<br>
+            <br>
+            This is the confirmation email, and you will receive an invitation email one day before the event is held.<br>
+            <br>
+            Thank you.<br>
+            <br>
+            --<br>
+            Best regards,<br>
+            <br>
+            A Renewal Agents 2022";
+        }
+        else
+        {
+            $data2 = [
+                'webinar_post_iot' => $this->moveFile('uploads/webinar/post_iot', $this->request->getFile('share_post_iot')),
+                'webinar_post_ctf' => $this->moveFile('uploads/webinar/post_ctf', $this->request->getFile('share_post_ctf'))
+            ];
+            $subject = "[Confirmation] Webinar Capture The Flag and Webinar Internet of Things";
+            $message = "Dear {$data['webinar_nama']} from {$data['webinar_instansi']} ,<br>
+                        <br>
+                        Thank you for registering for our event, \"Webinar Capture The Flag\" and \"Webinar Internet of Things.\"<br>
+                        <br>
+                        Hereby, we've received your submission. We'll check the completeness of the requirements that have been submitted.<br>
+                        <br>
+                        This is the confirmation email, and you will receive an invitation email one day before the event is held.<br>
+                        <br>
+                        Thank you.<br>
+                        <br>
+                        --<br>
+                        Best regards,<br>
+                        <br>
+                        A Renewal Agents 2022";
+        }
+
+        $data = array_merge($data, $data2);
+        
+        $this->sendemail($data['webinar_email'], $subject, $message);
         $this->model_webinar->save($data);
         return redirect()->to('/Auth/finish_regist');
     }
