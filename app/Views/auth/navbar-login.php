@@ -8,17 +8,17 @@
     </button>
     <div class="collapse navbar-collapse col-4 mx-auto text-center" id="navbarNavAltMarkup">
       <div class="navbar-nav mx-auto">
-        <a class="nav-link" aria-current="page" href="#">CTF</a>
-        <a class="nav-link" href="#">IOT</a>
-        <a class="nav-link" href="#">Olimpiade</a>
-        <a class="nav-link" href="#">Webinar</a>
-        <a class="nav-link" href="#">Expo</a>
+        <a class="nav-link" aria-current="page" href="<?= base_url() ?>/home/ctf">CTF</a>
+        <a class="nav-link" href="<?= base_url() ?>/home/iot">IOT</a>
+        <a class="nav-link" href="<?= base_url() ?>/home/olimpiade">Olimpiade</a>
+        <a class="nav-link" href="<?= base_url() ?>/home/webinar">Webinar</a>
+        <a class="nav-link" href="<?= base_url() ?>/home/expo">Expo</a>
       </div>
     </div>
     <div class="collapse navbar-collapse col-4 text-center navbar-2" id="navbarNavAltMarkup">
       <div class="navbar-nav ms-auto">
-        <a class="nav-link mx-4" aria-current="page" href="#">Login</a>
-        <a class="btn btn-outline-secondary nav-link px-4 rounded-pill" href="#">Daftar</a>
+        <a class="nav-link mx-4" aria-current="page" href="<?= base_url() ?>/auth/login">Login</a>
+        <a class="btn btn-outline-secondary nav-link px-4 rounded-pill" href="<?= base_url() ?>/home/registrasi">Daftar</a>
       </div>
     </div>
   </div>

@@ -7,7 +7,7 @@
   <h1 class="fw-bold mb-4 text-white">Dashboard</h1>
   <ul>
     <li class="active">
-      <a href="<?= base_url() ?>/dashboard/user_webinar/home"><img class="me-2" src="<?= base_url() ?>/images/dashboard/home.svg" alt="Icon"> Home</a>
+      <a href="<?= base_url() ?>/dashboard/user_webinar/home"><i class="fas fa-home"></i> Home</a>
     </li>
   </ul>
 </div>

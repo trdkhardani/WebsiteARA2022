@@ -7,10 +7,10 @@
   <h1 class="fw-bold text-white">Dashboard</h1>
   <ul>
     <li class="">
-      <a href="<?= base_url() ?>/dashboard/admin_webinar/list"><img class="me-2" src="<?= base_url() ?>/images/dashboard/home.svg" alt="Icon"> List Team</a>
+      <a href="<?= base_url() ?>/dashboard/admin_webinar/list"><i class="fas fa-list"></i> List</a>
     </li>
     <li class="active">
-      <a href="<?= base_url() ?>/dashboard/admin_webinar/konfirmasi"><img class="me-2" src="<?= base_url() ?>/images/dashboard/submission.svg" alt="Icon"> Konfirmasi Team</a>
+      <a href="<?= base_url() ?>/dashboard/admin_webinar/konfirmasi"><i class="fas fa-check-circle"></i> Konfirmasi</a>
     </li>
   </ul>
 </div>
@@ -31,7 +31,8 @@
         <th>WA</th>
         <th>Email</th>
         <th>Post Twibbon</th>
-        <th>Share Poster Webinar</th>
+        <th>Share Poster Webinar CTF</th>
+        <th>Share Poster Webinar IOT</th>
         <th>Follow IG ARA</th>
         <th>Follow IG HMIT</th>
         <th>Subscribe Youtube IT ITS</th>
@@ -49,6 +50,7 @@
           <td>081241227574</td>
           <td>rmurshal@gmail.com</td>
           <td><a href="<?= base_url() ?>/files/webinar/twibbon/testing.jpg" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+          <td><a href="<?= base_url() ?>/files/webinar/share_poster/testing.jpg" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
           <td><a href="<?= base_url() ?>/files/webinar/share_poster/testing.jpg" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
           <td><a href="<?= base_url() ?>/files/webinar/follow_ig_ara/testing.jpg" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
           <td><a href="<?= base_url() ?>/files/webinar/follow_ig_hmit/testing.jpg" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
