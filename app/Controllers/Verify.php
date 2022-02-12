@@ -340,36 +340,26 @@ class Verify extends BaseController
                     'max_size'  => 'ukuran maksimal gambar adalah 1024 kb'
                 ]
             ],
-            'nama_anggota_1'  => [
-                'label'     => 'nama_anggota_1',
-                'rules'     => 'required',
-                'errors'    => [
-                    'required'  => 'nama anggota 1 harus diisi'
-                ]
-            ],
             'ktm_anggota_1'  => [
                 'label'     => 'ktm_anggota_1',
-                'rules'     => 'uploaded[ktm_anggota_1]|is_image[ktm_anggota_1]|max_size[ktm_anggota_1, 1024]',
+                'rules'     => 'is_image[ktm_anggota_1]|max_size[ktm_anggota_1, 1024]',
                 'errors'    => [
-                    'uploaded'  => 'field harus diisi',
                     'is_image'  => 'harap isi dengan file gambar',
                     'max_size'  => 'ukuran maksimal gambar adalah 1024 kb'
                 ]
             ],
             'ig_ara_anggota_1'  => [
                 'label'     => 'ig_ara_anggota_1',
-                'rules'     => 'uploaded[ig_ara_anggota_1]|is_image[ig_ara_anggota_1]|max_size[ig_ara_anggota_1, 1024]',
+                'rules'     => 'is_image[ig_ara_anggota_1]|max_size[ig_ara_anggota_1, 1024]',
                 'errors'    => [
-                    'uploaded'  => 'field harus diisi',
                     'is_image'  => 'harap isi dengan file gambar',
                     'max_size'  => 'ukuran maksimal gambar adalah 1024 kb'
                 ]
             ],
             'ig_hmit_anggota_1'  => [
                 'label'     => 'ig_hmit_anggota_1',
-                'rules'     => 'uploaded[ig_hmit_anggota_1]|is_image[ig_hmit_anggota_1]|max_size[ig_hmit_anggota_1, 1024]',
+                'rules'     => 'is_image[ig_hmit_anggota_1]|max_size[ig_hmit_anggota_1, 1024]',
                 'errors'    => [
-                    'uploaded'  => 'field harus diisi',
                     'is_image'  => 'harap isi dengan file gambar',
                     'max_size'  => 'ukuran maksimal gambar adalah 1024 kb'
                 ]
@@ -415,7 +405,24 @@ class Verify extends BaseController
             return redirect()->to('auth/registrasi_ctf')->withInput(); 
         }
         
-        if(!empty($this->request->getVar('nama_anggota_2')))
+        if(empty($this->request->getVar('nama_anggota_1')))
+        {
+            $data = [
+                'ctf_nama_tim'          => $this->request->getVar('nama_tim'),
+                'ctf_jumlah_anggota'    => 1, 
+                'ctf_email_ketua'      => $this->request->getVar('email_ketua'), 
+                'ctf_nama_ketua'        => $this->request->getVar('nama_ketua'), 
+                'ctf_suket_ketua'       => $this->moveFile('uploads/ctf/ktm', $this->request->getFile('ktm_ketua')),  
+                'ctf_ig_ara_ketua'      => $this->moveFile('uploads/ctf/ig_ara', $this->request->getFile('ig_ara_ketua')),
+                'ctf_ig_hmit_ketua'     => $this->moveFile('uploads/ctf/ig_hmit', $this->request->getFile('ig_hmit_ketua')),
+                'ctf_intitusi'          => $this->request->getVar('asal_institusi'), 
+                'ctf_contact'           => $this->request->getVar('wa_ketua'), 
+                'ctf_status_final'      => 0,
+                'ctf_bukti_bayar'       => $this->moveFile('uploads/ctf/bukti_bayar', $this->request->getFile('bukti_bayar')), 
+                'ctf_status'            => 0
+            ];
+        }
+        else if(!empty($this->request->getVar('nama_anggota_2')))
         {
             $data = [
                 'ctf_jumlah_anggota'    => 3, 
@@ -424,15 +431,15 @@ class Verify extends BaseController
                 'ctf_ig_ara_anggota_2'  => $this->moveFile('uploads/ctf/ig_ara', $this->request->getFile('ig_ara_anggota_2')),
                 'ctf_ig_hmit_anggota_2' => $this->moveFile('uploads/ctf/ig_hmit', $this->request->getFile('ig_hmit_anggota_2')),
                 'ctf_nama_tim'          => $this->request->getVar('nama_tim'), 
-                'ctf_email_ketua '      => $this->request->getVar('email_ketua'), 
+                'ctf_email_ketua'       => $this->request->getVar('email_ketua'), 
                 'ctf_nama_ketua'        => $this->request->getVar('nama_ketua'), 
                 'ctf_nama_anggota_1'    => $this->request->getVar('nama_anggota_1'), 
                 'ctf_suket_ketua'       => $this->moveFile('uploads/ctf/ktm', $this->request->getFile('ktm_ketua')), 
                 'ctf_suket_anggota_1'   => $this->moveFile('uploads/ctf/ktm', $this->request->getFile('ktm_anggota_1')),  
                 'ctf_ig_ara_ketua'      => $this->moveFile('uploads/ctf/ig_ara', $this->request->getFile('ig_ara_ketua')),
-                'ctf_ig_ara_anggota_1'  => $this->moveFile('uploads/ctf/ig_hmit', $this->request->getFile('ig_hmit_ketua')),
-                'ctf_ig_hmit_ketua '    => $this->moveFile('uploads/ctf/ig_ara', $this->request->getFile('ig_ara_anggota_1')), 
-                'ctf_ig_hmit_anggota_1 '=> $this->moveFile('uploads/ctf/ig_hmit', $this->request->getFile('ig_hmit_anggota_1')), 
+                'ctf_ig_hmit_ketua'     => $this->moveFile('uploads/ctf/ig_hmit', $this->request->getFile('ig_hmit_ketua')),
+                'ctf_ig_ara_anggota_1'  => $this->moveFile('uploads/ctf/ig_ara', $this->request->getFile('ig_ara_anggota_1')), 
+                'ctf_ig_hmit_anggota_1' => $this->moveFile('uploads/ctf/ig_hmit', $this->request->getFile('ig_hmit_anggota_1')),  
                 'ctf_intitusi'          => $this->request->getVar('asal_institusi'), 
                 'ctf_contact'           => $this->request->getVar('wa_ketua'), 
                 'ctf_status_final'      => 0,
@@ -444,15 +451,15 @@ class Verify extends BaseController
         {
             $data = [
                 'ctf_nama_tim'          => $this->request->getVar('nama_tim'), 
-                'ctf_email_ketua '      => $this->request->getVar('email_ketua'), 
+                'ctf_email_ketua'       => $this->request->getVar('email_ketua'), 
                 'ctf_nama_ketua'        => $this->request->getVar('nama_ketua'), 
                 'ctf_nama_anggota_1'    => $this->request->getVar('nama_anggota_1'), 
                 'ctf_suket_ketua'       => $this->moveFile('uploads/ctf/ktm', $this->request->getFile('ktm_ketua')), 
                 'ctf_suket_anggota_1'   => $this->moveFile('uploads/ctf/ktm', $this->request->getFile('ktm_anggota_1')),  
                 'ctf_ig_ara_ketua'      => $this->moveFile('uploads/ctf/ig_ara', $this->request->getFile('ig_ara_ketua')),
-                'ctf_ig_ara_anggota_1'  => $this->moveFile('uploads/ctf/ig_hmit', $this->request->getFile('ig_hmit_ketua')),
-                'ctf_ig_hmit_ketua '    => $this->moveFile('uploads/ctf/ig_ara', $this->request->getFile('ig_ara_anggota_1')), 
-                'ctf_ig_hmit_anggota_1 '=> $this->moveFile('uploads/ctf/ig_hmit', $this->request->getFile('ig_hmit_anggota_1')), 
+                'ctf_ig_hmit_ketua'     => $this->moveFile('uploads/ctf/ig_hmit', $this->request->getFile('ig_hmit_ketua')),
+                'ctf_ig_ara_anggota_1'  => $this->moveFile('uploads/ctf/ig_ara', $this->request->getFile('ig_ara_anggota_1')), 
+                'ctf_ig_hmit_anggota_1' => $this->moveFile('uploads/ctf/ig_hmit', $this->request->getFile('ig_hmit_anggota_1')), 
                 'ctf_intitusi'          => $this->request->getVar('asal_institusi'), 
                 'ctf_contact'           => $this->request->getVar('wa_ketua'), 
                 'ctf_status_final'      => 0,
@@ -463,9 +470,22 @@ class Verify extends BaseController
         }
 
         //template email isi aja subject sama messagenya
-        //$subject;
-        //$message;
-        //$this->sendemail($data['ctf_email_ketua'], $message, $subject);
+        $subject = "[Confirmation] Capture the Flag";
+        $message = "Dear {$data['ctf_nama_tim']} from {$data['ctf_intitusi']} ,</br>
+        </br>
+        Thank you for registering for our event, \"Capture the Flag.\"<br>
+        <br>
+        Hereby, we've received your submission. We'll check the completeness of the requirements that have been submitted.<br>
+        <br>
+        This is the confirmation email, and you will receive an invitation email one day before the event is held.<br>
+        <br>
+        Thank you.<br>
+        <br>
+        --<br>
+        Best regards,<br>
+        <br>
+        A Renewal Agents 2022";
+        $this->sendemail($data['ctf_email_ketua'], $subject, $message);
 
         $this->model_ctf->save($data);
         return redirect()->to('/Auth/finish_regist');
@@ -783,9 +803,22 @@ class Verify extends BaseController
         ];
 
         //template email isi aja subject sama messagenya
-        //$subject;
-        //$message;
-        //$this->sendemail($data['expo_email'], $message, $subject);
+        $subject = "[Confirmation] Expo Information Technology";
+        $message = "Dear {$data['expo_nama']} from {$data['expo_institusi']} ,</br>
+        </br>
+        Thank you for registering for our event, \"Expo Information Technology.\"<br>
+        <br>
+        Hereby, we've received your submission. We'll check the completeness of the requirements that have been submitted.<br>
+        <br>
+        This is the confirmation email, and you will receive an invitation email one day before the event is held.<br>
+        <br>
+        Thank you.<br>
+        <br>
+        --<br>
+        Best regards,<br>
+        <br>
+        A Renewal Agents 2022";
+        $this->sendemail($data['expo_email'], $subject, $message);
         
         $this->model_expo->save($data);
         return redirect()->to('/Auth/finish_regist');
@@ -1010,7 +1043,7 @@ class Verify extends BaseController
                         <br>
                         A Renewal Agents 2022";
         }
-
+        
         $data = array_merge($data, $data2);
         
         $this->sendemail($data['webinar_email'], $subject, $message);
