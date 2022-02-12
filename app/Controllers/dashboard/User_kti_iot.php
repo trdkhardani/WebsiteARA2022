@@ -38,11 +38,14 @@ class User_kti_iot extends BaseController
     // $nama_tim = 'dummy';
     $tim = $this->model_kti_iot->where($this->model_kti_iot->nama_tim, $nama_tim)->first();
     $data = [
+      'active' => 'home',
       'lomba' => 'KTI Internet of Things',
       'nama' => $this->session->get('username'),
       'ketua' => $tim[$this->model_kti_iot->nama_ketua],
       'anggota_1' => $tim[$this->model_kti_iot->nama_anggota_1],
       'anggota_2' => $tim[$this->model_kti_iot->nama_anggota_2],
+      'status_penyisihan' => $tim['iot_status_penyisihan'],
+      'status_final' => $tim['iot_status_final'],
     ];
     return view('dashboard/user/kti_iot/home', $data);
   }
@@ -58,14 +61,17 @@ class User_kti_iot extends BaseController
     $nama_tim = $this->session->get('keterangan');
     $tim = $this->model_kti_iot->where($this->model_kti_iot->nama_tim, $nama_tim)->first();
     $data = [
+      'active' => 'abstrak',
       'lomba' => 'KTI Internet of Things',
       'nama' => $this->session->get('username'),
       'ketua' => $tim[$this->model_kti_iot->nama_ketua],
       'anggota_1' => $tim[$this->model_kti_iot->nama_anggota_1],
       'anggota_2' => $tim[$this->model_kti_iot->nama_anggota_2],
       'abstrak' => $tim[$this->model_kti_iot->abstrak],
+      'status_penyisihan' => $tim['iot_status_penyisihan'],
+      'status_final' => $tim['iot_status_final'],
     ];
-    // Ada flashdata message dari hasil verify, tolong bikinin yg bagus :v 
+
     return view('dashboard/user/kti_iot/abstrak', $data);
   }
   public function verify_abstrak()
@@ -87,27 +93,93 @@ class User_kti_iot extends BaseController
       'iot_id' => $tim['iot_id'],
       'iot_abstrak' => $renamed_abstrak_file,
     ];
-    $this->model_kti_iot->save($data);
-    // Ganti aja kata2nya kalo mau 
-    $this->session->setFlashdata('msg', 'abstrak berhasil ditambahkan');
-    return redirect()->to('dasboard/User_kti_iot/abstrak')->withInput();
+    if (!$this->model_kti_iot->save($data)) {
+      // $this->session->setFlashdata('msg', 'abstrak gagal ditambahkan!');
+      return redirect()->to('dashboard/user_kti_iot/abstrak')->withInput();
+    }
+
+    // $this->session->setFlashdata('msg', 'abstrak berhasil ditambahkan');
+    return redirect()->to('dashboard/user_kti_iot/abstrak')->withInput();
   }
-  // filter dan return ke view yg sesuai
+
   public function full_paper()
   {
-    $data["lomba"] = "KTI Internet of Things";
-    $data["nama"] = "Tim IT'03";
-    // return view('dashboard/user/kti_iot/belum_full_paper', $data);
-    // return view('dashboard/user/kti_iot/bayar_full_paper', $data);
+    if (!$this->session->has('username')) {
+      return redirect()->to('/Auth/login');
+    }
+    if ($this->session->get('is_admin') == true) {
+      return redirect()->to('/Auth/login');
+    }
+    $nama_tim = $this->session->get('keterangan');
+    $tim = $this->model_kti_iot->where($this->model_kti_iot->nama_tim, $nama_tim)->first();
+    $data = [
+      'active' => 'full_paper',
+      'lomba' => 'KTI Internet of Things',
+      'nama' => $this->session->get('username'),
+      'ketua' => $tim[$this->model_kti_iot->nama_ketua],
+      'anggota_1' => $tim[$this->model_kti_iot->nama_anggota_1],
+      'anggota_2' => $tim[$this->model_kti_iot->nama_anggota_2],
+      'full_paper' => $tim[$this->model_kti_iot->full_paper],
+      'status_penyisihan' => $tim['iot_status_penyisihan'],
+      'status_final' => $tim['iot_status_final'],
+    ];
     return view('dashboard/user/kti_iot/full_paper', $data);
   }
 
+  public function verify_full_paper()
+  {
+    if (!$this->session->has('username')) {
+      return redirect()->to('/Auth/login');
+    }
+    if ($this->session->get('is_admin') == true) {
+      return redirect()->to('/Auth/login');
+    }
+    $nama_tim = $this->session->get('keterangan');
+    $tim = $this->model_kti_iot->where($this->model_kti_iot->nama_tim, $nama_tim)->first();
+    // Ambil file abstrak
+    $abstrak_file = $this->request->getFile('full_paper');
+    // Define path
+    $abstrak_path = 'uploads/kti_iot/full_paper';
+    $renamed_full_paper = $this->moveFile($abstrak_path, $abstrak_file);
+    $data = [
+      'iot_id' => $tim['iot_id'],
+      'iot_kti_paper' => $renamed_full_paper,
+    ];
+    $this->model_kti_iot->save($data);
+    // $this->session->setFlashdata('msg', 'full_paper berhasil ditambahkan');
+    return redirect()->to('dashboard/user_kti_iot/full_paper')->withInput();
+  }
   public function final()
   {
-    $data["lomba"] = "KTI Internet of Things";
-    $data["nama"] = "Tim IT'03";
-    // return view('dashboard/user/kti_iot/belum_final', $data);
-    // return view('dashboard/user/kti_iot/bayar_final', $data);
-    return view('dashboard/user/kti_iot/final', $data);
+    if (!$this->session->has('username')) {
+      return redirect()->to('/Auth/login');
+    }
+    if ($this->session->get('is_admin') == true) {
+      return redirect()->to('/Auth/login');
+    }
+    $nama_tim = $this->session->get('keterangan');
+    $tim = $this->model_kti_iot->where($this->model_kti_iot->nama_tim, $nama_tim)->first();
+    $data = [
+      'active' => 'final',
+      'lomba' => 'KTI Internet of Things',
+      'nama' => $this->session->get('username'),
+      'ketua' => $tim[$this->model_kti_iot->nama_ketua],
+      'anggota_1' => $tim[$this->model_kti_iot->nama_anggota_1],
+      'anggota_2' => $tim[$this->model_kti_iot->nama_anggota_2],
+      'final' => $tim[$this->model_kti_iot->final],
+      'status_penyisihan' => $tim['iot_status_penyisihan'],
+      'status_final' => $tim['iot_status_final'],
+    ];
+
+    // Check apakah lulus final atau tidak
+    if ($data['final'])
+      return view('dashboard/user/kti_iot/final', $data);
+    else
+      return redirect()->to('dashboard/user/kti_iot/home');
+  }
+  public function logout()
+  {
+    $this->session->destroy();
+    return redirect()->to('Auth/login');
   }
 }

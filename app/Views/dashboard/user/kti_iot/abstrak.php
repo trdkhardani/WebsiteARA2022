@@ -6,18 +6,22 @@
   <button id="btn-close-side" class="btn shadow-none d-block d-lg-none text-white ms-auto"><i class="fas fa-chevron-left"></i></button>
   <h1 class="fw-bold mb-4 text-white">Dashboard</h1>
   <ul>
-    <li class="">
+    <li class="<?= ($active  == 'home') ? 'active' : '' ?>">
       <a href="<?= base_url() ?>/dashboard/user_kti_iot/home"><i class="fa-solid fa-house"></i> Home</a>
     </li>
-    <li class="active">
+    <li class="<?= ($active  == 'abstrak') ? 'active' : '' ?>">
       <a href="<?= base_url() ?>/dashboard/user_kti_iot/abstrak"><i class="fa-solid fa-note-sticky"></i> Abstrak</a>
     </li>
-    <li class="">
-      <a href="<?= base_url() ?>/dashboard/user_kti_iot/full_paper"><i class="fas fa-newspaper"></i> Full Paper</a>
-    </li>
-    <li class="">
-      <a href="<?= base_url() ?>/dashboard/user_kti_iot/final"><i class="fa-solid fa-trophy"></i> Final</a>
-    </li>
+    <?php if ($status_penyisihan) : ?>
+      <li class="<?= ($active  == 'full_paper') ? 'active' : '' ?>">
+        <a href="<?= base_url() ?>/dashboard/user_kti_iot/full_paper"><i class="fas fa-newspaper"></i> Full Paper</a>
+      </li>
+      <?php if ($status_final) : ?>
+        <li class="<?= ($active  == 'final') ? 'active' : '' ?>">
+          <a href="<?= base_url() ?>/dashboard/user_kti_iot/final"><i class="fa-solid fa-trophy"></i> Final</a>
+        </li>
+      <?php endif; ?>
+    <?php endif; ?>
   </ul>
 </div>
 <?= $this->endSection(); ?>
@@ -36,19 +40,13 @@
   </ul>
 </div>
 <!-- pengumpulan abstrak -->
-<?php if (session()->getFlashdata('msg')) : ?>
-  <div class="card-dashboard">
-    <h4 class="text-danger text-center">Desain alert messagenya ganti:v<?= session()->getFlashdata('msg'); ?></h4>
-  </div>
-<?php endif; ?>
-
-<?php if ($abstrak) : ?>
+<?php if (!$abstrak) : ?>
   <div class="card-dashboard">
     <h4>Pengumpulan Abstrak</h4>
     <ul>
       <li><i class="fas fa-exclamation-triangle"></i> Pastikan anda sudah menginputkan file yang benar. File hanya bisa diinputkan satu kali.</li>
       <li>
-        <form action="dashboard/User_kti_iot/verify_abstrak" method="POST" enctype="multipart/form-data">
+        <form action="/dashboard/User_kti_iot/verify_abstrak" method="POST" enctype="multipart/form-data">
           <div class="mb-4">
             <input class="form-control" type="file" name="abstrak">
           </div>
@@ -59,7 +57,7 @@
   </div>
 <?php endif; ?>
 <!-- sudah mengumpulkan abstrak -->
-<?php if (!$abstrak) : ?>
+<?php if ($abstrak) : ?>
   <div class="card-dashboard">
     <h4>Pengumpulan Abstrak</h4>
     <ul>

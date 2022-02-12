@@ -16,6 +16,8 @@ class Model_Kti_iot extends Model
     protected $nama_anggota_1 = 'iot_nama_anggota_1';
     protected $nama_anggota_2 = 'iot_nama_anggota_2';
     protected $abstrak = 'iot_abstrak';
+    protected $full_paper = 'iot_kti_paper';
     protected $createdField = 'iot_date_created';
+    protected $final = 'iot_status_final';
     protected $updatedField = 'iot_date_updated';
 }

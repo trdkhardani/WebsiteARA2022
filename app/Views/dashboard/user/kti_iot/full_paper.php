@@ -35,26 +35,30 @@
   </ul>
 </div>
 <!-- pengumpulan full paper -->
-<div class="card-dashboard">
-  <h4>Pengumpulan Full Paper</h4>
-  <ul>
-    <li><i class="fas fa-exclamation-triangle"></i> Pastikan anda sudah menginputkan file yang benar. File hanya bisa diinputkan satu kali.</li>
-    <li>
-      <form action="" method="POST">
-        <div class="mb-4">
-          <input class="form-control" type="file" name="full_paper">
-        </div>
-        <button type="submit" class="btn d-block mx-auto text-white">Submit</button>
-      </form>
-    </li>
-  </ul>
-</div>
+<?php if (!$full_paper) : ?>
+  <div class="card-dashboard">
+    <h4>Pengumpulan Full Paper</h4>
+    <ul>
+      <li><i class="fas fa-exclamation-triangle"></i> Pastikan anda sudah menginputkan file yang benar. File hanya bisa diinputkan satu kali.</li>
+      <li>
+        <form action="/dashboard/User_kti_iot/verify_full_paper" method="POST" enctype="multipart/form-data">
+          <div class="mb-4">
+            <input class="form-control" type="file" name="full_paper">
+          </div>
+          <button type="submit" class="btn d-block mx-auto text-white">Submit</button>
+        </form>
+      </li>
+    </ul>
+  </div>
+<?php endif; ?>
 <!-- sudah mengumpulkan full paper -->
-<div class="card-dashboard">
-  <h4>Pengumpulan Full Paper</h4>
-  <ul>
-    <li><i class="fas fa-thumbs-up"></i> Terima kasih sudah mengumpulkan Full Paper. Pantau terus Instagram ARA untuk mengecek hasilnya.</li>
-  </ul>
-</div>
+<?php if ($full_paper) : ?>
+  <div class="card-dashboard">
+    <h4>Pengumpulan Full Paper</h4>
+    <ul>
+      <li><i class="fas fa-thumbs-up"></i> Terima kasih sudah mengumpulkan Full Paper. Pantau terus Instagram ARA untuk mengecek hasilnya.</li>
+    </ul>
+  </div>
+<?php endif; ?>
 <?= $this->endSection(); ?>
 <!-- /end content -->

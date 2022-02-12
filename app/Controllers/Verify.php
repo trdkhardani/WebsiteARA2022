@@ -216,10 +216,17 @@ class Verify extends BaseController
         $renamed_share_anggota_1 = $this->moveFile($ig_share_path, $share_post_anggota_1);
 
         // Anggota 2
-        $renamed_ktm_anggota_2 = $this->moveFile($ktm_path, $ktm_anggota_2);
-        $renamed_ig_ara_anggota_2 = $this->moveFile($ig_follow_path, $ig_ara_anggota_2);
-        $renamed_ig_hmit_anggota_2 = $this->moveFile($ig_follow_path, $ig_hmit_anggota_2);
-        $renamed_share_anggota_2 = $this->moveFile($ig_share_path, $share_post_anggota_2);
+        $nama_anggota_2 = $this->request->getVar('nama_anggota_2');
+        $renamed_ktm_anggota_2 = null;
+        $renamed_ig_ara_anggota_2 = null;
+        $renamed_ig_hmit_anggota_2 = null;
+        $renamed_share_anggota_2 = null;
+        if (!empty($nama_anggota_2)) {
+            $renamed_ktm_anggota_2 = $this->moveFile($ktm_path, $ktm_anggota_2);
+            $renamed_ig_ara_anggota_2 = $this->moveFile($ig_follow_path, $ig_ara_anggota_2);
+            $renamed_ig_hmit_anggota_2 = $this->moveFile($ig_follow_path, $ig_hmit_anggota_2);
+            $renamed_share_anggota_2 = $this->moveFile($ig_share_path, $share_post_anggota_2);
+        }
 
         // Hitung anggota
         $jumlahAnggota = 2;

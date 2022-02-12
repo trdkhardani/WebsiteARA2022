@@ -17,7 +17,7 @@
         </div>
         <div class="collapse navbar-collapse col-4 text-center navbar-2" id="navbarNavAltMarkup">
             <div class="navbar-nav ms-auto">
-                <a class="nav-link mx-4" aria-current="page" href="#">Login</a>
+                <a class="nav-link mx-4" aria-current="page" href="<?= base_url() ?>/Auth/login">Login</a>
                 <a class="btn btn-outline-secondary nav-link px-4 rounded-pill" id="daftar" href="<?= base_url() ?>/home/registrasi">Daftar</a>
             </div>
         </div>
