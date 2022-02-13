@@ -53,7 +53,6 @@ class Home extends BaseController
 
   public function logout()
   {
-    session();
     session()->destroy();
     return redirect()->to('Auth/login');
   }

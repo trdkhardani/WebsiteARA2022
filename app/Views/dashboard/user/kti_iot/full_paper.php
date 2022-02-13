@@ -6,18 +6,22 @@
   <button id="btn-close-side" class="btn shadow-none d-block d-lg-none text-white ms-auto"><i class="fas fa-chevron-left"></i></button>
   <h1 class="fw-bold mb-4 text-white">Dashboard</h1>
   <ul>
-    <li class="">
+    <li class="<?= ($active  == 'home') ? 'active' : '' ?>">
       <a href="<?= base_url() ?>/dashboard/user_kti_iot/home"><i class="fa-solid fa-house"></i> Home</a>
     </li>
-    <li class="">
+    <li class="<?= ($active  == 'abstrak') ? 'active' : '' ?>">
       <a href="<?= base_url() ?>/dashboard/user_kti_iot/abstrak"><i class="fa-solid fa-note-sticky"></i> Abstrak</a>
     </li>
-    <li class="active">
-      <a href="<?= base_url() ?>/dashboard/user_kti_iot/full_paper"><i class="fas fa-newspaper"></i> Full Paper</a>
-    </li>
-    <li class="">
-      <a href="<?= base_url() ?>/dashboard/user_kti_iot/final"><i class="fa-solid fa-trophy"></i> Final</a>
-    </li>
+    <?php if ($status_konfirmasi_abstrak) : ?>
+      <li class="<?= ($active  == 'full_paper') ? 'active' : '' ?>">
+        <a href="<?= base_url() ?>/dashboard/user_kti_iot/full_paper"><i class="fas fa-newspaper"></i> Full Paper</a>
+      </li>
+      <?php if ($status_final) : ?>
+        <li class="<?= ($active  == 'final') ? 'active' : '' ?>">
+          <a href="<?= base_url() ?>/dashboard/user_kti_iot/final"><i class="fa-solid fa-trophy"></i> Final</a>
+        </li>
+      <?php endif; ?>
+    <?php endif; ?>
   </ul>
 </div>
 <?= $this->endSection(); ?>
@@ -43,7 +47,7 @@
       <li>
         <form action="/dashboard/User_kti_iot/verify_full_paper" method="POST" enctype="multipart/form-data">
           <div class="mb-4">
-            <input class="form-control" type="file" name="full_paper">
+            <input class="form-control" type="file" name="full_paper" required>
           </div>
           <button type="submit" class="btn d-block mx-auto text-white">Submit</button>
         </form>

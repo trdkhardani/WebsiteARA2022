@@ -12,11 +12,11 @@
     <li class="<?= ($active  == 'abstrak') ? 'active' : '' ?>">
       <a href="<?= base_url() ?>/dashboard/user_kti_iot/abstrak"><i class="fa-solid fa-note-sticky"></i> Abstrak</a>
     </li>
-    <?php if ($status_penyisihan) : ?>
+    <?php if ($status_konfirmasi_abstrak) : ?>
       <li class="<?= ($active  == 'full_paper') ? 'active' : '' ?>">
         <a href="<?= base_url() ?>/dashboard/user_kti_iot/full_paper"><i class="fas fa-newspaper"></i> Full Paper</a>
       </li>
-      <?php if ($status_final) : ?>
+      <?php if ($status_penyisihan) : ?>
         <li class="<?= ($active  == 'final') ? 'active' : '' ?>">
           <a href="<?= base_url() ?>/dashboard/user_kti_iot/final"><i class="fa-solid fa-trophy"></i> Final</a>
         </li>
@@ -48,7 +48,7 @@
       <li>
         <form action="/dashboard/User_kti_iot/verify_abstrak" method="POST" enctype="multipart/form-data">
           <div class="mb-4">
-            <input class="form-control" type="file" name="abstrak">
+            <input class="form-control" type="file" name="abstrak" required>
           </div>
           <button type="submit" class="btn d-block mx-auto text-white">Submit</button>
         </form>

@@ -12,11 +12,11 @@
     <li class="<?= ($active  == 'abstrak') ? 'active' : '' ?>">
       <a href="<?= base_url() ?>/dashboard/user_kti_iot/abstrak"><i class="fa-solid fa-note-sticky"></i> Abstrak</a>
     </li>
-    <?php if ($status_penyisihan) : ?>
+    <?php if ($status_konfirmasi_abstrak) : ?>
       <li class="<?= ($active  == 'full_paper') ? 'active' : '' ?>">
         <a href="<?= base_url() ?>/dashboard/user_kti_iot/full_paper"><i class="fas fa-newspaper"></i> Full Paper</a>
       </li>
-      <?php if ($status_final) : ?>
+      <?php if ($status_penyisihan) : ?>
         <li class="<?= ($active  == 'final') ? 'active' : '' ?>">
           <a href="<?= base_url() ?>/dashboard/user_kti_iot/final"><i class="fa-solid fa-trophy"></i> Final</a>
         </li>
@@ -41,10 +41,14 @@
 <div class="card-dashboard">
   <h4>Data Tim</h4>
   <ul>
-    <li><i class="fas fa-university"></i> Institusi: Institut Teknologi Sepuluh Nopember</li>
+    <li><i class="fas fa-university"></i> Institusi: <?= $institusi; ?></li>
     <li><i class="fas fa-user"></i> Ketua Tim: <?= $ketua; ?></li>
-    <li><i class="fas fa-user"></i> Anggota 1: <?= $anggota_1; ?></li>
-    <li><i class="fas fa-user"></i> Anggota 2: <?= $anggota_2; ?></li>
+    <?php if ($anggota_1) : ?>
+      <li><i class="fas fa-user"></i> Anggota 1: <?= $anggota_1; ?></li>
+    <?php endif; ?>
+    <?php if ($anggota_2) : ?>
+      <li><i class="fas fa-user"></i> Anggota 2: <?= $anggota_2; ?></li>
+    <?php endif; ?>
   </ul>
 </div>
 <?= $this->endSection(); ?>
