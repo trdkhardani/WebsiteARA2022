@@ -202,7 +202,8 @@ class Verify extends BaseController
         $ig_follow_path = 'uploads/kti_iot/ig/follow';
         $ig_share_path = 'uploads/kti_iot/ig/share';
         $ktm_path = 'uploads/kti_iot/ktm';
-
+        // Hitung anggota
+        $jumlahAnggota = 1;
         // Ketua
         $renamed_ktm_ketua = $this->moveFile($ktm_path, $ktm_ketua);
         $renamed_ig_ara_ketua = $this->moveFile($ig_follow_path, $ig_ara_ketua);
@@ -210,10 +211,18 @@ class Verify extends BaseController
         $renamed_share_ketua = $this->moveFile($ig_share_path, $share_post_ketua);
 
         // Anggota 1 
-        $renamed_ktm_anggota_1 = $this->moveFile($ktm_path, $ktm_anggota_1);
-        $renamed_ig_ara_anggota_1 = $this->moveFile($ig_follow_path, $ig_ara_anggota_1);
-        $renamed_ig_hmit_anggota_1 = $this->moveFile($ig_follow_path, $ig_hmit_anggota_1);
-        $renamed_share_anggota_1 = $this->moveFile($ig_share_path, $share_post_anggota_1);
+        $nama_anggota_1 = $this->request->getVar('nama_anggota_1');
+        $renamed_ktm_anggota_1 = null;
+        $renamed_ig_ara_anggota_1 = null;
+        $renamed_ig_hmit_anggota_1 = null;
+        $renamed_share_anggota_1 = null;
+        if (!empty($nama_anggota_1)) {
+            $jumlahAnggota++;
+            $renamed_ktm_anggota_1 = $this->moveFile($ktm_path, $ktm_anggota_1);
+            $renamed_ig_ara_anggota_1 = $this->moveFile($ig_follow_path, $ig_ara_anggota_1);
+            $renamed_ig_hmit_anggota_1 = $this->moveFile($ig_follow_path, $ig_hmit_anggota_1);
+            $renamed_share_anggota_1 = $this->moveFile($ig_share_path, $share_post_anggota_1);
+        }
 
         // Anggota 2
         $nama_anggota_2 = $this->request->getVar('nama_anggota_2');
@@ -222,6 +231,7 @@ class Verify extends BaseController
         $renamed_ig_hmit_anggota_2 = null;
         $renamed_share_anggota_2 = null;
         if (!empty($nama_anggota_2)) {
+            $jumlahAnggota++;
             $renamed_ktm_anggota_2 = $this->moveFile($ktm_path, $ktm_anggota_2);
             $renamed_ig_ara_anggota_2 = $this->moveFile($ig_follow_path, $ig_ara_anggota_2);
             $renamed_ig_hmit_anggota_2 = $this->moveFile($ig_follow_path, $ig_hmit_anggota_2);
@@ -229,10 +239,6 @@ class Verify extends BaseController
         }
 
         // Hitung anggota
-        $jumlahAnggota = 2;
-        $nama_anggota_2 = $this->request->getVar('nama_anggota_2');
-        if (!empty($nama_anggota_2))
-            $jumlahAnggota++;
 
         // Tampung data sesuai field di db
         $data_kti = [
@@ -240,8 +246,8 @@ class Verify extends BaseController
             'iot_jumlah_anggota' => $jumlahAnggota,
             'iot_email_ketua' => $this->request->getVar('email_ketua'),
             'iot_nama_ketua' => $this->request->getVar('nama_ketua'),
-            'iot_nama_anggota_1' => $this->request->getVar('nama_anggota_1'),
-            'iot_nama_anggota_2' => $this->request->getVar('nama_anggota_2'),
+            'iot_nama_anggota_1' => $nama_anggota_1,
+            'iot_nama_anggota_2' => $nama_anggota_2,
             'iot_suket_ketua' => $renamed_ktm_ketua,
             'iot_suket_anggota_1' => $renamed_ktm_anggota_1,
             'iot_suket_anggota_2' => $renamed_ktm_anggota_2,
