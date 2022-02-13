@@ -50,4 +50,10 @@ class Home extends BaseController
   {
     return view('landing_page/pages/information/tentang_ara');
   }
+
+  public function logout()
+  {
+    session()->destroy();
+    return redirect()->to('Auth/login');
+  }
 }

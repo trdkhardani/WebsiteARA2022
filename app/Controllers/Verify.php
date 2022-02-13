@@ -216,10 +216,17 @@ class Verify extends BaseController
         $renamed_share_anggota_1 = $this->moveFile($ig_share_path, $share_post_anggota_1);
 
         // Anggota 2
-        $renamed_ktm_anggota_2 = $this->moveFile($ktm_path, $ktm_anggota_2);
-        $renamed_ig_ara_anggota_2 = $this->moveFile($ig_follow_path, $ig_ara_anggota_2);
-        $renamed_ig_hmit_anggota_2 = $this->moveFile($ig_follow_path, $ig_hmit_anggota_2);
-        $renamed_share_anggota_2 = $this->moveFile($ig_share_path, $share_post_anggota_2);
+        $nama_anggota_2 = $this->request->getVar('nama_anggota_2');
+        $renamed_ktm_anggota_2 = null;
+        $renamed_ig_ara_anggota_2 = null;
+        $renamed_ig_hmit_anggota_2 = null;
+        $renamed_share_anggota_2 = null;
+        if (!empty($nama_anggota_2)) {
+            $renamed_ktm_anggota_2 = $this->moveFile($ktm_path, $ktm_anggota_2);
+            $renamed_ig_ara_anggota_2 = $this->moveFile($ig_follow_path, $ig_ara_anggota_2);
+            $renamed_ig_hmit_anggota_2 = $this->moveFile($ig_follow_path, $ig_hmit_anggota_2);
+            $renamed_share_anggota_2 = $this->moveFile($ig_share_path, $share_post_anggota_2);
+        }
 
         // Hitung anggota
         $jumlahAnggota = 2;
@@ -402,60 +409,56 @@ class Verify extends BaseController
             ]
         ];
 
-        if(!$this->validate($rules))
-        {
+        if (!$this->validate($rules)) {
             $validation = \Config\Services::validation();
-            return redirect()->to('auth/registrasi_ctf')->withInput(); 
+            return redirect()->to('auth/registrasi_ctf')->withInput();
         }
-        
-        if(!empty($this->request->getVar('nama_anggota_2')))
-        {
+
+        if (!empty($this->request->getVar('nama_anggota_2'))) {
             $data = [
-                'ctf_jumlah_anggota'    => 3, 
+                'ctf_jumlah_anggota'    => 3,
                 'ctf_nama_anggota_2'    => $this->request->getVar('nama_anggota_2'),
                 'ctf_suket_anggota_2'   => $this->moveFile('uploads/ctf/ktm', $this->request->getFile('ktm_anggota_2')),
                 'ctf_ig_ara_anggota_2'  => $this->moveFile('uploads/ctf/ig_ara', $this->request->getFile('ig_ara_anggota_2')),
                 'ctf_ig_hmit_anggota_2' => $this->moveFile('uploads/ctf/ig_hmit', $this->request->getFile('ig_hmit_anggota_2')),
-                'ctf_nama_tim'          => $this->request->getVar('nama_tim'), 
-                'ctf_email_ketua '      => $this->request->getVar('email_ketua'), 
-                'ctf_nama_ketua'        => $this->request->getVar('nama_ketua'), 
-                'ctf_nama_anggota_1'    => $this->request->getVar('nama_anggota_1'), 
-                'ctf_suket_ketua'       => $this->moveFile('uploads/ctf/ktm', $this->request->getFile('ktm_ketua')), 
-                'ctf_suket_anggota_1'   => $this->moveFile('uploads/ctf/ktm', $this->request->getFile('ktm_anggota_1')),  
+                'ctf_nama_tim'          => $this->request->getVar('nama_tim'),
+                'ctf_email_ketua '      => $this->request->getVar('email_ketua'),
+                'ctf_nama_ketua'        => $this->request->getVar('nama_ketua'),
+                'ctf_nama_anggota_1'    => $this->request->getVar('nama_anggota_1'),
+                'ctf_suket_ketua'       => $this->moveFile('uploads/ctf/ktm', $this->request->getFile('ktm_ketua')),
+                'ctf_suket_anggota_1'   => $this->moveFile('uploads/ctf/ktm', $this->request->getFile('ktm_anggota_1')),
                 'ctf_ig_ara_ketua'      => $this->moveFile('uploads/ctf/ig_ara', $this->request->getFile('ig_ara_ketua')),
                 'ctf_ig_ara_anggota_1'  => $this->moveFile('uploads/ctf/ig_hmit', $this->request->getFile('ig_hmit_ketua')),
-                'ctf_ig_hmit_ketua '    => $this->moveFile('uploads/ctf/ig_ara', $this->request->getFile('ig_ara_anggota_1')), 
-                'ctf_ig_hmit_anggota_1 '=> $this->moveFile('uploads/ctf/ig_hmit', $this->request->getFile('ig_hmit_anggota_1')), 
-                'ctf_intitusi'          => $this->request->getVar('asal_institusi'), 
-                'ctf_contact'           => $this->request->getVar('wa_ketua'), 
+                'ctf_ig_hmit_ketua '    => $this->moveFile('uploads/ctf/ig_ara', $this->request->getFile('ig_ara_anggota_1')),
+                'ctf_ig_hmit_anggota_1 ' => $this->moveFile('uploads/ctf/ig_hmit', $this->request->getFile('ig_hmit_anggota_1')),
+                'ctf_intitusi'          => $this->request->getVar('asal_institusi'),
+                'ctf_contact'           => $this->request->getVar('wa_ketua'),
                 'ctf_status_final'      => 0,
-                'ctf_bukti_bayar'       => $this->moveFile('uploads/ctf/bukti_bayar', $this->request->getFile('bukti_bayar')), 
+                'ctf_bukti_bayar'       => $this->moveFile('uploads/ctf/bukti_bayar', $this->request->getFile('bukti_bayar')),
                 'ctf_status'            => 0
             ];
-        }
-        else
-        {
+        } else {
             $data = [
-                'ctf_nama_tim'          => $this->request->getVar('nama_tim'), 
-                'ctf_email_ketua '      => $this->request->getVar('email_ketua'), 
-                'ctf_nama_ketua'        => $this->request->getVar('nama_ketua'), 
-                'ctf_nama_anggota_1'    => $this->request->getVar('nama_anggota_1'), 
-                'ctf_suket_ketua'       => $this->moveFile('uploads/ctf/ktm', $this->request->getFile('ktm_ketua')), 
-                'ctf_suket_anggota_1'   => $this->moveFile('uploads/ctf/ktm', $this->request->getFile('ktm_anggota_1')),  
+                'ctf_nama_tim'          => $this->request->getVar('nama_tim'),
+                'ctf_email_ketua '      => $this->request->getVar('email_ketua'),
+                'ctf_nama_ketua'        => $this->request->getVar('nama_ketua'),
+                'ctf_nama_anggota_1'    => $this->request->getVar('nama_anggota_1'),
+                'ctf_suket_ketua'       => $this->moveFile('uploads/ctf/ktm', $this->request->getFile('ktm_ketua')),
+                'ctf_suket_anggota_1'   => $this->moveFile('uploads/ctf/ktm', $this->request->getFile('ktm_anggota_1')),
                 'ctf_ig_ara_ketua'      => $this->moveFile('uploads/ctf/ig_ara', $this->request->getFile('ig_ara_ketua')),
                 'ctf_ig_ara_anggota_1'  => $this->moveFile('uploads/ctf/ig_hmit', $this->request->getFile('ig_hmit_ketua')),
-                'ctf_ig_hmit_ketua '    => $this->moveFile('uploads/ctf/ig_ara', $this->request->getFile('ig_ara_anggota_1')), 
-                'ctf_ig_hmit_anggota_1 '=> $this->moveFile('uploads/ctf/ig_hmit', $this->request->getFile('ig_hmit_anggota_1')), 
-                'ctf_intitusi'          => $this->request->getVar('asal_institusi'), 
-                'ctf_contact'           => $this->request->getVar('wa_ketua'), 
+                'ctf_ig_hmit_ketua '    => $this->moveFile('uploads/ctf/ig_ara', $this->request->getFile('ig_ara_anggota_1')),
+                'ctf_ig_hmit_anggota_1 ' => $this->moveFile('uploads/ctf/ig_hmit', $this->request->getFile('ig_hmit_anggota_1')),
+                'ctf_intitusi'          => $this->request->getVar('asal_institusi'),
+                'ctf_contact'           => $this->request->getVar('wa_ketua'),
                 'ctf_status_final'      => 0,
-                'ctf_bukti_bayar'       => $this->moveFile('uploads/ctf/bukti_bayar', $this->request->getFile('bukti_bayar')), 
+                'ctf_bukti_bayar'       => $this->moveFile('uploads/ctf/bukti_bayar', $this->request->getFile('bukti_bayar')),
                 'ctf_status'            => 0,
                 'ctf_jumlah_anggota'    => 2
             ];
         }
 
-        
+
 
         $this->model_ctf->save($data);
         return redirect()->to('/Auth/finish_regist');
@@ -736,7 +739,7 @@ class Verify extends BaseController
                     'is_image'  => 'field harus diisi dengan gambar',
                     'max_size'  => 'ukuran gambar maksimal 1024 kb'
                 ]
-            ],   
+            ],
             'post_twibbon' => [
                 'label'     => 'post_twibbon',
                 'rules'     => 'uploaded[post_twibbon]|is_image[share_post]|max_size[share_post, 1024]',
@@ -745,25 +748,24 @@ class Verify extends BaseController
                     'is_image'  => 'field harus diisi dengan gambar',
                     'max_size'  => 'ukuran gambar maksimal 1024 kb'
                 ]
-            ] 
+            ]
         ];
 
-        if(!$this->validate($rules))
-        {
+        if (!$this->validate($rules)) {
             $validation = \Config\Services::validation();
-            return redirect()->to('auth/registrasi_expo')->withInput(); 
+            return redirect()->to('auth/registrasi_expo')->withInput();
         }
 
         $data = [
-            'expo_nama'     => $this->request->getVar('nama'), 
-            'expo_email'    => $this->request->getVar('email'), 
-            'expo_contact'  => $this->request->getVar('whatsapp'), 
-            'expo_institusi'=> $this->request->getVar('asal_institusi'), 
-            'expo_status'   => 0, 
-            'expo_twibbon'  => $this->moveFile('uploads/expo/post_twibbon', $this->request->getFile('post_twibbon')), 
-            'expo_poster'   => $this->moveFile('uploads/expo/share_post', $this->request->getFile('share_post')), 
-            'expo_ig_hmit'  => $this->moveFile('uploads/expo/follow_ig_hmit', $this->request->getFile('follow_ig_hmit')), 
-            'expo_ig_ara'   => $this->moveFile('uploads/expo/follow_ig_ara', $this->request->getFile('follow_ig_ara')) 
+            'expo_nama'     => $this->request->getVar('nama'),
+            'expo_email'    => $this->request->getVar('email'),
+            'expo_contact'  => $this->request->getVar('whatsapp'),
+            'expo_institusi' => $this->request->getVar('asal_institusi'),
+            'expo_status'   => 0,
+            'expo_twibbon'  => $this->moveFile('uploads/expo/post_twibbon', $this->request->getFile('post_twibbon')),
+            'expo_poster'   => $this->moveFile('uploads/expo/share_post', $this->request->getFile('share_post')),
+            'expo_ig_hmit'  => $this->moveFile('uploads/expo/follow_ig_hmit', $this->request->getFile('follow_ig_hmit')),
+            'expo_ig_ara'   => $this->moveFile('uploads/expo/follow_ig_ara', $this->request->getFile('follow_ig_ara'))
             //'expo_sponsor'  => $this->moveFile('uploads/expo/post_twibbon', $this->request->getFile('post_twibbon'))
         ];
 
@@ -860,25 +862,24 @@ class Verify extends BaseController
             ]
         ];
 
-        if(!$this->validate($rules))
-        {   
-            
+        if (!$this->validate($rules)) {
+
             $validation = \Config\Services::validation();
-            return redirect()->to('auth/registrasi_webinar')->withInput(); 
+            return redirect()->to('auth/registrasi_webinar')->withInput();
         }
 
         $data = [
-            'webinar_nama'      => $this->request->getVar('nama'), 
-            'webinar_email'     => $this->request->getVar('email'), 
-            'webinar_contact'   => $this->request->getVar('whatsapp'), 
-            'webinar_instansi'  => $this->request->getVar('asal_institusi'), 
-            'webinar_status'    => 0, 
-            'webinar_story'     => $this->moveFile('uploads/webinar/story', $this->request->getFile('share_post')), 
-            'webinar_ig_ara'    => $this->moveFile('uploads/webinar/ig_ara', $this->request->getFile('follow_ig_ara')), 
-            'webinar_ig_hmit'   => $this->moveFile('uploads/webinar/ig_hmit', $this->request->getFile('follow_ig_hmit')), 
+            'webinar_nama'      => $this->request->getVar('nama'),
+            'webinar_email'     => $this->request->getVar('email'),
+            'webinar_contact'   => $this->request->getVar('whatsapp'),
+            'webinar_instansi'  => $this->request->getVar('asal_institusi'),
+            'webinar_status'    => 0,
+            'webinar_story'     => $this->moveFile('uploads/webinar/story', $this->request->getFile('share_post')),
+            'webinar_ig_ara'    => $this->moveFile('uploads/webinar/ig_ara', $this->request->getFile('follow_ig_ara')),
+            'webinar_ig_hmit'   => $this->moveFile('uploads/webinar/ig_hmit', $this->request->getFile('follow_ig_hmit')),
             'webinar_subscribe' => $this->moveFile('uploads/webinar/subs', $this->request->getFile('subs_yt_it')),
-            'webinar_share_1'   => $this->moveFile('uploads/webinar/share_1', $this->request->getFile('share_group.0')), 
-            'webinar_share_2'   => $this->moveFile('uploads/webinar/share_2', $this->request->getFile('share_group.1')), 
+            'webinar_share_1'   => $this->moveFile('uploads/webinar/share_1', $this->request->getFile('share_group.0')),
+            'webinar_share_2'   => $this->moveFile('uploads/webinar/share_2', $this->request->getFile('share_group.1')),
             'webinar_twibbon'   => $this->moveFile('uploads/webinar/post_twibbon', $this->request->getFile('post_twibbon'))
         ];
 
