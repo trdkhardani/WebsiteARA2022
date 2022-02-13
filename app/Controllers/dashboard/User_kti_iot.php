@@ -127,14 +127,17 @@ class User_kti_iot extends BaseController
       'pembayaran_full_paper' => $tim['iot_pembayaran_full_paper']
     ];
     // Jika tidak lolos final (asal akses)
-    if (!$data['status_konfirmasi_abstrak'])
-      return redirect()->to('dashboard/user_kti_iot/home');
+    // if (!$data['status_konfirmasi_abstrak'])
+    //   return redirect()->to('dashboard/user_kti_iot/home');
 
-    // Udah bayar
-    if ($data['status_penyisihan'])
+    if ($data['status_penyisihan']) {
+      // Belom bayar
+      if (!$data['status_bayar_full_paper'])
+        return view('dashboard/user/kti_iot/bayar_full_paper', $data);
       return view('dashboard/user/kti_iot/full_paper', $data);
-    // Belum
-    return view('dashboard/user/kti_iot/bayar_full_paper', $data);
+    }
+    // Belum full paper
+    return view('dashboard/user/kti_iot/belum_full_paper', $data);
   }
 
   // Pembayaran full paper
@@ -208,15 +211,14 @@ class User_kti_iot extends BaseController
       'status_bayar_final' => $tim['iot_status_konfirmasi_final']
     ];
     // Jika asal akses
-    if (!$data['status_konfirmasi_abstrak'] || !$data['status_penyisihan'])
-      return redirect()->to('dashboard/user_kti_iot/home');
+    // if (!$data['status_konfirmasi_abstrak'] || !$data['status_penyisihan'])
+    //   return redirect()->to('dashboard/user_kti_iot/home');
 
     // Cek apakah lulus final atau tidak
     if ($data['status_final']) {
       // Cek jika belum bayar
-      if (!$data['status_bayar_final']) {
+      if (!$data['status_bayar_final'])
         return view('dashboard/user/kti_iot/bayar_final', $data);
-      }
       return view('dashboard/user/kti_iot/final', $data);
     } else
       return view('dashboard/user/kti_iot/belum_final', $data);

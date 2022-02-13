@@ -103,13 +103,13 @@ class Verify extends BaseController
                     'is_image' => $imgTypeError
                 ]
             ],
-            'nama_anggota_1' => [
-                'label' => 'nama_anggota_1',
-                'rules' => 'required',
-                'errors' => [
-                    'required' => $fieldError
-                ]
-            ],
+            // 'nama_anggota_1' => [
+            //     'label' => 'nama_anggota_1',
+            //     'rules' => 'required',
+            //     'errors' => [
+            //         'required' => $fieldError
+            //     ]
+            // ],
             'ktm_anggota_1' => [
                 'label' => 'ktm_anggota_1',
                 'rules' => 'max_size[ktm_anggota_1,1024]|is_image[ktm_anggota_1]',
@@ -176,6 +176,7 @@ class Verify extends BaseController
             ],
 
         ];
+
         if (!$this->validate($validation_rules)) {
             return redirect()->to('/Auth/registrasi_kti')->withInput();
         }

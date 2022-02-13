@@ -72,9 +72,17 @@
           <td><?= $tim['iot_nama_anggota_2']; ?></td>
           <td><?= $tim['iot_contact']; ?></td>
           <td><?= $tim['iot_email_ketua']; ?></td>
-          <td><a href="<?= base_url() ?>/files/iot/ktm/testing.jpg" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
-          <td><a href="<?= base_url() ?>/files/iot/ktm/testing.jpg" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
-          <td><a href="<?= base_url() ?>/files/iot/ktm/testing.jpg" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+          <td><a href="<?= base_url() ?>/uploads/kti_iot/ktm/<?= $tim['iot_suket_ketua'] ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+          <?php if ($tim['iot_suket_anggota_1']) : ?>
+            <td><a href="<?= base_url() ?>/uploads/kti_iot/ktm/<?= $tim['iot_suket_anggota_1'] ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+          <?php else : ?>
+            <td>-</td>
+          <?php endif; ?>
+          <?php if ($tim['iot_suket_anggota_2']) : ?>
+            <td><a href="<?= base_url() ?>/uploads/kti_iot/ktm/<?= $tim['iot_suket_anggota_2'] ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+          <?php else : ?>
+            <td>-</td>
+          <?php endif; ?>
           <td><a href="<?= base_url() ?>/files/iot/follow_ig_ara/testing.jpg" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
           <td><a href="<?= base_url() ?>/files/iot/follow_ig_ara/testing.jpg" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
           <td><a href="<?= base_url() ?>/files/iot/follow_ig_ara/testing.jpg" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
@@ -85,15 +93,14 @@
           <td><a href="<?= base_url() ?>/files/iot/share_post/testing.jpg" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
           <td><a href="<?= base_url() ?>/files/iot/share_post/testing.jpg" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
           <td>
-            <a href="" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#modalTerima">Terima</a>
-            <a href="" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#modalTolak">Tolak</a>
-
-            <!-- <form action="/dashboard/Admin_kti_iot/verify_konfirmasi_abstrak/<?= $tim['iot_id']; ?>/1" method="post">
+            <!-- <a href="" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#modalTerima">Terima</a>
+            <a href="" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#modalTolak">Tolak</a> -->
+            <form action="/dashboard/Admin_kti_iot/verify_konfirmasi_abstrak/<?= $tim['iot_id']; ?>/1" method="post">
               <button type="submit" class="btn btn-sm btn-success">Terima</button>
             </form>
             <form action="/dashboard/Admin_kti_iot/verify_konfirmasi_abstrak/<?= $tim['iot_id']; ?>/0" method="post">
               <button type="submit" class="btn btn-sm btn-danger">Tolak</button>
-            </form> -->
+            </form>
           </td>
         </tr>
         <?php $i++; ?>
