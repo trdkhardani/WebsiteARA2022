@@ -22,11 +22,11 @@
                 <p class="mt-2 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam cumque exercitationem iste ea fugiat dolorem? Quaerat, officia sunt perspiciatis temporibus eaque quas iste ratione! Non odio laboriosam incidunt obcaecati cum!</p>
             </div>
         </div>
-        <button class="carousel-control-prev mb-5 pb-5" type="button" data-bs-target="#carousel-HMIT" data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-HMIT" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next mb-5 pb-5" type="button" data-bs-target="#carousel-HMIT" data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#carousel-HMIT" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
