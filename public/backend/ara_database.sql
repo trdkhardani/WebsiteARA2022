@@ -183,12 +183,14 @@ CREATE TABLE `panitia_login` (
 
 CREATE TABLE `webinar` (
   `webinar_id` int(11) NOT NULL,
+  `webinar_event` varchar(10) NOT NULL,
   `webinar_nama` varchar(255) NOT NULL,
   `webinar_email` varchar(255) NOT NULL,
   `webinar_contact` varchar(20) NOT NULL,
   `webinar_instansi` varchar(255) NOT NULL,
   `webinar_status` tinyint(1) NOT NULL DEFAULT 0,
-  `webinar_story` varchar(255) NOT NULL,
+  `webinar_post_iot` varchar(255) NOT NULL DEFAULT '-',
+  `webinar_post_ctf` varchar(255) NOT NULL DEFAULT '-',
   `webinar_ig_ara` varchar(255) NOT NULL,
   `webinar_ig_hmit` varchar(255) NOT NULL,
   `webinar_subscribe` varchar(255) NOT NULL,
