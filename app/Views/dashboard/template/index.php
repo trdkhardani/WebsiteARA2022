@@ -65,7 +65,6 @@
   <script>
     function logout() {
       // destroy sesinya
-      window.location.href = "<?= base_url(); ?>"
     }
 
     const btnOpenSide = document.getElementById("btn-open-side");

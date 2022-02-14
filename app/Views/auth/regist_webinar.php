@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registrasi Webinar</title>
+  <title>Registrasi Webinar | ARA HMIT ITS 2022</title>
   <meta name="description" content="Mendorong Inovasi dan Pembangunan Infrastruktur Teknologi untuk Indonesia">
   <meta name="keywords" content="ARA, A Renewal Agent, Teknologi Informasi, Institut Teknologi Sepuluh Nopember">
   <meta name="author" content="Divisi Website ARA 2022">
@@ -27,8 +27,8 @@
       <h1 class="mb-3 text-center">Registrasi Webinar</h1>
       <p>Halo sobat ARA! Bagaimana? Sudah tertarik belum untuk mendaftar di event Webinar ini? Harusnya tertarik udah tertarik dong ya hehe. Apabila kamu ada pertanyaan terkait pendaftaran ini, silahkan menghubungi kontak berikut ya:</p>
       <ul>
-        <li>Coming soon dari Mita</li>
-        <li>Coming soon dari Mita</li>
+        <li>Dimas Bagus : dimasbagusrachmadani (Line) / 081336195441 (Whatsapp)</li>
+        <li>Icha : tarishaicha (Line) / 082333082308 (Whatsapp)</li>
       </ul>
       <p><b><span class="text-danger">*</span> Wajib diisi</b></p>
     </header>
@@ -51,8 +51,33 @@
           <input type="text" class="form-control" id="whatsapp" name="whatsapp">
         </div>
         <div class="mb-3">
-          <label for="share_post" class="form-label">Share Post Webinar <span class="text-danger">*<?= '<br>' . $validation->getError('share_post') ?></span></label>
-          <input class="form-control" type="file" id="share_post" name="share_post">
+          <label class="form-label">Pilihan Webinar <span class="text-danger">*</span></label>
+          <div class="form-check" @click="handleCTF">
+            <input class="form-check-input" type="radio" name="event" id="webinarCTF" value="CTF" checked>
+            <label class="form-check-label" for="webinarCTF">
+              Capture the Flag
+            </label>
+          </div>
+          <div class="form-check" @click="handleIOT">
+            <input class="form-check-input" type="radio" name="event" id="webinarIoT" value="IoT">
+            <label class="form-check-label" for="webinarIoT">
+              Internet of Things
+            </label>
+          </div>
+          <div class="form-check" @click="handleKeduanya">
+            <input class="form-check-input" type="radio" name="event" id="webinarIoT&CTF" value="IoT & CTF">
+            <label class="form-check-label" for="webinarIoT&CTF">
+              Keduanya
+            </label>
+          </div>
+        </div>
+        <div class="mb-3" v-if="isCtf">
+          <label for="share_post_ctf" class="form-label">Share Post Webinar Capture The Flag <span class="text-danger">*<?= '<br>' . $validation->getError('share_post_ctf') ?></span></label>
+          <input class="form-control" type="file" id="share_post_ctf" name="share_post_ctf">
+        </div>
+        <div class="mb-3" v-if="isIot">
+          <label for="share_post_iot" class="form-label">Share Post Webinar Internet Of Things <span class="text-danger">*<?= '<br>' . $validation->getError('share_post_iot') ?></span></label>
+          <input class="form-control" type="file" id="share_post_iot" name="share_post_iot">
         </div>
         <div class="mb-3">
           <label for="follow_ig_ara" class="form-label">Follow IG ARA <span class="text-danger">*<?= '<br>' . $validation->getError('follow_ig_ara') ?></span></label>
@@ -86,6 +111,40 @@
   <?= $this->include("auth/footer"); ?>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+  <script src="https://unpkg.com/vue@3.1.1/dist/vue.global.prod.js"></script>
+
+  <script>
+    const app = Vue.createApp({
+      data() {
+        return {
+          isCtf: true,
+          isIot: false,
+        };
+      },
+      methods: {
+        reset() {
+          this.isCtf = false;
+          this.isIot = false;
+        },
+        handleCTF() {
+          this.reset();
+          this.isCtf = true;
+        },
+        handleIOT() {
+          this.reset();
+          this.isIot = true;
+        },
+        handleKeduanya() {
+          this.reset();
+          this.isCtf = true;
+          this.isIot = true;
+        },
+      },
+    });
+
+    app.mount("main");
+  </script>
 </body>
 
 </html>

@@ -46,8 +46,14 @@ class Home extends BaseController
     return view('landing_page/pages/information/expo', $data);
   }
 
-  public function registration()
+  public function tentang_ara()
   {
-    return view('landing_page/registration');
+    return view('landing_page/pages/information/tentang_ara');
+  }
+
+  public function logout()
+  {
+    session()->destroy();
+    return redirect()->to('Auth/login');
   }
 }

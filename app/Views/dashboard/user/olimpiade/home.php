@@ -7,10 +7,10 @@
   <h1 class="fw-bold mb-4 text-white">Dashboard</h1>
   <ul>
     <li class="active">
-      <a href="<?= base_url() ?>/dashboard/user_olim/home"><img class="me-2" src="<?= base_url() ?>/images/dashboard/home.svg" alt="Icon"> Home</a>
+      <a href="<?= base_url() ?>/dashboard/user_olim/home"><i class="fas fa-home"></i> Home</a>
     </li>
     <li class="">
-      <a href="<?= base_url() ?>/dashboard/user_olim/team"><img class="me-2" src="<?= base_url() ?>/images/dashboard/people.svg" alt="Icon"> Tim Anda</a>
+      <a href="<?= base_url() ?>/dashboard/user_olim/team"><i class="fas fa-user-friends"></i> Tim Anda</a>
     </li>
   </ul>
 </div>

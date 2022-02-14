@@ -6,18 +6,22 @@
   <button id="btn-close-side" class="btn shadow-none d-block d-lg-none text-white ms-auto"><i class="fas fa-chevron-left"></i></button>
   <h1 class="fw-bold mb-4 text-white">Dashboard</h1>
   <ul>
-    <li class="active">
-      <a href="<?= base_url() ?>/dashboard/user_kti_iot/home"><img class="me-2" src="<?= base_url() ?>/images/dashboard/home.svg" alt="Icon"> Home</a>
+    <li class="<?= ($active  == 'home') ? 'active' : '' ?>">
+      <a href="<?= base_url() ?>/dashboard/user_kti_iot/home"><i class="fa-solid fa-house"></i> Home</a>
     </li>
-    <li class="">
-      <a href="<?= base_url() ?>/dashboard/user_kti_iot/abstrak"><img class="me-2" src="<?= base_url() ?>/images/dashboard/submission.svg" alt="Icon"> Abstrak</a>
+    <li class="<?= ($active  == 'abstrak') ? 'active' : '' ?>">
+      <a href="<?= base_url() ?>/dashboard/user_kti_iot/abstrak"><i class="fa-solid fa-note-sticky"></i> Abstrak</a>
     </li>
-    <li class="">
-      <a href="<?= base_url() ?>/dashboard/user_kti_iot/full_paper"><img class="me-2" src="<?= base_url() ?>/images/dashboard/submission.svg" alt="Icon"> Full Paper</a>
-    </li>
-    <li class="">
-      <a href="<?= base_url() ?>/dashboard/user_kti_iot/final"><img class="me-2" src="<?= base_url() ?>/images/dashboard/people.svg" alt="Icon"> Final</a>
-    </li>
+    <?php if ($status_konfirmasi_abstrak) : ?>
+      <li class="<?= ($active  == 'full_paper') ? 'active' : '' ?>">
+        <a href="<?= base_url() ?>/dashboard/user_kti_iot/full_paper"><i class="fas fa-newspaper"></i> Full Paper</a>
+      </li>
+      <?php if ($status_penyisihan) : ?>
+        <li class="<?= ($active  == 'final') ? 'active' : '' ?>">
+          <a href="<?= base_url() ?>/dashboard/user_kti_iot/final"><i class="fa-solid fa-trophy"></i> Final</a>
+        </li>
+      <?php endif; ?>
+    <?php endif; ?>
   </ul>
 </div>
 <?= $this->endSection(); ?>
@@ -37,10 +41,14 @@
 <div class="card-dashboard">
   <h4>Data Tim</h4>
   <ul>
-    <li><i class="fas fa-university"></i> Institusi: Institut Teknologi Sepuluh Nopember</li>
-    <li><i class="fas fa-user"></i> Ketua Tim: Haffif Rasya Fauzi</li>
-    <li><i class="fas fa-user"></i> Anggota 1: Naufal Dhiya Ulhaq</li>
-    <li><i class="fas fa-user"></i> Anggota 2: Fatih Rian Hibatul Hakim</li>
+    <li><i class="fas fa-university"></i> Institusi: <?= $institusi; ?></li>
+    <li><i class="fas fa-user"></i> Ketua Tim: <?= $ketua; ?></li>
+    <?php if ($anggota_1) : ?>
+      <li><i class="fas fa-user"></i> Anggota 1: <?= $anggota_1; ?></li>
+    <?php endif; ?>
+    <?php if ($anggota_2) : ?>
+      <li><i class="fas fa-user"></i> Anggota 2: <?= $anggota_2; ?></li>
+    <?php endif; ?>
   </ul>
 </div>
 <?= $this->endSection(); ?>

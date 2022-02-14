@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registrasi Expo</title>
+  <title>Registrasi Expo | ARA HMIT ITS 2022</title>
   <meta name="description" content="Mendorong Inovasi dan Pembangunan Infrastruktur Teknologi untuk Indonesia">
   <meta name="keywords" content="ARA, A Renewal Agent, Teknologi Informasi, Institut Teknologi Sepuluh Nopember">
   <meta name="author" content="Divisi Website ARA 2022">
@@ -27,8 +27,8 @@
       <h1 class="mb-3 text-center">Registrasi Expo IT</h1>
       <p>Halo sobat ARA! Bagaimana? Sudah tertarik belum untuk mendaftar di event Expo IT ini? Harusnya tertarik udah tertarik dong ya hehe. Apabila kamu ada pertanyaan terkait pendaftaran ini, silahkan menghubungi kontak berikut ya:</p>
       <ul>
-        <li>Coming soon dari Axel</li>
-        <li>Coming soon dari Axel</li>
+        <li>Primary Secondary : primasecondary121201 (Line) / 085232414072 (Whatsapp)</li>
+        <li>Axellino Anggoro: axellino-aa (Line) / 082133453710 (Whatsapp)</li>
       </ul>
       <p><b><span class="text-danger">*</span> Wajib diisi</b></p>
     </header>
