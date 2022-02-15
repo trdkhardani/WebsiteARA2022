@@ -27,7 +27,7 @@ class Admin_kti_iot extends BaseController
       'list_tim_abstrak' => $this->model_kti_iot->where('iot_status_konfirmasi_abstrak', 1)->findAll(),
       'terkonfirmasi' => $this->model_kti_iot->where('iot_status_konfirmasi_abstrak', 1)->countAllResults(),
       'belum_terkonfirmasi' => $this->model_kti_iot->where('iot_status_konfirmasi_abstrak', 0)->countAllResults(),
-      'total_peserta' => $this->model_kti_iot->countAllResults()
+      'total_peserta' => $this->model_kti_iot->where('iot_status_konfirmasi_abstrak', 1)->countAllResults() + $this->model_kti_iot->where('iot_status_konfirmasi_abstrak', 0)->countAllResults()
     ];
     // dd($data);
     return view("dashboard/admin/kti_iot/list_abstrak", $data);
@@ -48,7 +48,7 @@ class Admin_kti_iot extends BaseController
       'list_tim_abstrak' => $this->model_kti_iot->where('iot_status_konfirmasi_abstrak', 0)->findAll(),
       'terkonfirmasi' => $this->model_kti_iot->where('iot_status_konfirmasi_abstrak', 1)->countAllResults(),
       'belum_terkonfirmasi' => $this->model_kti_iot->where('iot_status_konfirmasi_abstrak', 0)->countAllResults(),
-      'total_peserta' => $this->model_kti_iot->countAllResults()
+      'total_peserta' => $this->model_kti_iot->where('iot_status_konfirmasi_abstrak', 1)->countAllResults() + $this->model_kti_iot->where('iot_status_konfirmasi_abstrak', 0)->countAllResults()
     ];
     return view("dashboard/admin/kti_iot/konfirmasi_abstrak", $data);
   }
@@ -69,8 +69,7 @@ class Admin_kti_iot extends BaseController
     if ($status) {
       $data = [
         'iot_id' => $tim['iot_id'],
-        'iot_status_konfirmasi_abstrak' => 1,
-        'iot_status_penyisihan' => 1
+        'iot_status_konfirmasi_abstrak' => 1
       ];
       $this->model_kti_iot->save($data);
     } else {
@@ -124,7 +123,7 @@ class Admin_kti_iot extends BaseController
       'list_tim_full_paper' => $this->model_kti_iot->where('iot_status_konfirmasi_full_paper', 1)->findAll(),
       'terkonfirmasi' => $this->model_kti_iot->where('iot_status_konfirmasi_full_paper', 1)->countAllResults(),
       'belum_terkonfirmasi' => $this->model_kti_iot->where('iot_status_konfirmasi_full_paper', 0)->countAllResults(),
-      'total_peserta' => $this->model_kti_iot->countAllResults()
+      'total_peserta' => $this->model_kti_iot->where('iot_status_konfirmasi_full_paper', 1)->countAllResults() + $this->model_kti_iot->where('iot_status_konfirmasi_full_paper', 0)->countAllResults()
     ];
     return view("dashboard/admin/kti_iot/list_fullpaper", $data);
   }
@@ -148,7 +147,7 @@ class Admin_kti_iot extends BaseController
       ])->findAll(),
       'terkonfirmasi' => $this->model_kti_iot->where('iot_status_konfirmasi_full_paper', 1)->countAllResults(),
       'belum_terkonfirmasi' => $this->model_kti_iot->where('iot_status_konfirmasi_full_paper', 0)->countAllResults(),
-      'total_peserta' => $this->model_kti_iot->countAllResults()
+      'total_peserta' => $this->model_kti_iot->where('iot_status_konfirmasi_full_paper', 1)->countAllResults() + $this->model_kti_iot->where('iot_status_konfirmasi_full_paper', 0)->countAllResults()
     ];
     return view("dashboard/admin/kti_iot/konfirmasi_fullpaper", $data);
   }
@@ -196,7 +195,7 @@ class Admin_kti_iot extends BaseController
       'lomba' => 'KTI Internet of Things',
       'nama' => 'Admin',
       'tahap' => 'Final',
-      'list_tim_full_paper' => $this->model_kti_iot->where('iot_status_final', 1)->findAll(),
+      'list_tim_final' => $this->model_kti_iot->where('iot_status_konfirmasi_final', 1)->findAll(),
       'terkonfirmasi' => $this->model_kti_iot->where('iot_status_konfirmasi_final', 1)->countAllResults(),
       'belum_terkonfirmasi' => $this->model_kti_iot->where('iot_status_konfirmasi_final', 0)->countAllResults(),
       'total_peserta' => $this->model_kti_iot->countAllResults()
@@ -222,7 +221,7 @@ class Admin_kti_iot extends BaseController
       ])->findAll(),
       'terkonfirmasi' => $this->model_kti_iot->where('iot_status_konfirmasi_final', 1)->countAllResults(),
       'belum_terkonfirmasi' => $this->model_kti_iot->where('iot_status_konfirmasi_final', 0)->countAllResults(),
-      'total_peserta' => $this->model_kti_iot->countAllResults()
+      'total_peserta' => $this->model_kti_iot->where('iot_status_konfirmasi_final', 1)->countAllResults() + $this->model_kti_iot->where('iot_status_konfirmasi_final', 0)->countAllResults()
     ];
     return view("dashboard/admin/kti_iot/konfirmasi_final", $data);
   }
