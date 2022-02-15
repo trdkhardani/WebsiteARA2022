@@ -50,23 +50,34 @@
       </tr>
     </thead>
     <tbody>
-      <?php for ($i = 1; $i <= 10; $i++) { ?>
+      <?php $i = 1; ?>
+      <?php foreach ($list_tim_full_paper as $tim) : ?>
         <tr>
           <td><?= $i ?>.</td>
-          <td>Tim IT'03</td>
-          <td>Institut Teknologi Sepuluh Nopember</td>
-          <td>Rama Muhammad Murshal</td>
-          <td>Rangga Gak tau Lagi</td>
-          <td>Diktia gak tau lagi</td>
-          <td>081241227574</td>
-          <td>rmurshal@gmail.com</td>
-          <td><a href="<?= base_url() ?>/files/iot/bayar_fullpaper/testing.jpg" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+          <td><?= $tim['iot_nama_tim']; ?></td>
+          <td><?= $tim['iot_institusi']; ?></td>
+          <td><?= $tim['iot_nama_ketua']; ?></td>
+          <td><?= ($tim['iot_nama_anggota_1']) ? $tim['iot_nama_anggota_1'] : ''; ?></td>
+          <td><?= ($tim['iot_nama_anggota_2']) ? $tim['iot_nama_anggota_2'] : ''; ?></td>
+          <td><?= $tim['iot_contact']; ?></td>
+          <td><?= $tim['iot_email_ketua']; ?></td>
+          <td><a href="<?= base_url() ?>/uploads/kti_iot/full_paper/<?= $tim['iot_kti_paper'] ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
           <td>
-            <a href="" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#modalTerima">Terima</a>
-            <a href="" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#modalTolak">Tolak</a>
+            <!-- <a href="" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#modalTerima">Terima</a>
+            <a href="" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#modalTolak">Tolak</a> -->
+            <form action="/dashboard/Admin_kti_iot/verify_konfirmasi_full_paper" method="post">
+              <input type="hidden" value="<?= $tim['iot_id'] ?>" name="id">
+              <input type="hidden" value="1" name="status">
+              <button type="submit" class="btn btn-sm btn-success">Terima</button>
+            </form>
+            <form action="/dashboard/Admin_kti_iot/verify_konfirmasi_full_paper" method="post">
+              <input type="hidden" value="<?= $tim['iot_id'] ?>" name="id">
+              <input type="hidden" value="0" name="status">
+              <button type="submit" class="btn btn-sm btn-danger">Tolak</button>
+            </form>
           </td>
         </tr>
-      <?php } ?>
+      <?php endforeach; ?>
     </tbody>
   </table>
 </div>
