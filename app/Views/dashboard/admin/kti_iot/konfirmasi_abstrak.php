@@ -95,10 +95,14 @@
           <td>
             <!-- <a href="" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#modalTerima">Terima</a>
             <a href="" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#modalTolak">Tolak</a> -->
-            <form action="/dashboard/Admin_kti_iot/verify_konfirmasi_abstrak/<?= $tim['iot_id']; ?>/1" method="post">
+            <form action="/dashboard/Admin_kti_iot/verify_konfirmasi_abstrak" method="post">
+              <input type="hidden" value="<?= $tim['iot_id']; ?>" name="id">
+              <input type="hidden" value="1" name="status">
               <button type="submit" class="btn btn-sm btn-success">Terima</button>
             </form>
-            <form action="/dashboard/Admin_kti_iot/verify_konfirmasi_abstrak/<?= $tim['iot_id']; ?>/0" method="post">
+            <form action="/dashboard/Admin_kti_iot/verify_konfirmasi_abstrak" method="post">
+              <input type="hidden" value="<?= $tim['iot_id']; ?>" name="id">
+              <input type="hidden" value="0" name="status">
               <button type="submit" class="btn btn-sm btn-danger">Tolak</button>
             </form>
           </td>
