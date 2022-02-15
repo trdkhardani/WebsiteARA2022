@@ -53,31 +53,31 @@
         <div class="mb-3">
           <label class="form-label">Pilihan Webinar <span class="text-danger">*</span></label>
           <div class="form-check" @click="handleCTF">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="webinarCTF" checked>
+            <input class="form-check-input" type="radio" name="event" id="webinarCTF" value="CTF" checked>
             <label class="form-check-label" for="webinarCTF">
               Capture the Flag
             </label>
           </div>
           <div class="form-check" @click="handleIOT">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-            <label class="form-check-label" for="flexRadioDefault2">
+            <input class="form-check-input" type="radio" name="event" id="webinarIoT" value="IoT">
+            <label class="form-check-label" for="webinarIoT">
               Internet of Things
             </label>
           </div>
           <div class="form-check" @click="handleKeduanya">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
-            <label class="form-check-label" for="flexRadioDefault3">
+            <input class="form-check-input" type="radio" name="event" id="webinarIoT&CTF" value="IoT & CTF">
+            <label class="form-check-label" for="webinarIoT&CTF">
               Keduanya
             </label>
           </div>
         </div>
         <div class="mb-3" v-if="isCtf">
-          <label for="share_post_ctf" class="form-label">Share Post Webinar Capture The Flag <span class="text-danger">*</span></label>
-          <input class="form-control" type="file" id="share_post_ctf">
+          <label for="share_post_ctf" class="form-label">Share Post Webinar Capture The Flag <span class="text-danger">*<?= '<br>' . $validation->getError('share_post_ctf') ?></span></label>
+          <input class="form-control" type="file" id="share_post_ctf" name="share_post_ctf">
         </div>
         <div class="mb-3" v-if="isIot">
-          <label for="share_post_iot" class="form-label">Share Post Webinar Internet Of Things <span class="text-danger">*</span></label>
-          <input class="form-control" type="file" id="share_post_iot">
+          <label for="share_post_iot" class="form-label">Share Post Webinar Internet Of Things <span class="text-danger">*<?= '<br>' . $validation->getError('share_post_iot') ?></span></label>
+          <input class="form-control" type="file" id="share_post_iot" name="share_post_iot">
         </div>
         <div class="mb-3">
           <label for="follow_ig_ara" class="form-label">Follow IG ARA <span class="text-danger">*<?= '<br>' . $validation->getError('follow_ig_ara') ?></span></label>

@@ -153,28 +153,71 @@ section {
   }
 }
 
-#carousel-HMIT .carousel-control-prev {
+#carousel-HMIT .carousel-control-prev-icon {
   position: absolute;
   left: -100px;
+  top: 16vh;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   font-weight: bolder;
-  bottom: 15vh;
 }
 
-#carousel-HMIT .carousel-control-next {
+#carousel-HMIT .carousel-control-next-icon {
   position: absolute;
   right: -100px;
+  top: 16vh;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   font-weight: bolder;
-  bottom: 15vh;
+}
+
+@media only screen and (max-width: 1200px) {
+  #carousel-HMIT {
+    width: 75% !important;
+  }
+  #carousel-HMIT .carousel-control-prev-icon {
+    left: -50px;
+    top: 20vh;
+  }
+  #carousel-HMIT .carousel-control-next-icon {
+    right: -50px;
+    top: 20vh;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  #carousel-HMIT {
+    width: 75% !important;
+  }
+  #carousel-HMIT .carousel-control-prev-icon {
+    left: -50px;
+    top: 15vh;
+  }
+  #carousel-HMIT .carousel-control-next-icon {
+    right: -50px;
+    top: 15vh;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #carousel-HMIT .carousel-control-prev-icon {
+    left: -50px;
+    top: 15vh;
+  }
+  #carousel-HMIT .carousel-control-next-icon {
+    right: -50px;
+    top: 15vh;
+  }
 }
 
 @media only screen and (max-width: 576px) {
-  #carousel-HMIT .carousel-control-prev {
+  #carousel-HMIT .carousel-control-prev-icon {
     left: -50px;
-    bottom: 25vh;
+    top: 20vw;
   }
-  #carousel-HMIT .carousel-control-next {
+  #carousel-HMIT .carousel-control-next-icon {
     right: -50px;
-    bottom: 25vh;
+    top: 20vw;
   }
 }
 
