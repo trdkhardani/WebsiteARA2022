@@ -1,6 +1,6 @@
 <div class="d-flex mb-3">
   <div class="p-3 card-count">
-    <h4><i class="far fa-check-circle"></i> Total Peserta <?= $tahap ?></h4>
+    <h4><i class="far fa-check-circle"></i> Jumlah Peserta <?= $tahap ?></h4>
     <h5><?= $total_peserta; ?></h5>
   </div>
   <div class="p-3 card-count">
