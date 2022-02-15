@@ -49,7 +49,7 @@
     </thead>
     <tbody>
       <?php $i = 1; ?>
-      <?php foreach ($list_tim_full_paper as $tim) : ?>
+      <?php foreach ($list_tim_final as $tim) : ?>
         <tr>
           <td><?= $i ?>.</td>
           <td><?= $tim['iot_nama_tim']; ?></td>
