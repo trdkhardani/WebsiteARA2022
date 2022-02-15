@@ -202,11 +202,11 @@ section {
 @media only screen and (max-width: 768px) {
   #carousel-HMIT .carousel-control-prev-icon {
     left: -50px;
-    top: 15vh;
+    top: 13vh;
   }
   #carousel-HMIT .carousel-control-next-icon {
     right: -50px;
-    top: 15vh;
+    top: 13vh;
   }
 }
 
