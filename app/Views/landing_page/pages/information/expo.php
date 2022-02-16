@@ -9,7 +9,7 @@
     <div class="col-md-6">
         <h1>ExpoIT</h1>
         <p class="mt-4">Di Expo IT para pembicara akan memamerkan serta memaparkan kepada audiens mengenai hasil karya mereka dan bagaimana program di bidang tersebut bisa berjalan. Sehingga para audiens akan mendapat wawasan seputar potensi karir dan karya Departemen Teknologi Informasi ITS.</p>
-        <a href="#" class="btn btn-primary px-4 py-3 mt-4 me-4 rounded-pill">Download Guide Book</a>
+        <a href="#" class="btn btn-primary px-4 py-3 mt-4 me-4 rounded-pill disabled">Download Guide Book</a>
         <a href="#" class="btn btn-primary px-4 py-3 mt-4 rounded-pill">Daftar ExpoIT</a>
     </div>
     <div class="col-md-6">
@@ -20,26 +20,20 @@
     <div class="timeline">
         <div class="event kiri">
             <div data-aos="fade-right" class="isi-event">
-                <p class="fw-bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <p>01-01-2022 - 31-12-2023</p>
+                <p class="fw-bold">Open Registrasi</p>
+                <p>20 Maret 2022</p>
             </div>
         </div>
         <div class="event kanan mt-5">
             <div data-aos="fade-left" class="isi-event">
-                <p class="fw-bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <p>01-01-2022 - 31-12-2023</p>
+                <p class="fw-bold">Close Registrasi</p>
+                <p>20 April 2022</p>
             </div>
         </div>
         <div class="event kiri mt-5">
             <div data-aos="fade-right" class="isi-event">
-                <p class="fw-bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <p>01-01-2022 - 31-12-2023</p>
-            </div>
-        </div>
-        <div class="event kanan mt-5">
-            <div data-aos="fade-left" class="isi-event">
-                <p class="fw-bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <p>01-01-2022 - 31-12-2023</p>
+                <p class="fw-bold">Coming Soon...</p>
+                <!-- <p>01-01-2022 - 31-12-2023</p> -->
             </div>
         </div>
     </div>

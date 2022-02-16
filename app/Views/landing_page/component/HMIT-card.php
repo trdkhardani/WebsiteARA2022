@@ -1,25 +1,24 @@
 <section data-aos-duration="1500" data-aos="zoom-in-up" data-aos-duration="3000" class="container bg-light py-4" style="--bs-bg-opacity: .27; border-radius: 79px">
     <small class="mx-auto d-block text-center fw-bold">Diselenggarakan Oleh</small>
     <h2 class="h1 text-center font-weight-bold mt-4">HMIT ITS</h2>
-    <p class="text-center my-1 py-3 w-75 mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet diam a libero vulputate, nec dapibus enim vestibulum. Praesent id metus luctus, venenatis ex eget, tincidunt massa. Pellentesque a ullamcorper sapien.</p>
+    <p class="text-center my-1 py-3 w-75 mx-auto">HMIT merupakan himpunan yang mengayomi mahasiswa departmen Teknologi Informasi ITS. Didirikan pada November 2019 dan sejak saat itu telah mengadakan 2 event besar yakni ExploIT 2020 dan ARA 2021 yang sukses dan diikuti oleh ribuan peserta.</p>
     <div class="mx-auto text-center d-flex justify-content-center mb-5">
-        <a class="sosial-media mx-2 rounded-circle" href="" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a class="sosial-media mx-2 rounded-circle" href="" target="_blank"><i class="fab fa-line"></i></a>
-        <a class="sosial-media mx-2 rounded-circle" href="" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a class="sosial-media mx-2 rounded-circle" href="https://www.instagram.com/hmit_its/" rel="nofollow" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a class="sosial-media mx-2 rounded-circle" href="https://timeline.line.me/user/_dY3IhpWxTrFRR2jUUi8zD00dbhy0yqgnmZppCC8" target="_blank" rel="nofollow"><i class="fab fa-line"></i></a>
+        <a class="sosial-media mx-2 rounded-circle" href="https://www.linkedin.com/company/himpunan-mahasiswa-teknologi-informasi-its" rel="nofollow" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a class="sosial-media mx-2 rounded-circle" href="https://www.youtube.com/channel/UChWjgJMQIYVivMx_gIy1eDA" rel="nofollow" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a class="sosial-media mx-2 rounded-circle" href="https://www.its.ac.id/it/" rel="dofollow" target="_blank"><i class="fas fa-globe"></i></a>
     </div>
-    <div id="carousel-HMIT" class="w-50 mx-auto carousel slide" data-bs-ride="carousel">
+    <div id="carousel-HMIT" class="w-50 mx-auto carousel slide pb-5" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="<?= base_url() ?>/images/example.png" class="d-block w-100" alt="...">
-                <p class="mt-2 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam cumque exercitationem iste ea fugiat dolorem? Quaerat, officia sunt perspiciatis temporibus eaque quas iste ratione! Non odio laboriosam incidunt obcaecati cum!</p>
             </div>
             <div class="carousel-item">
                 <img src="<?= base_url() ?>/images/example.png" class="d-block w-100" alt="...">
-                <p class="mt-2 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam cumque exercitationem iste ea fugiat dolorem? Quaerat, officia sunt perspiciatis temporibus eaque quas iste ratione! Non odio laboriosam incidunt obcaecati cum!</p>
             </div>
             <div class="carousel-item">
                 <img src="<?= base_url() ?>/images/example.png" class="d-block w-100" alt="...">
-                <p class="mt-2 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam cumque exercitationem iste ea fugiat dolorem? Quaerat, officia sunt perspiciatis temporibus eaque quas iste ratione! Non odio laboriosam incidunt obcaecati cum!</p>
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carousel-HMIT" data-bs-slide="prev">
