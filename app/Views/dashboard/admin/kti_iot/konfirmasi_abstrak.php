@@ -84,14 +84,38 @@
             <td>-</td>
           <?php endif; ?>
           <td><a href="<?= base_url() ?>/uploads/kti_iot/ig/follow/<?= $tim['iot_ig_ara_ketua'] ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
-          <td><a href="<?= base_url() ?>/uploads/kti_iot/ig/follow/<?= $tim['iot_ig_ara_anggota_1'] ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
-          <td><a href="<?= base_url() ?>/uploads/kti_iot/ig/follow/<?= $tim['iot_ig_ara_anggota_2'] ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+          <?php if ($tim['iot_ig_ara_anggota_1']) : ?>
+            <td><a href="<?= base_url() ?>/uploads/kti_iot/ig/follow/<?= ($tim['iot_ig_ara_anggota_1']) ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+          <?php else : ?>
+            <td>-</td>
+          <?php endif; ?>
+          <?php if ($tim['iot_ig_ara_anggota_2']) : ?>
+            <td><a href="<?= base_url() ?>/uploads/kti_iot/ig/follow/<?= ($tim['iot_ig_ara_anggota_2']) ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+          <?php else : ?>
+            <td>-</td>
+          <?php endif; ?>
           <td><a href="<?= base_url() ?>/uploads/kti_iot/ig/follow/<?= $tim['iot_ig_hmit_ketua'] ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
-          <td><a href="<?= base_url() ?>/uploads/kti_iot/ig/follow/<?= $tim['iot_ig_hmit_anggota_1'] ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
-          <td><a href="<?= base_url() ?>/uploads/kti_iot/ig/follow/<?= $tim['iot_ig_hmit_anggota_2'] ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+          <?php if ($tim['iot_ig_hmit_anggota_1']) : ?>
+            <td><a href="<?= base_url() ?>/uploads/kti_iot/ig/follow/<?= ($tim['iot_ig_hmit_anggota_1']) ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+          <?php else : ?>
+            <td>-</td>
+          <?php endif; ?>
+          <?php if ($tim['iot_ig_hmit_anggota_2']) : ?>
+            <td><a href="<?= base_url() ?>/uploads/kti_iot/ig/follow/<?= ($tim['iot_ig_hmit_anggota_2']) ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+          <?php else : ?>
+            <td>-</td>
+          <?php endif; ?>
           <td><a href="<?= base_url() ?>/uploads/kti_iot/ig/share/<?= $tim['iot_story_ketua'] ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
-          <td><a href="<?= base_url() ?>/uploads/kti_iot/ig/share/<?= $tim['iot_story_anggota_1'] ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
-          <td><a href="<?= base_url() ?>/uploads/kti_iot/ig/share/<?= $tim['iot_story_anggota_2'] ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+          <?php if ($tim['iot_story_anggota_1']) : ?>
+            <td><a href="<?= base_url() ?>/uploads/kti_iot/ig/follow/<?= ($tim['iot_story_anggota_1']) ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+          <?php else : ?>
+            <td>-</td>
+          <?php endif; ?>
+          <?php if ($tim['iot_story_anggota_2']) : ?>
+            <td><a href="<?= base_url() ?>/uploads/kti_iot/ig/follow/<?= ($tim['iot_story_anggota_2']) ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+          <?php else : ?>
+            <td>-</td>
+          <?php endif; ?>
           <td>
             <!-- <a href="" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#modalTerima">Terima</a>
             <a href="" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#modalTolak">Tolak</a> -->
