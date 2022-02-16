@@ -13,7 +13,6 @@
         <button type="button" class="btn btn-secondary shadow-none" data-bs-dismiss="modal">Gajadi</button>
         <!-- <button type="button" class="btn shadow-none" onclick="logout()" id="btn-logout">Keluar</button> -->
         <form action="/Home/logout" method="POST">
-
           <button type="submit" class="btn shadow-none" id="btn-logout">Keluar</button>
         </form>
       </div>
@@ -34,7 +33,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary shadow-none" data-bs-dismiss="modal">Gajadi</button>
-        <button type="button" class="btn btn-success shadow-none" onclick="alert('Handle di template index.php biar bisa pake kode php jangan dipisah ke .js')">Terima</button>
+        <a type="button" class="btn btn-success shadow-none" id="buttTerima" onclick="document.getElementById('buttTerima').classList.add('disabled');">Terima</a>
       </div>
     </div>
   </div>
@@ -53,7 +52,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary shadow-none" data-bs-dismiss="modal">Gajadi</button>
-        <button type="button" class="btn btn-danger shadow-none" onclick="alert('Handle di template index.php biar bisa pake kode php jangan dipisah ke .js')">Tolak</button>
+        <a type="button" class="btn btn-danger shadow-none" id="buttTolak" onclick="document.getElementById('buttTolak').classList.add('disabled');">Tolak</a>
       </div>
     </div>
   </div>

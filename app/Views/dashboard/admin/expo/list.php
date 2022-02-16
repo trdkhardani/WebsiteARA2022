@@ -34,14 +34,15 @@
       </tr>
     </thead>
     <tbody>
-      <?php for ($i = 1; $i <= 10; $i++) { ?>
-        <tr>
-          <td><?= $i ?>.</td>
-          <td>M Fernando</td>
-          <td>Institut Teknologi Sepuluh Nopember</td>
-          <td>081241227574</td>
-          <td>rmurshal@gmail.com</td>
-        </tr>
+    <?php $i = 1; 
+        foreach($data as $item){ ?>
+          <tr>
+            <td><?= $i++ ?></td>
+            <td><?= $item->expo_nama?></td>
+            <td><?= $item->expo_institusi?></td>
+            <td><?= $item->expo_contact?></td>
+            <td><?= $item->expo_email?></td>
+          </tr>
       <?php } ?>
     </tbody>
   </table>

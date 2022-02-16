@@ -26,6 +26,7 @@
     <thead>
       <tr>
         <th>No</th>
+        <th>event</th>
         <th>Nama</th>
         <th>Institusi</th>
         <th>WA</th>
@@ -33,7 +34,18 @@
       </tr>
     </thead>
     <tbody>
-      <?php for ($i = 1; $i <= 10; $i++) { ?>
+      <?php $i = 1; 
+        foreach($data as $item){ ?>
+          <tr>
+            <td><?= $i++ ?></td>
+            <td><?= $item->webinar_event?></td>
+            <td><?= $item->webinar_nama?></td>
+            <td><?= $item->webinar_instansi?></td>
+            <td><?= $item->webinar_contact?></td>
+            <td><?= $item->webinar_email?></td>
+          </tr>
+      <?php } ?>
+      <!--<?php for ($i = 1; $i <= 10; $i++) { ?>
         <tr>
           <td><?= $i ?>.</td>
           <td>M Fernando</td>
@@ -41,7 +53,7 @@
           <td>081241227574</td>
           <td>rmurshal@gmail.com</td>
         </tr>
-      <?php } ?>
+      <?php } ?>-->
     </tbody>
   </table>
 </div>

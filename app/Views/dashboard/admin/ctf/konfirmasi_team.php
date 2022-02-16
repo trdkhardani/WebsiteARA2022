@@ -47,7 +47,86 @@
       </tr>
     </thead>
     <tbody>
-      <?php for ($i = 1; $i <= 10; $i++) { ?>
+    <?php $i = 1; 
+      foreach($data as $item){ 
+        if($item->ctf_jumlah_anggota == 1) { ?>
+          <tr>
+            <td> <?= $i++?> </td>
+            <td> <?= $item->ctf_nama_tim ?> </td>
+            <td> <?= $item->ctf_intitusi ?> </td>
+            <td> <?= $item->ctf_nama_ketua ?> </td>
+            <td><a > - </a></td>
+            <td><a > - </a></td>
+            <td> <?= $item->ctf_contact  ?> </td>
+            <td> <?= $item->ctf_email_ketua  ?> </td>
+            <td><a href="<?= base_url() ?>/uploads/ctf/ktm/<?= $item->ctf_suket_ketua ?> " target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+            <td><a > - </a></td>
+            <td><a > - </a></td>
+            <td><a href="<?= base_url() ?>/uploads/ctf/ig_ara/<?= $item->ctf_ig_ara_ketua ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+            <td><a > - </a></td>
+            <td><a > - </a></td>
+            <td><a href="<?= base_url() ?>/uploads/ctf/ig_hmit/<?= $item->ctf_ig_hmit_ketua ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+            <td><a > - </a></td>
+            <td><a > - </a></td>
+            <td><a href="<?= base_url() ?>/uploads/ctf/bukti_bayar/<?= $item->ctf_bukti_bayar ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+            <td>
+            <a href="" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#modalTerima" onclick="document.getElementById('buttTerima').href = '<?= base_url() ?>/dashboard/Admin_ctf/Accept/<?= $item->ctf_id ?>';">Terima</a>
+            <a href="" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#modalTolak" onclick="document.getElementById('buttTolak').href = '<?= base_url() ?>/dashboard/Admin_ctf/Reject/<?= $item->ctf_id ?>';">Tolak</a>
+          </td>
+          </tr>
+        <?php }elseif($item->ctf_jumlah_anggota == 2){ ?>
+          <tr>
+            <td> <?= $i++?> </td>
+            <td> <?= $item->ctf_nama_tim ?> </td>
+            <td> <?= $item->ctf_intitusi ?> </td>
+            <td> <?= $item->ctf_nama_ketua ?> </td>
+            <td> <?= $item->ctf_nama_anggota_1 ?> </td>
+            <td><a > - </a></td>
+            <td> <?= $item->ctf_contact  ?> </td>
+            <td> <?= $item->ctf_email_ketua  ?> </td>
+            <td><a href="<?= base_url() ?>/uploads/ctf/ktm/<?= $item->ctf_suket_ketua ?> " target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+            <td><a href="<?= base_url() ?>/uploads/ctf/ktm/<?= $item->ctf_suket_anggota_1 ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+            <td><a > - </a></td>
+            <td><a href="<?= base_url() ?>/uploads/ctf/ig_ara/<?= $item->ctf_ig_ara_ketua ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+            <td><a href="<?= base_url() ?>/uploads/ctf/ig_ara/<?= $item->ctf_ig_ara_anggota_1 ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+            <td><a > - </a></td>
+            <td><a href="<?= base_url() ?>/uploads/ctf/ig_hmit/<?= $item->ctf_ig_hmit_ketua ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+            <td><a href="<?= base_url() ?>/uploads/ctf/ig_hmit/<?= $item->ctf_ig_hmit_anggota_1 ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+            <td><a > - </a></td>
+            <td><a href="<?= base_url() ?>/uploads/ctf/bukti_bayar/<?= $item->ctf_bukti_bayar ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+            <td>
+            <a href="" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#modalTerima" onclick="document.getElementById('buttTerima').href = '<?= base_url() ?>/dashboard/Admin_ctf/Accept/<?= $item->ctf_id ?>';">Terima</a>
+            <a href="" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#modalTolak" onclick="document.getElementById('buttTolak').href = '<?= base_url() ?>/dashboard/Admin_ctf/Reject/<?= $item->ctf_id ?>';">Tolak</a>
+          </td>
+          </tr>
+        <?php }elseif($item->ctf_jumlah_anggota == 3){ ?>
+          <tr>
+            <td> <?= $i++?> </td>
+            <td> <?= $item->ctf_nama_tim ?> </td>
+            <td> <?= $item->ctf_intitusi ?> </td>
+            <td> <?= $item->ctf_nama_ketua ?> </td>
+            <td> <?= $item->ctf_nama_anggota_1 ?> </td>
+            <td> <?= $item->ctf_nama_anggota_2 ?> </td>
+            <td> <?= $item->ctf_contact  ?> </td>
+            <td> <?= $item->ctf_email_ketua  ?> </td>
+            <td><a href="<?= base_url() ?>/uploads/ctf/ktm/<?= $item->ctf_suket_ketua ?> " target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+            <td><a href="<?= base_url() ?>/uploads/ctf/ktm/<?= $item->ctf_suket_anggota_1 ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+            <td><a href="<?= base_url() ?>/uploads/ctf/ktm/<?= $item->ctf_suket_anggota_2 ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+            <td><a href="<?= base_url() ?>/uploads/ctf/ig_ara/<?= $item->ctf_ig_ara_ketua ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+            <td><a href="<?= base_url() ?>/uploads/ctf/ig_ara/<?= $item->ctf_ig_ara_anggota_1 ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+            <td><a href="<?= base_url() ?>/uploads/ctf/ig_ara/<?= $item->ctf_ig_ara_anggota_2 ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+            <td><a href="<?= base_url() ?>/uploads/ctf/ig_hmit/<?= $item->ctf_ig_hmit_ketua ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+            <td><a href="<?= base_url() ?>/uploads/ctf/ig_hmit/<?= $item->ctf_ig_hmit_anggota_1 ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+            <td><a href="<?= base_url() ?>/uploads/ctf/ig_hmit/<?= $item->ctf_ig_hmit_anggota_2 ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+            <td><a href="<?= base_url() ?>/uploads/ctf/bukti_bayar/<?= $item->ctf_bukti_bayar ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+            <td>
+            <a href="" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#modalTerima" onclick="document.getElementById('buttTerima').href = '<?= base_url() ?>/dashboard/Admin_ctf/Accept/<?= $item->ctf_id ?>';">Terima</a>
+            <a href="" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#modalTolak" onclick="document.getElementById('buttTolak').href = '<?= base_url() ?>/dashboard/Admin_ctf/Reject/<?= $item->ctf_id ?>';">Tolak</a>
+          </td>
+          </tr>
+        <?php } ?>
+      <?php } ?>
+      <!--<?php for ($i = 1; $i <= 10; $i++) { ?>
         <tr>
           <td><?= $i ?>.</td>
           <td>Tim IT'03</td>
@@ -72,7 +151,7 @@
             <a href="" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#modalTolak">Tolak</a>
           </td>
         </tr>
-      <?php } ?>
+      <?php } ?>-->
     </tbody>
   </table>
 </div>
