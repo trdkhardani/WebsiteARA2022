@@ -9,8 +9,8 @@
     <div class="col-md-6">
         <h1>Capture The Flag</h1>
         <p class="mt-4">Capture the flag ARA adalah sebuah kompetisi di bidang jaringan dan keamanan informasi dengan mekanisme setiap peserta diminta untuk mengumpulkan flag sebanyak-banyaknya dari soal yang telah diberikan. Kompetisi ini dapat diikuti oleh tim yang terdiri dari 2-3 orang yang berasal dari instansi/lembaga pendidikan yang sama.Kompetisi ini diselenggarakan untuk mahasiswa di seluruh Indonesia sebagai salah satu cabang kompetisi dari rangkaian event ARA 2022.</p>
-        <a href="#" class="btn btn-primary px-4 py-3 mt-4 me-4 rounded-pill">Download Guide Book</a>
-        <a href="#" class="btn btn-primary px-4 py-3 mt-4 rounded-pill">Daftar CTF</a>
+        <a href="#" class="btn btn-primary px-4 py-3 mt-4 me-4 rounded-pill disabled">Download Guide Book</a>
+        <a href="<?= base_url() ?>/auth/registrasi_ctf" class="btn btn-primary px-4 py-3 mt-4 rounded-pill">Daftar CTF</a>
     </div>
     <div class="col-md-6">
         <img src="<?= base_url() ?>/images/misterius.svg" alt="" class="ms-auto">
@@ -20,26 +20,20 @@
     <div class="timeline">
         <div class="event kiri">
             <div data-aos="fade-right" class="isi-event">
-                <p class="fw-bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <p>01-01-2022 - 31-12-2023</p>
+                <p class="fw-bold">Open Registrasi</p>
+                <p>1 Maret 2022</p>
             </div>
         </div>
         <div class="event kanan mt-5">
             <div data-aos="fade-left" class="isi-event">
-                <p class="fw-bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <p>01-01-2022 - 31-12-2023</p>
+                <p class="fw-bold">Close Registrasi</p>
+                <p>1 Mei 2022</p>
             </div>
         </div>
         <div class="event kiri mt-5">
             <div data-aos="fade-right" class="isi-event">
-                <p class="fw-bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <p>01-01-2022 - 31-12-2023</p>
-            </div>
-        </div>
-        <div class="event kanan mt-5">
-            <div data-aos="fade-left" class="isi-event">
-                <p class="fw-bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <p>01-01-2022 - 31-12-2023</p>
+                <p class="fw-bold">Coming Soon...</p>
+                <!-- <p>01-01-2022 - 31-12-2023</p> -->
             </div>
         </div>
     </div>
