@@ -19,8 +19,8 @@ class Admin_webinar extends BaseController
 
   public function list()
   {
-    session()->destroy();
-    return redirect()->to("/auth/login");
+    //session()->destroy();
+    //return redirect()->to("/auth/login");
 
     // aku gabisa login disini
     $data["lomba"] = "Webinar";
