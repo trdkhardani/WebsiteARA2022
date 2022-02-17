@@ -10,7 +10,7 @@
         <h1>Webinar</h1>
         <p class="mt-4">Webinar merupakan acara pertama dalam rangkaian kegiatan ARA 2022 yang akan membahas dua topik khusus yaitu Internet of Things dan Cyber Security dimana pembicaranya ialah orang terkemuka dari sektor industri terkait. Pengetahuan adalah sesuatu yang paling berharga di dunia ini. Oleh karena itu, ikuti kegiatan webinar ARA 2022 untuk memperluas pengetahuan kalian!</p>
         <a href="#" class="btn btn-primary px-4 py-3 mt-4 me-4 rounded-pill disabled">Download Guide Book</a>
-        <a href="#" class="btn btn-primary px-4 py-3 mt-4 rounded-pill">Daftar Webinar</a>
+        <a href="<?= base_url() ?>/auth/registrasi_webinar" class="btn btn-primary px-4 py-3 mt-4 rounded-pill">Daftar Webinar</a>
     </div>
     <div class="col-md-6">
         <img src="<?= base_url() ?>/images/manusia-laptop.svg" alt="" class="ms-auto">

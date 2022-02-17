@@ -10,7 +10,7 @@
         <h1>Olimpiade</h1>
         <p class="mt-4">Olimpiade ARA 2022 adalah olimpiade nasional dengan topik Cyber Security (keamanan siber) dan IoT berbasis tim yang terdiri dari 1-3 siswa/siswi SMA/SMK yang akan berkompetisi dalam 2 babak, yaitu penyisihan dengan soal teori dan final mengenai studi kasus beserta solusinya. Tunjukkan pengetahuan dan taring kalian dalam kompetisi Olimpiade ARA 2022!</p>
         <a href="#" class="btn btn-primary px-4 py-3 mt-4 me-4 rounded-pill disabled">Download Guide Book</a>
-        <a href="#" class="btn btn-primary px-4 py-3 mt-4 rounded-pill">Daftar Olimpiade</a>
+        <a href="<?= base_url() ?>/auth/registrasi_olim" class="btn btn-primary px-4 py-3 mt-4 rounded-pill">Daftar Olimpiade</a>
     </div>
     <div class="col-md-6">
         <img src="<?= base_url() ?>/images/winner.svg" alt="" class="ms-auto">
