@@ -79,21 +79,21 @@
 
         <!-- anggota 1 -->
         <div class="mb-4">
-          <h2>Anggota 1 <span class="text-danger">*</span></h2>
+          <h2>Anggota 1</h2>
           <div class="mb-3">
-            <label for="nama_anggota_1" class="form-label">Nama <span class="text-danger">*<?= '<br>' . $validation->getError('nama_anggota_1') ?></span></label>
+            <label for="nama_anggota_1" class="form-label">Nama <span class="text-danger"><?= '<br>' . $validation->getError('nama_anggota_1') ?></span></label>
             <input type="text" class="form-control" id="nama_anggota_1" name="nama_anggota_1">
           </div>
           <div class="mb-3">
-            <label for="ktm_anggota_1" class="form-label">Kartu Tanda Mahasiswa <span class="text-danger">*<?= '<br>' . $validation->getError('ktm_anggota_1') ?></span></label>
+            <label for="ktm_anggota_1" class="form-label">Kartu Tanda Mahasiswa <span class="text-danger"><?= '<br>' . $validation->getError('ktm_anggota_1') ?></span></label>
             <input class="form-control" type="file" id="ktm_anggota_1" name="ktm_anggota_1">
           </div>
           <div class="mb-3">
-            <label for="ig_ara_anggota_1" class="form-label">Follow IG ARA <span class="text-danger">*<?= '<br>' . $validation->getError('ig_ara_anggota_1') ?></span></label>
+            <label for="ig_ara_anggota_1" class="form-label">Follow IG ARA <span class="text-danger"><?= '<br>' . $validation->getError('ig_ara_anggota_1') ?></span></label>
             <input class="form-control" type="file" id="ig_ara_anggota_1" name="ig_ara_anggota_1">
           </div>
           <div class="mb-3">
-            <label for="ig_hmit_anggota_1" class="form-label">Follow IG HMIT <span class="text-danger">*<?= '<br>' . $validation->getError('ig_hmit_anggota_1') ?></span></label>
+            <label for="ig_hmit_anggota_1" class="form-label">Follow IG HMIT <span class="text-danger"><?= '<br>' . $validation->getError('ig_hmit_anggota_1') ?></span></label>
             <input class="form-control" type="file" id="ig_hmit_anggota_1" name="ig_hmit_anggota_1">
           </div>
         </div>
@@ -103,19 +103,19 @@
         <div class="mb-3">
           <h2>Anggota 2</h2>
           <div class="mb-3">
-            <label for="nama_anggota_2" class="form-label">Nama</label> <span class="text-danger">*<?= '<br>' . $validation->getError('nama_anggota_2') ?></span>
+            <label for="nama_anggota_2" class="form-label">Nama</label> <span class="text-danger"><?= '<br>' . $validation->getError('nama_anggota_2') ?></span>
             <input type="text" class="form-control" id="nama_anggota_2" name="nama_anggota_2">
           </div>
           <div class="mb-3">
-            <label for="ktm_anggota_2" class="form-label">Kartu Tanda Mahasiswa</label> <span class="text-danger">*<?= '<br>' . $validation->getError('ktm_anggota_2') ?></span>
+            <label for="ktm_anggota_2" class="form-label">Kartu Tanda Mahasiswa</label> <span class="text-danger"><?= '<br>' . $validation->getError('ktm_anggota_2') ?></span>
             <input class="form-control" type="file" id="ktm_anggota_2" name="ktm_anggota_2">
           </div>
           <div class="mb-3">
-            <label for="ig_ara_anggota_2" class="form-label">Follow IG ARA</label> <span class="text-danger">*<?= '<br>' . $validation->getError('ig_ara_anggota_2') ?></span>
+            <label for="ig_ara_anggota_2" class="form-label">Follow IG ARA</label> <span class="text-danger"><?= '<br>' . $validation->getError('ig_ara_anggota_2') ?></span>
             <input class="form-control" type="file" id="ig_ara_anggota_2" name="ig_ara_anggota_2">
           </div>
           <div class="mb-3">
-            <label for="ig_hmit_anggota_2" class="form-label">Follow IG HMIT</label> <span class="text-danger">*<?= '<br>' . $validation->getError('ig_hmit_anggota_2') ?></span>
+            <label for="ig_hmit_anggota_2" class="form-label">Follow IG HMIT</label> <span class="text-danger"><?= '<br>' . $validation->getError('ig_hmit_anggota_2') ?></span>
             <input class="form-control" type="file" id="ig_hmit_anggota_2" name="ig_hmit_anggota_2">
           </div>
         </div>

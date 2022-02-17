@@ -18,6 +18,10 @@ class Admin_expo extends BaseController
   }
   public function list()
   {
+    // session()->destroy();
+    // return redirect()->to("home/index");
+
+    // coba diperbaiki lagi ini, diaku pas akses pagenya load terus
     $data["lomba"] = "Expo";
     $data["nama"] = "Admin";
     $data["tahap"] = "Expo";

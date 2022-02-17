@@ -19,6 +19,10 @@ class Admin_webinar extends BaseController
 
   public function list()
   {
+    session()->destroy();
+    return redirect()->to("/auth/login");
+
+    // aku gabisa login disini
     $data["lomba"] = "Webinar";
     $data["nama"] = "Admin";
     $data["tahap"] = "Webinar";
@@ -153,18 +157,18 @@ class Admin_webinar extends BaseController
     }
   }
 
-  public function tes()
-  {
-    $this->model_coba = new model_coba();
-    $data = [
-      'account_username' => 'asd', 
-      'account_table' => 'asd', 
-      'account_keterangan' => 'asd', 
-      'account_password' => 'asd'
-    ];
-    /*$data = [
-      'webinar_nama' => 'asd'
-    ];*/
-    $this->model_coba->save($data);
-  }
+  // public function tes()
+  // {
+  //   $this->model_coba = new model_coba();
+  //   $data = [
+  //     'account_username' => 'asd', 
+  //     'account_table' => 'asd', 
+  //     'account_keterangan' => 'asd', 
+  //     'account_password' => 'asd'
+  //   ];
+  //   /*$data = [
+  //     'webinar_nama' => 'asd'
+  //   ];*/
+  //   $this->model_coba->save($data);
+  // }
 }
