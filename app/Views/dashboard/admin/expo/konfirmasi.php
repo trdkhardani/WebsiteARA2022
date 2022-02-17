@@ -38,7 +38,25 @@
       </tr>
     </thead>
     <tbody>
-      <?php for ($i = 1; $i <= 10; $i++) { ?>
+    <?php $i = 1; 
+      foreach($data as $item){ ?>
+        <tr>
+          <td> <?= $i++ ?> </td> 
+          <td> <?= $item->expo_nama ?> </td> 
+          <td> <?= $item->expo_institusi ?> </td> 
+          <td> <?= $item->expo_contact ?> </td> 
+          <td> <?= $item->expo_email ?> </td> 
+          <td><a href="<?= base_url() ?>/uploads/expo/post_twibbon/<?= $item->expo_twibbon?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+          <td><a href="<?= base_url() ?>/uploads/expo/share_post/<?= $item->expo_poster?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+          <td><a href="<?= base_url() ?>/uploads/expo/follow_ig_ara/<?= $item->expo_ig_ara?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+          <td><a href="<?= base_url() ?>/uploads/expo/follow_ig_hmit/<?= $item->expo_ig_hmit?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+          <td>
+            <a href="" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#modalTerima" onclick="document.getElementById('buttTerima').href = '<?= base_url() ?>/dashboard/Admin_expo/Accept/<?= $item->expo_id ?>';">Terima</a>
+            <a href="" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#modalTolak" onclick="document.getElementById('buttTolak').href = '<?= base_url() ?>/dashboard/Admin_expo/Reject/<?= $item->expo_id ?>';">Tolak</a>
+          </td>
+        </tr>
+      <?php }?> 
+      <!--<?php for ($i = 1; $i <= 10; $i++) { ?>
         <tr>
           <td><?= $i ?>.</td>
           <td>Rama Muhammad Murshal</td>
@@ -54,7 +72,7 @@
             <a href="" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#modalTolak">Tolak</a>
           </td>
         </tr>
-      <?php } ?>
+      <?php } ?>-->
     </tbody>
   </table>
 </div>

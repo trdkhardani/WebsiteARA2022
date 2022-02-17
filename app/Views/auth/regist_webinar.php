@@ -36,19 +36,19 @@
       <form action="<?= base_url() ?>/Verify/verify_registrasi_webinar" method="POST" enctype="multipart/form-data">
         <div class="mb-3">
           <label for="nama" class="form-label">Nama <span class="text-danger">*<?= '<br>' . $validation->getError('nama') ?></span></label>
-          <input type="text" class="form-control" id="nama" name="nama">
+          <input type="text" class="form-control" id="nama" name="nama" value="<?= old('nama') ?>">
         </div>
         <div class="mb-3">
           <label for="asal_institusi" class="form-label">Asal Institusi <span class="text-danger">*<?= '<br>' . $validation->getError('asal_institusi') ?></span></label>
-          <input type="text" class="form-control" id="asal_institusi" name="asal_institusi">
+          <input type="text" class="form-control" id="asal_institusi" name="asal_institusi" value="<?= old('asal_institusi') ?>">
         </div>
         <div class="mb-3">
           <label for="email" class="form-label">Email <span class="text-danger">*<?= '<br>' . $validation->getError('email') ?></span></label>
-          <input type="email" class="form-control" id="email" name="email">
+          <input type="email" class="form-control" id="email" name="email" value="<?= old('email') ?>">
         </div>
         <div class="mb-3">
           <label for="whatsapp" class="form-label">Whatsapp <span class="text-danger">*<?= '<br>' . $validation->getError('whatsapp') ?></span></label>
-          <input type="text" class="form-control" id="whatsapp" name="whatsapp">
+          <input type="text" class="form-control" id="whatsapp" name="whatsapp" value="<?= old('whatsapp') ?>">
         </div>
         <div class="mb-3">
           <label class="form-label">Pilihan Webinar <span class="text-danger">*</span></label>
@@ -73,27 +73,27 @@
         </div>
         <div class="mb-3" v-if="isCtf">
           <label for="share_post_ctf" class="form-label">Share Post Webinar Capture The Flag <span class="text-danger">*<?= '<br>' . $validation->getError('share_post_ctf') ?></span></label>
-          <input class="form-control" type="file" id="share_post_ctf" name="share_post_ctf">
+          <input class="form-control" type="file" id="share_post_ctf" name="share_post_ctf" value="<?= old('share_post_ctf') ?>">
         </div>
         <div class="mb-3" v-if="isIot">
           <label for="share_post_iot" class="form-label">Share Post Webinar Internet Of Things <span class="text-danger">*<?= '<br>' . $validation->getError('share_post_iot') ?></span></label>
-          <input class="form-control" type="file" id="share_post_iot" name="share_post_iot">
+          <input class="form-control" type="file" id="share_post_iot" name="share_post_iot" value="<?= old('share_post_iot') ?>">
         </div>
         <div class="mb-3">
           <label for="follow_ig_ara" class="form-label">Follow IG ARA <span class="text-danger">*<?= '<br>' . $validation->getError('follow_ig_ara') ?></span></label>
-          <input class="form-control" type="file" id="follow_ig_ara" name="follow_ig_ara">
+          <input class="form-control" type="file" id="follow_ig_ara" name="follow_ig_ara" value="<?= old('follow_ig_ara') ?>">
         </div>
         <div class="mb-3">
           <label for="follow_ig_hmit" class="form-label">Follow IG HMIT <span class="text-danger">*<?= '<br>' . $validation->getError('follow_ig_hmit') ?></span></label>
-          <input class="form-control" type="file" id="follow_ig_hmit" name="follow_ig_hmit">
+          <input class="form-control" type="file" id="follow_ig_hmit" name="follow_ig_hmit" value="<?= old('follow_ig_hmit') ?>">
         </div>
         <div class="mb-3">
           <label for="subs_yt_it" class="form-label">Subscribe Youtube HMIT <span class="text-danger">*<?= '<br>' . $validation->getError('subs_yt_it') ?></span></label>
-          <input class="form-control" type="file" id="subs_yt_it" name="subs_yt_it">
+          <input class="form-control" type="file" id="subs_yt_it" name="subs_yt_it" value="<?= old('subs_yt_it') ?>">
         </div>
         <div class="mb-3">
           <label for="share_group" class="form-label">Share Post ke 2 grup <span class="text-danger">*<?= '<br>' . $validation->getError('share_group[]') ?></span></label>
-          <input class="form-control" type="file" id="share_group" name="share_group[]" multiple>
+          <input class="form-control" type="file" id="share_group" name="share_group[]" multiple value="<?= old('share_group[]') ?>">
         </div>
         <div class="mb-3">
           <label for="post_twibbon" class="form-label">Post Twibbon</label> <span class="text-danger">*<?= '<br>' . $validation->getError('post_twibbon') ?></span></label>
