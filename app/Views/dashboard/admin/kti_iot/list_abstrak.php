@@ -49,19 +49,21 @@
       </tr>
     </thead>
     <tbody>
-      <?php for ($i = 1; $i <= 10; $i++) { ?>
+      <?php $i = 1; ?>
+      <?php foreach ($list_tim_abstrak as $tim) : ?>
         <tr>
           <td><?= $i ?>.</td>
-          <td>Tim IT'03</td>
-          <td>Institut Teknologi Sepuluh Nopember</td>
-          <td>Rama Muhammad Murshal</td>
-          <td>Rangga Gak tau Lagi</td>
-          <td>Diktia gak tau lagi</td>
-          <td>081241227574</td>
-          <td>rmurshal@gmail.com</td>
-          <td><a href="<?= base_url() ?>/files/iot/abstrak/testing.jpg" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+          <td><?= $tim['iot_nama_tim']; ?></td>
+          <td><?= $tim['iot_institusi']; ?></td>
+          <td><?= $tim['iot_nama_ketua']; ?></td>
+          <td><?= ($tim['iot_nama_anggota_1']) ? $tim['iot_nama_anggota_1'] : ''; ?></td>
+          <td><?= ($tim['iot_nama_anggota_2']) ? $tim['iot_nama_anggota_2'] : ''; ?></td>
+          <td><?= $tim['iot_contact']; ?></td>
+          <td><?= $tim['iot_email_ketua']; ?></td>
+          <td><a href="<?= base_url() ?>/uploads/kti_iot/abstrak/<?= $tim['iot_abstrak']; ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
         </tr>
-      <?php } ?>
+        <?php $i++; ?>
+      <?php endforeach; ?>
     </tbody>
   </table>
 </div>

@@ -105,13 +105,13 @@ class Verify extends BaseController
                     'is_image' => $imgTypeError
                 ]
             ],
-            'nama_anggota_1' => [
-                'label' => 'nama_anggota_1',
-                'rules' => 'required',
-                'errors' => [
-                    'required' => $fieldError
-                ]
-            ],
+            // 'nama_anggota_1' => [
+            //     'label' => 'nama_anggota_1',
+            //     'rules' => 'required',
+            //     'errors' => [
+            //         'required' => $fieldError
+            //     ]
+            // ],
             'ktm_anggota_1' => [
                 'label' => 'ktm_anggota_1',
                 'rules' => 'max_size[ktm_anggota_1,1024]|is_image[ktm_anggota_1]',
@@ -178,6 +178,7 @@ class Verify extends BaseController
             ],
 
         ];
+
         if (!$this->validate($validation_rules)) {
             return redirect()->to('/Auth/registrasi_kti')->withInput();
         }
@@ -204,7 +205,8 @@ class Verify extends BaseController
         $ig_follow_path = 'uploads/kti_iot/ig/follow';
         $ig_share_path = 'uploads/kti_iot/ig/share';
         $ktm_path = 'uploads/kti_iot/ktm';
-
+        // Hitung anggota
+        $jumlahAnggota = 1;
         // Ketua
         $renamed_ktm_ketua = $this->moveFile($ktm_path, $ktm_ketua);
         $renamed_ig_ara_ketua = $this->moveFile($ig_follow_path, $ig_ara_ketua);
@@ -212,10 +214,18 @@ class Verify extends BaseController
         $renamed_share_ketua = $this->moveFile($ig_share_path, $share_post_ketua);
 
         // Anggota 1 
-        $renamed_ktm_anggota_1 = $this->moveFile($ktm_path, $ktm_anggota_1);
-        $renamed_ig_ara_anggota_1 = $this->moveFile($ig_follow_path, $ig_ara_anggota_1);
-        $renamed_ig_hmit_anggota_1 = $this->moveFile($ig_follow_path, $ig_hmit_anggota_1);
-        $renamed_share_anggota_1 = $this->moveFile($ig_share_path, $share_post_anggota_1);
+        $nama_anggota_1 = $this->request->getVar('nama_anggota_1');
+        $renamed_ktm_anggota_1 = null;
+        $renamed_ig_ara_anggota_1 = null;
+        $renamed_ig_hmit_anggota_1 = null;
+        $renamed_share_anggota_1 = null;
+        if (!empty($nama_anggota_1)) {
+            $jumlahAnggota++;
+            $renamed_ktm_anggota_1 = $this->moveFile($ktm_path, $ktm_anggota_1);
+            $renamed_ig_ara_anggota_1 = $this->moveFile($ig_follow_path, $ig_ara_anggota_1);
+            $renamed_ig_hmit_anggota_1 = $this->moveFile($ig_follow_path, $ig_hmit_anggota_1);
+            $renamed_share_anggota_1 = $this->moveFile($ig_share_path, $share_post_anggota_1);
+        }
 
         // Anggota 2
         $nama_anggota_2 = $this->request->getVar('nama_anggota_2');
@@ -224,6 +234,7 @@ class Verify extends BaseController
         $renamed_ig_hmit_anggota_2 = null;
         $renamed_share_anggota_2 = null;
         if (!empty($nama_anggota_2)) {
+            $jumlahAnggota++;
             $renamed_ktm_anggota_2 = $this->moveFile($ktm_path, $ktm_anggota_2);
             $renamed_ig_ara_anggota_2 = $this->moveFile($ig_follow_path, $ig_ara_anggota_2);
             $renamed_ig_hmit_anggota_2 = $this->moveFile($ig_follow_path, $ig_hmit_anggota_2);
@@ -231,10 +242,6 @@ class Verify extends BaseController
         }
 
         // Hitung anggota
-        $jumlahAnggota = 2;
-        $nama_anggota_2 = $this->request->getVar('nama_anggota_2');
-        if (!empty($nama_anggota_2))
-            $jumlahAnggota++;
 
         // Tampung data sesuai field di db
         $data_kti = [
@@ -242,8 +249,8 @@ class Verify extends BaseController
             'iot_jumlah_anggota' => $jumlahAnggota,
             'iot_email_ketua' => $this->request->getVar('email_ketua'),
             'iot_nama_ketua' => $this->request->getVar('nama_ketua'),
-            'iot_nama_anggota_1' => $this->request->getVar('nama_anggota_1'),
-            'iot_nama_anggota_2' => $this->request->getVar('nama_anggota_2'),
+            'iot_nama_anggota_1' => $nama_anggota_1,
+            'iot_nama_anggota_2' => $nama_anggota_2,
             'iot_suket_ketua' => $renamed_ktm_ketua,
             'iot_suket_anggota_1' => $renamed_ktm_anggota_1,
             'iot_suket_anggota_2' => $renamed_ktm_anggota_2,
@@ -265,8 +272,8 @@ class Verify extends BaseController
             'iot_pembayaran_full_paper' => null,
             'iot_pembayaran_final' => null,
             'iot_status_konfirmasi_abstrak' => 0,
-            'iot_status_konfirmasi_full_paper' => 0,
-            'iot_status_konfirmasi_final' => 0
+            'iot_status_konfirmasi_full_paper' => null,
+            'iot_status_konfirmasi_final' => null
         ];
 
         //template email isi aja subject sama messagenya
@@ -410,62 +417,59 @@ class Verify extends BaseController
             $validation = \Config\Services::validation();
             return redirect()->to('auth/registrasi_ctf')->withInput();
         }
-        
-        if(empty($this->request->getVar('nama_anggota_1')))
-        {
+
+        if (empty($this->request->getVar('nama_anggota_1'))) {
             $data = [
                 'ctf_nama_tim'          => $this->request->getVar('nama_tim'),
-                'ctf_jumlah_anggota'    => 1, 
-                'ctf_email_ketua'      => $this->request->getVar('email_ketua'), 
-                'ctf_nama_ketua'        => $this->request->getVar('nama_ketua'), 
-                'ctf_suket_ketua'       => $this->moveFile('uploads/ctf/ktm', $this->request->getFile('ktm_ketua')),  
+                'ctf_jumlah_anggota'    => 1,
+                'ctf_email_ketua'      => $this->request->getVar('email_ketua'),
+                'ctf_nama_ketua'        => $this->request->getVar('nama_ketua'),
+                'ctf_suket_ketua'       => $this->moveFile('uploads/ctf/ktm', $this->request->getFile('ktm_ketua')),
                 'ctf_ig_ara_ketua'      => $this->moveFile('uploads/ctf/ig_ara', $this->request->getFile('ig_ara_ketua')),
                 'ctf_ig_hmit_ketua'     => $this->moveFile('uploads/ctf/ig_hmit', $this->request->getFile('ig_hmit_ketua')),
-                'ctf_intitusi'          => $this->request->getVar('asal_institusi'), 
-                'ctf_contact'           => $this->request->getVar('wa_ketua'), 
+                'ctf_intitusi'          => $this->request->getVar('asal_institusi'),
+                'ctf_contact'           => $this->request->getVar('wa_ketua'),
                 'ctf_status_final'      => 0,
-                'ctf_bukti_bayar'       => $this->moveFile('uploads/ctf/bukti_bayar', $this->request->getFile('bukti_bayar')), 
+                'ctf_bukti_bayar'       => $this->moveFile('uploads/ctf/bukti_bayar', $this->request->getFile('bukti_bayar')),
                 'ctf_status'            => 0
             ];
-        }
-        else if(!empty($this->request->getVar('nama_anggota_2')))
-        {
+        } else if (!empty($this->request->getVar('nama_anggota_2'))) {
             $data = [
                 'ctf_jumlah_anggota'    => 3,
                 'ctf_nama_anggota_2'    => $this->request->getVar('nama_anggota_2'),
                 'ctf_suket_anggota_2'   => $this->moveFile('uploads/ctf/ktm', $this->request->getFile('ktm_anggota_2')),
                 'ctf_ig_ara_anggota_2'  => $this->moveFile('uploads/ctf/ig_ara', $this->request->getFile('ig_ara_anggota_2')),
                 'ctf_ig_hmit_anggota_2' => $this->moveFile('uploads/ctf/ig_hmit', $this->request->getFile('ig_hmit_anggota_2')),
-                'ctf_nama_tim'          => $this->request->getVar('nama_tim'), 
-                'ctf_email_ketua'       => $this->request->getVar('email_ketua'), 
-                'ctf_nama_ketua'        => $this->request->getVar('nama_ketua'), 
-                'ctf_nama_anggota_1'    => $this->request->getVar('nama_anggota_1'), 
-                'ctf_suket_ketua'       => $this->moveFile('uploads/ctf/ktm', $this->request->getFile('ktm_ketua')), 
-                'ctf_suket_anggota_1'   => $this->moveFile('uploads/ctf/ktm', $this->request->getFile('ktm_anggota_1')),  
+                'ctf_nama_tim'          => $this->request->getVar('nama_tim'),
+                'ctf_email_ketua'       => $this->request->getVar('email_ketua'),
+                'ctf_nama_ketua'        => $this->request->getVar('nama_ketua'),
+                'ctf_nama_anggota_1'    => $this->request->getVar('nama_anggota_1'),
+                'ctf_suket_ketua'       => $this->moveFile('uploads/ctf/ktm', $this->request->getFile('ktm_ketua')),
+                'ctf_suket_anggota_1'   => $this->moveFile('uploads/ctf/ktm', $this->request->getFile('ktm_anggota_1')),
                 'ctf_ig_ara_ketua'      => $this->moveFile('uploads/ctf/ig_ara', $this->request->getFile('ig_ara_ketua')),
                 'ctf_ig_hmit_ketua'     => $this->moveFile('uploads/ctf/ig_hmit', $this->request->getFile('ig_hmit_ketua')),
-                'ctf_ig_ara_anggota_1'  => $this->moveFile('uploads/ctf/ig_ara', $this->request->getFile('ig_ara_anggota_1')), 
-                'ctf_ig_hmit_anggota_1' => $this->moveFile('uploads/ctf/ig_hmit', $this->request->getFile('ig_hmit_anggota_1')),  
-                'ctf_intitusi'          => $this->request->getVar('asal_institusi'), 
-                'ctf_contact'           => $this->request->getVar('wa_ketua'), 
+                'ctf_ig_ara_anggota_1'  => $this->moveFile('uploads/ctf/ig_ara', $this->request->getFile('ig_ara_anggota_1')),
+                'ctf_ig_hmit_anggota_1' => $this->moveFile('uploads/ctf/ig_hmit', $this->request->getFile('ig_hmit_anggota_1')),
+                'ctf_intitusi'          => $this->request->getVar('asal_institusi'),
+                'ctf_contact'           => $this->request->getVar('wa_ketua'),
                 'ctf_status_final'      => 0,
                 'ctf_bukti_bayar'       => $this->moveFile('uploads/ctf/bukti_bayar', $this->request->getFile('bukti_bayar')),
                 'ctf_status'            => 0
             ];
         } else {
             $data = [
-                'ctf_nama_tim'          => $this->request->getVar('nama_tim'), 
-                'ctf_email_ketua'       => $this->request->getVar('email_ketua'), 
-                'ctf_nama_ketua'        => $this->request->getVar('nama_ketua'), 
-                'ctf_nama_anggota_1'    => $this->request->getVar('nama_anggota_1'), 
-                'ctf_suket_ketua'       => $this->moveFile('uploads/ctf/ktm', $this->request->getFile('ktm_ketua')), 
-                'ctf_suket_anggota_1'   => $this->moveFile('uploads/ctf/ktm', $this->request->getFile('ktm_anggota_1')),  
+                'ctf_nama_tim'          => $this->request->getVar('nama_tim'),
+                'ctf_email_ketua'       => $this->request->getVar('email_ketua'),
+                'ctf_nama_ketua'        => $this->request->getVar('nama_ketua'),
+                'ctf_nama_anggota_1'    => $this->request->getVar('nama_anggota_1'),
+                'ctf_suket_ketua'       => $this->moveFile('uploads/ctf/ktm', $this->request->getFile('ktm_ketua')),
+                'ctf_suket_anggota_1'   => $this->moveFile('uploads/ctf/ktm', $this->request->getFile('ktm_anggota_1')),
                 'ctf_ig_ara_ketua'      => $this->moveFile('uploads/ctf/ig_ara', $this->request->getFile('ig_ara_ketua')),
                 'ctf_ig_hmit_ketua'     => $this->moveFile('uploads/ctf/ig_hmit', $this->request->getFile('ig_hmit_ketua')),
-                'ctf_ig_ara_anggota_1'  => $this->moveFile('uploads/ctf/ig_ara', $this->request->getFile('ig_ara_anggota_1')), 
-                'ctf_ig_hmit_anggota_1' => $this->moveFile('uploads/ctf/ig_hmit', $this->request->getFile('ig_hmit_anggota_1')), 
-                'ctf_intitusi'          => $this->request->getVar('asal_institusi'), 
-                'ctf_contact'           => $this->request->getVar('wa_ketua'), 
+                'ctf_ig_ara_anggota_1'  => $this->moveFile('uploads/ctf/ig_ara', $this->request->getFile('ig_ara_anggota_1')),
+                'ctf_ig_hmit_anggota_1' => $this->moveFile('uploads/ctf/ig_hmit', $this->request->getFile('ig_hmit_anggota_1')),
+                'ctf_intitusi'          => $this->request->getVar('asal_institusi'),
+                'ctf_contact'           => $this->request->getVar('wa_ketua'),
                 'ctf_status_final'      => 0,
                 'ctf_bukti_bayar'       => $this->moveFile('uploads/ctf/bukti_bayar', $this->request->getFile('bukti_bayar')),
                 'ctf_status'            => 0,
@@ -822,7 +826,7 @@ class Verify extends BaseController
         <br>
         A Renewal Agents 2022";
         $this->sendemail($data['expo_email'], $subject, $message);
-        
+
         $this->model_expo->save($data);
         return redirect()->to('/Auth/finish_regist');
     }
@@ -908,8 +912,7 @@ class Verify extends BaseController
             ]
         ];
 
-        if($this->request->getVar('event') == 'CTF')
-        {
+        if ($this->request->getVar('event') == 'CTF') {
             $rules2 = [
                 'share_post_ctf' => [
                     'label'     => 'share_post_ctf',
@@ -921,9 +924,7 @@ class Verify extends BaseController
                     ]
                 ],
             ];
-        }
-        else if($this->request->getVar('event') == 'IoT')
-        {
+        } else if ($this->request->getVar('event') == 'IoT') {
             $rules2 = [
                 'share_post_iot' => [
                     'label'     => 'share_post_ctf',
@@ -935,9 +936,7 @@ class Verify extends BaseController
                     ]
                 ],
             ];
-        }
-        else
-        {
+        } else {
             $rules2 = [
                 'share_post_iot' => [
                     'label'     => 'share_post_iot',
@@ -960,30 +959,28 @@ class Verify extends BaseController
             ];
         }
         $rules = array_merge($rules, $rules2);
-        if(!$this->validate($rules))
-        {   
+        if (!$this->validate($rules)) {
             $validation = \Config\Services::validation();
             return redirect()->to('auth/registrasi_webinar')->withInput();
         }
 
         $data = [
-            'webinar_event'     => $this->request->getVar('event'), 
-            'webinar_nama'      => $this->request->getVar('nama'), 
-            'webinar_email'     => $this->request->getVar('email'), 
-            'webinar_contact'   => $this->request->getVar('whatsapp'), 
-            'webinar_instansi'  => $this->request->getVar('asal_institusi'), 
-            'webinar_status'    => 0, 
+            'webinar_event'     => $this->request->getVar('event'),
+            'webinar_nama'      => $this->request->getVar('nama'),
+            'webinar_email'     => $this->request->getVar('email'),
+            'webinar_contact'   => $this->request->getVar('whatsapp'),
+            'webinar_instansi'  => $this->request->getVar('asal_institusi'),
+            'webinar_status'    => 0,
             //'webinar_story'     => $this->moveFile('uploads/webinar/story', $this->request->getFile('share_post')), 
-            'webinar_ig_ara'    => $this->moveFile('uploads/webinar/ig_ara', $this->request->getFile('follow_ig_ara')), 
-            'webinar_ig_hmit'   => $this->moveFile('uploads/webinar/ig_hmit', $this->request->getFile('follow_ig_hmit')), 
+            'webinar_ig_ara'    => $this->moveFile('uploads/webinar/ig_ara', $this->request->getFile('follow_ig_ara')),
+            'webinar_ig_hmit'   => $this->moveFile('uploads/webinar/ig_hmit', $this->request->getFile('follow_ig_hmit')),
             'webinar_subscribe' => $this->moveFile('uploads/webinar/subs', $this->request->getFile('subs_yt_it')),
             'webinar_share_1'   => $this->moveFile('uploads/webinar/share_1', $this->request->getFile('share_group.0')),
             'webinar_share_2'   => $this->moveFile('uploads/webinar/share_2', $this->request->getFile('share_group.1')),
             'webinar_twibbon'   => $this->moveFile('uploads/webinar/post_twibbon', $this->request->getFile('post_twibbon'))
         ];
 
-        if($this->request->getVar('event') == 'CTF')
-        {
+        if ($this->request->getVar('event') == 'CTF') {
             $data2 = [
                 'webinar_post_ctf' => $this->moveFile('uploads/webinar/post_ctf', $this->request->getFile('share_post_ctf'))
             ];
@@ -1002,9 +999,7 @@ class Verify extends BaseController
                         Best regards,<br>
                         <br>
                         A Renewal Agents 2022";
-        }
-        else if($this->request->getVar('event') == 'IoT')
-        {
+        } else if ($this->request->getVar('event') == 'IoT') {
             $data2 = [
                 'webinar_post_iot' => $this->moveFile('uploads/webinar/post_iot', $this->request->getFile('share_post_iot'))
             ];
@@ -1023,9 +1018,7 @@ class Verify extends BaseController
             Best regards,<br>
             <br>
             A Renewal Agents 2022";
-        }
-        else
-        {
+        } else {
             $data2 = [
                 'webinar_post_iot' => $this->moveFile('uploads/webinar/post_iot', $this->request->getFile('share_post_iot')),
                 'webinar_post_ctf' => $this->moveFile('uploads/webinar/post_ctf', $this->request->getFile('share_post_ctf'))
@@ -1046,9 +1039,9 @@ class Verify extends BaseController
                         <br>
                         A Renewal Agents 2022";
         }
-        
+
         $data = array_merge($data, $data2);
-        
+
         $this->sendemail($data['webinar_email'], $subject, $message);
         $this->model_webinar->save($data);
         return redirect()->to('/Auth/finish_regist');
