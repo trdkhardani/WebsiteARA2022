@@ -61,7 +61,7 @@
           <td><?= $tim['iot_nama_anggota_2']; ?></td>
           <td><?= $tim['iot_contact']; ?></td>
           <td><?= $tim['iot_email_ketua']; ?></td>
-          <td><a href="<?= base_url() ?>/uploads/kti_iot/bukti_bayar/<?= $tim['iot_pembayaran_final'] ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+          <td><a href="<?= base_url() ?>/uploads/kti_iot/bukti_bayar/final/<?= $tim['iot_pembayaran_final'] ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
           <td>
             <!-- <a href="" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#modalTerima">Terima</a>
             <a href="" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#modalTolak">Tolak</a> -->

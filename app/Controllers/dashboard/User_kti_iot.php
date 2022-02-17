@@ -156,7 +156,8 @@ class User_kti_iot extends BaseController
     $tim = $this->model_kti_iot->where($this->model_kti_iot->nama_tim, $nama_tim)->first();
     $data = [
       'iot_id' => $tim['iot_id'],
-      'iot_pembayaran_full_paper' => $renamed_bukti_bayar
+      'iot_pembayaran_full_paper' => $renamed_bukti_bayar,
+      'iot_status_konfirmasi_full_paper' => 0,
     ];
     $this->model_kti_iot->save($data);
     return redirect()->to('dashboard/user_kti_iot/full_paper');
@@ -240,7 +241,8 @@ class User_kti_iot extends BaseController
     $tim = $this->model_kti_iot->where($this->model_kti_iot->nama_tim, $nama_tim)->first();
     $data = [
       'iot_id' => $tim['iot_id'],
-      'iot_pembayaran_final' => $renamed_bukti_bayar
+      'iot_pembayaran_final' => $renamed_bukti_bayar,
+      'iot_status_konfirmasi_final' => 0
     ];
     $this->model_kti_iot->save($data);
     return redirect()->to('dashboard/user_kti_iot/final');

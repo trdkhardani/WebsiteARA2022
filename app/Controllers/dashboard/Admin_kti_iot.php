@@ -198,7 +198,7 @@ class Admin_kti_iot extends BaseController
       'list_tim_final' => $this->model_kti_iot->where('iot_status_konfirmasi_final', 1)->findAll(),
       'terkonfirmasi' => $this->model_kti_iot->where('iot_status_konfirmasi_final', 1)->countAllResults(),
       'belum_terkonfirmasi' => $this->model_kti_iot->where('iot_status_konfirmasi_final', 0)->countAllResults(),
-      'total_peserta' => $this->model_kti_iot->countAllResults()
+      'total_peserta' => $this->model_kti_iot->where('iot_status_konfirmasi_final', 1)->countAllResults() + $this->model_kti_iot->where('iot_status_konfirmasi_final', 0)->countAllResults()
     ];
     return view("dashboard/admin/kti_iot/list_final", $data);
   }
@@ -245,7 +245,7 @@ class Admin_kti_iot extends BaseController
       ];
       $this->model_kti_iot->save($data);
     } else {
-      //Jika ditolak, delete file bayar full paper
+      //Jika ditolak, delete file bayar final
       $path = 'uploads/kti_iot/bukti_bayar/full_paper/';
       $this->delete_file($path, $tim['iot_pembayaran_final']);
       $data = [
