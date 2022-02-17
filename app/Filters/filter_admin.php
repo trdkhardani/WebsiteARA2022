@@ -23,19 +23,19 @@ class filter_admin implements FilterInterface
         {
             return redirect()->to('/dashboard/Admin_ctf/list_team');
         }
-        elseif(session()->username == 'Admin expo' && $nocek != 'admin_ctf')
+        elseif(session()->username == 'Admin expo' && $nocek != 'admin_expo')
         {
             return redirect()->to('/dashboard/Admin_expo/list');
         }
-        elseif(session()->username == 'Admin webinar' && $nocek != 'admin_ctf')
+        elseif(session()->username == 'Admin webinar' && $nocek != 'admin_webinar')
         {
             return redirect()->to('/dashboard/Admin_webinar/list');
         }
-        elseif(session()->username == 'Admin kti iot' && $nocek != 'admin_ctf')
+        elseif(session()->username == 'Admin kti iot' && $nocek != 'admin_kti_iot')
         {
             return redirect()->to('/dashboard/Admin_kti_iot/list_abstrak');
         }
-        elseif(session()->username == 'Admin olim' && $nocek != 'admin_ctf')
+        elseif(session()->username == 'Admin olim' && $nocek != 'admin_olim')
         {
             return redirect()->to('/dashboard/Admin_olim/list_team');
         }

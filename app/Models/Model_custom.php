@@ -42,7 +42,7 @@ class Model_custom
     public function updatestatus_where($table, $id)
     {
         $builder = $this->db->table($table);
-        $builder->set($table.'_status', 0);
+        $builder->set($table.'_status', 1);
         $builder->where($table.'_id', $id);
         $builder->update();
     }
