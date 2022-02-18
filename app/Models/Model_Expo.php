@@ -11,7 +11,7 @@ class Model_Expo extends Model
     protected $primaryKey = 'expo_id';
     protected $allowedFields = [
         'expo_nama', 
-        'expo_email ', 
+        'expo_email', 
         'expo_contact', 
         'expo_institusi', 
         'expo_status', 

@@ -24,10 +24,10 @@
 <div class="card-dashboard">
   <h4>Data Tim</h4>
   <ul>
-    <li><i class="fas fa-university"></i> Institusi: Institut Teknologi Sepuluh Nopember</li>
-    <li><i class="fas fa-user"></i> Ketua Tim: Haffif Rasya Fauzi</li>
-    <li><i class="fas fa-user"></i> Anggota 1: Naufal Dhiya Ulhaq</li>
-    <li><i class="fas fa-user"></i> Anggota 2: Fatih Rian Hibatul Hakim</li>
+    <li><i class="fas fa-university"></i> Institusi: <?= $data[0]->ctf_nama_tim ?></li>
+    <li><i class="fas fa-user"></i> Ketua Tim:  <?= $data[0]->ctf_nama_ketua ?></li>
+    <li><i class="fas fa-user"></i> Anggota 1: <?= $data[0]->ctf_nama_anggota_1 ?></li>
+    <li><i class="fas fa-user"></i> Anggota 2: <?= $data[0]->ctf_nama_anggota_2 ?></li>
   </ul>
 </div>
 <?= $this->endSection(); ?>

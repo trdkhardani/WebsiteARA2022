@@ -12,16 +12,13 @@
     <li class="<?= ($active  == 'abstrak') ? 'active' : '' ?>">
       <a href="<?= base_url() ?>/dashboard/user_kti_iot/abstrak"><i class="fa-solid fa-note-sticky"></i> Abstrak</a>
     </li>
-    <?php if ($status_konfirmasi_abstrak) : ?>
-      <li class="<?= ($active  == 'full_paper') ? 'active' : '' ?>">
-        <a href="<?= base_url() ?>/dashboard/user_kti_iot/full_paper"><i class="fas fa-newspaper"></i> Full Paper</a>
-      </li>
-      <?php if ($status_penyisihan) : ?>
-        <li class="<?= ($active  == 'final') ? 'active' : '' ?>">
-          <a href="<?= base_url() ?>/dashboard/user_kti_iot/final"><i class="fa-solid fa-trophy"></i> Final</a>
-        </li>
-      <?php endif; ?>
-    <?php endif; ?>
+    <li class="<?= ($active  == 'full_paper') ? 'active' : '' ?>">
+      <a href="<?= base_url() ?>/dashboard/user_kti_iot/full_paper"><i class="fas fa-newspaper"></i> Full Paper</a>
+    </li>
+
+    <li class="<?= ($active  == 'final') ? 'active' : '' ?>">
+      <a href="<?= base_url() ?>/dashboard/user_kti_iot/final"><i class="fa-solid fa-trophy"></i> Final</a>
+    </li>
   </ul>
 </div>
 <?= $this->endSection(); ?>
