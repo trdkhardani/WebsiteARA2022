@@ -38,11 +38,11 @@
         <div class="mb-4">
           <div class="mb-3">
             <label for="nama_tim" class="form-label">Nama Tim <span class="text-danger">*<?= '<br>' . $validation->getError('nama_tim') ?></span></label>
-            <input type="text" class="form-control" id="nama_tim" name="nama_tim">
+            <input type="text" class="form-control" id="nama_tim" name="nama_tim" value="<?= old('nama_tim') ?>">
           </div>
           <div class="mb-3">
             <label for="asal_institusi" class="form-label">Asal Institusi <span class="text-danger">*<?= '<br>' . $validation->getError('asal_institusi') ?></span></label>
-            <input type="text" class="form-control" id="asal_institusi" name="asal_institusi">
+            <input type="text" class="form-control" id="asal_institusi" name="asal_institusi" value="<?= old('asal_institusi') ?>">
           </div>
         </div>
         <!-- end tim -->
@@ -52,15 +52,15 @@
           <h2>Ketua Tim <span class="text-danger">*</span></h2>
           <div class="mb-3">
             <label for="nama_ketua" class="form-label">Nama <span class="text-danger">*<?= '<br>' . $validation->getError('nama_ketua') ?></span></label>
-            <input type="text" class="form-control" id="nama_ketua" name="nama_ketua">
+            <input type="text" class="form-control" id="nama_ketua" name="nama_ketua" value="<?= old('nama_ketua') ?>">
           </div>
           <div class="mb-3">
             <label for="email_ketua" class="form-label">Email <span class="text-danger">*<?= '<br>' . $validation->getError('email_ketua') ?></span></label>
-            <input type="email" class="form-control" id="email_ketua" name="email_ketua">
+            <input type="email" class="form-control" id="email_ketua" name="email_ketua" value="<?= old('email_ketua') ?>">
           </div>
           <div class="mb-3">
             <label for="wa_ketua" class="form-label">Whatsapp <span class="text-danger">*<?= '<br>' . $validation->getError('wa_ketua') ?></span></label>
-            <input type="text" class="form-control" id="wa_ketua" name="wa_ketua">
+            <input type="text" class="form-control" id="wa_ketua" name="wa_ketua" value="<?= old('wa_ketua') ?>">
           </div>
           <div class="mb-3">
             <label for="ktm_ketua" class="form-label">Kartu Tanda Mahasiswa <span class="text-danger">*<?= '<br>' . $validation->getError('ktm_ketua') ?></span></label>
@@ -83,26 +83,26 @@
 
         <!-- anggota 1 -->
         <div class="mb-4">
-          <h2>Anggota 1 <span class="text-danger">*</span></h2>
+          <h2>Anggota 1 <span class="text-danger"></span></h2>
           <div class="mb-3">
-            <label for="nama_anggota_1" class="form-label">Nama <span class="text-danger">*<?= '<br>' . $validation->getError('nama_anggota_1') ?></span></label>
-            <input type="text" class="form-control" id="nama_anggota_1" name="nama_anggota_1">
+            <label for="nama_anggota_1" class="form-label">Nama <span class="text-danger"><?= '<br>' . $validation->getError('nama_anggota_1') ?></span></label>
+            <input type="text" class="form-control" id="nama_anggota_1" name="nama_anggota_1" value="<?= old('nama_anggota_1') ?>">
           </div>
           <div class="mb-3">
-            <label for="ktm_anggota_1" class="form-label">Kartu Tanda Mahasiswa <span class="text-danger">*<?= '<br>' . $validation->getError('ktm_anggota_1') ?></span></label>
-            <input class="form-control" type="file" id="ktm_anggota_1" name="ktm_anggota_1" required>
+            <label for="ktm_anggota_1" class="form-label">Kartu Tanda Mahasiswa <span class="text-danger"><?= '<br>' . $validation->getError('ktm_anggota_1') ?></span></label>
+            <input class="form-control" type="file" id="ktm_anggota_1" name="ktm_anggota_1">
           </div>
           <div class="mb-3">
-            <label for="ig_ara_anggota_1" class="form-label">Follow IG ARA <span class="text-danger">*<?= '<br>' . $validation->getError('ig_ara_anggota_1') ?></span></label>
-            <input class="form-control" type="file" id="ig_ara_anggota_1" name="ig_ara_anggota_1" required>
+            <label for="ig_ara_anggota_1" class="form-label">Follow IG ARA <span class="text-danger"><?= '<br>' . $validation->getError('ig_ara_anggota_1') ?></span></label>
+            <input class="form-control" type="file" id="ig_ara_anggota_1" name="ig_ara_anggota_1">
           </div>
           <div class="mb-3">
-            <label for="ig_hmit_anggota_1" class="form-label">Follow IG HMIT <span class="text-danger">*<?= '<br>' . $validation->getError('ig_hmit_anggota_1') ?></span></label>
-            <input class="form-control" type="file" id="ig_hmit_anggota_1" name="ig_hmit_anggota_1" required>
+            <label for="ig_hmit_anggota_1" class="form-label">Follow IG HMIT <span class="text-danger"><?= '<br>' . $validation->getError('ig_hmit_anggota_1') ?></span></label>
+            <input class="form-control" type="file" id="ig_hmit_anggota_1" name="ig_hmit_anggota_1">
           </div>
           <div class="mb-3">
-            <label for="share_post_anggota_1" class="form-label">Share Postingan <span class="text-danger">*<?= '<br>' . $validation->getError('share_post_anggota_1') ?></span></label>
-            <input class="form-control" type="file" id="share_post_anggota_1" name="share_post_anggota_1" required>
+            <label for="share_post_anggota_1" class="form-label">Share Postingan <span class="text-danger"><?= '<br>' . $validation->getError('share_post_anggota_1') ?></span></label>
+            <input class="form-control" type="file" id="share_post_anggota_1" name="share_post_anggota_1">
           </div>
         </div>
         <!-- end anggota 1 -->
@@ -112,7 +112,7 @@
           <h2>Anggota 2</h2>
           <div class="mb-3">
             <label for="nama_anggota_2" class="form-label">Nama</label>
-            <input type="text" class="form-control" id="nama_anggota_2" name="nama_anggota_2">
+            <input type="text" class="form-control" id="nama_anggota_2" name="nama_anggota_2" value="<?= old('nama_anggota_2') ?>">
           </div>
           <div class="mb-3">
             <label for="ktm_anggota_2" class="form-label">Kartu Tanda Mahasiswa <span class="text-danger"><?= '<br>' . $validation->getError('ktm_anggota_2') ?></span></label>

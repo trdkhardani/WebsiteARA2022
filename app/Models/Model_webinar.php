@@ -10,12 +10,14 @@ class Model_webinar extends Model
     protected $table = 'webinar';
     protected $primaryKey = 'webinar_id';
     protected $allowedFields = [
+        'webinar_event',
         'webinar_nama', 
-        'webinar_email ', 
+        'webinar_email', 
         'webinar_contact', 
         'webinar_instansi', 
         'webinar_status', 
-        'webinar_story', 
+        'webinar_post_iot',
+        'webinar_post_ctf', 
         'webinar_ig_ara', 
         'webinar_ig_hmit', 
         'webinar_subscribe', 
