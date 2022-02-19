@@ -13,7 +13,7 @@ class Admin_kti_iot extends BaseController
   {
     $this->session = session();
     $this->model_kti_iot = new Model_Kti_iot();
-    $this->model->account = new Model_Account();
+    $this->model_account = new Model_Account();
     $this->model_custom = new Model_custom();
   }
   public function list_abstrak()
@@ -312,7 +312,7 @@ class Admin_kti_iot extends BaseController
       $this->model_kti_iot->save($data);
     } else {
       //Jika ditolak, delete file bayar final
-      $path = 'uploads/kti_iot/bukti_bayar/full_paper/';
+      $path = 'uploads/kti_iot/bukti_bayar/final/';
       $this->delete_file($path, $tim['iot_pembayaran_final']);
       $data = [
         'iot_id' => $tim['iot_id'],
