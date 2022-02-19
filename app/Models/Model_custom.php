@@ -54,5 +54,3 @@ class Model_custom
         return !empty($builder->get()->getResult());
     }
 }
-
-?>

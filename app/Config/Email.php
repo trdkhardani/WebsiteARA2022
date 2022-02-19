@@ -68,6 +68,7 @@ class Email extends BaseConfig
      *
      * @var int
      */
+    // public $SMTPPort = 587;
     public $SMTPPort = 465;
 
     /**

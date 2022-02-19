@@ -3,6 +3,8 @@
 namespace App\Controllers\Dashboard;
 
 use App\Controllers\BaseController;
+use App\Models\Model_Account;
+use App\Models\Model_custom;
 use App\Models\Model_Kti_iot;
 
 class Admin_kti_iot extends BaseController
@@ -11,6 +13,8 @@ class Admin_kti_iot extends BaseController
   {
     $this->session = session();
     $this->model_kti_iot = new Model_Kti_iot();
+    $this->model->account = new Model_Account();
+    $this->model_custom = new Model_custom();
   }
   public function list_abstrak()
   {
@@ -52,7 +56,8 @@ class Admin_kti_iot extends BaseController
     ];
     return view("dashboard/admin/kti_iot/konfirmasi_abstrak", $data);
   }
-  public function verify_konfirmasi_abstrak()
+
+  public function verify_konfirmasi_abstrak($id, $status)
   {
     if (!$this->session->get('is_admin')) {
       return redirect()->to('/Auth/login');
@@ -60,18 +65,49 @@ class Admin_kti_iot extends BaseController
     if (!$this->session->get('username')) {
       return redirect()->to('/Auth/login');
     }
-    $id = $this->request->getVar('id');
-    $status = $this->request->getVar('status');
+    // $id = $this->request->getVar('id');
+    // $status = $this->request->getVar('status');
     $tim = $this->model_kti_iot->where('iot_id', $id)->first();
     // Untuk men-delete file, relatif terhadap folder public
     // unlink('backend/121079.jpg');
     // Jika di accept
+    helper('text');
     if ($status) {
-      $data = [
-        'iot_id' => $tim['iot_id'],
-        'iot_status_konfirmasi_abstrak' => 1
-      ];
-      $this->model_kti_iot->save($data);
+      $password = random_string('alnum', 16);
+      $name = random_string('alnum', 8);
+
+      if ($this->model_custom->is_pass_same($password)) {
+        return redirect()->to('dashboard/Admin_kti_iot/verify_konfirmasi_abstrak/' . $id . '/1');
+      } else {
+        $data_status = [
+          'iot_id' => $tim['iot_id'],
+          'iot_status_konfirmasi_abstrak' => 1
+        ];
+        $this->model_kti_iot->save($data_status);
+        $data = [
+          'account_table'       => 'kti_iot',
+          'account_keterangan'  => $tim['iot_nama_tim'],
+          'account_username'    => 'kti_iot' . $name . '_' . $tim['iot_nama_tim'],
+          'account_password'    => password_hash($password, PASSWORD_DEFAULT)
+        ];
+        $this->model_account->save($data);
+        $subject = "[Accepted] Internet of Things (IOT)";
+        $message = "Dear {$tim['iot_nama_tim']} from {$tim['iot_institusi']} ,<br>
+                  <br>
+                  Thank you for registering for our competition, \"Internet of Things (IOT).\"<br>
+                  <br>
+                  This is your account username and password <br>
+                  <br>
+                  Username : {$data['account_username']}<br>
+                  Password : {$password}<br>
+                  <br>
+                  --<br>
+                  Best regards,<br>
+                  <br>
+                  A Renewal Agents 2022";
+        $this->sendemail($tim['iot_email_ketua'], $subject, $message);
+        $this->session->setFlashdata('msg', 'berhasil menerima peserta');
+      }
     } else {
       // Tampung nama file
       $ktm_path = 'uploads/kti_iot/ktm/';
@@ -98,13 +134,28 @@ class Admin_kti_iot extends BaseController
 
       // Delete field di db
       $this->model_kti_iot->where('iot_id', $tim['iot_id'])->delete();
+      $subject = "[Rejected] Internet of Things (IOT)";
+      $message = "Dear {$tim['iot_nama_tim']} from {$tim['iot_institusi']} ,<br>
+                  <br>
+                  Thank you for registering for our event, \"Internet of Things (IOT).\"<br>
+                  <br>
+                  unfortunately your requirement is not enough, so please register again in the form <br>
+                  <br>
+                  <br>
+                  --<br>
+                  Best regards,<br>
+                  <br>
+                  A Renewal Agents 2022";
+      $this->sendemail($tim['iot_email_ketua'], $subject, $message);
+      $this->session->setFlashdata('msg', 'berhasil menolak peserta');
     }
     return redirect()->to('dashboard/Admin_kti_iot/konfirmasi_abstrak');
   }
 
   public function delete_file($path, $filename)
   {
-    unlink($path . $filename);
+    if (!empty($filename))
+      unlink($path . $filename);
     return;
   }
 
@@ -152,7 +203,7 @@ class Admin_kti_iot extends BaseController
     return view("dashboard/admin/kti_iot/konfirmasi_fullpaper", $data);
   }
 
-  public function verify_konfirmasi_full_paper()
+  public function verify_konfirmasi_full_paper($id, $status)
   {
     if (!$this->session->get('is_admin')) {
       return redirect()->to('/Auth/login');
@@ -160,8 +211,8 @@ class Admin_kti_iot extends BaseController
     if (!$this->session->get('username')) {
       return redirect()->to('/Auth/login');
     }
-    $id = $this->request->getVar('id');
-    $status = $this->request->getVar('status');
+    // $id = $this->request->getVar('id');
+    // $status = $this->request->getVar('status');
     $tim = $this->model_kti_iot->where('iot_id', $id)->first();
     // Jika di Terima
     if ($status) {
@@ -179,6 +230,21 @@ class Admin_kti_iot extends BaseController
         'iot_pembayaran_full_paper' => null
       ];
       $this->model_kti_iot->save($data);
+
+      $subject = "[Rejected] Internet of Things (IOT)";
+      $message = "Dear {$tim['iot_nama_tim']} from {$tim['iot_institusi']} ,<br>
+                  <br>
+                  Thank you for participating for our event, \"Internet of Things (IOT).\"<br>
+                  <br>
+                  unfortunately your payment requirement is invalid, so please input again in your dahsboard <br>
+                  <br>
+                  <br>
+                  --<br>
+                  Best regards,<br>
+                  <br>
+                  A Renewal Agents 2022";
+      $this->sendemail($tim['iot_email_ketua'], $subject, $message);
+      $this->session->setFlashdata('msg', 'berhasil menolak peserta');
     }
     return redirect()->to('dashboard/Admin_kti_iot/konfirmasi_fullpaper');
   }
@@ -226,7 +292,7 @@ class Admin_kti_iot extends BaseController
     return view("dashboard/admin/kti_iot/konfirmasi_final", $data);
   }
 
-  public function verify_konfirmasi_final()
+  public function verify_konfirmasi_final($id, $status)
   {
     if (!$this->session->get('is_admin')) {
       return redirect()->to('/Auth/login');
@@ -234,8 +300,8 @@ class Admin_kti_iot extends BaseController
     if (!$this->session->get('username')) {
       return redirect()->to('/Auth/login');
     }
-    $id = $this->request->getVar('id');
-    $status = $this->request->getVar('status');
+    // $id = $this->request->getVar('id');
+    // $status = $this->request->getVar('status');
     $tim = $this->model_kti_iot->where('iot_id', $id)->first();
     // Jika di Terima
     if ($status) {
@@ -253,6 +319,21 @@ class Admin_kti_iot extends BaseController
         'iot_pembayaran_final' => null
       ];
       $this->model_kti_iot->save($data);
+
+      $subject = "[Rejected] Internet of Things (IOT)";
+      $message = "Dear {$tim['iot_nama_tim']} from {$tim['iot_institusi']} ,<br>
+                  <br>
+                  Thank you for participating for our event, \"Internet of Things (IOT).\"<br>
+                  <br>
+                  unfortunately your payment requirement is invalid, so please input again in your dahsboard <br>
+                  <br>
+                  <br>
+                  --<br>
+                  Best regards,<br>
+                  <br>
+                  A Renewal Agents 2022";
+      $this->sendemail($tim['iot_email_ketua'], $subject, $message);
+      $this->session->setFlashdata('msg', 'berhasil menolak peserta');
     }
     return redirect()->to('dashboard/Admin_kti_iot/konfirmasi_final');
   }

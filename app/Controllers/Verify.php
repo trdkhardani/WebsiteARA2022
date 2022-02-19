@@ -244,7 +244,7 @@ class Verify extends BaseController
         // Hitung anggota
 
         // Tampung data sesuai field di db
-        $data_kti = [
+        $data = [
             'iot_nama_tim' => $this->request->getVar('nama_tim'),
             'iot_jumlah_anggota' => $jumlahAnggota,
             'iot_email_ketua' => $this->request->getVar('email_ketua'),
@@ -280,9 +280,24 @@ class Verify extends BaseController
         //$subject;
         //$message;
         //$this->sendemail($data['iot_email_ketua'], $message, $subject);
-
+        $subject = "[Confirmation] Internet of Things (IOT)";
+        $message = "Dear {$data['iot_nama_tim']} from {$data['iot_institusi']} ,</br>
+        </br>
+        Thank you for registering for our event, \"Internet of Things (IOT).\"<br>
+        <br>
+        Hereby, we've received your submission. We'll check the completeness of the requirements that have been submitted.<br>
+        <br>
+        This is the confirmation email, and you will receive an invitation email one day before the event is held.<br>
+        <br>
+        Thank you.<br>
+        <br>
+        --<br>
+        Best regards,<br>
+        <br>
+        A Renewal Agents 2022";
+        $this->sendemail($data['iot_email_ketua'], $subject, $message);
         // Insert ke db dan redirect ke finish regist
-        $this->model_kti->save($data_kti);
+        $this->model_kti->save($data);
         return redirect()->to('/Auth/finish_regist');
     }
 
@@ -687,7 +702,7 @@ class Verify extends BaseController
             $jumlahAnggota++;
 
         // Tampung variabel sesuai dengan field di db
-        $data_olim = [
+        $data = [
             'olim_nama_tim' => $this->request->getVar('nama_tim'),
             'olim_institusi' => $this->request->getVar('asal_sekolah'),
             'olim_jumlah_anggota' => $jumlahAnggota,
@@ -714,9 +729,25 @@ class Verify extends BaseController
         //$subject;
         //$message;
         //$this->sendemail($data['olim_email_ketua'], $message, $subject);
+        $subject = "[Confirmation] Olimpiade";
+        $message = "Dear {$data['olim_nama_tim']} from {$data['olim_intitusi']} ,</br>
+        </br>
+        Thank you for registering for our event, \"Olimpiade.\"<br>
+        <br>
+        Hereby, we've received your submission. We'll check the completeness of the requirements that have been submitted.<br>
+        <br>
+        This is the confirmation email, and you will receive an invitation email one day before the event is held.<br>
+        <br>
+        Thank you.<br>
+        <br>
+        --<br>
+        Best regards,<br>
+        <br>
+        A Renewal Agents 2022";
+        $this->sendemail($data['olim_email_ketua'], $subject, $message);
 
         // Insert ke db dan redirect ke finish regist
-        $this->model_olimpiade->save($data_olim);
+        $this->model_olimpiade->save($data);
         return redirect()->to('/Auth/finish_regist');
     }
 

@@ -44,36 +44,30 @@ class Admin_ctf extends BaseController
   {
     $data = $this->model_custom->get_where('ctf', $id, '_id');
     $this->model_custom->delete_where('ctf', $id);
-  
-    $path = 'uploads/ctf/';
-    unlink($path."ig_ara/".$data[0]->ctf_ig_ara_ketua);
-    unlink($path."ig_hmit/".$data[0]->ctf_ig_hmit_ketua);
-    unlink($path."ktm/".$data[0]->ctf_suket_ketua);
-    unlink($path."bukti_bayar/".$data[0]->ctf_bukti_bayar);
 
-    if(!empty($data[0]->ctf_ig_ara_anggota_1))
-    {
-      unlink($path."ig_ara/".$data[0]->ctf_ig_ara_anggota_1);
+    $path = 'uploads/ctf/';
+    unlink($path . "ig_ara/" . $data[0]->ctf_ig_ara_ketua);
+    unlink($path . "ig_hmit/" . $data[0]->ctf_ig_hmit_ketua);
+    unlink($path . "ktm/" . $data[0]->ctf_suket_ketua);
+    unlink($path . "bukti_bayar/" . $data[0]->ctf_bukti_bayar);
+
+    if (!empty($data[0]->ctf_ig_ara_anggota_1)) {
+      unlink($path . "ig_ara/" . $data[0]->ctf_ig_ara_anggota_1);
     }
-    if(!empty($data[0]->ctf_ig_hmit_anggota_1))
-    {
-      unlink($path."ig_hmit/".$data[0]->ctf_ig_hmit_anggota_1);
+    if (!empty($data[0]->ctf_ig_hmit_anggota_1)) {
+      unlink($path . "ig_hmit/" . $data[0]->ctf_ig_hmit_anggota_1);
     }
-    if(!empty($data[0]->ctf_suket_anggota_1))
-    {
-      unlink($path."ktm/".$data[0]->ctf_suket_anggota_1);
+    if (!empty($data[0]->ctf_suket_anggota_1)) {
+      unlink($path . "ktm/" . $data[0]->ctf_suket_anggota_1);
     }
-    if(!empty($data[0]->ctf_ig_ara_anggota_2))
-    {
-      unlink($path."ig_ara/".$data[0]->ctf_ig_ara_anggota_2);
+    if (!empty($data[0]->ctf_ig_ara_anggota_2)) {
+      unlink($path . "ig_ara/" . $data[0]->ctf_ig_ara_anggota_2);
     }
-    if(!empty($data[0]->ctf_ig_hmit_anggota_2))
-    {
-      unlink($path."ig_hmit/".$data[0]->ctf_ig_hmit_anggota_2);
+    if (!empty($data[0]->ctf_ig_hmit_anggota_2)) {
+      unlink($path . "ig_hmit/" . $data[0]->ctf_ig_hmit_anggota_2);
     }
-    if(!empty($data[0]->ctf_suket_anggota_2))
-    {
-      unlink($path."ktm/".$data[0]->ctf_suket_anggota_2);
+    if (!empty($data[0]->ctf_suket_anggota_2)) {
+      unlink($path . "ktm/" . $data[0]->ctf_suket_anggota_2);
     }
 
     $subject = "[Rejected] Capture The Flag";
@@ -101,18 +95,15 @@ class Admin_ctf extends BaseController
     $password = random_string('alnum', 16);
     $name = random_string('alnum', 8);
 
-    if($this->model_custom->is_pass_same($password))
-    {
-      return redirect()->to('/dashboard/admin_ctf/Accept/'.$id);
-    }
-    else
-    {
+    if ($this->model_custom->is_pass_same($password)) {
+      return redirect()->to('/dashboard/admin_ctf/Accept/' . $id);
+    } else {
       $this->model_custom->updatestatus_where('ctf', $id);
       $data_old = $this->model_custom->get_where('ctf', $id, '_id');
       $data = [
         'account_table'       => 'ctf',
         'account_keterangan'  => $data_old[0]->ctf_nama_tim,
-        'account_username'    => 'ctf'.$name.'_'.$data_old[0]->ctf_nama_tim,
+        'account_username'    => 'ctf' . $name . '_' . $data_old[0]->ctf_nama_tim,
         'account_password'    => password_hash($password, PASSWORD_DEFAULT)
       ];
       $this->model_account->save($data);
