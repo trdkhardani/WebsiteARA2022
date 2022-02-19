@@ -670,36 +670,41 @@ class Verify extends BaseController
 
         // Memindahkan file ke path masing2
         // Define path
-        $ig_path = 'uploads/olimpiade/ig';
-        $kp_path = 'uploads/olimpiade/kp';
-        $bukti_bayar_path = 'uploads/olimpiade/bukti_bayar';
+        $ig_path = 'uploads/olimpiade/ig/';
+        $kp_path = 'uploads/olimpiade/kp/';
+        $bukti_bayar_path = 'uploads/olimpiade/bukti_bayar/';
 
+        $jumlahAnggota = 1;
         // Ketua
         $renamed_kp_ketua = $this->moveFile($kp_path, $kp_ketua);
         $renamed_ig_ara_ketua = $this->moveFile($ig_path, $ig_ara_ketua);
         $renamed_ig_hmit_ketua = $this->moveFile($ig_path, $ig_hmit_ketua);
 
         // Anggota 1
-        $renamed_kp_anggota_1 = $this->moveFile($kp_path, $kp_anggota_1);
-        $renamed_ig_ara_anggota_1 = $this->moveFile($ig_path, $ig_ara_anggota_1);
-        $renamed_ig_hmit_anggota_1 = $this->moveFile($ig_path, $ig_hmit_anggota_1);
+        $nama_anggota_1 = $this->request->getVar('nama_anggota_1');
+        $renamed_kp_anggota_1 = null;
+        $renamed_ig_ara_anggota_1 = null;
+        $renamed_ig_hmit_anggota_1 = null;
+        if (!empty($nama_anggota_1)) {
+            $renamed_kp_anggota_1 = $this->moveFile($kp_path, $kp_anggota_1);
+            $renamed_ig_ara_anggota_1 = $this->moveFile($ig_path, $ig_ara_anggota_1);
+            $renamed_ig_hmit_anggota_1 = $this->moveFile($ig_path, $ig_hmit_anggota_1);
+        }
 
         // Anggota 2
-        $renamed_kp_anggota_2 = $this->moveFile($kp_path, $kp_anggota_2);
-        $renamed_ig_ara_anggota_2 = $this->moveFile($ig_path, $ig_ara_anggota_2);
-        $renamed_ig_hmit_anggota_2 = $this->moveFile($ig_path, $ig_hmit_anggota_2);
+        $nama_anggota_2 = $this->request->getVar('nama_anggota_2');
+        $renamed_kp_anggota_2 = null;
+        $renamed_ig_ara_anggota_2 = null;
+        $renamed_ig_hmit_anggota_2 = null;
+        if (!empty($nama_anggota_2)) {
+            $jumlahAnggota++;
+            $renamed_kp_anggota_2 = $this->moveFile($kp_path, $kp_anggota_2);
+            $renamed_ig_ara_anggota_2 = $this->moveFile($ig_path, $ig_ara_anggota_2);
+            $renamed_ig_hmit_anggota_2 = $this->moveFile($ig_path, $ig_hmit_anggota_2);
+        }
 
         // Bukti bayar
         $renamed_bukti_bayar = $this->moveFile($bukti_bayar_path, $bukti_bayar);
-
-        // Hitung anggota
-        $jumlahAnggota = 1;
-        $nama_anggota_1 = $this->request->getVar('nama_anggota_1');
-        $nama_anggota_2 = $this->request->getVar('nama_anggota_2');
-        if (!empty($nama_anggota_1))
-            $jumlahAnggota++;
-        if (!empty($nama_anggota_2))
-            $jumlahAnggota++;
 
         // Tampung variabel sesuai dengan field di db
         $data = [
@@ -730,7 +735,7 @@ class Verify extends BaseController
         //$message;
         //$this->sendemail($data['olim_email_ketua'], $message, $subject);
         $subject = "[Confirmation] Olimpiade";
-        $message = "Dear {$data['olim_nama_tim']} from {$data['olim_intitusi']} ,</br>
+        $message = "Dear {$data['olim_nama_tim']} from {$data['olim_institusi']} ,</br>
         </br>
         Thank you for registering for our event, \"Olimpiade.\"<br>
         <br>
