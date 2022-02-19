@@ -12,27 +12,6 @@
     <div id="carousel-HMIT" class="w-50 mx-auto carousel slide pb-5" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="<?= base_url() ?>/images/dokumentasi2021/(1).jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="<?= base_url() ?>/images/dokumentasi2021/(2).jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="<?= base_url() ?>/images/dokumentasi2021/(3).jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="<?= base_url() ?>/images/dokumentasi2021/(4).jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="<?= base_url() ?>/images/dokumentasi2021/(5).jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="<?= base_url() ?>/images/dokumentasi2021/(6).jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="<?= base_url() ?>/images/dokumentasi2021/(7).jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
                 <img src="<?= base_url() ?>/images/dokumentasi2021/(8).jpg" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
@@ -43,6 +22,9 @@
             </div>
             <div class="carousel-item">
                 <img src="<?= base_url() ?>/images/dokumentasi2021/(11).jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="<?= base_url() ?>/images/dokumentasi2021/(12).jpg" class="d-block w-100" alt="...">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carousel-HMIT" data-bs-slide="prev">

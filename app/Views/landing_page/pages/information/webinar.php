@@ -32,8 +32,14 @@
         </div>
         <div class="event kiri mt-5">
             <div data-aos="fade-right" class="isi-event">
-                <p class="fw-bold">Coming Soon...</p>
-                <!-- <p>01-01-2022 - 31-12-2023</p> -->
+                <p class="fw-bold">CTF</p>
+                <p>9 April 2022</p>
+            </div>
+        </div>
+        <div class="event kanan mt-5">
+            <div data-aos="fade-right" class="isi-event">
+                <p class="fw-bold">IOT</p>
+                <p>10 April 2022</p>
             </div>
         </div>
     </div>
