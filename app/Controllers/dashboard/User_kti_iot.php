@@ -40,7 +40,7 @@ class User_kti_iot extends BaseController
       'active' => 'home',
       'institusi' => $tim['iot_institusi'],
       'lomba' => 'KTI Internet of Things',
-      'nama' => $this->session->get('username'),
+      'nama' => $tim['iot_nama_tim'],
       'ketua' => $tim[$this->model_kti_iot->nama_ketua],
       'anggota_1' => $tim[$this->model_kti_iot->nama_anggota_1],
       'anggota_2' => $tim[$this->model_kti_iot->nama_anggota_2],
@@ -64,7 +64,7 @@ class User_kti_iot extends BaseController
     $data = [
       'active' => 'abstrak',
       'lomba' => 'KTI Internet of Things',
-      'nama' => $this->session->get('username'),
+      'nama' => $tim['iot_nama_tim'],
       'ketua' => $tim[$this->model_kti_iot->nama_ketua],
       'anggota_1' => $tim[$this->model_kti_iot->nama_anggota_1],
       'anggota_2' => $tim[$this->model_kti_iot->nama_anggota_2],
@@ -115,7 +115,7 @@ class User_kti_iot extends BaseController
     $data = [
       'active' => 'full_paper',
       'lomba' => 'KTI Internet of Things',
-      'nama' => $this->session->get('username'),
+      'nama' => $tim['iot_nama_tim'],
       'ketua' => $tim[$this->model_kti_iot->nama_ketua],
       'anggota_1' => $tim[$this->model_kti_iot->nama_anggota_1],
       'anggota_2' => $tim[$this->model_kti_iot->nama_anggota_2],
@@ -201,7 +201,7 @@ class User_kti_iot extends BaseController
     $data = [
       'active' => 'final',
       'lomba' => 'KTI Internet of Things',
-      'nama' => $this->session->get('username'),
+      'nama' => $tim['iot_nama_tim'],
       'ketua' => $tim[$this->model_kti_iot->nama_ketua],
       'anggota_1' => $tim[$this->model_kti_iot->nama_anggota_1],
       'anggota_2' => $tim[$this->model_kti_iot->nama_anggota_2],

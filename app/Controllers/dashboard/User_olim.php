@@ -3,24 +3,39 @@
 namespace App\Controllers\Dashboard;
 
 use App\Controllers\BaseController;
+use App\Models\Model_Olimpiade;
 
 class User_olim extends BaseController
 {
   public function __construct()
   {
     $this->session = session();
+    $this->model_olim = new Model_Olimpiade();
   }
   public function home()
   {
-    $data["lomba"] = "Olimpiade";
-    $data["nama"] = "Tim IT'03";
+    $tim = $this->model_olim->where('olim_nama_tim', $this->session->get('keterangan'))->first();
+    $data = [
+      'lomba' => 'Olimpiade',
+      'nama' => $tim['olim_nama_tim'],
+      'ketua' => $tim['olim_nama_ketua'],
+      'anggota_1' => $tim['olim_nama_anggota_1'],
+      'anggota_2' => $tim['olim_nama_anggota_2'],
+    ];
     return view('dashboard/user/olimpiade/home', $data);
   }
 
   public function team()
   {
-    $data["lomba"] = "Olimpiade";
-    $data["nama"] = "Tim IT'03";
+    $tim = $this->model_olim->where('olim_nama_tim', $this->session->get('keterangan'))->first();
+    $data = [
+      'lomba' => 'Olimpiade',
+      'nama' => $tim['olim_nama_tim'],
+      'ketua' => $tim['olim_nama_ketua'],
+      'institusi' => $tim['olim_institusi'],
+      'anggota_1' => $tim['olim_nama_anggota_1'],
+      'anggota_2' => $tim['olim_nama_anggota_2'],
+    ];
     return view('dashboard/user/olimpiade/team', $data);
   }
 }

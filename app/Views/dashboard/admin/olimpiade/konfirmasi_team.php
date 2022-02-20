@@ -47,32 +47,57 @@
       </tr>
     </thead>
     <tbody>
-      <?php for ($i = 1; $i <= 10; $i++) { ?>
+      <?php $i = 1; ?>
+      <?php foreach ($list_tim as $tim) : ?>
         <tr>
           <td><?= $i ?>.</td>
-          <td>Tim IT'03</td>
-          <td>SMA 5 Negeri Surabaya</td>
-          <td>Rama Muhammad Murshal</td>
-          <td>Rangga Gak tau Lagi</td>
-          <td>Diktia gak tau lagi</td>
-          <td>081241227574</td>
-          <td>rmurshal@gmail.com</td>
-          <td><a href="<?= base_url() ?>/files/olim/kartu_pelajar/testing.jpg" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
-          <td><a href="<?= base_url() ?>/files/olim/kartu_pelajar/testing.jpg" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
-          <td><a href="<?= base_url() ?>/files/olim/kartu_pelajar/testing.jpg" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
-          <td><a href="<?= base_url() ?>/files/olim/follow_ig_ara/testing.jpg" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
-          <td><a href="<?= base_url() ?>/files/olim/follow_ig_ara/testing.jpg" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
-          <td><a href="<?= base_url() ?>/files/olim/follow_ig_ara/testing.jpg" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
-          <td><a href="<?= base_url() ?>/files/olim/follow_ig_hmit/testing.jpg" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
-          <td><a href="<?= base_url() ?>/files/olim/follow_ig_hmit/testing.jpg" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
-          <td><a href="<?= base_url() ?>/files/olim/follow_ig_hmit/testing.jpg" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
-          <td><a href="<?= base_url() ?>/files/olim/bukti_bayar/testing.jpg" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+          <td><?= $tim['olim_nama_tim']; ?></td>
+          <td><?= $tim['olim_institusi']; ?></td>
+          <td><?= $tim['olim_nama_ketua']; ?></td>
+          <td><?= ($tim['olim_nama_anggota_1']) ? $tim['olim_nama_anggota_1'] : '-'; ?></td>
+          <td><?= ($tim['olim_nama_anggota_2']) ? $tim['olim_nama_anggota_2'] : '-'; ?></td>
+          <td><?= $tim['olim_contact']; ?></td>
+          <td><?= $tim['olim_email_ketua']; ?></td>
+          <td><a href="<?= base_url() ?>/uploads/olimpiade/kp/<?= $tim['olim_suket_ketua'] ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+          <?php if ($tim['olim_suket_anggota_1']) : ?>
+            <td><a href="<?= base_url() ?>/uploads/olimpiade/kp/<?= $tim['olim_suket_anggota_1'] ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+          <?php else : ?>
+            <td>-</td>
+          <?php endif; ?>
+          <?php if ($tim['olim_suket_anggota_2']) : ?>
+            <td><a href="<?= base_url() ?>/uploads/olimpiade/kp/<?= $tim['olim_suket_anggota_2'] ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+          <?php else : ?>
+            <td>-</td>
+          <?php endif; ?>
+          <td><a href="<?= base_url() ?>/uploads/olimpiade/ig/<?= $tim['olim_ig_ara_ketua'] ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+          <?php if ($tim['olim_ig_ara_anggota_1']) : ?>
+            <td><a href="<?= base_url() ?>/uploads/olimpiade/ig/<?= $tim['olim_ig_ara_anggota_1'] ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+          <?php else : ?>
+            <td>-</td>
+          <?php endif; ?>
+          <?php if ($tim['olim_ig_ara_anggota_2']) : ?>
+            <td><a href="<?= base_url() ?>/uploads/olimpiade/ig/<?= $tim['olim_ig_ara_anggota_2'] ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+          <?php else : ?>
+            <td>-</td>
+          <?php endif; ?>
+          <td><a href="<?= base_url() ?>/uploads/olimpiade/ig/<?= $tim['olim_ig_hmit_ketua'] ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+          <?php if ($tim['olim_ig_hmit_anggota_1']) : ?>
+            <td><a href="<?= base_url() ?>/uploads/olimpiade/ig/<?= $tim['olim_ig_hmit_anggota_1'] ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+          <?php else : ?>
+            <td>-</td>
+          <?php endif; ?>
+          <?php if ($tim['olim_ig_hmit_anggota_2']) : ?>
+            <td><a href="<?= base_url() ?>/uploads/olimpiade/ig/<?= $tim['olim_ig_hmit_anggota_2'] ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+          <?php else : ?>
+            <td>-</td>
+          <?php endif; ?>
+          <td><a href="<?= base_url() ?>/uploads/olimpiade/bukti_bayar/<?= $tim['olim_pembayaran'] ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
           <td>
-            <a href="" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#modalTerima">Terima</a>
-            <a href="" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#modalTolak">Tolak</a>
+            <a href="" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#modalTerima" onclick="document.getElementById('buttTerima').href = '<?= base_url() ?>/dashboard/admin_olim/verify_konfirmasi_team/<?= $tim['olim_id'] ?>/1';">Terima</a>
+            <a href="" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#modalTolak" onclick="document.getElementById('buttTolak').href = '<?= base_url() ?>/dashboard/admin_olim/verify_konfirmasi_team/<?= $tim['olim_id'] ?>/0';">Tolak</a>
           </td>
         </tr>
-      <?php } ?>
+      <?php endforeach; ?>
     </tbody>
   </table>
 </div>

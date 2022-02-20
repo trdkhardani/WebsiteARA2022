@@ -36,18 +36,20 @@
       </tr>
     </thead>
     <tbody>
-      <?php for ($i = 1; $i <= 10; $i++) { ?>
+      <?php $i = 1; ?>
+      <?php foreach ($list_tim as $tim) : ?>
         <tr>
           <td><?= $i ?>.</td>
-          <td>Tim IT'03</td>
-          <td>SMA Negeri 5 Surabaya</td>
-          <td>Rama Muhammad Murshal</td>
-          <td>Rangga Gak tau Lagi</td>
-          <td>Diktia gak tau lagi</td>
-          <td>081241227574</td>
-          <td>rmurshal@gmail.com</td>
+          <td><?= $tim['olim_nama_tim']; ?></td>
+          <td><?= $tim['olim_institusi']; ?></td>
+          <td><?= $tim['olim_nama_ketua']; ?></td>
+          <td><?= ($tim['olim_nama_anggota_1']) ? $tim['olim_nama_anggota_1'] : '-'; ?></td>
+          <td><?= ($tim['olim_nama_anggota_2']) ? $tim['olim_nama_anggota_2'] : '-'; ?></td>
+          <td><?= $tim['olim_contact']; ?></td>
+          <td><?= $tim['olim_email_ketua']; ?></td>
         </tr>
-      <?php } ?>
+        <?php $i++; ?>
+      <?php endforeach; ?>
     </tbody>
   </table>
 </div>
