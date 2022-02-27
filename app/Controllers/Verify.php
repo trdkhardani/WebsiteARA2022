@@ -818,9 +818,8 @@ class Verify extends BaseController
             ],
             'post_twibbon' => [
                 'label'     => 'post_twibbon',
-                'rules'     => 'uploaded[post_twibbon]|is_image[share_post]|max_size[share_post, 1024]',
+                'rules'     => 'is_image[share_post]|max_size[share_post, 1024]',
                 'errors'    => [
-                    'uploaded'  => 'field harus diisi',
                     'is_image'  => 'field harus diisi dengan gambar',
                     'max_size'  => 'ukuran gambar maksimal 1024 kb'
                 ]
@@ -832,13 +831,18 @@ class Verify extends BaseController
             return redirect()->to('auth/registrasi_expo')->withInput();
         }
 
+        $postTwibbon = null;
+        if (!$this->request->getFile('post_twibbon')->getError() == 4) {
+            $postTwibbon = $this->moveFile('uploads/expo/post_twibbon', $this->request->getFile('post_twibbon'));
+        }
+
         $data = [
             'expo_nama'     => $this->request->getVar('nama'),
             'expo_email'    => $this->request->getVar('email'),
             'expo_contact'  => $this->request->getVar('whatsapp'),
             'expo_institusi' => $this->request->getVar('asal_institusi'),
             'expo_status'   => 0,
-            'expo_twibbon'  => $this->moveFile('uploads/expo/post_twibbon', $this->request->getFile('post_twibbon')),
+            'expo_twibbon'  => $postTwibbon,
             'expo_poster'   => $this->moveFile('uploads/expo/share_post', $this->request->getFile('share_post')),
             'expo_ig_hmit'  => $this->moveFile('uploads/expo/follow_ig_hmit', $this->request->getFile('follow_ig_hmit')),
             'expo_ig_ara'   => $this->moveFile('uploads/expo/follow_ig_ara', $this->request->getFile('follow_ig_ara'))

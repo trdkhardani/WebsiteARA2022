@@ -21,9 +21,8 @@ class Admin_expo extends BaseController
     // session()->destroy();
     // return redirect()->to("home/index");
 
-    // coba diperbaiki lagi ini, diaku pas akses pagenya load terus
     $data["lomba"] = "Expo";
-    $data["nama"] = "Admin";
+    $data["nama"] = "Admin Expo IT";
     $data["tahap"] = "Expo";
     $data['data'] = $this->model_custom->getall_where("expo", 1);
     $data['total_peserta'] = $this->model_expo->countAllResults();
@@ -35,7 +34,7 @@ class Admin_expo extends BaseController
   public function konfirmasi()
   {
     $data["lomba"] = "Expo";
-    $data["nama"] = "Admin";
+    $data["nama"] = "Admin Expo IT";
     $data["tahap"] = "Expo";
     $data['data'] = $this->model_custom->getall_where("expo", 0);
     $data['total_peserta'] = $this->model_expo->countAllResults();
@@ -52,8 +51,11 @@ class Admin_expo extends BaseController
     $path = 'uploads/expo/';
     unlink($path."follow_ig_ara/".$data[0]->expo_ig_ara);
     unlink($path."follow_ig_hmit/".$data[0]->expo_ig_hmit);
-    unlink($path."post_twibbon/".$data[0]->expo_twibbon);
     unlink($path."share_post/".$data[0]->expo_poster);
+
+    if ($data[0]->expo_twibbon) {
+        unlink($path."post_twibbon/".$data[0]->expo_twibbon);
+    }
 
     $subject = "[Rejected] Expo Technology Information";
     $message = "Dear {$data[0]->expo_nama} from {$data[0]->expo_institusi} ,<br>

@@ -63,7 +63,7 @@
           <input class="form-control" type="file" id="follow_ig_hmit" name="follow_ig_hmit" value="<?= old('follow_ig_hmit') ?>">
         </div>
         <div class="mb-3">
-          <label for="post_twibbon" class="form-label">Post Twibbon</label> <span class="text-danger">*<?= '<br>' . $validation->getError('post_twibbon') ?></span>
+          <label for="post_twibbon" class="form-label">Post Twibbon</label>
           <input class="form-control" type="file" id="post_twibbon" name="post_twibbon" value="<?= old('post_twibbon') ?>">
         </div>
         <div class="mb-5">

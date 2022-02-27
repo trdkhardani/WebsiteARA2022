@@ -46,7 +46,11 @@
           <td> <?= $item->expo_institusi ?> </td> 
           <td> <?= $item->expo_contact ?> </td> 
           <td> <?= $item->expo_email ?> </td> 
-          <td><a href="<?= base_url() ?>/uploads/expo/post_twibbon/<?= $item->expo_twibbon?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+          <?php if ($item->expo_twibbon) { ?>
+            <td><a href="<?= base_url() ?>/uploads/expo/post_twibbon/<?= $item->expo_twibbon?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+          <?php } else { ?>
+            <td> - </td>
+          <?php } ?>
           <td><a href="<?= base_url() ?>/uploads/expo/share_post/<?= $item->expo_poster?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
           <td><a href="<?= base_url() ?>/uploads/expo/follow_ig_ara/<?= $item->expo_ig_ara?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
           <td><a href="<?= base_url() ?>/uploads/expo/follow_ig_hmit/<?= $item->expo_ig_hmit?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
