@@ -26,7 +26,7 @@ class Admin_olim extends BaseController
     }
     $data = [
       'lomba' => 'Olimpiade',
-      'nama' => $this->session->get('username'),
+      'nama' => "Admin Olimpiade",
       'tahap' => 'Olimpiade',
       'list_tim' => $this->model_olim->where('olim_status', 1)->findAll(),
       'terkonfirmasi' => $this->model_olim->where('olim_status', 1)->countAllResults(),
@@ -46,7 +46,7 @@ class Admin_olim extends BaseController
     }
     $data = [
       'lomba' => 'Olimpiade',
-      'nama' => $this->session->get('username'),
+      'nama' => "Admin Olimpiade",
       'tahap' => 'Olimpiade',
       'list_tim' => $this->model_olim->where('olim_status', 0)->findAll(),
       'terkonfirmasi' => $this->model_olim->where('olim_status', 1)->countAllResults(),

@@ -26,12 +26,22 @@
   <ul>
     <li><i class="fas fa-university"></i> Asal Sekolah: <?= $institusi; ?></li>
     <li><i class="fas fa-user"></i> Ketua Tim: <?= $ketua; ?></li>
-    <?php if ($anggota_1) : ?>
-      <li><i class="fas fa-user"></i> Anggota 1: <?= $anggota_1; ?></li>
-    <?php endif; ?>
-    <?php if ($anggota_2) : ?>
-      <li><i class="fas fa-user"></i> Anggota 2: <?= $anggota_2; ?></li>
-    <?php endif; ?>
+    <li>
+        <i class="fas fa-user"></i> Anggota 1:
+        <?php if ($anggota_1) { ?>
+            <?= $anggota_1; ?>
+        <?php } else { ?>
+            -
+        <?php } ?>
+    </li>
+    <li>
+        <i class="fas fa-user"></i> Anggota 2:
+        <?php if ($anggota_2) { ?>
+            <?= $anggota_2; ?>
+        <?php } else { ?>
+            -
+        <?php } ?>
+    </li>
   </ul>
 </div>
 <?= $this->endSection(); ?>
