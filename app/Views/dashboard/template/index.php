@@ -10,7 +10,7 @@
   <meta name="description" content="Mendorong Inovasi dan Pembangunan Infrastruktur Teknologi untuk Indonesia">
   <meta name="keywords" content="ARA, A Renewal Agent, Teknologi Informasi, Institut Teknologi Sepuluh Nopember">
   <meta name="author" content="Divisi Website ARA 2022">
-  <link rel="icon" href="<?= base_url() ?>/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="<?= base_url() ?>/images/logo-ara.svg" type="image/x-icon">
   <!-- bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <!-- font awesome -->

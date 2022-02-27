@@ -11,7 +11,7 @@
   <meta name="author" content="Divisi Website ARA 2022">
 
   <!-- links -->
-  <link rel="icon" href="<?= base_url() ?>/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="<?= base_url() ?>/images/logo-ara.svg" type="image/x-icon">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -30,13 +30,13 @@
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="<?= base_url() ?>/images/tentang_ara/maslambang.png" class="d-block w-100" alt="Dokumentasi ARA">
+              <img src="<?= base_url() ?>/images/tentang_ara/maslambang.png" class="d-block w-100 rounded shadow-lg" alt="Dokumentasi ARA">
             </div>
             <div class="carousel-item">
-              <img src="<?= base_url() ?>/images/tentang_ara/juara1olim.jpg" class="d-block w-100" alt="Dokumentasi ARA">
+              <img src="<?= base_url() ?>/images/tentang_ara/juara1olim.jpg" class="d-block w-100 rounded shadow-lg" alt="Dokumentasi ARA">
             </div>
             <div class="carousel-item">
-              <img src="<?= base_url() ?>/images/tentang_ara/presentasi.jpg" class="d-block w-100" alt="Dokumentasi ARA">
+              <img src="<?= base_url() ?>/images/tentang_ara/presentasi.jpg" class="d-block w-100 rounded shadow-lg" alt="Dokumentasi ARA">
             </div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -62,10 +62,10 @@
         </div>
         <div class="row">
           <div class="col-sm-6 mb-2" data-aos="fade-right">
-            <img src="<?= base_url() ?>/images/tentang_ara/juara1ctf.jpg" class="img-fluid d-block mx-auto" alt="Dokumentasi ARA">
+            <img src="<?= base_url() ?>/images/tentang_ara/juara1ctf.jpg" class="img-fluid d-block mx-auto rounded shadow-lg" alt="Dokumentasi ARA">
           </div>
           <div class="col-sm-6 mb-2" data-aos="fade-left">
-            <img src="<?= base_url() ?>/images/tentang_ara/pemaparan.png" class="img-fluid d-block mx-auto" alt="Dokumentasi ARA">
+            <img src="<?= base_url() ?>/images/tentang_ara/pemaparan.png" class="img-fluid d-block mx-auto rounded shadow-lg" alt="Dokumentasi ARA">
           </div>
         </div>
       </section>
@@ -83,22 +83,19 @@
         </div>
         <div class="row">
           <div class="col-sm-6 mb-2" data-aos="fade-right">
-            <img src="<?= base_url() ?>/images/tentang_ara/presentasi2.png" class="img-fluid d-block mx-auto" alt="Dokumentasi ARA">
+            <img src="<?= base_url() ?>/images/tentang_ara/presentasi2.png" class="img-fluid d-block mx-auto rounded shadow-lg" alt="Dokumentasi ARA">
           </div>
           <div class="col-sm-6 mb-2" data-aos="fade-left">
-            <img src="<?= base_url() ?>/images/tentang_ara/juara1iot.jpg" class="img-fluid d-block mx-auto" alt="Dokumentasi ARA">
+            <img src="<?= base_url() ?>/images/tentang_ara/juara1iot.jpg" class="img-fluid d-block mx-auto rounded shadow-lg" alt="Dokumentasi ARA">
           </div>
         </div>
       </section>
 
-      <section id="support-sponsors" class="my-5">
+      <section id="support-sponsors" class="my-5" data-aos="zoom-in">
         <h2 class="text-center mb-5">Support and Sponsor</h2>
         <div class="row justify-content-center mx-auto" style="max-width: 768px">
           <img class="col-4" src="<?= base_url() ?>/images/HMIT 1.png" alt="">
-          <img class="col-4" src="<?= base_url() ?>/images/HMIT 1.png" alt="">
-          <img class="col-4" src="<?= base_url() ?>/images/HMIT 1.png" alt="">
-          <img class="col-4" src="<?= base_url() ?>/images/HMIT 1.png" alt="">
-          <img class="col-4" src="<?= base_url() ?>/images/HMIT 1.png" alt="">
+          <img class="col-4" src="<?= base_url() ?>/images/logo-its.png" alt="">
         </div>
       </section>
     </div>

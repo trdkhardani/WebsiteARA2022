@@ -24,7 +24,7 @@ class Admin_webinar extends BaseController
 
     // aku gabisa login disini
     $data["lomba"] = "Webinar";
-    $data["nama"] = "Admin";
+    $data["nama"] = "Admin Webinar";
     $data["tahap"] = "Webinar";
     $data['data'] = $this->model_custom->getall_where("webinar", 1);
     $data['total_peserta'] = $this->model_webinar->countAllResults();
@@ -37,7 +37,7 @@ class Admin_webinar extends BaseController
   {
 
     $data["lomba"] = "Webinar";
-    $data["nama"] = "Admin";
+    $data["nama"] = "Admin Webinar";
     $data["tahap"] = "Webinar";
     $data['data'] = $this->model_custom->getall_where("webinar", 0);
     $data['total_peserta'] = $this->model_webinar->countAllResults();
@@ -52,12 +52,15 @@ class Admin_webinar extends BaseController
     $this->model_custom->delete_where('webinar', $id);
     
     $path = 'uploads/webinar/';
-    unlink($path."post_twibbon/".$data[0]->webinar_twibbon);
     unlink($path."ig_ara/".$data[0]->webinar_ig_ara);
     unlink($path."ig_hmit/".$data[0]->webinar_ig_hmit);
     unlink($path."subs/".$data[0]->webinar_subscribe);
     unlink($path."share_1/".$data[0]->webinar_share_1);
     unlink($path."share_2/".$data[0]->webinar_share_2);
+    
+    if($data[0]->webinar_twibbon) {
+        unlink($path."post_twibbon/".$data[0]->webinar_twibbon);
+    }
     
     if($data[0]->webinar_post_iot != '-')
     {

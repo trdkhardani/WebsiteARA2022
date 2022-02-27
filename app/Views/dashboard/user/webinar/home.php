@@ -17,9 +17,30 @@
 <!-- content -->
 <?= $this->section("content"); ?>
 <h3 class="mb-3">Informasi Umum</h3>
+<?php if($event == "CTF"){ ?>
 <!-- card dashboard -->
 <div class="card-dashboard">
-  <h4>Tema Webinar A</h4>
+  <h4>Webinar CTF</h4>
+  <ul>
+    <li><i class="fas fa-user"></i> Pemateri: Haffif Rasya Fauzi</li>
+    <li><i class="fas fa-clock"></i> Waktu Pelaksanaan: 4 April 2022</li>
+    <li><i class="fas fa-external-link-alt"></i> Link Meeting: <span class="important">Coming Soon</span></li>
+  </ul>
+</div>
+<?php } else if ($event == "IoT") { ?>
+<!-- card dashboard -->
+<div class="card-dashboard">
+  <h4>Webinar IoT</h4>
+  <ul>
+    <li><i class="fas fa-user"></i> Pemateri: Haffif Rasya Fauzi</li>
+    <li><i class="fas fa-clock"></i> Waktu Pelaksanaan: 4 April 2022</li>
+    <li><i class="fas fa-external-link-alt"></i> Link Meeting: <span class="important">Coming Soon</span></li>
+  </ul>
+</div>
+<?php } else { ?>
+<!-- card dashboard -->
+<div class="card-dashboard">
+  <h4>Webinar IoT</h4>
   <ul>
     <li><i class="fas fa-user"></i> Pemateri: Haffif Rasya Fauzi</li>
     <li><i class="fas fa-clock"></i> Waktu Pelaksanaan: 4 April 2022</li>
@@ -28,21 +49,13 @@
 </div>
 <!-- card dashboard -->
 <div class="card-dashboard">
-  <h4>Tema Webinar A</h4>
+  <h4>Webinar CTF</h4>
   <ul>
     <li><i class="fas fa-user"></i> Pemateri: Haffif Rasya Fauzi</li>
     <li><i class="fas fa-clock"></i> Waktu Pelaksanaan: 4 April 2022</li>
     <li><i class="fas fa-external-link-alt"></i> Link Meeting: <span class="important">Coming Soon</span></li>
   </ul>
 </div>
-<!-- card dashboard -->
-<div class="card-dashboard">
-  <h4>Tema Webinar A</h4>
-  <ul>
-    <li><i class="fas fa-user"></i> Pemateri: Haffif Rasya Fauzi</li>
-    <li><i class="fas fa-clock"></i> Waktu Pelaksanaan: 4 April 2022</li>
-    <li><i class="fas fa-external-link-alt"></i> Link Meeting: <span class="important">Coming Soon</span></li>
-  </ul>
-</div>
+<?php } ?>
 <?= $this->endSection(); ?>
 <!-- /end content -->

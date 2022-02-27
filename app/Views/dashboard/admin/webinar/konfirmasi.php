@@ -51,8 +51,12 @@
           <td> <?= $item->webinar_nama ?> </td> 
           <td> <?= $item->webinar_instansi ?> </td> 
           <td> <?= $item->webinar_contact ?> </td> 
-          <td> <?= $item->webinar_email ?> </td> 
-          <td><a href="<?= base_url() ?>/uploads/webinar/post_twibbon/<?= $item->webinar_twibbon?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+          <td> <?= $item->webinar_email ?> </td>
+          <?php if($item->webinar_twibbon) { ?>
+            <td><a href="<?= base_url() ?>/uploads/webinar/post_twibbon/<?= $item->webinar_twibbon?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+          <?php } else { ?>
+            <td> - </td>
+          <?php } ?>
           <?php if($item->webinar_post_ctf != '-') { ?>
             <td><a href="<?= base_url() ?>/uploads/webinar/post_ctf/<?= $item->webinar_post_ctf?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
           <?php } else { ?>

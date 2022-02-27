@@ -939,9 +939,8 @@ class Verify extends BaseController
             ],
             'post_twibbon' => [
                 'label'     => 'post_twibbon',
-                'rules'     => 'uploaded[post_twibbon]|is_image[post_twibbon]|max_size[post_twibbon, 1024]',
+                'rules'     => 'is_image[post_twibbon]|max_size[post_twibbon, 1024]',
                 'errors'    => [
-                    'uploaded'  => 'field harus diisi',
                     'is_image'  => 'field harus diisi dengan gambar',
                     'max_size'  => 'ukuran gambar maksimal 1024 kb'
                 ]
@@ -994,10 +993,16 @@ class Verify extends BaseController
                 ],
             ];
         }
+
         $rules = array_merge($rules, $rules2);
         if (!$this->validate($rules)) {
             $validation = \Config\Services::validation();
             return redirect()->to('auth/registrasi_webinar')->withInput();
+        }
+
+        $postTwibbon = null;
+        if (!$this->request->getFile("post_twibbon")->getError() == 4) {
+            $postTwibbon = $this->moveFile('uploads/webinar/post_twibbon', $this->request->getFile("post_twibbon"));
         }
 
         $data = [
@@ -1013,7 +1018,7 @@ class Verify extends BaseController
             'webinar_subscribe' => $this->moveFile('uploads/webinar/subs', $this->request->getFile('subs_yt_it')),
             'webinar_share_1'   => $this->moveFile('uploads/webinar/share_1', $this->request->getFile('share_group.0')),
             'webinar_share_2'   => $this->moveFile('uploads/webinar/share_2', $this->request->getFile('share_group.1')),
-            'webinar_twibbon'   => $this->moveFile('uploads/webinar/post_twibbon', $this->request->getFile('post_twibbon'))
+            'webinar_twibbon'   => $postTwibbon,
         ];
 
         if ($this->request->getVar('event') == 'CTF') {

@@ -11,7 +11,7 @@
   <meta name="author" content="Divisi Website ARA 2022">
 
   <!-- links -->
-  <link rel="icon" href="<?= base_url() ?>/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="<?= base_url() ?>/images/logo-ara.svg" type="image/x-icon">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="<?= base_url() ?>/css/auth/regist.css">
@@ -30,6 +30,7 @@
         <li>Aqila Aqsa : lalaingook (Line) / 081234253472 (Whatsapp)</li>
         <li>Richard Nicolas : richardrn2002 (Line) / 08236384762 (Whatsapp)</li>
       </ul>
+      <p>Untuk biaya pendaftaran mengikuti CTF ini dapat anda akses melalui <a href="https://drive.google.com/file/d/1U12TAM5vryGjayDzD-agY2Y0vI7kk_d-/view" target="_blank">Link ini</a>. Pastikan anda membayar sesuai kapan waktu anda mendaftar.</p>
       <p><b><span class="text-danger">*</span> Wajib diisi</b></p>
     </header>
     <main>
