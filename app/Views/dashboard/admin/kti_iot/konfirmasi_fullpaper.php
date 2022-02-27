@@ -57,24 +57,14 @@
           <td><?= $tim['iot_nama_tim']; ?></td>
           <td><?= $tim['iot_institusi']; ?></td>
           <td><?= $tim['iot_nama_ketua']; ?></td>
-          <td><?= ($tim['iot_nama_anggota_1']) ? $tim['iot_nama_anggota_1'] : ''; ?></td>
-          <td><?= ($tim['iot_nama_anggota_2']) ? $tim['iot_nama_anggota_2'] : ''; ?></td>
+          <td><?= ($tim['iot_nama_anggota_1']) ? $tim['iot_nama_anggota_1'] : '-'; ?></td>
+          <td><?= ($tim['iot_nama_anggota_2']) ? $tim['iot_nama_anggota_2'] : '-'; ?></td>
           <td><?= $tim['iot_contact']; ?></td>
           <td><?= $tim['iot_email_ketua']; ?></td>
           <td><a href="<?= base_url() ?>/uploads/kti_iot/bukti_bayar/full_paper/<?= $tim['iot_pembayaran_full_paper'] ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
           <td>
-            <a href="" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#modalTerima" onclick="document.getElementById('buttTerima').href = '<?= base_url() ?>/dashboard/Admin_kti_iot/verify_konfirmasi_full_paper/<?= $tim['iot_id'] ?>/1';">Terima</a>
-            <a href="" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#modalTolak" onclick="document.getElementById('buttTolak').href = '<?= base_url() ?>/dashboard/Admin_kti_iot/verify_konfirmasi_full_paper/<?= $tim['iot_id'] ?>/0';">Tolak</a>
-            <!-- <form action="/dashboard/Admin_kti_iot/verify_konfirmasi_full_paper" method="post">
-              <input type="hidden" value="<?= $tim['iot_id'] ?>" name="id">
-              <input type="hidden" value="1" name="status">
-              <button type="submit" class="btn btn-sm btn-success">Terima</button>
-            </form>
-            <form action="/dashboard/Admin_kti_iot/verify_konfirmasi_full_paper" method="post">
-              <input type="hidden" value="<?= $tim['iot_id'] ?>" name="id">
-              <input type="hidden" value="0" name="status">
-              <button type="submit" class="btn btn-sm btn-danger">Tolak</button> -->
-            </form>
+            <a href="" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#modalTerimaData" onclick="document.getElementById('buttTerimaData').href = '<?= base_url() ?>/dashboard/Admin_kti_iot/verify_konfirmasi_full_paper/<?= $tim['iot_id'] ?>/1';">Terima</a>
+            <a href="" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#modalTolakData" onclick="document.getElementById('buttTolakData').href = '<?= base_url() ?>/dashboard/Admin_kti_iot/verify_konfirmasi_full_paper/<?= $tim['iot_id'] ?>/0';">Tolak</a>
           </td>
         </tr>
       <?php endforeach; ?>

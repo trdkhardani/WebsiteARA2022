@@ -16,6 +16,7 @@ class Admin_kti_iot extends BaseController
     $this->model_account = new Model_Account();
     $this->model_custom = new Model_custom();
   }
+
   public function list_abstrak()
   {
     if (!$this->session->get('is_admin')) {
@@ -26,7 +27,7 @@ class Admin_kti_iot extends BaseController
     }
     $data = [
       'lomba' => 'KTI Internet of Things',
-      'nama' => 'Admin',
+      'nama' => 'Admin KTI IoT',
       'tahap' => 'Abstrak',
       'list_tim_abstrak' => $this->model_kti_iot->where('iot_status_konfirmasi_abstrak', 1)->findAll(),
       'terkonfirmasi' => $this->model_kti_iot->where('iot_status_konfirmasi_abstrak', 1)->countAllResults(),
@@ -47,7 +48,7 @@ class Admin_kti_iot extends BaseController
     }
     $data = [
       'lomba' => 'KTI Internet of Things',
-      'nama' => 'Admin',
+      'nama' => 'Admin KTI IoT',
       'tahap' => 'Abstrak',
       'list_tim_abstrak' => $this->model_kti_iot->where('iot_status_konfirmasi_abstrak', 0)->findAll(),
       'terkonfirmasi' => $this->model_kti_iot->where('iot_status_konfirmasi_abstrak', 1)->countAllResults(),
@@ -169,7 +170,7 @@ class Admin_kti_iot extends BaseController
     }
     $data = [
       'lomba' => 'KTI Internet of Things',
-      'nama' => 'Admin',
+      'nama' => 'Admin KTI IoT',
       'tahap' => 'Full Paper',
       'list_tim_full_paper' => $this->model_kti_iot->where('iot_status_konfirmasi_full_paper', 1)->findAll(),
       'terkonfirmasi' => $this->model_kti_iot->where('iot_status_konfirmasi_full_paper', 1)->countAllResults(),
@@ -189,7 +190,7 @@ class Admin_kti_iot extends BaseController
     }
     $data = [
       'lomba' => 'KTI Internet of Things',
-      'nama' => 'Admin',
+      'nama' => 'Admin KTI IoT',
       'tahap' => 'Full Paper',
       // Cari daftar tim yang sudah upload bukti bayar full paper
       'list_tim_full_paper' => $this->model_kti_iot->where([
@@ -221,13 +222,28 @@ class Admin_kti_iot extends BaseController
         'iot_status_konfirmasi_full_paper' => 1
       ];
       $this->model_kti_iot->save($data);
+      $subject = "[Accepted] Internet of Things (IOT)";
+      $message = "Dear {$tim['iot_nama_tim']} from {$tim['iot_institusi']} ,<br>
+                  <br>
+                  Thank you for participating for our event, \"Internet of Things (IOT).\"<br>
+                  <br>
+                  your payment to follow the full paper stage has been received. Then you can input your full paper in your dashboard. <br>
+                  <br>
+                  <br>
+                  --<br>
+                  Best regards,<br>
+                  <br>
+                  A Renewal Agents 2022";
+      $this->sendemail($tim['iot_email_ketua'], $subject, $message);
+      $this->session->setFlashdata('msg', 'berhasil menerima peserta');
     } else {
       //Jika ditolak, delete file bayar full paper
       $path = 'uploads/kti_iot/bukti_bayar/full_paper/';
       $this->delete_file($path, $tim['iot_pembayaran_full_paper']);
       $data = [
         'iot_id' => $tim['iot_id'],
-        'iot_pembayaran_full_paper' => null
+        'iot_pembayaran_full_paper' => null,
+        'iot_status_konfirmasi_full_paper' => null
       ];
       $this->model_kti_iot->save($data);
 
@@ -259,7 +275,7 @@ class Admin_kti_iot extends BaseController
     }
     $data = [
       'lomba' => 'KTI Internet of Things',
-      'nama' => 'Admin',
+      'nama' => 'Admin KTI IoT',
       'tahap' => 'Final',
       'list_tim_final' => $this->model_kti_iot->where('iot_status_konfirmasi_final', 1)->findAll(),
       'terkonfirmasi' => $this->model_kti_iot->where('iot_status_konfirmasi_final', 1)->countAllResults(),
@@ -279,7 +295,7 @@ class Admin_kti_iot extends BaseController
     }
     $data = [
       'lomba' => 'KTI Internet of Things',
-      'nama' => 'Admin',
+      'nama' => 'Admin KTI IoT',
       'tahap' => 'Final',
       'list_tim_full_paper' => $this->model_kti_iot->where([
         'iot_status_konfirmasi_final' => 0,
@@ -310,13 +326,29 @@ class Admin_kti_iot extends BaseController
         'iot_status_konfirmasi_final' => 1
       ];
       $this->model_kti_iot->save($data);
+
+      $subject = "[Accepted] Internet of Things (IOT)";
+      $message = "Dear {$tim['iot_nama_tim']} from {$tim['iot_institusi']} ,<br>
+                  <br>
+                  Thank you for participating for our event, \"Internet of Things (IOT).\"<br>
+                  <br>
+                  your payment to follow the final stage has been received. Lets prepare your group to be the champion! <br>
+                  <br>
+                  <br>
+                  --<br>
+                  Best regards,<br>
+                  <br>
+                  A Renewal Agents 2022";
+      $this->sendemail($tim['iot_email_ketua'], $subject, $message);
+      $this->session->setFlashdata('msg', 'berhasil menerima peserta');
     } else {
       //Jika ditolak, delete file bayar final
       $path = 'uploads/kti_iot/bukti_bayar/final/';
       $this->delete_file($path, $tim['iot_pembayaran_final']);
       $data = [
         'iot_id' => $tim['iot_id'],
-        'iot_pembayaran_final' => null
+        'iot_pembayaran_final' => null,
+        'iot_status_konfirmasi_final' => null
       ];
       $this->model_kti_iot->save($data);
 

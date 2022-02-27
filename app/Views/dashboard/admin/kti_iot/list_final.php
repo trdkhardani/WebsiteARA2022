@@ -55,8 +55,8 @@
           <td><?= $tim['iot_nama_tim']; ?></td>
           <td><?= $tim['iot_institusi']; ?></td>
           <td><?= $tim['iot_nama_ketua']; ?></td>
-          <td><?= $tim['iot_nama_anggota_1']; ?></td>
-          <td><?= $tim['iot_nama_anggota_2']; ?></td>
+          <td><?= ($tim['iot_nama_anggota_1']) ? $tim['iot_nama_anggota_1'] : '-' ?></td>
+          <td><?= ($tim['iot_nama_anggota_2']) ? $tim['iot_nama_anggota_2'] : '-' ?></td>
           <td><?= $tim['iot_contact']; ?></td>
           <td><?= $tim['iot_email_ketua']; ?></td>
         </tr>

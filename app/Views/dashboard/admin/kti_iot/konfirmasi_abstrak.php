@@ -68,8 +68,16 @@
           <td><?= $tim['iot_nama_tim']; ?></td>
           <td><?= $tim['iot_institusi']; ?></td>
           <td><?= $tim['iot_nama_ketua']; ?></td>
-          <td><?= $tim['iot_nama_anggota_1']; ?></td>
-          <td><?= $tim['iot_nama_anggota_2']; ?></td>
+          <?php if ($tim["iot_nama_anggota_1"]) { ?>
+            <td><?= $tim['iot_nama_anggota_1']; ?></td>
+          <?php } else { ?>
+            <td>-</td>
+          <?php } ?>
+          <?php if ($tim["iot_nama_anggota_2"]) { ?>
+            <td><?= $tim['iot_nama_anggota_2']; ?></td>
+          <?php } else { ?>
+            <td>-</td>
+          <?php } ?>
           <td><?= $tim['iot_contact']; ?></td>
           <td><?= $tim['iot_email_ketua']; ?></td>
           <td><a href="<?= base_url() ?>/uploads/kti_iot/ktm/<?= $tim['iot_suket_ketua'] ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
@@ -107,12 +115,12 @@
           <?php endif; ?>
           <td><a href="<?= base_url() ?>/uploads/kti_iot/ig/share/<?= $tim['iot_story_ketua'] ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
           <?php if ($tim['iot_story_anggota_1']) : ?>
-            <td><a href="<?= base_url() ?>/uploads/kti_iot/ig/follow/<?= ($tim['iot_story_anggota_1']) ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+            <td><a href="<?= base_url() ?>/uploads/kti_iot/ig/share/<?= ($tim['iot_story_anggota_1']) ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
           <?php else : ?>
             <td>-</td>
           <?php endif; ?>
           <?php if ($tim['iot_story_anggota_2']) : ?>
-            <td><a href="<?= base_url() ?>/uploads/kti_iot/ig/follow/<?= ($tim['iot_story_anggota_2']) ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+            <td><a href="<?= base_url() ?>/uploads/kti_iot/ig/share/<?= ($tim['iot_story_anggota_2']) ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
           <?php else : ?>
             <td>-</td>
           <?php endif; ?>

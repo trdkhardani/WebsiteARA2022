@@ -160,6 +160,12 @@ h3 {
   border: 2px solid $ungu-dark;
 }
 
+@media screen and (max-width: 576px) {
+    #counting {
+        flex-wrap: wrap;
+    }   
+}
+
 .card-count {
   @include basic-box();
   margin: 10px;

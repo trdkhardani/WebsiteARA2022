@@ -32,7 +32,7 @@
 <div class="card-dashboard">
   <h4>Informasi</h4>
   <ul>
-    <li><i class="fas fa-clock"></i> Deadline Pembayaran: 22 Maret</li>
+    <li><i class="fas fa-clock"></i> Deadline Pembayaran: 2 April - 29 April</li>
   </ul>
 </div>
 <!-- Upload Bukti Pembayaran -->

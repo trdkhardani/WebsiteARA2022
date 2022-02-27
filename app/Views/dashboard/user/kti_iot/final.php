@@ -31,7 +31,7 @@
 <div class="card-dashboard">
   <h4>Technical Meeting</h4>
   <ul>
-    <li><i class="fas fa-clock"></i> Waktu: 14 April</li>
+    <li><i class="fas fa-clock"></i> Waktu: 18 Mei</li>
     <li><i class="fas fa-external-link-alt"></i> Link: <span class="important">Coming Soon</span></li>
   </ul>
 </div>
@@ -39,6 +39,7 @@
 <div class="card-dashboard">
   <h4>Presentasi</h4>
   <ul>
+    <li><i class="fas fa-clock"></i> Waktu: 21 Mei</li>
     <li><i class="fas fa-headset"></i> Pantau email anda untuk mengecek sesi.</li>
   </ul>
 </div>

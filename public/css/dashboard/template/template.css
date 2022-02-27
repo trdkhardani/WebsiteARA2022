@@ -144,6 +144,13 @@ h3 {
   color: #60f1d7;
 }
 
+@media screen and (max-width: 576px) {
+  #counting {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 .card-count {
   background: linear-gradient(180.6deg, rgba(255, 255, 255, 0.14) 57.37%, rgba(255, 255, 255, 0) 128.61%);
   border-radius: 14px;

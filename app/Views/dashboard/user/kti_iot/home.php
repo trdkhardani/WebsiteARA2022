@@ -31,7 +31,7 @@
 <div class="card-dashboard">
   <h4>Guide Book</h4>
   <ul>
-    <li><i class="fas fa-book"></i> Link: <a href="https://drive.ara.guide.book.com" target="_blank">https://drive.ara.guide.book.com</a></li>
+    <li><i class="fas fa-book"></i> Link: <a href="https://drive.google.com/file/d/1fC6lsxBzS4j9fleYrDf_yQrqqtD3ScG_/view" target="_blank">Lihat Disini</a></li>
   </ul>
 </div>
 <!-- data tim -->
@@ -40,12 +40,22 @@
   <ul>
     <li><i class="fas fa-university"></i> Institusi: <?= $institusi; ?></li>
     <li><i class="fas fa-user"></i> Ketua Tim: <?= $ketua; ?></li>
-    <?php if ($anggota_1) : ?>
-      <li><i class="fas fa-user"></i> Anggota 1: <?= $anggota_1; ?></li>
-    <?php endif; ?>
-    <?php if ($anggota_2) : ?>
-      <li><i class="fas fa-user"></i> Anggota 2: <?= $anggota_2; ?></li>
-    <?php endif; ?>
+    <li>
+        <i class="fas fa-user"></i> Anggota 1: 
+        <?php if($anggota_1){ ?>
+            <?= $anggota_1 ?>
+        <?php } else { ?>
+            -
+        <?php } ?>
+    </li>
+    <li>
+        <i class="fas fa-user"></i> Anggota 2: 
+        <?php if($anggota_2){ ?>
+            <?= $anggota_2 ?>
+        <?php } else { ?>
+            -
+        <?php } ?>
+    </li>
   </ul>
 </div>
 <?= $this->endSection(); ?>

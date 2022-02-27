@@ -31,8 +31,7 @@
 <div class="card-dashboard">
   <h4>Informasi Full Paper</h4>
   <ul>
-    <li><i class="fas fa-calendar-alt"></i> Pelaksanaan: 27 Februari - 19 Maret</li>
-    <li><i class="fas fa-clock"></i> Deadline Pengumpulan: 22 Maret</li>
+    <li><i class="fas fa-calendar-alt"></i> Pelaksanaan: 2 April - 30 April</li>
   </ul>
 </div>
 <!-- pengumpulan full paper -->
@@ -58,6 +57,8 @@
     <h4>Pengumpulan Full Paper</h4>
     <ul>
       <li><i class="fas fa-thumbs-up"></i> Terima kasih sudah mengumpulkan Full Paper. Pantau terus Instagram ARA untuk mengecek hasilnya.</li>
+      <li><i class="fas fa-calendar-alt"></i> Seleksi Full Paper: 9 Mei - 14 Mei</li>
+      <li><i class="fas fa-clock"></i> Pengumuman Lolos ke tahap Final: 15 Mei</li>
     </ul>
   </div>
 <?php endif; ?>
