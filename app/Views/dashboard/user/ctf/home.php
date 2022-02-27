@@ -24,7 +24,7 @@
 <div class="card-dashboard">
   <h4>Guide Book</h4>
   <ul>
-    <li><i class="fas fa-book"></i> Link: <a href="https://drive.ara.guide.book.com" target="_blank">https://drive.ara.guide.book.com</a></li>
+    <li><i class="fas fa-book"></i> Link: <a href="https://drive.google.com/file/d/1U12TAM5vryGjayDzD-agY2Y0vI7kk_d-/view" target="_blank">Lihat Disini</a></li>
   </ul>
 </div>
 <?= $this->endSection(); ?>

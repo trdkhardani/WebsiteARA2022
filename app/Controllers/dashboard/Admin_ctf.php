@@ -19,7 +19,7 @@ class Admin_ctf extends BaseController
   public function list_team()
   {
     $data["lomba"] = "Capture The Flag";
-    $data["nama"] = "Admin";
+    $data["nama"] = "Admin CTF";
     $data["tahap"] = "CTF";
     $data['data'] = $this->model_custom->getall_where("ctf", 1);
     $data['total_peserta'] = $this->model_ctf->countAllResults();
@@ -31,7 +31,7 @@ class Admin_ctf extends BaseController
   public function konfirmasi_team()
   {
     $data["lomba"] = "Capture The Flag";
-    $data["nama"] = "Admin";
+    $data["nama"] = "Admin CTF";
     $data["tahap"] = "CTF";
     $data['data'] = $this->model_custom->getall_where("ctf", 0);
     $data['total_peserta'] = $this->model_ctf->countAllResults();
