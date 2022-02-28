@@ -41,7 +41,7 @@
     <ul>
       <li><i class="fas fa-exclamation-triangle"></i> Pastikan anda sudah menginputkan file yang benar. File hanya bisa diinputkan satu kali.</li>
       <li>
-        <form action="/dashboard/User_kti_iot/verify_full_paper" method="POST" enctype="multipart/form-data">
+        <form action="<?= base_url() ?>/dashboard/User_kti_iot/verify_full_paper" method="POST" enctype="multipart/form-data">
           <div class="mb-4">
             <input class="form-control" type="file" name="full_paper" required>
           </div>

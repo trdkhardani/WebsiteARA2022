@@ -8,7 +8,7 @@ use App\Models\Model_Account;
 use App\Models\Model_Kti_iot;
 use App\Models\Model_Olimpiade;
 use App\Models\Model_ctf;
-use App\Models\Model_expo;
+use App\Models\Model_Expo;
 use App\Models\Model_webinar;
 use App\Models\Model_Panitia;
 use Config\Services;

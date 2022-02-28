@@ -12,7 +12,7 @@
     <div id="carousel-HMIT" class="w-50 mx-auto carousel slide pb-5" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="<?= base_url() ?>/images/dokumentasi2021/(8).jpg" class="d-block w-100" alt="...">
+                <img src="<?= base_url() ?>/images/dokumentasi2021/(8).JPG" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
                 <img src="<?= base_url() ?>/images/dokumentasi2021/(9).jpg" class="d-block w-100" alt="...">

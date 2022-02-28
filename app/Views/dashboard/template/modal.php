@@ -12,7 +12,7 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary shadow-none" data-bs-dismiss="modal">Gajadi</button>
         <!-- <button type="button" class="btn shadow-none" onclick="logout()" id="btn-logout">Keluar</button> -->
-        <form action="/Home/logout" method="POST">
+        <form action="<?= base_url() ?>/Home/logout" method="POST">
           <button type="submit" class="btn shadow-none" id="btn-logout">Keluar</button>
         </form>
       </div>

@@ -30,7 +30,7 @@
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="<?= base_url() ?>/images/tentang_ara/maslambang.png" class="d-block w-100 rounded shadow-lg" alt="Dokumentasi ARA">
+              <img src="<?= base_url() ?>/images/tentang_ara/maslambang.PNG" class="d-block w-100 rounded shadow-lg" alt="Dokumentasi ARA">
             </div>
             <div class="carousel-item">
               <img src="<?= base_url() ?>/images/tentang_ara/juara1olim.jpg" class="d-block w-100 rounded shadow-lg" alt="Dokumentasi ARA">
@@ -65,7 +65,7 @@
             <img src="<?= base_url() ?>/images/tentang_ara/juara1ctf.jpg" class="img-fluid d-block mx-auto rounded shadow-lg" alt="Dokumentasi ARA">
           </div>
           <div class="col-sm-6 mb-2" data-aos="fade-left">
-            <img src="<?= base_url() ?>/images/tentang_ara/pemaparan.png" class="img-fluid d-block mx-auto rounded shadow-lg" alt="Dokumentasi ARA">
+            <img src="<?= base_url() ?>/images/tentang_ara/pemaparan.PNG" class="img-fluid d-block mx-auto rounded shadow-lg" alt="Dokumentasi ARA">
           </div>
         </div>
       </section>
@@ -83,7 +83,7 @@
         </div>
         <div class="row">
           <div class="col-sm-6 mb-2" data-aos="fade-right">
-            <img src="<?= base_url() ?>/images/tentang_ara/presentasi2.png" class="img-fluid d-block mx-auto rounded shadow-lg" alt="Dokumentasi ARA">
+            <img src="<?= base_url() ?>/images/tentang_ara/presentasi2.PNG" class="img-fluid d-block mx-auto rounded shadow-lg" alt="Dokumentasi ARA">
           </div>
           <div class="col-sm-6 mb-2" data-aos="fade-left">
             <img src="<?= base_url() ?>/images/tentang_ara/juara1iot.jpg" class="img-fluid d-block mx-auto rounded shadow-lg" alt="Dokumentasi ARA">
