@@ -82,7 +82,7 @@
             <div data-aos="fade-right" class="isi-event">
                 <p class="fw-bold">Pengumuman Juara</p>
                 <p>Melalui Web dan Sosial Media ARA 2022</p>
-                <p>3 Juni 2022</p>
+                <p>5 Juni 2022</p>
             </div>
         </div>
     </div>
