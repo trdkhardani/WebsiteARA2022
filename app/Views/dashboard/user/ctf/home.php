@@ -24,7 +24,13 @@
 <div class="card-dashboard">
   <h4>Guide Book</h4>
   <ul>
-    <li><i class="fas fa-book"></i> Link: <a href="https://drive.google.com/file/d/1U12TAM5vryGjayDzD-agY2Y0vI7kk_d-/view" target="_blank">Lihat Disini</a></li>
+    <li><i class="fas fa-book"></i> Link: <a href="https://drive.google.com/file/d/1palxAVjgCk5h69Y7e1N4TE5IKCKGOeLP/view?usp=sharing" target="_blank">Lihat Disini</a></li>
+  </ul>
+</div>
+<div class="card-dashboard">
+  <h4>Discord Link</h4>
+  <ul>
+    <li><i class="fa-brands fa-discord"></i> Link: <a href="https://discord.gg/PH2yVuq7" target="_blank">Join dan temukan Flag!</a></li>
   </ul>
 </div>
 <?= $this->endSection(); ?>

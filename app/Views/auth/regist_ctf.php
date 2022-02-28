@@ -36,7 +36,7 @@
             <a href="https://wa.me/6282363847621" target="_blank">Whatsapp</a>
         </li>
       </ul>
-      <p>Untuk biaya pendaftaran mengikuti CTF ini dapat anda akses melalui <a href="https://drive.google.com/file/d/1U12TAM5vryGjayDzD-agY2Y0vI7kk_d-/view" target="_blank">Link ini</a>. Pastikan anda membayar sesuai kapan waktu anda mendaftar.</p>
+      <p>Untuk biaya pendaftaran mengikuti CTF ini dapat anda akses melalui <a href="https://drive.google.com/file/d/1palxAVjgCk5h69Y7e1N4TE5IKCKGOeLP/view?usp=sharing" target="_blank">Link ini</a>. Pastikan anda membayar sesuai kapan waktu anda mendaftar.</p>
       <p><b><span class="text-danger">*</span> Wajib diisi</b></p>
     </header>
     <main>

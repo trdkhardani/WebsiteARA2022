@@ -27,5 +27,11 @@
     <li><i class="fas fa-book"></i> Link: <a href="https://drive.google.com/file/d/16FGqHRsCI-iI1bZxJ5Lvlemk47hJhoAP/view" target="_blank">Lihat Disini</a></li>
   </ul>
 </div>
+<div class="card-dashboard">
+  <h4>Whatsapp Group</h4>
+  <ul>
+    <li><i class="fa-brands fa-whatsapp"></i> Link: <a href="https://chat.whatsapp.com/LxoqllQdG1VDhgiCa2Q3qA" target="_blank">Klik dan Bergabung</a></li>
+  </ul>
+</div>
 <?= $this->endSection(); ?>
 <!-- /end content -->

@@ -93,7 +93,8 @@ class Admin_olim extends BaseController
                   This is your account username and password <br>
                   <br>
                   Username : {$data['account_username']}<br>
-                  Password : {$password}<br>
+                  Password : {$password}<br><br>
+                  Your team can join the following groups to get more information: https://chat.whatsapp.com/LxoqllQdG1VDhgiCa2Q3qA
                   <br>
                   --<br>
                   Best regards,<br>

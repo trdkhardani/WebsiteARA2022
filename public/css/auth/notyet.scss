@@ -1,0 +1,74 @@
+@import "../general/rule.scss";
+// nav and body
+body {
+  background-image: url("../../images/bg-fixed.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  @include body-family();
+}
+h1,
+h2 {
+  @include heading-family();
+}
+@media screen and (max-width: 768px) {
+  .wrapper-main {
+    width: 100% !important;
+  }
+}
+.nav-gradient {
+  background-color: #161175;
+}
+@media only screen and (max-width: 992px) {
+  .navbar-2 {
+    margin-top: 28px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .navbar-toggler {
+    padding: 0;
+  }
+}
+
+// main
+main {
+  min-height: 80vh;
+}
+
+// footer
+.sosial-media {
+  background-color: #abe9d2;
+  width: 68px;
+  height: 68px;
+  display: block;
+  position: relative;
+  i {
+    color: $biru-dark;
+    font-size: 24px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+footer {
+  background-color: $ungu;
+  p {
+    @include body-2;
+  }
+  .h1 {
+    background: linear-gradient(to right, #ff628f 0%, #7a75d9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .sosial-media,
+  .ke-atas {
+    background: linear-gradient(180deg, #fff 25%, #ffe9e9 75%);
+  }
+  .sosial-media i {
+    background: linear-gradient(to top, #533ba9, #9b53a6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

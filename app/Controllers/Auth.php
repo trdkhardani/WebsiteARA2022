@@ -37,25 +37,31 @@ class Auth extends BaseController
   {
     session();
     $data = [
-      'validation' => \Config\Services::validation()
+      'validation' => \Config\Services::validation(),
+      'event' => 'Expo IT',
+      'waktu' => '20 Maret - 20 April'
     ];
-    return view('auth/regist_expo', $data);
+    // return view('auth/regist_expo', $data);
+    return view('auth/notyet', $data);
   }
 
   public function registrasi_webinar()
   {
     session();
     $data = [
-      'validation' => \Config\Services::validation()
+      'validation' => \Config\Services::validation(),
+      'event' => 'Webinar',
+      'waktu' => '9 Maret - 8 April'
     ];
-    return view('auth/regist_webinar', $data);
+    // return view('auth/regist_webinar', $data);
+    return view('auth/notyet', $data);
   }
 
   public function login()
   {
     session();
     $data = [
-      'validation' => \Config\Services::validation()
+      'validation' => \Config\Services::validation(),
     ];
     return view('auth/login');
   }
