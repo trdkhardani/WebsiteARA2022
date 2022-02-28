@@ -53,9 +53,9 @@ class Admin_expo extends BaseController
     unlink($path."follow_ig_hmit/".$data[0]->expo_ig_hmit);
     unlink($path."share_post/".$data[0]->expo_poster);
 
-    if ($data[0]->expo_twibbon) {
+    /*if ($data[0]->expo_twibbon) {
         unlink($path."post_twibbon/".$data[0]->expo_twibbon);
-    }
+    }*/
 
     $subject = "[Rejected] Expo Technology Information";
     $message = "Dear {$data[0]->expo_nama} from {$data[0]->expo_institusi} ,<br>

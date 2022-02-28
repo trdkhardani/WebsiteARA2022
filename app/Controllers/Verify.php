@@ -816,14 +816,14 @@ class Verify extends BaseController
                     'max_size'  => 'ukuran gambar maksimal 1024 kb'
                 ]
             ],
-            'post_twibbon' => [
+            /*'post_twibbon' => [
                 'label'     => 'post_twibbon',
                 'rules'     => 'is_image[share_post]|max_size[share_post, 1024]',
                 'errors'    => [
                     'is_image'  => 'field harus diisi dengan gambar',
                     'max_size'  => 'ukuran gambar maksimal 1024 kb'
                 ]
-            ]
+            ]*/
         ];
 
         if (!$this->validate($rules)) {
@@ -831,10 +831,10 @@ class Verify extends BaseController
             return redirect()->to('auth/registrasi_expo')->withInput();
         }
 
-        $postTwibbon = null;
+        /*$postTwibbon = null;
         if (!$this->request->getFile('post_twibbon')->getError() == 4) {
             $postTwibbon = $this->moveFile('uploads/expo/post_twibbon', $this->request->getFile('post_twibbon'));
-        }
+        }*/
 
         $data = [
             'expo_nama'     => $this->request->getVar('nama'),
@@ -842,7 +842,7 @@ class Verify extends BaseController
             'expo_contact'  => $this->request->getVar('whatsapp'),
             'expo_institusi' => $this->request->getVar('asal_institusi'),
             'expo_status'   => 0,
-            'expo_twibbon'  => $postTwibbon,
+            //'expo_twibbon'  => $postTwibbon,
             'expo_poster'   => $this->moveFile('uploads/expo/share_post', $this->request->getFile('share_post')),
             'expo_ig_hmit'  => $this->moveFile('uploads/expo/follow_ig_hmit', $this->request->getFile('follow_ig_hmit')),
             'expo_ig_ara'   => $this->moveFile('uploads/expo/follow_ig_ara', $this->request->getFile('follow_ig_ara'))
@@ -923,7 +923,7 @@ class Verify extends BaseController
                     'max_size'  => 'ukuran gambar maksimal 1024 kb'
                 ]
             ],
-            'subs_yt_it' => [
+            /*'subs_yt_it' => [
                 'label'     => 'subs_yt_it',
                 'rules'     => 'uploaded[subs_yt_it]|is_image[subs_yt_it]|max_size[subs_yt_it, 1024]',
                 'errors'    => [
@@ -948,7 +948,7 @@ class Verify extends BaseController
                     'is_image'  => 'field harus diisi dengan gambar',
                     'max_size'  => 'ukuran gambar maksimal 1024 kb'
                 ]
-            ]
+            ]*/
         ];
 
         if ($this->request->getVar('event') == 'CTF') {
@@ -1004,10 +1004,10 @@ class Verify extends BaseController
             return redirect()->to('auth/registrasi_webinar')->withInput();
         }
 
-        $postTwibbon = null;
+        /*$postTwibbon = null;
         if (!$this->request->getFile("post_twibbon")->getError() == 4) {
             $postTwibbon = $this->moveFile('uploads/webinar/post_twibbon', $this->request->getFile("post_twibbon"));
-        }
+        }*/
 
         $data = [
             'webinar_event'     => $this->request->getVar('event'),
@@ -1019,10 +1019,10 @@ class Verify extends BaseController
             //'webinar_story'     => $this->moveFile('uploads/webinar/story', $this->request->getFile('share_post')), 
             'webinar_ig_ara'    => $this->moveFile('uploads/webinar/ig_ara', $this->request->getFile('follow_ig_ara')),
             'webinar_ig_hmit'   => $this->moveFile('uploads/webinar/ig_hmit', $this->request->getFile('follow_ig_hmit')),
-            'webinar_subscribe' => $this->moveFile('uploads/webinar/subs', $this->request->getFile('subs_yt_it')),
+            /*'webinar_subscribe' => $this->moveFile('uploads/webinar/subs', $this->request->getFile('subs_yt_it')),
             'webinar_share_1'   => $this->moveFile('uploads/webinar/share_1', $this->request->getFile('share_group.0')),
             'webinar_share_2'   => $this->moveFile('uploads/webinar/share_2', $this->request->getFile('share_group.1')),
-            'webinar_twibbon'   => $postTwibbon,
+            'webinar_twibbon'   => $postTwibbon,*/
         ];
 
         if ($this->request->getVar('event') == 'CTF') {

@@ -31,14 +31,14 @@
         <th>Institusi</th>
         <th>WA</th>
         <th>Email</th>
-        <th>Post Twibbon</th>
+       <!-- <th>Post Twibbon</th> -->
         <th>Share Poster Webinar CTF</th>
         <th>Share Poster Webinar IOT</th>
         <th>Follow IG ARA</th>
         <th>Follow IG HMIT</th>
-        <th>Subscribe Youtube IT ITS</th>
+      <!--  <th>Subscribe Youtube IT ITS</th>
         <th>Share Poster Grup 1</th>
-        <th>Share Poster Grup 2</th>
+        <th>Share Poster Grup 2</th>  -->
         <th>Aksi</th>
       </tr>
     </thead>
@@ -52,11 +52,11 @@
           <td> <?= $item->webinar_instansi ?> </td> 
           <td> <?= $item->webinar_contact ?> </td> 
           <td> <?= $item->webinar_email ?> </td>
-          <?php if($item->webinar_twibbon) { ?>
+        <!--  <?php if($item->webinar_twibbon) { ?>
             <td><a href="<?= base_url() ?>/uploads/webinar/post_twibbon/<?= $item->webinar_twibbon?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
           <?php } else { ?>
             <td> - </td>
-          <?php } ?>
+          <?php } ?> -->
           <?php if($item->webinar_post_ctf != '-') { ?>
             <td><a href="<?= base_url() ?>/uploads/webinar/post_ctf/<?= $item->webinar_post_ctf?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
           <?php } else { ?>
@@ -69,9 +69,9 @@
           <?php } ?>
           <td><a href="<?= base_url() ?>/uploads/webinar/ig_ara/<?= $item->webinar_ig_ara?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
           <td><a href="<?= base_url() ?>/uploads/webinar/ig_hmit/<?= $item->webinar_ig_hmit?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
-          <td><a href="<?= base_url() ?>/uploads/webinar/subs/<?= $item->webinar_subscribe?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+        <!--  <td><a href="<?= base_url() ?>/uploads/webinar/subs/<?= $item->webinar_subscribe?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
           <td><a href="<?= base_url() ?>/uploads/webinar/share_1/<?= $item->webinar_share_1?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
-          <td><a href="<?= base_url() ?>/uploads/webinar/share_2/<?= $item->webinar_share_2?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+          <td><a href="<?= base_url() ?>/uploads/webinar/share_2/<?= $item->webinar_share_2?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td> -->
           <td>
             <a href="" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#modalTerima" onclick="document.getElementById('buttTerima').href = '<?= base_url() ?>/dashboard/Admin_webinar/Accept/<?= $item->webinar_id ?>';">Terima</a>
             <a href="" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#modalTolak" onclick="document.getElementById('buttTolak').href = '<?= base_url() ?>/dashboard/Admin_webinar/Reject/<?= $item->webinar_id ?>';">Tolak</a>

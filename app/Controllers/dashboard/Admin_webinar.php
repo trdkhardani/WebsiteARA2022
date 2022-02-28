@@ -54,13 +54,13 @@ class Admin_webinar extends BaseController
     $path = 'uploads/webinar/';
     unlink($path . "ig_ara/" . $data[0]->webinar_ig_ara);
     unlink($path . "ig_hmit/" . $data[0]->webinar_ig_hmit);
-    unlink($path . "subs/" . $data[0]->webinar_subscribe);
+    /*unlink($path . "subs/" . $data[0]->webinar_subscribe);
     unlink($path . "share_1/" . $data[0]->webinar_share_1);
     unlink($path . "share_2/" . $data[0]->webinar_share_2);
 
     if ($data[0]->webinar_twibbon) {
       unlink($path . "post_twibbon/" . $data[0]->webinar_twibbon);
-    }
+    }*/
 
     if ($data[0]->webinar_post_iot != '-') {
       unlink($path . "post_iot/" . $data[0]->webinar_post_iot);
