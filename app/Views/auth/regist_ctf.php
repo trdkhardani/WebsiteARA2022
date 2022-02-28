@@ -27,8 +27,14 @@
       <h1 class="mb-3 text-center">Registrasi Capture The Flag</h1>
       <p>Halo sobat ARA! Bagaimana? Sudah tertarik belum untuk mendaftar di lomba Capture The Flag ini? Harusnya tertarik udah tertarik dong ya hehe. Apabila kamu ada pertanyaan terkait pendaftaran ini, silahkan menghubungi kontak berikut ya:</p>
       <ul>
-        <li>Aqila Aqsa : lalaingook (Line) / 081234253472 (Whatsapp)</li>
-        <li>Richard Nicolas : richardrn2002 (Line) / 08236384762 (Whatsapp)</li>
+        <li>Aqila Aqsa : 
+            <a href="http://line.me/ti/p/~lalaingook" target="_blank">Line</a> | 
+            <a href="https://wa.me/6281234253472" target="_blank">Whatsapp</a>
+        </li>
+        <li>Richard Nicolas : 
+            <a href="http://line.me/ti/p/~richardrn2002" target="_blank">Line</a> |
+            <a href="https://wa.me/6282363847621" target="_blank">Whatsapp</a>
+        </li>
       </ul>
       <p>Untuk biaya pendaftaran mengikuti CTF ini dapat anda akses melalui <a href="https://drive.google.com/file/d/1U12TAM5vryGjayDzD-agY2Y0vI7kk_d-/view" target="_blank">Link ini</a>. Pastikan anda membayar sesuai kapan waktu anda mendaftar.</p>
       <p><b><span class="text-danger">*</span> Wajib diisi</b></p>

@@ -20,7 +20,7 @@
 <?php if($event == "CTF"){ ?>
 <!-- card dashboard -->
 <div class="card-dashboard">
-  <h4>Webinar CTF</h4>
+  <h4>Webinar Cyber Security</h4>
   <ul>
     <li><i class="fas fa-user"></i> Pemateri: Haffif Rasya Fauzi</li>
     <li><i class="fas fa-clock"></i> Waktu Pelaksanaan: 4 April 2022</li>
@@ -49,7 +49,7 @@
 </div>
 <!-- card dashboard -->
 <div class="card-dashboard">
-  <h4>Webinar CTF</h4>
+  <h4>Webinar Cyber Security</h4>
   <ul>
     <li><i class="fas fa-user"></i> Pemateri: Haffif Rasya Fauzi</li>
     <li><i class="fas fa-clock"></i> Waktu Pelaksanaan: 4 April 2022</li>

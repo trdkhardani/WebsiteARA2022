@@ -27,8 +27,14 @@
       <h1 class="mb-3 text-center">Registrasi Expo IT</h1>
       <p>Halo sobat ARA! Bagaimana? Sudah tertarik belum untuk mendaftar di event Expo IT ini? Harusnya tertarik udah tertarik dong ya hehe. Apabila kamu ada pertanyaan terkait pendaftaran ini, silahkan menghubungi kontak berikut ya:</p>
       <ul>
-        <li>Primary Secondary : primasecondary121201 (Line) / 085232414072 (Whatsapp)</li>
-        <li>Axellino Anggoro: axellino-aa (Line) / 082133453710 (Whatsapp)</li>
+        <li>Primary Secondary : 
+            <a href="http://line.me/ti/p/~primasecondary121201" target="_blank">Line</a> | 
+            <a href="https://wa.me/6285232414072" target="_blank">Whatsapp</a>
+        </li>
+        <li>Axellino Anggoro: 
+            <a href="http://line.me/ti/p/~axellino-aa" target="_blank">Line</a> | 
+            <a href="https://wa.me/62082133453710" target="_blank">Whatsapp</a>
+        </li>
       </ul>
       <p><b><span class="text-danger">*</span> Wajib diisi</b></p>
     </header>
@@ -51,7 +57,7 @@
           <input type="text" class="form-control" id="whatsapp" name="whatsapp" value="<?= old('whatsapp') ?>">
         </div>
         <div class="mb-3">
-          <label for="share_post" class="form-label">Share Post Expo IT <span class="text-danger">*<?= '<br>' . $validation->getError('share_post') ?></span></label>
+          <label for="share_post" class="form-label">Share Post Expo IT di Story IG <span class="text-danger">*<?= '<br>' . $validation->getError('share_post') ?></span></label>
           <input class="form-control" type="file" id="share_post" name="share_post" value="<?= old('share_post') ?>">
         </div>
         <div class="mb-3">

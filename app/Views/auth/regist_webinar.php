@@ -27,8 +27,14 @@
       <h1 class="mb-3 text-center">Registrasi Webinar</h1>
       <p>Halo sobat ARA! Bagaimana? Sudah tertarik belum untuk mendaftar di event Webinar ini? Harusnya tertarik udah tertarik dong ya hehe. Apabila kamu ada pertanyaan terkait pendaftaran ini, silahkan menghubungi kontak berikut ya:</p>
       <ul>
-        <li>Dimas Bagus : dimasbagusrachmadani (Line) / 081336195441 (Whatsapp)</li>
-        <li>Icha : tarishaicha (Line) / 082333082308 (Whatsapp)</li>
+        <li>Dimas Bagus : 
+            <a href="http://line.me/ti/p/~dimasbagusrachmadani" target="_blank">Line</a> | 
+            <a href="https://wa.me/6281336195441" target="_blank">Whatsapp</a>
+        </li>
+        <li>Icha : 
+            <a href="http://line.me/ti/p/~tarishaicha" target="_blank">Line</a> |
+            <a href="https://wa.me/62082333082308" target="_blank">Whatsapp</a>
+        </li>
       </ul>
       <p><b><span class="text-danger">*</span> Wajib diisi</b></p>
     </header>
@@ -53,9 +59,9 @@
         <div class="mb-3">
           <label class="form-label">Pilihan Webinar <span class="text-danger">*</span></label>
           <div class="form-check" @click="handleCTF">
-            <input class="form-check-input" type="radio" name="event" id="webinarCTF" value="CTF" checked>
-            <label class="form-check-label" for="webinarCTF">
-              Capture the Flag
+            <input class="form-check-input" type="radio" name="event" id="webinarCySec" value="CTF" checked>
+            <label class="form-check-label" for="webinarCySec">
+              Cyber Security
             </label>
           </div>
           <div class="form-check" @click="handleIOT">
@@ -72,11 +78,11 @@
           </div>
         </div>
         <div class="mb-3" v-if="isCtf">
-          <label for="share_post_ctf" class="form-label">Share Post Webinar Capture The Flag <span class="text-danger">*<?= '<br>' . $validation->getError('share_post_ctf') ?></span></label>
+          <label for="share_post_ctf" class="form-label">Share Post Webinar Cyber Security di story IG <span class="text-danger">*<?= '<br>' . $validation->getError('share_post_ctf') ?></span></label>
           <input class="form-control" type="file" id="share_post_ctf" name="share_post_ctf" value="<?= old('share_post_ctf') ?>">
         </div>
         <div class="mb-3" v-if="isIot">
-          <label for="share_post_iot" class="form-label">Share Post Webinar Internet Of Things <span class="text-danger">*<?= '<br>' . $validation->getError('share_post_iot') ?></span></label>
+          <label for="share_post_iot" class="form-label">Share Post Webinar Internet Of Things di story IG <span class="text-danger">*<?= '<br>' . $validation->getError('share_post_iot') ?></span></label>
           <input class="form-control" type="file" id="share_post_iot" name="share_post_iot" value="<?= old('share_post_iot') ?>">
         </div>
         <div class="mb-3">
@@ -92,7 +98,7 @@
           <input class="form-control" type="file" id="subs_yt_it" name="subs_yt_it" value="<?= old('subs_yt_it') ?>">
         </div>
         <div class="mb-3">
-          <label for="share_group" class="form-label">Share Post ke 2 grup <span class="text-danger">*<?= '<br>' . $validation->getError('share_group[]') ?></span></label>
+          <label for="share_group" class="form-label">Share Post Webinar ke 2 grup <span class="text-danger">*<?= '<br>' . $validation->getError('share_group[]') ?></span></label>
           <input class="form-control" type="file" id="share_group" name="share_group[]" multiple value="<?= old('share_group[]') ?>">
         </div>
         <div class="mb-3">

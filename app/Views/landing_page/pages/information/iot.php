@@ -27,7 +27,7 @@
         </div>
         <div class="event kanan mt-5">
             <div data-aos="fade-left" class="isi-event">
-                <p class="fw-bold">Penngumpulan Abstrak (Babak 1)</p>
+                <p class="fw-bold">Pengumpulan Abstrak (Babak 1)</p>
                 <p>Melalui Web ARA</p>
                 <p>1 Maret 2022 - 31 Maret 2022</p>
             </div>

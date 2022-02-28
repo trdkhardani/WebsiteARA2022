@@ -27,10 +27,16 @@
       <h1 class="mb-3 text-center">Registrasi Olimpiade</h1>
       <p>Halo sobat ARA! Bagaimana? Sudah tertarik belum untuk mendaftar di lomba Olimpiade ini? Harusnya tertarik udah tertarik dong ya hehe. Apabila kamu ada pertanyaan terkait pendaftaran ini, silahkan menghubungi kontak berikut ya:</p>
       <ul>
-        <li>Maulanal Fatihil : maulanalfatihil13 (Line) / 081818905999 (Whatsapp)</li>
-        <li>Ilham Muhammad Sakti : Ilham_sakti27 (Line) / 081336353454 (Whatsapp)</li>
+        <li>Maulanal Fatihil : maulanalfatihil13 
+            <a href="http://line.me/ti/p/~maulanalfatihil13" target="_blank">Line</a> | 
+            <a href="https://wa.me/6281818905999" target="_blank">Whatsapp</a>
+        </li>
+        <li>Ilham Muhammad Sakti : 
+            <a href="http://line.me/ti/p/~ilham_sakti27" target="_blank">Line</a> | 
+            <a href="https://wa.me/6281336353454" target="_blank">Whatsapp</a>
+        </li>
       </ul>
-      <p>Untuk biara pendaftaran mengikuti lomba olimpiade ini dapat anda akses melalui <a href="https://drive.google.com/file/d/16FGqHRsCI-iI1bZxJ5Lvlemk47hJhoAP/view" target="_blank">Link ini</a>.</p>
+      <p>Untuk biaya pendaftaran mengikuti lomba olimpiade ini dapat anda akses melalui <a href="https://drive.google.com/file/d/16FGqHRsCI-iI1bZxJ5Lvlemk47hJhoAP/view" target="_blank">Link ini</a>.</p>
       <p><b><span class="text-danger">*</span> Wajib diisi</b></p>
     </header>
     <main>
