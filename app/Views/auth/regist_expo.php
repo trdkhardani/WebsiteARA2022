@@ -68,10 +68,10 @@
           <label for="follow_ig_hmit" class="form-label">Follow IG HMIT <span class="text-danger">*<?= '<br>' . $validation->getError('follow_ig_hmit') ?></span></label>
           <input class="form-control" type="file" id="follow_ig_hmit" name="follow_ig_hmit" value="<?= old('follow_ig_hmit') ?>">
         </div>
-        <div class="mb-3">
+      <!--  <div class="mb-3">
           <label for="post_twibbon" class="form-label">Post Twibbon</label>
           <input class="form-control" type="file" id="post_twibbon" name="post_twibbon" value="<?= old('post_twibbon') ?>">
-        </div>
+        </div> -->
         <div class="mb-5">
           <button class="btn btn-submit text-white d-block mx-auto">Submit</button>
         </div>
