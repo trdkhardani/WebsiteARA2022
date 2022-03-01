@@ -27,13 +27,13 @@
       <h1 class="mb-3 text-center">Registrasi Webinar</h1>
       <p>Halo sobat ARA! Bagaimana? Sudah tertarik belum untuk mendaftar di event Webinar ini? Harusnya tertarik udah tertarik dong ya hehe. Apabila kamu ada pertanyaan terkait pendaftaran ini, silahkan menghubungi kontak berikut ya:</p>
       <ul>
-        <li>Dimas Bagus : 
-            <a href="http://line.me/ti/p/~dimasbagusrachmadani" target="_blank">Line</a> | 
-            <a href="https://wa.me/6281336195441" target="_blank">Whatsapp</a>
+        <li>Dimas Bagus :
+          (<a href="http://line.me/ti/p/~dimasbagusrachmadani" target="_blank">Line</a>) atau
+          (<a href="https://wa.me/6281336195441" target="_blank">Whatsapp</a>).
         </li>
-        <li>Icha : 
-            <a href="http://line.me/ti/p/~tarishaicha" target="_blank">Line</a> |
-            <a href="https://wa.me/62082333082308" target="_blank">Whatsapp</a>
+        <li>Icha :
+          (<a href="http://line.me/ti/p/~tarishaicha" target="_blank">Line</a>) atau
+          (<a href="https://wa.me/62082333082308" target="_blank">Whatsapp</a>).
         </li>
       </ul>
       <p><b><span class="text-danger">*</span> Wajib diisi</b></p>
@@ -86,14 +86,14 @@
           <input class="form-control" type="file" id="share_post_iot" name="share_post_iot" value="<?= old('share_post_iot') ?>">
         </div>
         <div class="mb-3">
-          <label for="follow_ig_ara" class="form-label">Follow IG ARA <span class="text-danger">*<?= '<br>' . $validation->getError('follow_ig_ara') ?></span></label>
+          <label for="follow_ig_ara" class="form-label">Follow IG ARA (<a href="https://www.instagram.com/ara_its/" target="_blank">Instagram ARA 2022</a>) <span class="text-danger">*<?= '<br>' . $validation->getError('follow_ig_ara') ?></span></label>
           <input class="form-control" type="file" id="follow_ig_ara" name="follow_ig_ara" value="<?= old('follow_ig_ara') ?>">
         </div>
         <div class="mb-3">
-          <label for="follow_ig_hmit" class="form-label">Follow IG HMIT <span class="text-danger">*<?= '<br>' . $validation->getError('follow_ig_hmit') ?></span></label>
+          <label for="follow_ig_hmit" class="form-label">Follow IG HMIT (<a href="https://www.instagram.com/hmit_its/" target="_blank">Instagram HMIT ITS</a>) <span class="text-danger">*<?= '<br>' . $validation->getError('follow_ig_hmit') ?></span></label>
           <input class="form-control" type="file" id="follow_ig_hmit" name="follow_ig_hmit" value="<?= old('follow_ig_hmit') ?>">
         </div>
-       <!-- <div class="mb-3">
+        <!-- <div class="mb-3">
           <label for="subs_yt_it" class="form-label">Subscribe Youtube HMIT <span class="text-danger">*<?= '<br>' . $validation->getError('subs_yt_it') ?></span></label>
           <input class="form-control" type="file" id="subs_yt_it" name="subs_yt_it" value="<?= old('subs_yt_it') ?>">
         </div>

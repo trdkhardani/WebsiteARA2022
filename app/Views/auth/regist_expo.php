@@ -27,13 +27,13 @@
       <h1 class="mb-3 text-center">Registrasi Expo IT</h1>
       <p>Halo sobat ARA! Bagaimana? Sudah tertarik belum untuk mendaftar di event Expo IT ini? Harusnya tertarik udah tertarik dong ya hehe. Apabila kamu ada pertanyaan terkait pendaftaran ini, silahkan menghubungi kontak berikut ya:</p>
       <ul>
-        <li>Primary Secondary : 
-            <a href="http://line.me/ti/p/~primasecondary121201" target="_blank">Line</a> | 
-            <a href="https://wa.me/6285232414072" target="_blank">Whatsapp</a>
+        <li>Primary Secondary :
+          (<a href="http://line.me/ti/p/~primasecondary121201" target="_blank">Line</a>) atau
+          (<a href="https://wa.me/6285232414072" target="_blank">Whatsapp</a>).
         </li>
-        <li>Axellino Anggoro: 
-            <a href="http://line.me/ti/p/~axellino-aa" target="_blank">Line</a> | 
-            <a href="https://wa.me/62082133453710" target="_blank">Whatsapp</a>
+        <li>Axellino Anggoro:
+          (<a href="http://line.me/ti/p/~axellino-aa" target="_blank">Line</a>) atau
+          (<a href="https://wa.me/62082133453710" target="_blank">Whatsapp</a>).
         </li>
       </ul>
       <p><b><span class="text-danger">*</span> Wajib diisi</b></p>
@@ -57,18 +57,18 @@
           <input type="text" class="form-control" id="whatsapp" name="whatsapp" value="<?= old('whatsapp') ?>">
         </div>
         <div class="mb-3">
-          <label for="share_post" class="form-label">Share Post Expo IT di Story IG <span class="text-danger">*<?= '<br>' . $validation->getError('share_post') ?></span></label>
+          <label for="share_post" class="form-label">Share Post Expo IT di Story IG dan tag 3 temanmu <span class="text-danger">*<?= '<br>' . $validation->getError('share_post') ?></span></label>
           <input class="form-control" type="file" id="share_post" name="share_post" value="<?= old('share_post') ?>">
         </div>
         <div class="mb-3">
-          <label for="follow_ig_ara" class="form-label">Follow IG ARA <span class="text-danger">*<?= '<br>' . $validation->getError('follow_ig_ara') ?></span></label>
+          <label for="follow_ig_ara" class="form-label">Follow IG ARA (<a href="https://www.instagram.com/ara_its/" target="_blank">Instagram ARA 2022</a>) <span class="text-danger">*<?= '<br>' . $validation->getError('follow_ig_ara') ?></span></label>
           <input class="form-control" type="file" id="follow_ig_ara" name="follow_ig_ara" value="<?= old('follow_ig_ara') ?>">
         </div>
         <div class="mb-3">
-          <label for="follow_ig_hmit" class="form-label">Follow IG HMIT <span class="text-danger">*<?= '<br>' . $validation->getError('follow_ig_hmit') ?></span></label>
+          <label for="follow_ig_hmit" class="form-label">Follow IG HMIT (<a href="https://www.instagram.com/hmit_its/" target="_blank">Instagram HMIT ITS</a>) <span class="text-danger">*<?= '<br>' . $validation->getError('follow_ig_hmit') ?></span></label>
           <input class="form-control" type="file" id="follow_ig_hmit" name="follow_ig_hmit" value="<?= old('follow_ig_hmit') ?>">
         </div>
-      <!--  <div class="mb-3">
+        <!--  <div class="mb-3">
           <label for="post_twibbon" class="form-label">Post Twibbon</label>
           <input class="form-control" type="file" id="post_twibbon" name="post_twibbon" value="<?= old('post_twibbon') ?>">
         </div> -->

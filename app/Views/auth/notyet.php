@@ -24,8 +24,12 @@
   <!-- main -->
   <main class="d-flex align-items-center">
     <div class="container px-2 px-sm-5 text-center">
-      <h2>Mohon maaf, pendaftaran untuk event <?= $event ?> belum dibuka...</h2>
-      <h5>Daftarkan diri anda pada <span class="text-danger fw-bold"><?= $waktu ?></span> !</h5>
+      <h3 class="mb-3">Mohon maaf, pendaftaran untuk event <?= $event ?> belum dibuka</h3>
+      <h5>
+        <span class="d-inline-block mb-2">Pendaftaran dibuka pada</span>
+        <br>
+        <span class="text-danger"><?= $waktu ?></span>
+      </h5>
     </div>
   </main>
   <!-- end main -->

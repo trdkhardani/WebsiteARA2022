@@ -27,13 +27,13 @@
       <h1 class="mb-3 text-center">Registrasi KTI Internet Of Things</h1>
       <p>Halo sobat ARA! Bagaimana? Sudah tertarik belum untuk mendaftar di lomba KTI IOT ini? Harusnya tertarik udah tertarik dong ya hehe. Apabila kamu ada pertanyaan terkait pendaftaran ini, silahkan menghubungi kontak berikut ya:</p>
       <ul>
-        <li>Wisnuyasha Faizal : 
-            <a href="http://line.me/ti/p/~wisnuyasha.faiz" target="_blank">Line</a> |
-            <a href="https://wa.me/6281288350985" target="_blank">Whatsapp</a>
+        <li>Wisnuyasha Faizal :
+          (<a href="http://line.me/ti/p/~wisnuyasha.faiz" target="_blank">Line</a>) atau
+          (<a href="https://wa.me/6281288350985" target="_blank">Whatsapp</a>).
         </li>
         <li>Gennaro Fajar Mende :
-            <a href="http://line.me/ti/p/~gennaro0813" target="_blank">Line</a> | 
-            <a href="https://wa.me/6281297975277" target="_blank">Whatsapp</a>
+          (<a href="http://line.me/ti/p/~gennaro0813" target="_blank">Line</a>) atau
+          (<a href="https://wa.me/6281297975277" target="_blank">Whatsapp</a>).
         </li>
       </ul>
       <p>Untuk biaya pendaftaran awal mengikuti kegiatan tahap abstrak KTI IOT ini belum dipungung biaya loh, so segera daftarkan tim anda!</p>
@@ -74,15 +74,15 @@
             <input class="form-control" type="file" id="ktm_ketua" name="ktm_ketua" required>
           </div>
           <div class="mb-3">
-            <label for="ig_ara_ketua" class="form-label">Follow IG ARA <span class="text-danger">*<?= '<br>' . $validation->getError('ig_ara_ketua') ?></span></label>
+            <label for="ig_ara_ketua" class="form-label">Follow IG ARA (<a href="https://www.instagram.com/ara_its/" target="_blank">Instagram ARA 2022</a>) <span class="text-danger">*<?= '<br>' . $validation->getError('ig_ara_ketua') ?></span></label>
             <input class="form-control" type="file" id="ig_ara_ketua" name="ig_ara_ketua" required>
           </div>
           <div class="mb-3">
-            <label for="ig_hmit_ketua" class="form-label">Follow IG HMIT <span class="text-danger">*<?= '<br>' . $validation->getError('ig_hmit_ketua') ?></span></label>
+            <label for="ig_hmit_ketua" class="form-label">Follow IG HMIT (<a href="https://www.instagram.com/hmit_its/" target="_blank">Instagram HMIT ITS</a>) <span class="text-danger">*<?= '<br>' . $validation->getError('ig_hmit_ketua') ?></span></label>
             <input class="form-control" type="file" id="ig_hmit_ketua" name="ig_hmit_ketua" required>
           </div>
           <div class="mb-3">
-            <label for="share_post_ketua" class="form-label">Share Postingan IoT ARA di Story IG <span class="text-danger">*<?= '<br>' . $validation->getError('share_post_ketua') ?></span></label>
+            <label for="share_post_ketua" class="form-label">Share Postingan IoT ARA di Story IG dan tag 3 temanmu <span class="text-danger">*<?= '<br>' . $validation->getError('share_post_ketua') ?></span></label>
             <input class="form-control" type="file" id="share_post_ketua" name="share_post_ketua" required>
           </div>
         </div>
@@ -100,15 +100,15 @@
             <input class="form-control" type="file" id="ktm_anggota_1" name="ktm_anggota_1">
           </div>
           <div class="mb-3">
-            <label for="ig_ara_anggota_1" class="form-label">Follow IG ARA <span class="text-danger"><?= '<br>' . $validation->getError('ig_ara_anggota_1') ?></span></label>
+            <label for="ig_ara_anggota_1" class="form-label">Follow IG ARA (<a href="https://www.instagram.com/ara_its/" target="_blank">Instagram ARA 2022</a>) <span class="text-danger"><?= '<br>' . $validation->getError('ig_ara_anggota_1') ?></span></label>
             <input class="form-control" type="file" id="ig_ara_anggota_1" name="ig_ara_anggota_1">
           </div>
           <div class="mb-3">
-            <label for="ig_hmit_anggota_1" class="form-label">Follow IG HMIT <span class="text-danger"><?= '<br>' . $validation->getError('ig_hmit_anggota_1') ?></span></label>
+            <label for="ig_hmit_anggota_1" class="form-label">Follow IG HMIT (<a href="https://www.instagram.com/hmit_its/" target="_blank">Instagram HMIT ITS</a>) <span class="text-danger"><?= '<br>' . $validation->getError('ig_hmit_anggota_1') ?></span></label>
             <input class="form-control" type="file" id="ig_hmit_anggota_1" name="ig_hmit_anggota_1">
           </div>
           <div class="mb-3">
-            <label for="share_post_anggota_1" class="form-label">Share Postingan IoT ARA di Story IG <span class="text-danger"><?= '<br>' . $validation->getError('share_post_anggota_1') ?></span></label>
+            <label for="share_post_anggota_1" class="form-label">Share Postingan IoT ARA di Story IG dan tag 3 temanmu <span class="text-danger"><?= '<br>' . $validation->getError('share_post_anggota_1') ?></span></label>
             <input class="form-control" type="file" id="share_post_anggota_1" name="share_post_anggota_1">
           </div>
         </div>
@@ -126,15 +126,15 @@
             <input class="form-control" type="file" id="ktm_anggota_2" name="ktm_anggota_2">
           </div>
           <div class="mb-3">
-            <label for="ig_ara_anggota_2" class="form-label">Follow IG ARA <span class="text-danger"><?= '<br>' . $validation->getError('ig_ara_anggota_2') ?></span></label>
+            <label for="ig_ara_anggota_2" class="form-label">Follow IG ARA (<a href="https://www.instagram.com/ara_its/" target="_blank">Instagram ARA 2022</a>) <span class="text-danger"><?= '<br>' . $validation->getError('ig_ara_anggota_2') ?></span></label>
             <input class="form-control" type="file" id="ig_ara_anggota_2" name="ig_ara_anggota_2">
           </div>
           <div class="mb-3">
-            <label for="ig_hmit_anggota_2" class="form-label">Follow IG HMIT<span class="text-danger"><?= '<br>' . $validation->getError('ig_hmit_anggota_2') ?></span></label>
+            <label for="ig_hmit_anggota_2" class="form-label">Follow IG HMIT (<a href="https://www.instagram.com/hmit_its/" target="_blank">Instagram HMIT ITS</a>) <span class="text-danger"><?= '<br>' . $validation->getError('ig_hmit_anggota_2') ?></span></label>
             <input class="form-control" type="file" id="ig_hmit_anggota_2" name="ig_hmit_anggota_2">
           </div>
           <div class="mb-3">
-            <label for="share_post_anggota_2" class="form-label">Share Postingan IoT ARA di Story IG <span class="text-danger"><?= '<br>' . $validation->getError('share_post_anggota_2') ?></span></label>
+            <label for="share_post_anggota_2" class="form-label">Share Postingan IoT ARA di Story IG dan tag 3 temanmu <span class="text-danger"><?= '<br>' . $validation->getError('share_post_anggota_2') ?></span></label>
             <input class="form-control" type="file" id="share_post_anggota_2" name="share_post_anggota_2">
           </div>
         </div>

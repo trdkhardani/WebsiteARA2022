@@ -27,16 +27,15 @@
       <h1 class="mb-3 text-center">Registrasi Olimpiade</h1>
       <p>Halo sobat ARA! Bagaimana? Sudah tertarik belum untuk mendaftar di lomba Olimpiade ini? Harusnya tertarik udah tertarik dong ya hehe. Apabila kamu ada pertanyaan terkait pendaftaran ini, silahkan menghubungi kontak berikut ya:</p>
       <ul>
-        <li>Maulanal Fatihil : maulanalfatihil13 
-            <a href="http://line.me/ti/p/~maulanalfatihil13" target="_blank">Line</a> | 
-            <a href="https://wa.me/6281818905999" target="_blank">Whatsapp</a>
+        <li>Maulanal Fatihil : maulanalfatihil13
+          (<a href="http://line.me/ti/p/~maulanalfatihil13" target="_blank">Line</a>) atau
+          (<a href="https://wa.me/6281818905999" target="_blank">Whatsapp</a>).
         </li>
-        <li>Ilham Muhammad Sakti : 
-            <a href="http://line.me/ti/p/~ilham_sakti27" target="_blank">Line</a> | 
-            <a href="https://wa.me/6281336353454" target="_blank">Whatsapp</a>
+        <li>Ilham Muhammad Sakti :
+          (<a href="http://line.me/ti/p/~ilham_sakti27" target="_blank">Line</a>) atau
+          (<a href="https://wa.me/6281336353454" target="_blank">Whatsapp</a>).
         </li>
       </ul>
-      <p>Untuk biaya pendaftaran mengikuti lomba olimpiade ini dapat anda akses melalui <a href="https://drive.google.com/file/d/16FGqHRsCI-iI1bZxJ5Lvlemk47hJhoAP/view" target="_blank">Link ini</a>.</p>
       <p><b><span class="text-danger">*</span> Wajib diisi</b></p>
     </header>
     <main>
@@ -74,11 +73,11 @@
             <input class="form-control" type="file" id="kp_ketua" name="kp_ketua" required>
           </div>
           <div class="mb-3">
-            <label for="ig_ara_ketua" class="form-label">Follow IG ARA <span class="text-danger">*<?= '<br>' . $validation->getError('ig_ara_ketua') ?></span></label>
+            <label for="ig_ara_ketua" class="form-label">Follow IG ARA (<a href="https://www.instagram.com/ara_its/" target="_blank">Instagram ARA 2022</a>) <span class="text-danger">*<?= '<br>' . $validation->getError('ig_ara_ketua') ?></span></label>
             <input class="form-control" type="file" id="ig_ara_ketua" name="ig_ara_ketua" required>
           </div>
           <div class="mb-3">
-            <label for="ig_hmit_ketua" class="form-label">Follow IG HMIT <span class="text-danger">* <?= '<br>' . $validation->getError('ig_hmit_ketua') ?></span></label>
+            <label for="ig_hmit_ketua" class="form-label">Follow IG HMIT (<a href="https://www.instagram.com/hmit_its/" target="_blank">Instagram HMIT ITS</a>) <span class="text-danger">* <?= '<br>' . $validation->getError('ig_hmit_ketua') ?></span></label>
             <input class="form-control" type="file" id="ig_hmit_ketua" name="ig_hmit_ketua" required>
           </div>
         </div>
@@ -96,11 +95,11 @@
             <input class="form-control" type="file" id="kp_anggota_1" name="kp_anggota_1">
           </div>
           <div class="mb-3">
-            <label for="ig_ara_anggota_1" class="form-label">Follow IG ARA <span class="text-danger"></span></label>
+            <label for="ig_ara_anggota_1" class="form-label">Follow IG ARA (<a href="https://www.instagram.com/ara_its/" target="_blank">Instagram ARA 2022</a>) <span class="text-danger"></span></label>
             <input class="form-control" type="file" id="ig_ara_anggota_1" name="ig_ara_anggota_1">
           </div>
           <div class="mb-3">
-            <label for="ig_hmit_anggota_1" class="form-label">Follow IG HMIT <span class="text-danger"></span></label>
+            <label for="ig_hmit_anggota_1" class="form-label">Follow IG HMIT (<a href="https://www.instagram.com/hmit_its/" target="_blank">Instagram HMIT ITS</a>) <span class="text-danger"></span></label>
             <input class="form-control" type="file" id="ig_hmit_anggota_1" name="ig_hmit_anggota_1">
           </div>
         </div>
@@ -118,11 +117,11 @@
             <input class="form-control" type="file" id="kp_anggota_2" name="kp_anggota_2">
           </div>
           <div class="mb-3">
-            <label for="ig_ara_anggota_2" class="form-label">Follow IG ARA</label>
+            <label for="ig_ara_anggota_2" class="form-label">Follow IG ARA (<a href="https://www.instagram.com/ara_its/" target="_blank">Instagram ARA 2022</a>) </label>
             <input class="form-control" type="file" id="ig_ara_anggota_2" name="ig_ara_anggota_2">
           </div>
           <div class="mb-3">
-            <label for="ig_hmit_anggota_2" class="form-label">Follow IG HMIT</label>
+            <label for="ig_hmit_anggota_2" class="form-label">Follow IG HMIT (<a href="https://www.instagram.com/hmit_its/" target="_blank">Instagram HMIT ITS</a>) </label>
             <input class="form-control" type="file" id="ig_hmit_anggota_2" name="ig_hmit_anggota_2">
           </div>
         </div>
@@ -131,6 +130,7 @@
         <!-- Bukti bayar -->
         <div class="mb-5">
           <h2>Upload Bukti Pembayaran <span class="text-danger">*</span></h2>
+          <p>Untuk biaya pendaftaran mengikuti lomba olimpiade ini dapat anda akses melalui <a href="https://drive.google.com/file/d/16FGqHRsCI-iI1bZxJ5Lvlemk47hJhoAP/view" target="_blank">Link ini</a>.</p>
           <div class="mb-3">
             <label for="bukti_bayar" class="form-label">Bukti Bayar <span class="text-danger">*</span></label>
             <input type="file" class="form-control" id="bukti_bayar" name="bukti_bayar">
