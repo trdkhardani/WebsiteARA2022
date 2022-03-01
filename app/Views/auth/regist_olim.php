@@ -27,7 +27,7 @@
       <h1 class="mb-3 text-center">Registrasi Olimpiade</h1>
       <p>Halo sobat ARA! Bagaimana? Sudah tertarik belum untuk mendaftar di lomba Olimpiade ini? Harusnya tertarik udah tertarik dong ya hehe. Apabila kamu ada pertanyaan terkait pendaftaran ini, silahkan menghubungi kontak berikut ya:</p>
       <ul>
-        <li>Maulanal Fatihil : maulanalfatihil13
+        <li>Maulanal Fatihil :
           (<a href="http://line.me/ti/p/~maulanalfatihil13" target="_blank">Line</a>) atau
           (<a href="https://wa.me/6281818905999" target="_blank">Whatsapp</a>).
         </li>
