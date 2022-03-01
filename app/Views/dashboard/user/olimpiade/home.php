@@ -24,7 +24,7 @@
 <div class="card-dashboard">
   <h4>Guide Book</h4>
   <ul>
-    <li><i class="fas fa-book"></i> Link: <a href="https://drive.google.com/file/d/16FGqHRsCI-iI1bZxJ5Lvlemk47hJhoAP/view" target="_blank">Lihat Disini</a></li>
+    <li><i class="fas fa-book"></i> Link: <a href="https://drive.google.com/file/d/1YM3RAGTAefTf8x_hTTfd3XZGyjvZG9oc/view?usp=drivesdk" target="_blank">Lihat Disini</a></li>
   </ul>
 </div>
 <div class="card-dashboard">
