@@ -130,7 +130,7 @@
         <!-- Bukti bayar -->
         <div class="mb-5">
           <h2>Upload Bukti Pembayaran <span class="text-danger">*</span></h2>
-          <p>Untuk biaya pendaftaran mengikuti lomba olimpiade ini dapat anda akses melalui <a href="https://drive.google.com/file/d/16FGqHRsCI-iI1bZxJ5Lvlemk47hJhoAP/view" target="_blank">Link ini</a>.</p>
+          <p>Untuk biaya pendaftaran mengikuti lomba olimpiade ini dapat anda akses melalui <a href="https://drive.google.com/file/d/1YM3RAGTAefTf8x_hTTfd3XZGyjvZG9oc/view?usp=drivesdk" target="_blank">Link ini</a>.</p>
           <div class="mb-3">
             <label for="bukti_bayar" class="form-label">Bukti Bayar <span class="text-danger">*</span></label>
             <input type="file" class="form-control" id="bukti_bayar" name="bukti_bayar">
