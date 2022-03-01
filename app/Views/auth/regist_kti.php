@@ -36,7 +36,7 @@
           (<a href="https://wa.me/6281297975277" target="_blank">Whatsapp</a>).
         </li>
       </ul>
-      <p>Untuk biaya pendaftaran awal mengikuti kegiatan tahap abstrak KTI IOT ini belum dipungung biaya loh, so segera daftarkan tim anda!</p>
+      <p>Untuk biaya pendaftaran awal mengikuti kegiatan tahap abstrak KTI IOT ini belum dipungut biaya loh, so segera daftarkan tim anda!</p>
       <p><b><span class="text-danger">*</span> Wajib diisi</b></p>
     </header>
     <main>
