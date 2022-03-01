@@ -82,7 +82,7 @@
             <input class="form-control" type="file" id="ig_hmit_ketua" name="ig_hmit_ketua" required>
           </div>
           <div class="mb-3">
-            <label for="share_post_ketua" class="form-label">Share Postingan IoT ARA di Story IG dan tag 3 temanmu <span class="text-danger">*<?= '<br>' . $validation->getError('share_post_ketua') ?></span></label>
+            <label for="share_post_ketua" class="form-label">Share Postingan IoT ARA di Story IG dan tag 3 temanmu (<a href="https://drive.google.com/file/d/1wTR_Bl6Xut90NLuqTekkkZeXsNBDE0wg/view?usp=sharing" target="_blank">Lihat Poster</a>) <span class="text-danger">*<?= '<br>' . $validation->getError('share_post_ketua') ?></span></label>
             <input class="form-control" type="file" id="share_post_ketua" name="share_post_ketua" required>
           </div>
         </div>
@@ -108,7 +108,7 @@
             <input class="form-control" type="file" id="ig_hmit_anggota_1" name="ig_hmit_anggota_1">
           </div>
           <div class="mb-3">
-            <label for="share_post_anggota_1" class="form-label">Share Postingan IoT ARA di Story IG dan tag 3 temanmu <span class="text-danger"><?= '<br>' . $validation->getError('share_post_anggota_1') ?></span></label>
+            <label for="share_post_anggota_1" class="form-label">Share Postingan IoT ARA di Story IG dan tag 3 temanmu (<a href="https://drive.google.com/file/d/1wTR_Bl6Xut90NLuqTekkkZeXsNBDE0wg/view?usp=sharing" target="_blank">Lihat Poster</a>) <span class="text-danger"><?= '<br>' . $validation->getError('share_post_anggota_1') ?></span></label>
             <input class="form-control" type="file" id="share_post_anggota_1" name="share_post_anggota_1">
           </div>
         </div>
@@ -134,7 +134,7 @@
             <input class="form-control" type="file" id="ig_hmit_anggota_2" name="ig_hmit_anggota_2">
           </div>
           <div class="mb-3">
-            <label for="share_post_anggota_2" class="form-label">Share Postingan IoT ARA di Story IG dan tag 3 temanmu <span class="text-danger"><?= '<br>' . $validation->getError('share_post_anggota_2') ?></span></label>
+            <label for="share_post_anggota_2" class="form-label">Share Postingan IoT ARA di Story IG dan tag 3 temanmu (<a href="https://drive.google.com/file/d/1wTR_Bl6Xut90NLuqTekkkZeXsNBDE0wg/view?usp=sharing" target="_blank">Lihat Poster</a>) <span class="text-danger"><?= '<br>' . $validation->getError('share_post_anggota_2') ?></span></label>
             <input class="form-control" type="file" id="share_post_anggota_2" name="share_post_anggota_2">
           </div>
         </div>
