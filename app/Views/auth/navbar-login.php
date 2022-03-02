@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark sticky-top py-2">
-  <div class="container-fluid row px-5">
+  <div class="container-fluid px-3">
     <div class="col-4">
       <a href="<?= base_url() ?>"><img src="<?= base_url() ?>/images/ara-putih.svg" alt="Rocket Icon" height="50" class=""></a>
     </div>
