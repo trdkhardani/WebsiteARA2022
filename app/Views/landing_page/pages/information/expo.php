@@ -9,11 +9,10 @@
     <div class="col-md-6">
         <h1>ExpoIT</h1>
         <p class="mt-4">Di Expo IT para pembicara akan memamerkan serta memaparkan kepada audiens mengenai hasil karya mereka dan bagaimana program di bidang tersebut bisa berjalan. Sehingga para audiens akan mendapat wawasan seputar potensi karir dan karya Departemen Teknologi Informasi ITS.</p>
-        <a href="#" class="btn btn-primary px-4 py-3 mt-4 me-4 rounded-pill disabled">Download Guide Book</a>
         <a href="<?= base_url() ?>/auth/registrasi_expo" class="btn btn-primary px-4 py-3 mt-4 rounded-pill">Daftar ExpoIT</a>
     </div>
     <div class="col-md-6">
-        <img src="<?= base_url() ?>/images/future-robot.svg" alt="" class="ms-auto">
+        <img src="<?= base_url() ?>/images/future-robot.svg" alt="" class="ms-auto mt-4">
     </div>
 </section>
 <section>
@@ -37,7 +36,7 @@
             </div>
         </div>
         <div class="event kanan mt-5">
-            <div data-aos="fade-right" class="isi-event">
+            <div data-aos="fade-left" class="isi-event">
                 <p class="fw-bold">Day 2 EXPO</p>
                 <p>24 April 2022</p>
             </div>

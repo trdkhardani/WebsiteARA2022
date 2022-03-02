@@ -13,7 +13,7 @@
         <a href="<?= base_url() ?>/auth/registrasi_kti" class="btn btn-primary px-4 py-3 mt-4 rounded-pill">Daftar IOT</a>
     </div>
     <div class="col-md-6">
-        <img src="<?= base_url() ?>/images/nambang-wifi.svg" alt="" class="ms-auto">
+        <img src="<?= base_url() ?>/images/nambang-wifi.svg" alt="" class="ms-auto mt-4">
     </div>
 </section>
 <section>

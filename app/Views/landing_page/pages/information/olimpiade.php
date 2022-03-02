@@ -48,7 +48,7 @@
             </div>
         </div>
         <div class="event kiri mt-5">
-            <div data-aos="fade-left" class="isi-event">
+            <div data-aos="fade-right" class="isi-event">
                 <p class="fw-bold">Simulasi Platform</p>
                 <p>Dilakukan secara online melalui platform yang disediakan</p>
                 <p>14 Mei 2022</p>
@@ -63,7 +63,7 @@
         </div>
 
         <div class="event kiri mt-5">
-            <div data-aos="fade-left" class="isi-event">
+            <div data-aos="fade-right" class="isi-event">
                 <p class="fw-bold">Pengumuman Finalis</p>
                 <p>Melalui Web dan Sosial Media ARA 2022</p>
                 <p>16 Mei 2022</p>
@@ -77,7 +77,7 @@
             </div>
         </div>
         <div class="event kiri mt-5">
-            <div data-aos="fade-left" class="isi-event">
+            <div data-aos="fade-right" class="isi-event">
                 <p class="fw-bold">Pengumuman Juara</p>
                 <p>Melalui Web dan Sosial Media ARA 2022</p>
                 <p>5 Juni 2022</p>

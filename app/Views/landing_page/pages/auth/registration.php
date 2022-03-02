@@ -11,7 +11,7 @@
 <div class="bulat-merah-2 rounded-circle"></div>
 <div class="bulat-biru rounded-circle"></div>
 
-<div data-aos-duration="1500" data-aos="fade-up" class="container row align-items-center mx-auto position-relatve" style="margin-bottom: 200px;">
+<div data-aos-duration="1500" data-aos="fade-up" class="container row align-items-center mx-auto position-relatve mt-5 pt-5" style="margin-bottom: 150px;">
     <p class="h1 text-center">Ingin mendaftar di Bidang Apa?</p>
     <p class="text-center mt-4">Silahkan Pilih Bidang yang ingin kamu daftar</p>
 </div>
