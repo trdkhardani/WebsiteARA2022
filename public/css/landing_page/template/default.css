@@ -103,7 +103,7 @@ main {
 
 @media only screen and (max-width: 768px) {
   main {
-    margin-top: 0;
+    margin-top: 100px;
   }
 }
 
@@ -150,6 +150,13 @@ section {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  h1,
+  .h1 {
+    font-size: 36px;
   }
 }
 /*# sourceMappingURL=default.css.map */
