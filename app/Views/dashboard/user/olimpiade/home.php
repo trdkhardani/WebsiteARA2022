@@ -24,9 +24,17 @@
 <div class="card-dashboard">
   <h4>Guide Book</h4>
   <ul>
-    <li><i class="fas fa-book"></i> Link: <a href="https://drive.google.com/file/d/1YM3RAGTAefTf8x_hTTfd3XZGyjvZG9oc/view?usp=drivesdk" target="_blank">Lihat Disini</a></li>
+    <li><i class="fas fa-book"></i> Link: <a href="https://drive.google.com/file/d/1YM3RAGTAefTf8x_hTTfd3XZGyjvZG9oc/view?usp=drivesdk" target="_blank">Download</a></li>
   </ul>
 </div>
+<!-- Modul Link -->
+<div class="card-dashboard">
+  <h4>Modul</h4>
+  <ul>
+    <li><i class="fa-solid fa-book"></i> Link: <a href="https://drive.google.com/file/d/1Rmrlx-0lBDHtHE-J6w2OB2rDM0QZsKrL/view?usp=drivesdk" target="_blank">Download</a></li>
+  </ul>
+</div>
+<!-- Whatsapp group -->
 <div class="card-dashboard">
   <h4>Whatsapp Group</h4>
   <ul>
