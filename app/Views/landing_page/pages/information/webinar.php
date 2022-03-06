@@ -19,25 +19,25 @@
     <div class="timeline">
         <div class="event kiri">
             <div data-aos="fade-right" class="isi-event">
-                <p class="fw-bold">Open Registrasi</p>
-                <p>9 Maret 2022</p>
+                <p class="fw-bold">Open Registrasi Webinar</p>
+                <p>16 Maret 2022</p>
             </div>
         </div>
         <div class="event kanan mt-5">
             <div data-aos="fade-left" class="isi-event">
-                <p class="fw-bold">Close Registrasi</p>
-                <p>8 April 2022</p>
+                <p class="fw-bold">Close Registrasi Webinar</p>
+              <p>8 April 2022</p>
             </div>
         </div>
         <div class="event kiri mt-5">
             <div data-aos="fade-right" class="isi-event">
-                <p class="fw-bold">CTF</p>
+                <p class="fw-bold">Webinar Cyber Security</p>
                 <p>9 April 2022</p>
             </div>
         </div>
         <div class="event kanan mt-5">
             <div data-aos="fade-left" class="isi-event">
-                <p class="fw-bold">IOT</p>
+                <p class="fw-bold">Webinar Internet of Things</p>
                 <p>10 April 2022</p>
             </div>
         </div>

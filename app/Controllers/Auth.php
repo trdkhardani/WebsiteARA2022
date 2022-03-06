@@ -51,7 +51,7 @@ class Auth extends BaseController
     $data = [
       'validation' => \Config\Services::validation(),
       'event' => 'Webinar',
-      'waktu' => '9 Maret - 8 April'
+      'waktu' => '16 Maret - 8 April'
     ];
     return view('auth/regist_webinar', $data);
     // return view('auth/notyet', $data);
