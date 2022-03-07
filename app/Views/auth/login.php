@@ -30,6 +30,7 @@
           <p>Silahkan isi username dan password anda untuk login</p>
         </div>
         <form action="<?= base_url() ?>/Verify/verify_login" method="POST">
+        <?= csrf_field() ?>
           <div class="mb-3">
             <label for="username" class="form-label"><span class="text-warning"><?= session()->getFlashdata('msg'); ?></span></label>
             <input type="text" class="form-control shadow-none" placeholder="Username" name="username" required>

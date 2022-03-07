@@ -41,6 +41,7 @@
     </header>
     <main>
       <form action="<?= base_url() ?>/Verify/verify_registrasi_kti" method="POST" enctype="multipart/form-data">
+      <?= csrf_field() ?>
         <!-- tim -->
         <div class="mb-4">
           <div class="mb-3">

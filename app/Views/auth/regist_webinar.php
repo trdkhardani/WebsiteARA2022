@@ -40,6 +40,7 @@
     </header>
     <main>
       <form action="<?= base_url() ?>/Verify/verify_registrasi_webinar" method="POST" enctype="multipart/form-data">
+      <?= csrf_field() ?>
         <div class="mb-3">
           <label for="nama" class="form-label">Nama <span class="text-danger">*<?= '<br>' . $validation->getError('nama') ?></span></label>
           <input type="text" class="form-control" id="nama" name="nama" value="<?= old('nama') ?>">
