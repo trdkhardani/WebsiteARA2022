@@ -74,7 +74,7 @@
             <div data-aos="fade-left" class="isi-event">
                 <p class="fw-bold">Babak Final</p>
                 <p>Dilakukan secara online melalui platform yang disediakan</p>
-                <p>28 Mei 2022</p>
+                <p>4 Juni 2022</p>
             </div>
         </div>
 
