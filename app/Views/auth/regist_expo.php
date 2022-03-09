@@ -40,7 +40,7 @@
     </header>
     <main>
       <form action="<?= base_url() ?>/Verify/verify_registrasi_expo" method="POST" enctype="multipart/form-data">
-      <?= csrf_field() ?>
+        <?= csrf_field() ?>
         <div class="mb-3">
           <label for="nama" class="form-label">Nama <span class="text-danger">*<?= '<br>' . $validation->getError('nama') ?></span></label>
           <input type="text" class="form-control" id="nama" name="nama" value="<?= old('nama') ?>">
@@ -68,6 +68,27 @@
         <div class="mb-3">
           <label for="follow_ig_hmit" class="form-label">Follow IG HMIT (<a href="https://www.instagram.com/hmit_its/" target="_blank">Instagram HMIT ITS</a>) <span class="text-danger">*<?= '<br>' . $validation->getError('follow_ig_hmit') ?></span></label>
           <input class="form-control" type="file" id="follow_ig_hmit" name="follow_ig_hmit" value="<?= old('follow_ig_hmit') ?>">
+        </div>
+        <div class="mb-5">
+          <label class="form-label">Pilihan Day Expo <span class="text-danger">*</span></label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="event" id="expoDay1" value="day1" checked>
+            <label class="form-check-label" for="expoDay1">
+              Day 1 Expo
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="event" id="handleDay2" value="day2">
+            <label class="form-check-label" for="handleDay2">
+              Day 2 Expo
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="event" id="expoAllDay" value="allDay">
+            <label class="form-check-label" for="expoAllDay">
+              Day 1 dan Day 2
+            </label>
+          </div>
         </div>
         <!--  <div class="mb-3">
           <label for="post_twibbon" class="form-label">Post Twibbon</label>

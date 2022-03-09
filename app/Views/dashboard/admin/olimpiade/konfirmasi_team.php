@@ -26,6 +26,7 @@
     <thead>
       <tr>
         <th>No</th>
+        <th>ID Tim</th>
         <th>Tim</th>
         <th>Sekolah</th>
         <th>Ketua</th>
@@ -51,6 +52,7 @@
       <?php foreach ($list_tim as $tim) : ?>
         <tr>
           <td><?= $i ?>.</td>
+          <td><?= $tim["olim_id"] ?></td>
           <td><?= $tim['olim_nama_tim']; ?></td>
           <td><?= $tim['olim_institusi']; ?></td>
           <td><?= $tim['olim_nama_ketua']; ?></td>

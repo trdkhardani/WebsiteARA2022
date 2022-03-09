@@ -25,22 +25,23 @@
   <h4>Data Tim</h4>
   <ul>
     <li><i class="fas fa-university"></i> Asal Sekolah: <?= $institusi; ?></li>
+    <li><i class="fa-solid fa-id-badge"></i> ID Tim: <?= $id ?></li>
     <li><i class="fas fa-user"></i> Ketua Tim: <?= $ketua; ?></li>
     <li>
-        <i class="fas fa-user"></i> Anggota 1:
-        <?php if ($anggota_1) { ?>
-            <?= $anggota_1; ?>
-        <?php } else { ?>
-            -
-        <?php } ?>
+      <i class="fas fa-user"></i> Anggota 1:
+      <?php if ($anggota_1) { ?>
+        <?= $anggota_1; ?>
+      <?php } else { ?>
+        -
+      <?php } ?>
     </li>
     <li>
-        <i class="fas fa-user"></i> Anggota 2:
-        <?php if ($anggota_2) { ?>
-            <?= $anggota_2; ?>
-        <?php } else { ?>
-            -
-        <?php } ?>
+      <i class="fas fa-user"></i> Anggota 2:
+      <?php if ($anggota_2) { ?>
+        <?= $anggota_2; ?>
+      <?php } else { ?>
+        -
+      <?php } ?>
     </li>
   </ul>
 </div>

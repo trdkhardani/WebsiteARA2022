@@ -35,6 +35,7 @@ class User_olim extends BaseController
       'institusi' => $tim['olim_institusi'],
       'anggota_1' => $tim['olim_nama_anggota_1'],
       'anggota_2' => $tim['olim_nama_anggota_2'],
+      "id" => $tim["olim_id"],
     ];
     return view('dashboard/user/olimpiade/team', $data);
   }

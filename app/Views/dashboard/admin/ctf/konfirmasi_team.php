@@ -26,6 +26,7 @@
     <thead>
       <tr>
         <th>No</th>
+        <th>ID Tim</th>
         <th>Tim</th>
         <th>Institusi</th>
         <th>Ketua</th>
@@ -52,6 +53,7 @@
         if ($item->ctf_jumlah_anggota == 1) { ?>
           <tr>
             <td> <?= $i++ ?> </td>
+            <td> <?= $item->ctf_id ?> </td>
             <td> <?= $item->ctf_nama_tim ?> </td>
             <td> <?= $item->ctf_intitusi ?> </td>
             <td> <?= $item->ctf_nama_ketua ?> </td>

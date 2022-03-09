@@ -24,6 +24,16 @@ class User_kti_iot extends BaseController
     // File tidak ada
     return null;
   }
+  private function moveFileCustom($path, $file, $filename)
+  {
+    if (!empty($file)) {
+      // $renamed = $file->getRandomName();
+      $file->move($path, $filename);
+      return $filename;
+    }
+    // File tidak ada
+    return null;
+  }
 
   public function home()
   {
@@ -34,7 +44,6 @@ class User_kti_iot extends BaseController
       return redirect()->to('/Auth/login');
     }
     $nama_tim = $this->session->get('keterangan');
-    // $nama_tim = 'dummy';
     $tim = $this->model_kti_iot->where($this->model_kti_iot->nama_tim, $nama_tim)->first();
     $data = [
       'active' => 'home',
@@ -47,6 +56,7 @@ class User_kti_iot extends BaseController
       'status_konfirmasi_abstrak' => $tim['iot_status_konfirmasi_abstrak'],
       'status_penyisihan' => $tim['iot_status_penyisihan'],
       'status_final' => $tim['iot_status_final'],
+      'id' => $tim["iot_id"],
     ];
     return view('dashboard/user/kti_iot/home', $data);
   }
@@ -90,7 +100,8 @@ class User_kti_iot extends BaseController
     $abstrak_file = $this->request->getFile('abstrak');
     // Define path
     $abstrak_path = 'uploads/kti_iot/abstrak';
-    $renamed_abstrak_file = $this->moveFile($abstrak_path, $abstrak_file);
+    $abstrak_file_name = 'Abstrak_' . $tim['iot_id'] . '_' . $tim['iot_nama_tim'] . '.' . $abstrak_file->guessExtension();
+    $renamed_abstrak_file = $this->moveFileCustom($abstrak_path, $abstrak_file, $abstrak_file_name);
     $data = [
       'iot_id' => $tim['iot_id'],
       'iot_abstrak' => $renamed_abstrak_file,
@@ -175,10 +186,11 @@ class User_kti_iot extends BaseController
     $nama_tim = $this->session->get('keterangan');
     $tim = $this->model_kti_iot->where($this->model_kti_iot->nama_tim, $nama_tim)->first();
     // Ambil file abstrak
-    $abstrak_file = $this->request->getFile('full_paper');
+    $full_paper_file = $this->request->getFile('full_paper');
     // Define path
-    $abstrak_path = 'uploads/kti_iot/full_paper';
-    $renamed_full_paper = $this->moveFile($abstrak_path, $abstrak_file);
+    $full_paper_path = 'uploads/kti_iot/full_paper';
+    $full_paper_file_name = 'KTI_' . $tim['iot_id'] . '_' . $tim['iot_nama_tim'] . '.' . $full_paper_file->guessExtension();
+    $renamed_full_paper = $this->moveFileCustom($full_paper_path, $full_paper_file, $full_paper_file_name);
     $data = [
       'iot_id' => $tim['iot_id'],
       'iot_kti_paper' => $renamed_full_paper,

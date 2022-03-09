@@ -26,6 +26,7 @@
     <thead>
       <tr>
         <th>No</th>
+        <th>ID Tim</th>
         <th>Tim</th>
         <th>Institusi</th>
         <th>Ketua</th>
@@ -36,12 +37,13 @@
       </tr>
     </thead>
     <tbody>
-      <?php 
-        $i = 1;
-        foreach($data as $item) {
-          if($item->ctf_jumlah_anggota == 1) {?>
+      <?php
+      $i = 1;
+      foreach ($data as $item) {
+        if ($item->ctf_jumlah_anggota == 1) { ?>
           <tr>
-            <td> <?= $i++?> </td>
+            <td> <?= $i++ ?> </td>
+            <td> <?= $item->ctf_id ?> </td>
             <td> <?= $item->ctf_nama_tim ?> </td>
             <td> <?= $item->ctf_intitusi ?> </td>
             <td> <?= $item->ctf_nama_ketua ?> </td>
@@ -50,9 +52,9 @@
             <td> <?= $item->ctf_contact  ?> </td>
             <td> <?= $item->ctf_email_ketua  ?> </td>
           </tr>
-        <?php }elseif($item->ctf_jumlah_anggota == 2){ ?>
+        <?php } elseif ($item->ctf_jumlah_anggota == 2) { ?>
           <tr>
-            <td> <?= $i++?> </td>
+            <td> <?= $i++ ?> </td>
             <td> <?= $item->ctf_nama_tim ?> </td>
             <td> <?= $item->ctf_intitusi ?> </td>
             <td> <?= $item->ctf_nama_ketua ?> </td>
@@ -61,9 +63,9 @@
             <td> <?= $item->ctf_contact  ?> </td>
             <td> <?= $item->ctf_email_ketua  ?> </td>
           </tr>
-        <?php }elseif($item->ctf_jumlah_anggota == 3){ ?>
+        <?php } elseif ($item->ctf_jumlah_anggota == 3) { ?>
           <tr>
-            <td> <?= $i++?> </td>
+            <td> <?= $i++ ?> </td>
             <td> <?= $item->ctf_nama_tim ?> </td>
             <td> <?= $item->ctf_intitusi ?> </td>
             <td> <?= $item->ctf_nama_ketua ?> </td>
@@ -74,7 +76,7 @@
           </tr>
         <?php } ?>
       <?php } ?>
-     <!-- <?php for ($i = 1; $i <= 10; $i++) { ?>
+      <!-- <?php for ($i = 1; $i <= 10; $i++) { ?>
         <tr>
           <td><?= $i ?>.</td>
           <td>Tim IT'03</td>
