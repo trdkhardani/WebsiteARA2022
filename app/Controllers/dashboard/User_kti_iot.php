@@ -56,6 +56,7 @@ class User_kti_iot extends BaseController
       'status_konfirmasi_abstrak' => $tim['iot_status_konfirmasi_abstrak'],
       'status_penyisihan' => $tim['iot_status_penyisihan'],
       'status_final' => $tim['iot_status_final'],
+      'id' => $tim["iot_id"],
     ];
     return view('dashboard/user/kti_iot/home', $data);
   }

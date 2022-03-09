@@ -25,22 +25,23 @@
   <h4>Data Tim</h4>
   <ul>
     <li><i class="fas fa-university"></i> Institusi: <?= $data[0]->ctf_nama_tim ?></li>
-    <li><i class="fas fa-user"></i> Ketua Tim:  <?= $data[0]->ctf_nama_ketua ?></li>
+    <li><i class="fa-solid fa-id-badge"></i> ID Tim: <?= $data[0]->ctf_id ?></li>
+    <li><i class="fas fa-user"></i> Ketua Tim: <?= $data[0]->ctf_nama_ketua ?></li>
     <li>
-        <i class="fas fa-user"></i> Anggota 1: 
-        <?php if($data[0]->ctf_nama_anggota_1){ ?>
-            <?= $data[0]->ctf_nama_anggota_1 ?>
-        <?php } else { ?>
-            -
-        <?php } ?>
+      <i class="fas fa-user"></i> Anggota 1:
+      <?php if ($data[0]->ctf_nama_anggota_1) { ?>
+        <?= $data[0]->ctf_nama_anggota_1 ?>
+      <?php } else { ?>
+        -
+      <?php } ?>
     </li>
     <li>
-        <i class="fas fa-user"></i> Anggota 2: 
-        <?php if($data[0]->ctf_nama_anggota_2){ ?>
-            <?= $data[0]->ctf_nama_anggota_2 ?>
-        <?php } else { ?>
-            -
-        <?php } ?>
+      <i class="fas fa-user"></i> Anggota 2:
+      <?php if ($data[0]->ctf_nama_anggota_2) { ?>
+        <?= $data[0]->ctf_nama_anggota_2 ?>
+      <?php } else { ?>
+        -
+      <?php } ?>
     </li>
   </ul>
 </div>

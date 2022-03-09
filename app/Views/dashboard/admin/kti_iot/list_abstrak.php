@@ -38,6 +38,7 @@
     <thead>
       <tr>
         <th>No</th>
+        <th>ID Tim</th>
         <th>Tim</th>
         <th>Institusi</th>
         <th>Ketua</th>
@@ -53,6 +54,7 @@
       <?php foreach ($list_tim_abstrak as $tim) : ?>
         <tr>
           <td><?= $i ?>.</td>
+          <td><?= $tim["iot_id"] ?></td>
           <td><?= $tim['iot_nama_tim']; ?></td>
           <td><?= $tim['iot_institusi']; ?></td>
           <td><?= $tim['iot_nama_ketua']; ?></td>
@@ -61,12 +63,12 @@
           <td><?= $tim['iot_contact']; ?></td>
           <td><?= $tim['iot_email_ketua']; ?></td>
           <td>
-              <?php if($tim['iot_abstrak']) { ?>
-                <a href="<?= base_url() ?>/uploads/kti_iot/abstrak/<?= $tim['iot_abstrak']; ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a>
-              <?php } else { ?>
-                <p>Belum Mengumpulkan Abstrak</p>
-              <?php } ?>
-            </td>
+            <?php if ($tim['iot_abstrak']) { ?>
+              <a href="<?= base_url() ?>/uploads/kti_iot/abstrak/<?= $tim['iot_abstrak']; ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a>
+            <?php } else { ?>
+              <p>Belum Mengumpulkan Abstrak</p>
+            <?php } ?>
+          </td>
         </tr>
         <?php $i++; ?>
       <?php endforeach; ?>

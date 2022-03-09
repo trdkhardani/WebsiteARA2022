@@ -38,6 +38,7 @@
     <thead>
       <tr>
         <th>No</th>
+        <th>ID Tim</th>
         <th>Tim</th>
         <th>Institusi</th>
         <th>Ketua</th>
@@ -68,6 +69,7 @@
       <?php foreach ($list_tim_abstrak as $tim) : ?>
         <tr>
           <td><?= $i ?>.</td>
+          <td><?= $tim["iot_id"] ?></td>
           <td><?= $tim['iot_nama_tim']; ?></td>
           <td><?= $tim['iot_institusi']; ?></td>
           <td><?= $tim['iot_nama_ketua']; ?></td>
