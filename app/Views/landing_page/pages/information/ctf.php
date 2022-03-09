@@ -9,7 +9,7 @@
     <div class="col-md-6">
         <h1>Capture The Flag</h1>
         <p class="mt-4">Capture the flag ARA adalah sebuah kompetisi di bidang jaringan dan keamanan informasi dengan mekanisme setiap peserta diminta untuk mengumpulkan flag sebanyak-banyaknya dari soal yang telah diberikan. Kompetisi ini dapat diikuti oleh tim yang terdiri dari 2-3 orang yang berasal dari instansi/lembaga pendidikan yang sama.Kompetisi ini diselenggarakan untuk mahasiswa di seluruh Indonesia sebagai salah satu cabang kompetisi dari rangkaian event ARA 2022.</p>
-        <a href="https://drive.google.com/file/d/1palxAVjgCk5h69Y7e1N4TE5IKCKGOeLP/view?usp=sharing" target="_blank" class="btn btn-primary px-4 py-3 mt-4 me-4 rounded-pill">Download Guide Book</a>
+        <a href="https://drive.google.com/file/d/1bNqLIt6ejWc28Ww_tcoWWBsqLJJVDWHH/view?usp=sharing" target="_blank" class="btn btn-primary px-4 py-3 mt-4 me-4 rounded-pill">Download Guide Book</a>
         <a href="<?= base_url() ?>/auth/registrasi_ctf" class="btn btn-primary px-4 py-3 mt-4 rounded-pill">Daftar CTF</a>
     </div>
     <div class="col-md-6">

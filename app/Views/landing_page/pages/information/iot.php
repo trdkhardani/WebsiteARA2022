@@ -9,7 +9,7 @@
     <div class="col-md-6">
         <h1>Internet of Things (IOT)</h1>
         <p class="mt-4">Kompetisi ide inovatif dalam rangkaian acara ARA 2022 menggunakan mekanisme yang hampir serupa dengan Lomba Karya Tulis Ilmiah. Peserta diharapkan dapat menuangkan idenya dalam bentuk karya tulis ilmiah dengan topik utama Internet of Things. Kompetisi ide inovatif IoT ditujukan bagi mahasiswa aktif PTN/PTS se Indonesia.</p>
-        <a href="https://drive.google.com/file/d/1fC6lsxBzS4j9fleYrDf_yQrqqtD3ScG_/view?usp=sharing" target="_blank" class="btn btn-primary px-4 py-3 mt-4 me-4 rounded-pill">Download Guide Book</a>
+        <a href="https://drive.google.com/file/d/17rm4UaSQGzFAV9JeZSuX8J6bpr3GtVJz/view?usp=sharing" target="_blank" class="btn btn-primary px-4 py-3 mt-4 me-4 rounded-pill">Download Guide Book</a>
         <a href="<?= base_url() ?>/auth/registrasi_kti" class="btn btn-primary px-4 py-3 mt-4 rounded-pill">Daftar IOT</a>
     </div>
     <div class="col-md-6">

@@ -131,7 +131,7 @@
         <!-- Bukti bayar -->
         <div class="mb-5">
           <h2>Upload Bukti Pembayaran <span class="text-danger">*</span></h2>
-          <p>Untuk biaya pendaftaran mengikuti CTF ini dapat anda akses melalui (<a href="https://drive.google.com/file/d/1palxAVjgCk5h69Y7e1N4TE5IKCKGOeLP/view?usp=sharing" target="_blank">Link ini</a>). Pastikan anda membayar sesuai kapan waktu anda mendaftar.</p>
+          <p>Untuk biaya pendaftaran mengikuti CTF ini dapat anda akses melalui (<a href="https://drive.google.com/file/d/1bNqLIt6ejWc28Ww_tcoWWBsqLJJVDWHH/view?usp=sharing" target="_blank">Link ini</a>). Pastikan anda membayar sesuai kapan waktu anda mendaftar.</p>
           <div class="mb-3">
             <label for="bukti_bayar" class="form-label">Bukti Bayar <span class="text-danger">*<?= '<br>' . $validation->getError('bukti_bayar') ?></span></label>
             <input type="file" class="form-control" id="bukti_bayar" name="bukti_bayar" value="<?= old('bukti_bayar') ?>">

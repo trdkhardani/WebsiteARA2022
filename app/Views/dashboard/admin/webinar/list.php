@@ -34,16 +34,24 @@
       </tr>
     </thead>
     <tbody>
-      <?php $i = 1; 
-        foreach($data as $item){ ?>
-          <tr>
-            <td><?= $i++ ?></td>
-            <td><?= $item->webinar_event?></td>
-            <td><?= $item->webinar_nama?></td>
-            <td><?= $item->webinar_instansi?></td>
-            <td><?= $item->webinar_contact?></td>
-            <td><?= $item->webinar_email?></td>
-          </tr>
+      <?php $i = 1;
+      foreach ($data as $item) { ?>
+        <tr>
+          <td><?= $i++ ?></td>
+          <td>
+            <?php if ($item->webinar_event == "CTF") { ?>
+              Cyber Security
+            <?php } else if ($item->webinar_event == "IoT") { ?>
+              IoT
+            <?php } else { ?>
+              Cyber Security & IoT
+            <?php } ?>
+          </td>
+          <td><?= $item->webinar_nama ?></td>
+          <td><?= $item->webinar_instansi ?></td>
+          <td><?= $item->webinar_contact ?></td>
+          <td><?= $item->webinar_email ?></td>
+        </tr>
       <?php } ?>
       <!--<?php for ($i = 1; $i <= 10; $i++) { ?>
         <tr>

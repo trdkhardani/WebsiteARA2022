@@ -71,11 +71,11 @@ class Admin_webinar extends BaseController
     }
 
     if ($data[0]->webinar_event == 'CTF') {
-      $event = 'Capture The Flag';
+      $event = 'Cyber Security';
     } else if ($data[0]->webinar_event == 'IoT') {
       $event = 'Internet of Things';
     } else {
-      $event = 'Capture The Flag and Internet of Things';
+      $event = 'Cyber Security and Internet of Things';
     }
 
     $subject = "[Rejected] Webinar {$event}";
@@ -117,11 +117,17 @@ class Admin_webinar extends BaseController
       $this->model_account->save($data);
 
       if ($data_old[0]->webinar_event == 'CTF') {
-        $event = 'Capture The Flag';
+        $event = 'Cyber Security';
+        $link1 = "https://chat.whatsapp.com/CtbVlHoKeue78rIWyf0O67";
+        $link2 = "https://t.me/+BmojfhGELO45ZWE1";
       } else if ($data_old[0]->webinar_event == 'IoT') {
         $event = 'Internet of Things';
+        $link1 = "https://chat.whatsapp.com/IgakcYFMx5jHrhoqcf3ryP";
+        $link2 = "https://t.me/+pGftH65OTq1jNDY9";
       } else {
-        $event = 'Capture The Flag and Internet of Things';
+        $event = 'Cyber Security and Internet of Things';
+        $link1 = "(Cyber security: https://chat.whatsapp.com/CtbVlHoKeue78rIWyf0O67 or https://t.me/+BmojfhGELO45ZWE1)";
+        $link2 = "(Internet of Things: https://chat.whatsapp.com/IgakcYFMx5jHrhoqcf3ryP or https://t.me/+pGftH65OTq1jNDY9)";
       }
 
       $subject = "[Accepted] Webinar {$event}";
@@ -134,7 +140,7 @@ class Admin_webinar extends BaseController
                   Username : {$data['account_username']}<br>
                   Password : {$password}<br>
                   <br>
-                  You can join one or both of the following links for more information: https://chat.whatsapp.com/CtbVlHoKeue78rIWyf0O67 or https://t.me/+BmojfhGELO45ZWE1
+                  You can join the following groups for get more information -> {$link1} or {$link2}
                   <br>
                   --<br>
                   Best regards,<br>

@@ -16,15 +16,17 @@
 
 <!-- content -->
 <?= $this->section("content"); ?>
+
 <h3 class="mb-3">Informasi Umum</h3>
-<div class="card-dashboard">
-  <h4>Link group Informasi:</h4>
-  <ul>
-    <li><i class="fa-brands fa-whatsapp"></i> Whatsapp: <a href="https://chat.whatsapp.com/CtbVlHoKeue78rIWyf0O67" target="_blank">Join Disini</a></li>
-    <li><i class="fa-brands fa-telegram"></i> Telegram: <a href="https://t.me/+BmojfhGELO45ZWE1" target="_blank">Join Disini</a></li>
-  </ul>
-</div>
+
 <?php if ($event == "CTF") { ?>
+  <div class="card-dashboard">
+    <h4>Link group Informasi:</h4>
+    <ul>
+      <li><i class="fa-brands fa-whatsapp"></i> Whatsapp: <a href="https://chat.whatsapp.com/CtbVlHoKeue78rIWyf0O67" target="_blank">Join Disini</a></li>
+      <li><i class="fa-brands fa-telegram"></i> Telegram: <a href="https://t.me/+BmojfhGELO45ZWE1" target="_blank">Join Disini</a></li>
+    </ul>
+  </div>
   <!-- card dashboard -->
   <div class="card-dashboard">
     <h4>Webinar Cyber Security</h4>
@@ -35,6 +37,13 @@
     </ul>
   </div>
 <?php } else if ($event == "IoT") { ?>
+  <div class="card-dashboard">
+    <h4>Link group Informasi:</h4>
+    <ul>
+      <li><i class="fa-brands fa-whatsapp"></i> Whatsapp: <a href="https://chat.whatsapp.com/IgakcYFMx5jHrhoqcf3ryP" target="_blank">Join Disini</a></li>
+      <li><i class="fa-brands fa-telegram"></i> Telegram: <a href="https://t.me/+pGftH65OTq1jNDY9" target="_blank">Join Disini</a></li>
+    </ul>
+  </div>
   <!-- card dashboard -->
   <div class="card-dashboard">
     <h4>Webinar IoT</h4>
@@ -45,6 +54,15 @@
     </ul>
   </div>
 <?php } else { ?>
+  <div class="card-dashboard">
+    <h4>Link group Informasi:</h4>
+    <ul>
+      <li><i class="fa-brands fa-whatsapp"></i> Whatsapp Cyber Security: <a href="https://chat.whatsapp.com/CtbVlHoKeue78rIWyf0O67" target="_blank">Join Disini</a></li>
+      <li><i class="fa-brands fa-whatsapp"></i> Whatsapp Internet of Things: <a href="https://chat.whatsapp.com/IgakcYFMx5jHrhoqcf3ryP" target="_blank">Join Disini</a></li>
+      <li><i class="fa-brands fa-telegram"></i> Telegram Cyber Security: <a href="https://t.me/+BmojfhGELO45ZWE1" target="_blank">Join Disini</a></li>
+      <li><i class="fa-brands fa-telegram"></i> Telegram Internet of Things: <a href="https://t.me/+pGftH65OTq1jNDY9" target="_blank">Join Disini</a></li>
+    </ul>
+  </div>
   <!-- card dashboard -->
   <div class="card-dashboard">
     <h4>Webinar IoT</h4>

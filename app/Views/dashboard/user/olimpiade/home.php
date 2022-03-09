@@ -24,7 +24,7 @@
 <div class="card-dashboard">
   <h4>Guide Book</h4>
   <ul>
-    <li><i class="fas fa-book"></i> Link: <a href="https://drive.google.com/file/d/1YM3RAGTAefTf8x_hTTfd3XZGyjvZG9oc/view?usp=drivesdk" target="_blank">Download</a></li>
+    <li><i class="fas fa-book"></i> Link: <a href="https://drive.google.com/file/d/1HyPGJPTjOKniRnLeVenLlyHl60-Xr4XA/view?usp=sharing" target="_blank">Download</a></li>
   </ul>
 </div>
 <!-- Modul Link -->

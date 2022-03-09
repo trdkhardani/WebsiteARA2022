@@ -41,8 +41,8 @@ class Auth extends BaseController
       'event' => 'Expo IT',
       'waktu' => '20 Maret - 20 April'
     ];
-    return view('auth/regist_expo', $data);
-    // return view('auth/notyet', $data);
+    // return view('auth/regist_expo', $data);
+    return view('auth/notyet', $data);
   }
 
   public function registrasi_webinar()
@@ -53,8 +53,8 @@ class Auth extends BaseController
       'event' => 'Webinar',
       'waktu' => '16 Maret - 8 April'
     ];
-    return view('auth/regist_webinar', $data);
-    // return view('auth/notyet', $data);
+    // return view('auth/regist_webinar', $data);
+    return view('auth/notyet', $data);
   }
 
   public function login()

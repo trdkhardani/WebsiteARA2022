@@ -31,7 +31,7 @@
 <div class="card-dashboard">
   <h4>Guide Book</h4>
   <ul>
-    <li><i class="fas fa-book"></i> Link: <a href="https://drive.google.com/file/d/1fC6lsxBzS4j9fleYrDf_yQrqqtD3ScG_/view" target="_blank">Lihat Disini</a></li>
+    <li><i class="fas fa-book"></i> Link: <a href="https://drive.google.com/file/d/17rm4UaSQGzFAV9JeZSuX8J6bpr3GtVJz/view?usp=sharing" target="_blank">Lihat Disini</a></li>
   </ul>
 </div>
 <!-- data tim -->
