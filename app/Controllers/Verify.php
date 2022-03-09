@@ -81,6 +81,14 @@ class Verify extends BaseController
                     'is_image' => $imgTypeError
                 ]
             ],
+            'krsm_ketua' => [
+                'label' => 'krsm_ketua',
+                'rules' => 'max_size[krsm_ketua,1024]|is_image[krsm_ketua]',
+                'errors' => [
+                    'max_size' => $imgSizeError,
+                    'is_image' => $imgTypeError
+                ]
+            ],
             'ig_ara_ketua' => [
                 'label' => 'ig_ara_ketua',
                 'rules' => 'max_size[ig_ara_ketua,1024]|is_image[ig_ara_ketua]',
@@ -120,6 +128,14 @@ class Verify extends BaseController
                     'is_image' => $imgTypeError
                 ]
             ],
+            'krsm_anggota_1' => [
+                'label' => 'krsm_anggota_1',
+                'rules' => 'max_size[krsm_anggota_1,1024]|is_image[krsm_anggota_1]',
+                'errors' => [
+                    'max_size' => $imgSizeError,
+                    'is_image' => $imgTypeError
+                ]
+            ],
             'ig_ara_anggota_1' => [
                 'label' => 'ig_ara_anggota_1',
                 'rules' => 'max_size[ig_ara_anggota_1,1024]|is_image[ig_ara_anggota_1]',
@@ -147,6 +163,14 @@ class Verify extends BaseController
             'ktm_anggota_2' => [
                 'label' => 'ktm_anggota_2',
                 'rules' => 'max_size[ktm_anggota_2,1024]|is_image[ktm_anggota_2]',
+                'errors' => [
+                    'max_size' => $imgSizeError,
+                    'is_image' => $imgTypeError
+                ]
+            ],
+            'krsm_anggota_2' => [
+                'label' => 'krsm_anggota_2',
+                'rules' => 'max_size[krsm_anggota_2,1024]|is_image[krsm_anggota_2]',
                 'errors' => [
                     'max_size' => $imgSizeError,
                     'is_image' => $imgTypeError
@@ -185,17 +209,20 @@ class Verify extends BaseController
         // Ambil files
         // Ketua
         $ktm_ketua = $this->request->getFile('ktm_ketua');
+        $krsm_ketua = $this->request->getFile('krsm_ketua');
         $ig_ara_ketua = $this->request->getFile('ig_ara_ketua');
         $ig_hmit_ketua = $this->request->getFile('ig_hmit_ketua');
         $share_post_ketua = $this->request->getFile('share_post_ketua');
 
         // Anggota 1
         $ktm_anggota_1 = $this->request->getFile('ktm_anggota_1');
+        $krsm_anggota_1 = $this->request->getFile('krsm_anggota_1');
         $ig_ara_anggota_1 = $this->request->getFile('ig_ara_anggota_1');
         $ig_hmit_anggota_1 = $this->request->getFile('ig_hmit_anggota_1');
         $share_post_anggota_1 = $this->request->getFile('share_post_anggota_1');
         // Anggota 2
         $ktm_anggota_2 = $this->request->getFile('ktm_anggota_2');
+        $krsm_anggota_2 = $this->request->getFile('krsm_anggota_2');
         $ig_ara_anggota_2 = $this->request->getFile('ig_ara_anggota_2');
         $ig_hmit_anggota_2 = $this->request->getFile('ig_hmit_anggota_2');
         $share_post_anggota_2 = $this->request->getFile('share_post_anggota_2');
@@ -205,10 +232,12 @@ class Verify extends BaseController
         $ig_follow_path = 'uploads/kti_iot/ig/follow';
         $ig_share_path = 'uploads/kti_iot/ig/share';
         $ktm_path = 'uploads/kti_iot/ktm';
+        $krsm_path = 'uploads/kti_iot/krsm';
         // Hitung anggota
         $jumlahAnggota = 1;
         // Ketua
         $renamed_ktm_ketua = $this->moveFile($ktm_path, $ktm_ketua);
+        $renamed_krsm_ketua = $this->moveFile($krsm_path, $krsm_ketua);
         $renamed_ig_ara_ketua = $this->moveFile($ig_follow_path, $ig_ara_ketua);
         $renamed_ig_hmit_ketua = $this->moveFile($ig_follow_path, $ig_hmit_ketua);
         $renamed_share_ketua = $this->moveFile($ig_share_path, $share_post_ketua);
@@ -216,12 +245,14 @@ class Verify extends BaseController
         // Anggota 1 
         $nama_anggota_1 = $this->request->getVar('nama_anggota_1');
         $renamed_ktm_anggota_1 = null;
+        $renamed_krsm_anggota_1 = null;
         $renamed_ig_ara_anggota_1 = null;
         $renamed_ig_hmit_anggota_1 = null;
         $renamed_share_anggota_1 = null;
         if (!empty($nama_anggota_1)) {
             $jumlahAnggota++;
             $renamed_ktm_anggota_1 = $this->moveFile($ktm_path, $ktm_anggota_1);
+            $renamed_krsm_anggota_1 = $this->moveFile($krsm_path, $krsm_anggota_1);
             $renamed_ig_ara_anggota_1 = $this->moveFile($ig_follow_path, $ig_ara_anggota_1);
             $renamed_ig_hmit_anggota_1 = $this->moveFile($ig_follow_path, $ig_hmit_anggota_1);
             $renamed_share_anggota_1 = $this->moveFile($ig_share_path, $share_post_anggota_1);
@@ -230,12 +261,14 @@ class Verify extends BaseController
         // Anggota 2
         $nama_anggota_2 = $this->request->getVar('nama_anggota_2');
         $renamed_ktm_anggota_2 = null;
+        $renamed_krsm_anggota_2 = null;
         $renamed_ig_ara_anggota_2 = null;
         $renamed_ig_hmit_anggota_2 = null;
         $renamed_share_anggota_2 = null;
         if (!empty($nama_anggota_2)) {
             $jumlahAnggota++;
             $renamed_ktm_anggota_2 = $this->moveFile($ktm_path, $ktm_anggota_2);
+            $renamed_krsm_anggota_2 = $this->moveFile($krsm_path, $krsm_anggota_2);
             $renamed_ig_ara_anggota_2 = $this->moveFile($ig_follow_path, $ig_ara_anggota_2);
             $renamed_ig_hmit_anggota_2 = $this->moveFile($ig_follow_path, $ig_hmit_anggota_2);
             $renamed_share_anggota_2 = $this->moveFile($ig_share_path, $share_post_anggota_2);
@@ -254,6 +287,9 @@ class Verify extends BaseController
             'iot_suket_ketua' => $renamed_ktm_ketua,
             'iot_suket_anggota_1' => $renamed_ktm_anggota_1,
             'iot_suket_anggota_2' => $renamed_ktm_anggota_2,
+            'iot_krsm_ketua' => $renamed_krsm_ketua,
+            'iot_krsm_anggota_1' => $renamed_krsm_anggota_1,
+            'iot_krsm_anggota_2' => $renamed_krsm_anggota_2,
             'iot_contact' => $this->request->getVar('wa_ketua'),
             'iot_institusi' => $this->request->getVar('asal_institusi'),
             'iot_story_ketua' => $renamed_share_ketua,

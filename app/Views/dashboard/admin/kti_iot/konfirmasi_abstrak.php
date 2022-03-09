@@ -48,6 +48,9 @@
         <th>KTM Ketua</th>
         <th>KTM Anggota 1</th>
         <th>KTM Anggota 2</th>
+        <th>KRSM Ketua</th>
+        <th>KRSM Anggota 1</th>
+        <th>KRSM Anggota 2</th>
         <th>Follow IG Ara Ketua</th>
         <th>Follow IG Ara Anggota 1</th>
         <th>Follow IG Ara Anggota 2</th>
@@ -88,6 +91,17 @@
           <?php endif; ?>
           <?php if ($tim['iot_suket_anggota_2']) : ?>
             <td><a href="<?= base_url() ?>/uploads/kti_iot/ktm/<?= $tim['iot_suket_anggota_2'] ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+          <?php else : ?>
+            <td>-</td>
+          <?php endif; ?>
+          <td><a href="<?= base_url() ?>/uploads/kti_iot/krsm/<?= $tim['iot_krsm_ketua'] ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+          <?php if ($tim['iot_krsm_anggota_1']) : ?>
+            <td><a href="<?= base_url() ?>/uploads/kti_iot/krsm/<?= $tim['iot_krsm_anggota_1'] ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+          <?php else : ?>
+            <td>-</td>
+          <?php endif; ?>
+          <?php if ($tim['iot_krsm_anggota_2']) : ?>
+            <td><a href="<?= base_url() ?>/uploads/kti_iot/krsm/<?= $tim['iot_krsm_anggota_2'] ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
           <?php else : ?>
             <td>-</td>
           <?php endif; ?>
