@@ -39,7 +39,7 @@
   <div class="card-dashboard">
     <h4>Pengumpulan Full Paper</h4>
     <ul>
-      <li><i class="fas fa-exclamation-triangle"></i> Pastikan anda sudah menginputkan file yang benar. File hanya bisa diinputkan satu kali.</li>
+      <li><i class="fas fa-exclamation-triangle"></i> Pastikan anda sudah menginputkan file yang benar. Format file adalah '.pdf'. File hanya bisa diinputkan satu kali.</li>
       <li>
         <form action="<?= base_url() ?>/dashboard/User_kti_iot/verify_full_paper" method="POST" enctype="multipart/form-data">
           <div class="mb-4">
