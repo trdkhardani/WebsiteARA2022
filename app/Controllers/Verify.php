@@ -387,6 +387,15 @@ class Verify extends BaseController
                     'max_size'  => 'ukuran maksimal gambar adalah 1024 kb'
                 ]
             ],
+            'krsm_ketua'  => [
+                'label'     => 'krsm_ketua',
+                'rules'     => 'uploaded[krsm_ketua]|is_image[krsm_ketua]|max_size[krsm_ketua, 1024]',
+                'errors'    => [
+                    'uploaded'  => 'field harus diisi',
+                    'is_image'  => 'harap isi dengan file gambar',
+                    'max_size'  => 'ukuran maksimal gambar adalah 1024 kb'
+                ]
+            ],
             'ig_ara_ketua'  => [
                 'label'     => 'ig_ara_ketua',
                 'rules'     => 'uploaded[ig_ara_ketua]|is_image[ig_ara_ketua]|max_size[ig_ara_ketua, 1024]',
@@ -413,6 +422,15 @@ class Verify extends BaseController
                     'max_size'  => 'ukuran maksimal gambar adalah 1024 kb'
                 ]
             ],
+            'krsm_anggota_1'  => [
+                'label'     => 'krsm_anggota_1',
+                'rules'     => 'is_image[krsm_anggota_1]|max_size[krsm_anggota_1, 1024]',
+                'errors'    => [
+                    'uploaded'  => 'field harus diisi',
+                    'is_image'  => 'harap isi dengan file gambar',
+                    'max_size'  => 'ukuran maksimal gambar adalah 1024 kb'
+                ]
+            ],
             'ig_ara_anggota_1'  => [
                 'label'     => 'ig_ara_anggota_1',
                 'rules'     => 'is_image[ig_ara_anggota_1]|max_size[ig_ara_anggota_1, 1024]',
@@ -433,6 +451,15 @@ class Verify extends BaseController
                 'label'     => 'ktm_anggota_2',
                 'rules'     => 'is_image[ktm_anggota_2]|max_size[ktm_anggota_2, 1024]',
                 'errors'    => [
+                    'is_image'  => 'harap isi dengan file gambar',
+                    'max_size'  => 'ukuran maksimal gambar adalah 1024 kb'
+                ]
+            ],
+            'krsm_anggota_2'  => [
+                'label'     => 'krsm_anggota_2',
+                'rules'     => 'is_image[krsm_anggota_2]|max_size[krsm_anggota_2, 1024]',
+                'errors'    => [
+                    'uploaded'  => 'field harus diisi',
                     'is_image'  => 'harap isi dengan file gambar',
                     'max_size'  => 'ukuran maksimal gambar adalah 1024 kb'
                 ]
@@ -478,6 +505,7 @@ class Verify extends BaseController
                 'ctf_suket_ketua'       => $this->moveFile('uploads/ctf/ktm', $this->request->getFile('ktm_ketua')),
                 'ctf_ig_ara_ketua'      => $this->moveFile('uploads/ctf/ig_ara', $this->request->getFile('ig_ara_ketua')),
                 'ctf_ig_hmit_ketua'     => $this->moveFile('uploads/ctf/ig_hmit', $this->request->getFile('ig_hmit_ketua')),
+                'ctf_krsm_ketua'        => $this->moveFile('uploads/ctf/krsm', $this->request->getFile('krsm_ketua')),
                 'ctf_intitusi'          => $this->request->getVar('asal_institusi'),
                 'ctf_contact'           => $this->request->getVar('wa_ketua'),
                 'ctf_status_final'      => 0,
@@ -497,6 +525,9 @@ class Verify extends BaseController
                 'ctf_nama_anggota_1'    => $this->request->getVar('nama_anggota_1'),
                 'ctf_suket_ketua'       => $this->moveFile('uploads/ctf/ktm', $this->request->getFile('ktm_ketua')),
                 'ctf_suket_anggota_1'   => $this->moveFile('uploads/ctf/ktm', $this->request->getFile('ktm_anggota_1')),
+                'ctf_krsm_ketua'        => $this->moveFile('uploads/ctf/krsm', $this->request->getFile('krsm_ketua')),
+                'ctf_krsm_anggota_1'    => $this->moveFile('uploads/ctf/krsm', $this->request->getFile('krsm_anggota_1')),
+                'ctf_krsm_anggota_2'    => $this->moveFile('uploads/ctf/krsm', $this->request->getFile('krsm_anggota_2')),
                 'ctf_ig_ara_ketua'      => $this->moveFile('uploads/ctf/ig_ara', $this->request->getFile('ig_ara_ketua')),
                 'ctf_ig_hmit_ketua'     => $this->moveFile('uploads/ctf/ig_hmit', $this->request->getFile('ig_hmit_ketua')),
                 'ctf_ig_ara_anggota_1'  => $this->moveFile('uploads/ctf/ig_ara', $this->request->getFile('ig_ara_anggota_1')),
@@ -516,6 +547,8 @@ class Verify extends BaseController
                 'ctf_suket_ketua'       => $this->moveFile('uploads/ctf/ktm', $this->request->getFile('ktm_ketua')),
                 'ctf_suket_anggota_1'   => $this->moveFile('uploads/ctf/ktm', $this->request->getFile('ktm_anggota_1')),
                 'ctf_ig_ara_ketua'      => $this->moveFile('uploads/ctf/ig_ara', $this->request->getFile('ig_ara_ketua')),
+                'ctf_krsm_ketua'        => $this->moveFile('uploads/ctf/krsm', $this->request->getFile('krsm_ketua')),
+                'ctf_krsm_anggota_1'    => $this->moveFile('uploads/ctf/krsm', $this->request->getFile('krsm_anggota_1')),
                 'ctf_ig_hmit_ketua'     => $this->moveFile('uploads/ctf/ig_hmit', $this->request->getFile('ig_hmit_ketua')),
                 'ctf_ig_ara_anggota_1'  => $this->moveFile('uploads/ctf/ig_ara', $this->request->getFile('ig_ara_anggota_1')),
                 'ctf_ig_hmit_anggota_1' => $this->moveFile('uploads/ctf/ig_hmit', $this->request->getFile('ig_hmit_anggota_1')),

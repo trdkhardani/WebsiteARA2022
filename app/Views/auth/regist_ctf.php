@@ -74,6 +74,10 @@
             <input class="form-control" type="file" id="ktm_ketua" name="ktm_ketua" value="<?= old('ktm_ketua') ?>">
           </div>
           <div class="mb-3">
+            <label for="krsm_ketua" class="form-label">KRSM <span class="text-danger">*<?= '<br>' . $validation->getError('krsm_ketua') ?></span></label>
+            <input class="form-control" type="file" id="krsm_ketua" name="krsm_ketua" value="<?= old('krsm_ketua') ?>">
+          </div>
+          <div class="mb-3">
             <label for="ig_ara_ketua" class="form-label">Follow IG ARA (<a href="https://www.instagram.com/ara_its/" target="_blank">Instagram ARA 2022</a>) <span class="text-danger">*<?= '<br>' . $validation->getError('ig_ara_ketua') ?></span></label>
             <input class="form-control" type="file" id="ig_ara_ketua" name="ig_ara_ketua" value="<?= old('ig_ara_ketua') ?>">
           </div>
@@ -96,6 +100,10 @@
             <input class="form-control" type="file" id="ktm_anggota_1" name="ktm_anggota_1" value="<?= old('ktm_anggota_1') ?>">
           </div>
           <div class="mb-3">
+            <label for="krsm_anggota_1" class="form-label">KRSM <span class="text-danger">*<?= '<br>' . $validation->getError('krsm_anggota_1') ?></span></label>
+            <input class="form-control" type="file" id="krsm_anggota_1" name="krsm_anggota_1" value="<?= old('krsm_anggota_1') ?>">
+          </div>
+          <div class="mb-3">
             <label for="ig_ara_anggota_1" class="form-label">Follow IG ARA (<a href="https://www.instagram.com/ara_its/" target="_blank">Instagram ARA 2022</a>) <span class="text-danger"><?= '<br>' . $validation->getError('ig_ara_anggota_1') ?></span></label>
             <input class="form-control" type="file" id="ig_ara_anggota_1" name="ig_ara_anggota_1" value="<?= old('ig_ara_anggota_1') ?>">
           </div>
@@ -116,6 +124,10 @@
           <div class="mb-3">
             <label for="ktm_anggota_2" class="form-label">Kartu Tanda Mahasiswa</label> <span class="text-danger"><?= '<br>' . $validation->getError('ktm_anggota_2') ?></span>
             <input class="form-control" type="file" id="ktm_anggota_2" name="ktm_anggota_2" value="<?= old('ktm_anggota_2') ?>">
+          </div>
+          <div class="mb-3">
+            <label for="krsm_anggota_2" class="form-label">KRSM <span class="text-danger">*<?= '<br>' . $validation->getError('krsm_anggota_2') ?></span></label>
+            <input class="form-control" type="file" id="krsm_anggota_2" name="krsm_anggota_2" value="<?= old('krsm_anggota_2') ?>">
           </div>
           <div class="mb-3">
             <label for="ig_ara_anggota_2" class="form-label">Follow IG ARA (<a href="https://www.instagram.com/ara_its/" target="_blank">Instagram ARA 2022</a>) </label> <span class="text-danger"><?= '<br>' . $validation->getError('ig_ara_anggota_2') ?></span>
