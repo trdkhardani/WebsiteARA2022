@@ -72,19 +72,19 @@
         <div class="mb-5">
           <label class="form-label">Pilihan Day Expo <span class="text-danger">*</span></label>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="event" id="expoDay1" value="day1" checked>
+            <input class="form-check-input" type="radio" name="event" id="expoDay1" value="Day 1" checked>
             <label class="form-check-label" for="expoDay1">
               Day 1 Expo
             </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="event" id="handleDay2" value="day2">
+            <input class="form-check-input" type="radio" name="event" id="handleDay2" value="Day 2">
             <label class="form-check-label" for="handleDay2">
               Day 2 Expo
             </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="event" id="expoAllDay" value="allDay">
+            <input class="form-check-input" type="radio" name="event" id="expoAllDay" value="All Day">
             <label class="form-check-label" for="expoAllDay">
               Day 1 dan Day 2
             </label>

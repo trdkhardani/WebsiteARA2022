@@ -17,32 +17,46 @@
 <!-- content -->
 <?= $this->section("content"); ?>
 <h3 class="mb-3">Informasi Umum</h3>
-<!-- card dashboard -->
-<div class="card-dashboard">
-  <h4>Tema Expo A</h4>
-  <ul>
-    <li><i class="fas fa-user"></i> Pemateri: Haffif Rasya Fauzi</li>
-    <li><i class="fas fa-clock"></i> Waktu Pelaksanaan: 4 April 2022</li>
-    <li><i class="fas fa-external-link-alt"></i> Link Meeting: <span class="important">Coming Soon</span></li>
-  </ul>
-</div>
-<!-- card dashboard -->
-<div class="card-dashboard">
-  <h4>Tema Expo A</h4>
-  <ul>
-    <li><i class="fas fa-user"></i> Pemateri: Haffif Rasya Fauzi</li>
-    <li><i class="fas fa-clock"></i> Waktu Pelaksanaan: 4 April 2022</li>
-    <li><i class="fas fa-external-link-alt"></i> Link Meeting: <span class="important">Coming Soon</span></li>
-  </ul>
-</div>
-<!-- card dashboard -->
-<div class="card-dashboard">
-  <h4>Tema Expo A</h4>
-  <ul>
-    <li><i class="fas fa-user"></i> Pemateri: Haffif Rasya Fauzi</li>
-    <li><i class="fas fa-clock"></i> Waktu Pelaksanaan: 4 April 2022</li>
-    <li><i class="fas fa-external-link-alt"></i> Link Meeting: <span class="important">Coming Soon</span></li>
-  </ul>
-</div>
+
+<?php if ($event == "Day 1") { ?>
+  <!-- card dashboard -->
+  <div class="card-dashboard">
+    <h4>Expo Day 1</h4>
+    <ul>
+      <!-- <li><i class="fas fa-user"></i> Pemateri: Haffif Rasya Fauzi</li> -->
+      <li><i class="fas fa-clock"></i> Waktu Pelaksanaan: 23 April 2022</li>
+      <li><i class="fas fa-external-link-alt"></i> Link Meeting: <span class="important">Coming Soon</span></li>
+    </ul>
+  </div>
+<?php } else if ($event == "Day 2") { ?>
+  <!-- card dashboard -->
+  <div class="card-dashboard">
+    <h4>Expo Day 2</h4>
+    <ul>
+      <!-- <li><i class="fas fa-user"></i> Pemateri: Haffif Rasya Fauzi</li> -->
+      <li><i class="fas fa-clock"></i> Waktu Pelaksanaan: 24 April 2022</li>
+      <li><i class="fas fa-external-link-alt"></i> Link Meeting: <span class="important">Coming Soon</span></li>
+    </ul>
+  </div>
+<?php } else { ?>
+  <!-- card dashboard -->
+  <div class="card-dashboard">
+    <h4>Expo Day 1</h4>
+    <ul>
+      <!-- <li><i class="fas fa-user"></i> Pemateri: Haffif Rasya Fauzi</li> -->
+      <li><i class="fas fa-clock"></i> Waktu Pelaksanaan: 23 April 2022</li>
+      <li><i class="fas fa-external-link-alt"></i> Link Meeting: <span class="important">Coming Soon</span></li>
+    </ul>
+  </div>
+  <!-- card dashboard -->
+  <div class="card-dashboard">
+    <h4>Expo Day 2</h4>
+    <ul>
+      <!-- <li><i class="fas fa-user"></i> Pemateri: Haffif Rasya Fauzi</li> -->
+      <li><i class="fas fa-clock"></i> Waktu Pelaksanaan: 24 April 2022</li>
+      <li><i class="fas fa-external-link-alt"></i> Link Meeting: <span class="important">Coming Soon</span></li>
+    </ul>
+  </div>
+<?php } ?>
 <?= $this->endSection(); ?>
 <!-- /end content -->
