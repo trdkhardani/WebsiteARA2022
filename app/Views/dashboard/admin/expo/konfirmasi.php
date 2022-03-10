@@ -30,6 +30,7 @@
         <th>Institusi</th>
         <th>WA</th>
         <th>Email</th>
+        <th>Day</th>
       <!--  <th>Post Twibbon</th> -->
         <th>Share Poster</th>
         <th>Follow IG ARA</th>
@@ -46,6 +47,7 @@
           <td> <?= $item->expo_institusi ?> </td> 
           <td> <?= $item->expo_contact ?> </td> 
           <td> <?= $item->expo_email ?> </td> 
+          <td> <?= $item->expo_day ?> </td> 
         <!--  <?php if ($item->expo_twibbon) { ?>
             <td><a href="<?= base_url() ?>/uploads/expo/post_twibbon/<?= $item->expo_twibbon?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
           <?php } else { ?>

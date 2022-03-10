@@ -881,7 +881,8 @@ class Verify extends BaseController
             //'expo_twibbon'  => $postTwibbon,
             'expo_poster'   => $this->moveFile('uploads/expo/share_post', $this->request->getFile('share_post')),
             'expo_ig_hmit'  => $this->moveFile('uploads/expo/follow_ig_hmit', $this->request->getFile('follow_ig_hmit')),
-            'expo_ig_ara'   => $this->moveFile('uploads/expo/follow_ig_ara', $this->request->getFile('follow_ig_ara'))
+            'expo_ig_ara'   => $this->moveFile('uploads/expo/follow_ig_ara', $this->request->getFile('follow_ig_ara')),
+            'expo_day'      => $this->request->getVar('event')
             //'expo_sponsor'  => $this->moveFile('uploads/expo/post_twibbon', $this->request->getFile('post_twibbon'))
         ];
 

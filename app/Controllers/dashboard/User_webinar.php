@@ -18,7 +18,7 @@ class User_webinar extends BaseController
   }
   public function home()
   {
-    $data["lomba"] = $this->session->get('role');
+    $data["lomba"] = "Webinar";
     $data["nama"] = $this->model_custom->get_where('webinar', $this->session->get('keterangan'), '_email')[0]->webinar_nama;
     $data["event"] = $this->model_custom->get_where('webinar', $this->session->get('keterangan'), '_email')[0]->webinar_event;
     return view('dashboard/user/webinar/home', $data);

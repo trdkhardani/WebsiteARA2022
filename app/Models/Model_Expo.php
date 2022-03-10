@@ -19,6 +19,7 @@ class Model_Expo extends Model
         'expo_poster', 
         'expo_ig_hmit', 
         'expo_ig_ara', 
+        'expo_day',
         'expo_sponsor'
     ];
     protected $useTimestamps = true;

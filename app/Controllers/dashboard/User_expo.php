@@ -21,6 +21,7 @@ class User_expo extends BaseController
   {
     $data["lomba"] = "Expo";
     $data["nama"] = $this->model_custom->get_where('expo', $this->session->get('keterangan'), '_email')[0]->expo_nama;
+    $data["event"] = $this->model_custom->get_where('expo', $this->session->get('keterangan'), '_email')[0]->expo_day;
     return view('dashboard/user/expo/home', $data);
   }
 }

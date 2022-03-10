@@ -21,7 +21,7 @@
 
 <?php if ($event == "CTF") { ?>
   <div class="card-dashboard">
-    <h4>Link group Informasi:</h4>
+    <h4>Link group Informasi Webinar Cyber Security</h4>
     <ul>
       <li><i class="fa-brands fa-whatsapp"></i> Whatsapp: <a href="https://chat.whatsapp.com/CtbVlHoKeue78rIWyf0O67" target="_blank">Join Disini</a></li>
       <li><i class="fa-brands fa-telegram"></i> Telegram: <a href="https://t.me/+BmojfhGELO45ZWE1" target="_blank">Join Disini</a></li>
@@ -38,7 +38,7 @@
   </div>
 <?php } else if ($event == "IoT") { ?>
   <div class="card-dashboard">
-    <h4>Link group Informasi:</h4>
+    <h4>Link group Informasi Webinar Internet of Things</h4>
     <ul>
       <li><i class="fa-brands fa-whatsapp"></i> Whatsapp: <a href="https://chat.whatsapp.com/IgakcYFMx5jHrhoqcf3ryP" target="_blank">Join Disini</a></li>
       <li><i class="fa-brands fa-telegram"></i> Telegram: <a href="https://t.me/+pGftH65OTq1jNDY9" target="_blank">Join Disini</a></li>
@@ -46,7 +46,7 @@
   </div>
   <!-- card dashboard -->
   <div class="card-dashboard">
-    <h4>Webinar IoT</h4>
+    <h4>Webinar Internet of Things</h4>
     <ul>
       <li><i class="fas fa-user"></i> Pemateri: Haffif Rasya Fauzi</li>
       <li><i class="fas fa-clock"></i> Waktu Pelaksanaan: 4 April 2022</li>
@@ -55,7 +55,7 @@
   </div>
 <?php } else { ?>
   <div class="card-dashboard">
-    <h4>Link group Informasi:</h4>
+    <h4>Link group Informasi Webinar Cyber Security dan Internet of Things</h4>
     <ul>
       <li><i class="fa-brands fa-whatsapp"></i> Whatsapp Cyber Security: <a href="https://chat.whatsapp.com/CtbVlHoKeue78rIWyf0O67" target="_blank">Join Disini</a></li>
       <li><i class="fa-brands fa-whatsapp"></i> Whatsapp Internet of Things: <a href="https://chat.whatsapp.com/IgakcYFMx5jHrhoqcf3ryP" target="_blank">Join Disini</a></li>
