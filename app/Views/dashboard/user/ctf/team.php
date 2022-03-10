@@ -24,7 +24,7 @@
 <div class="card-dashboard">
   <h4>Data Tim</h4>
   <ul>
-    <li><i class="fas fa-university"></i> Institusi: <?= $data[0]->ctf_nama_tim ?></li>
+    <li><i class="fas fa-university"></i> Institusi: <?= $data[0]->ctf_intitusi ?></li>
     <li><i class="fa-solid fa-id-badge"></i> ID Tim: <?= $data[0]->ctf_id ?></li>
     <li><i class="fas fa-user"></i> Ketua Tim: <?= $data[0]->ctf_nama_ketua ?></li>
     <li>
