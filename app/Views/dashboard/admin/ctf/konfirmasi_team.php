@@ -79,6 +79,7 @@
         <?php } elseif ($item->ctf_jumlah_anggota == 2) { ?>
           <tr>
             <td> <?= $i++ ?> </td>
+            <td> <?= $item->ctf_id ?> </td>
             <td> <?= $item->ctf_nama_tim ?> </td>
             <td> <?= $item->ctf_intitusi ?> </td>
             <td> <?= $item->ctf_nama_ketua ?> </td>
@@ -104,6 +105,7 @@
         <?php } elseif ($item->ctf_jumlah_anggota == 3) { ?>
           <tr>
             <td> <?= $i++ ?> </td>
+            <td> <?= $item->ctf_id ?> </td>
             <td> <?= $item->ctf_nama_tim ?> </td>
             <td> <?= $item->ctf_intitusi ?> </td>
             <td> <?= $item->ctf_nama_ketua ?> </td>
