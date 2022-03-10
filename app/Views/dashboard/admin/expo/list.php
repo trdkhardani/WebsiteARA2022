@@ -31,6 +31,7 @@
         <th>Institusi</th>
         <th>WA</th>
         <th>Email</th>
+        <th>Day</th>
       </tr>
     </thead>
     <tbody>
@@ -42,6 +43,7 @@
             <td><?= $item->expo_institusi?></td>
             <td><?= $item->expo_contact?></td>
             <td><?= $item->expo_email?></td>
+            <td><?= $item->expo_day?></td>
           </tr>
       <?php } ?>
     </tbody>
