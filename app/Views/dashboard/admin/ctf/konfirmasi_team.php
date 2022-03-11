@@ -37,6 +37,9 @@
         <th>KTM Ketua</th>
         <th>KTM Anggota 1</th>
         <th>KTM Anggota 2</th>
+        <th>KRSM Ketua</th>
+        <th>KRSM Anggota 1</th>
+        <th>KRSM Anggota 2</th>
         <th>Follow IG Ara Ketua</th>
         <th>Follow IG Ara Anggota 1</th>
         <th>Follow IG Ara Anggota 2</th>
@@ -62,6 +65,9 @@
             <td> <?= $item->ctf_contact  ?> </td>
             <td> <?= $item->ctf_email_ketua  ?> </td>
             <td><a href="<?= base_url() ?>/uploads/ctf/ktm/<?= $item->ctf_suket_ketua ?> " target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+            <td><a> - </a></td>
+            <td><a> - </a></td>
+            <td><a href="<?= base_url() ?>/uploads/ctf/krsm/<?= $item->ctf_krsm_ketua ?> " target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
             <td><a> - </a></td>
             <td><a> - </a></td>
             <td><a href="<?= base_url() ?>/uploads/ctf/ig_ara/<?= $item->ctf_ig_ara_ketua ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
@@ -90,6 +96,9 @@
             <td><a href="<?= base_url() ?>/uploads/ctf/ktm/<?= $item->ctf_suket_ketua ?> " target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
             <td><a href="<?= base_url() ?>/uploads/ctf/ktm/<?= $item->ctf_suket_anggota_1 ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
             <td><a> - </a></td>
+            <td><a href="<?= base_url() ?>/uploads/ctf/krsm/<?= $item->ctf_krsm_ketua ?> " target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+            <td><a href="<?= base_url() ?>/uploads/ctf/krsm/<?= $item->ctf_krsm_anggota_1 ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+            <td><a> - </a></td>
             <td><a href="<?= base_url() ?>/uploads/ctf/ig_ara/<?= $item->ctf_ig_ara_ketua ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
             <td><a href="<?= base_url() ?>/uploads/ctf/ig_ara/<?= $item->ctf_ig_ara_anggota_1 ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
             <td><a> - </a></td>
@@ -116,6 +125,9 @@
             <td><a href="<?= base_url() ?>/uploads/ctf/ktm/<?= $item->ctf_suket_ketua ?> " target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
             <td><a href="<?= base_url() ?>/uploads/ctf/ktm/<?= $item->ctf_suket_anggota_1 ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
             <td><a href="<?= base_url() ?>/uploads/ctf/ktm/<?= $item->ctf_suket_anggota_2 ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+            <td><a href="<?= base_url() ?>/uploads/ctf/krsm/<?= $item->ctf_krsm_ketua ?> " target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+            <td><a href="<?= base_url() ?>/uploads/ctf/krsm/<?= $item->ctf_krsm_anggota_1 ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+            <td><a href="<?= base_url() ?>/uploads/ctf/krsm/<?= $item->ctf_krsm_anggota_2 ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
             <td><a href="<?= base_url() ?>/uploads/ctf/ig_ara/<?= $item->ctf_ig_ara_ketua ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
             <td><a href="<?= base_url() ?>/uploads/ctf/ig_ara/<?= $item->ctf_ig_ara_anggota_1 ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
             <td><a href="<?= base_url() ?>/uploads/ctf/ig_ara/<?= $item->ctf_ig_ara_anggota_2 ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>

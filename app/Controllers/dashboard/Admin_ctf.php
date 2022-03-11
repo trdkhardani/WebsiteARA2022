@@ -49,6 +49,7 @@ class Admin_ctf extends BaseController
     unlink($path . "ig_ara/" . $data[0]->ctf_ig_ara_ketua);
     unlink($path . "ig_hmit/" . $data[0]->ctf_ig_hmit_ketua);
     unlink($path . "ktm/" . $data[0]->ctf_suket_ketua);
+    unlink($path . "krsm/" . $data[0]->ctf_krsm_ketua);
     unlink($path . "bukti_bayar/" . $data[0]->ctf_bukti_bayar);
 
     if (!empty($data[0]->ctf_ig_ara_anggota_1)) {
@@ -60,6 +61,9 @@ class Admin_ctf extends BaseController
     if (!empty($data[0]->ctf_suket_anggota_1)) {
       unlink($path . "ktm/" . $data[0]->ctf_suket_anggota_1);
     }
+    if (!empty($data[0]->ctf_krsm_anggota_1)) {
+      unlink($path . "krsm/" . $data[0]->ctf_krsm_anggota_1);
+    }
     if (!empty($data[0]->ctf_ig_ara_anggota_2)) {
       unlink($path . "ig_ara/" . $data[0]->ctf_ig_ara_anggota_2);
     }
@@ -68,6 +72,9 @@ class Admin_ctf extends BaseController
     }
     if (!empty($data[0]->ctf_suket_anggota_2)) {
       unlink($path . "ktm/" . $data[0]->ctf_suket_anggota_2);
+    }
+    if (!empty($data[0]->ctf_krsm_anggota_2)) {
+      unlink($path . "krsm/" . $data[0]->ctf_krsm_anggota_2);
     }
 
     $subject = "[Rejected] Capture The Flag";
