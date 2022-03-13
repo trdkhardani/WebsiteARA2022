@@ -426,7 +426,6 @@ class Verify extends BaseController
                 'label'     => 'krsm_anggota_1',
                 'rules'     => 'is_image[krsm_anggota_1]|max_size[krsm_anggota_1, 1024]',
                 'errors'    => [
-                    'uploaded'  => 'field harus diisi',
                     'is_image'  => 'harap isi dengan file gambar',
                     'max_size'  => 'ukuran maksimal gambar adalah 1024 kb'
                 ]
@@ -459,7 +458,6 @@ class Verify extends BaseController
                 'label'     => 'krsm_anggota_2',
                 'rules'     => 'is_image[krsm_anggota_2]|max_size[krsm_anggota_2, 1024]',
                 'errors'    => [
-                    'uploaded'  => 'field harus diisi',
                     'is_image'  => 'harap isi dengan file gambar',
                     'max_size'  => 'ukuran maksimal gambar adalah 1024 kb'
                 ]
