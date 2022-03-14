@@ -828,65 +828,65 @@ class Verify extends BaseController
                 'label' => 'nama',
                 'rules' => 'required',
                 'errors' => [
-                    'required'  => 'nama harus diisi'
+                    'required'  => 'Nama harus diisi'
                 ]
             ],
             'asal_institusi'  => [
                 'label' => 'asal_institusi',
                 'rules' => 'required',
                 'errors' => [
-                    'required'  => 'asal institusi harus diisi'
+                    'required'  => 'Asal institusi harus diisi'
                 ]
             ],
             'email'  => [
                 'label' => 'email',
                 'rules' => 'required|is_unique[expo.expo_email]',
                 'errors' => [
-                    'required'  => 'email harus diisi',
-                    'is_unique' => 'email sudah terdaftar'
+                    'required'  => 'Email harus diisi',
+                    'is_unique' => 'Email sudah terdaftar'
                 ]
             ],
             'whatsapp'  => [
                 'label' => 'whatsapp',
                 'rules' => 'required|numeric',
                 'erros' => [
-                    'required'  => 'whatsapp harus diisi',
-                    'whatsapp'  => 'field whatsapp harus diisi dengan nomer yang benar'
+                    'required'  => 'Whatsapp harus diisi',
+                    'whatsapp'  => 'Field whatsapp harus diisi dengan format nomor yang benar'
                 ]
             ],
             'share_post' => [
                 'label'     => 'share_post',
-                'rules'     => 'uploaded[share_post]|is_image[share_post]|max_size[share_post, 1024]',
+                'rules'     => 'uploaded[share_post]|is_image[share_post]|max_size[share_post, 512]',
                 'errors'    => [
-                    'uploaded'  => 'field harus diisi',
-                    'is_image'  => 'field harus diisi dengan gambar',
-                    'max_size'  => 'ukuran gambar maksimal 1024 kb'
+                    'uploaded'  => 'Field harus diisi',
+                    'is_image'  => 'Field harus diisi dengan gambar',
+                    'max_size'  => 'Ukuran gambar maksimal 512 kb'
                 ]
             ],
             'follow_ig_ara' => [
                 'label'     => 'follow_ig_ara',
-                'rules'     => 'uploaded[follow_ig_ara]|is_image[share_post]|max_size[share_post, 1024]',
+                'rules'     => 'uploaded[follow_ig_ara]|is_image[share_post]|max_size[share_post, 512]',
                 'errors'    => [
-                    'uploaded'  => 'field harus diisi',
-                    'is_image'  => 'field harus diisi dengan gambar',
-                    'max_size'  => 'ukuran gambar maksimal 1024 kb'
+                    'uploaded'  => 'Field harus diisi',
+                    'is_image'  => 'Field harus diisi dengan gambar',
+                    'max_size'  => 'Ukuran gambar maksimal 512 kb'
                 ]
             ],
             'follow_ig_hmit' => [
                 'label'     => 'follow_ig_hmit',
-                'rules'     => 'uploaded[follow_ig_hmit]|is_image[share_post]|max_size[share_post, 1024]',
+                'rules'     => 'uploaded[follow_ig_hmit]|is_image[share_post]|max_size[share_post, 512]',
                 'errors'    => [
-                    'uploaded'  => 'field harus diisi',
-                    'is_image'  => 'field harus diisi dengan gambar',
-                    'max_size'  => 'ukuran gambar maksimal 1024 kb'
+                    'uploaded'  => 'Field harus diisi',
+                    'is_image'  => 'Field harus diisi dengan gambar',
+                    'max_size'  => 'Ukuran gambar maksimal 512 kb'
                 ]
             ],
             /*'post_twibbon' => [
                 'label'     => 'post_twibbon',
-                'rules'     => 'is_image[share_post]|max_size[share_post, 1024]',
+                'rules'     => 'is_image[share_post]|max_size[share_post, 512]',
                 'errors'    => [
-                    'is_image'  => 'field harus diisi dengan gambar',
-                    'max_size'  => 'ukuran gambar maksimal 1024 kb'
+                    'is_image'  => 'Field harus diisi dengan gambar',
+                    'max_size'  => 'Ukuran gambar maksimal 512 kb'
                 ]
             ]*/
         ];
@@ -960,59 +960,59 @@ class Verify extends BaseController
                 'label'     => 'asal_institusi',
                 'rules'     => 'required',
                 'errors'    => [
-                    'required'  => 'instansi harus diisi',
+                    'required'  => 'Instansi harus diisi',
                 ]
             ],
             'whatsapp' => [
                 'label'     => 'whatsapp',
                 'rules'     => 'required|numeric',
                 'errors'    => [
-                    'required'  => 'instansi harus diisi',
-                    'numeric'   => 'field whatsapp harus diisi dengan nomer yang benar'
+                    'required'  => 'Nomor whatsapp harus diisi',
+                    'numeric'   => 'Field whatsapp harus diisi dengan format nomor yang benar'
                 ]
             ],
             'follow_ig_ara' => [
                 'label'     => 'follow_ig_ara',
-                'rules'     => 'uploaded[follow_ig_ara]|is_image[follow_ig_ara]|max_size[follow_ig_ara, 1024]',
+                'rules'     => 'uploaded[follow_ig_ara]|is_image[follow_ig_ara]|max_size[follow_ig_ara, 512]',
                 'errors'    => [
-                    'uploaded'  => 'field harus diisi',
-                    'is_image'  => 'field harus diisi dengan gambar',
-                    'max_size'  => 'ukuran gambar maksimal 1024 kb'
+                    'uploaded'  => 'Field harus diisi',
+                    'is_image'  => 'Field harus diisi dengan gambar',
+                    'max_size'  => 'Ukuran gambar maksimal 512 kb'
                 ]
             ],
             'follow_ig_hmit' => [
                 'label'     => 'follow_ig_hmit',
-                'rules'     => 'uploaded[follow_ig_hmit]|is_image[follow_ig_hmit]|max_size[follow_ig_hmit, 1024]',
+                'rules'     => 'uploaded[follow_ig_hmit]|is_image[follow_ig_hmit]|max_size[follow_ig_hmit, 512]',
                 'errors'    => [
-                    'uploaded'  => 'field harus diisi',
-                    'is_image'  => 'field  harus diisi dengan gambar',
-                    'max_size'  => 'ukuran gambar maksimal 1024 kb'
+                    'uploaded'  => 'Field harus diisi',
+                    'is_image'  => 'Field  harus diisi dengan gambar',
+                    'max_size'  => 'Ukuran gambar maksimal 512 kb'
                 ]
             ],
             /*'subs_yt_it' => [
                 'label'     => 'subs_yt_it',
-                'rules'     => 'uploaded[subs_yt_it]|is_image[subs_yt_it]|max_size[subs_yt_it, 1024]',
+                'rules'     => 'uploaded[subs_yt_it]|is_image[subs_yt_it]|max_size[subs_yt_it, 512]',
                 'errors'    => [
-                    'uploaded'  => 'field harus diisi',
-                    'is_image'  => 'field harus diisi dengan gambar',
-                    'max_size'  => 'ukuran gambar maksimal 1024 kb'
+                    'uploaded'  => 'Field harus diisi',
+                    'is_image'  => 'Field harus diisi dengan gambar',
+                    'max_size'  => 'Ukuran gambar maksimal 512 kb'
                 ]
             ],
             'share_group[]' => [
                 'label'     => 'share_group[]',
-                'rules'     => 'is_image[share_group]|max_size[share_group, 1024]|count_image_2[share_group]',
+                'rules'     => 'is_image[share_group]|max_size[share_group, 512]|count_image_2[share_group]',
                 'errors'    => [
-                    'is_image'  => 'field harus diisi dengan gambar',
-                    'max_size'  => 'ukuran gambar maksimal 1024 kb',
-                    'count_image_2' => 'field ini harus diisi dengan 2 gambar'
+                    'is_image'  => 'Field harus diisi dengan gambar',
+                    'max_size'  => 'Ukuran gambar maksimal 512 kb',
+                    'count_image_2' => 'Field ini harus diisi dengan 2 gambar'
                 ]
             ],
             'post_twibbon' => [
                 'label'     => 'post_twibbon',
-                'rules'     => 'is_image[post_twibbon]|max_size[post_twibbon, 1024]',
+                'rules'     => 'is_image[post_twibbon]|max_size[post_twibbon, 512]',
                 'errors'    => [
-                    'is_image'  => 'field harus diisi dengan gambar',
-                    'max_size'  => 'ukuran gambar maksimal 1024 kb'
+                    'is_image'  => 'Field harus diisi dengan gambar',
+                    'max_size'  => 'Ukuran gambar maksimal 512 kb'
                 ]
             ]*/
         ];
@@ -1021,11 +1021,11 @@ class Verify extends BaseController
             $rules2 = [
                 'share_post_ctf' => [
                     'label'     => 'share_post_ctf',
-                    'rules'     => 'uploaded[share_post_ctf]|is_image[share_post_ctf]|max_size[share_post_ctf, 1024]',
+                    'rules'     => 'uploaded[share_post_ctf]|is_image[share_post_ctf]|max_size[share_post_ctf, 512]',
                     'errors'    => [
-                        'uploaded'  => 'field harus diisi',
-                        'is_image'  => 'field harus diisi dengan gambar',
-                        'max_size'  => 'ukuran gambar maksimal 1024 kb'
+                        'uploaded'  => 'Field harus diisi',
+                        'is_image'  => 'Field harus diisi dengan gambar',
+                        'max_size'  => 'Ukuran gambar maksimal 512 kb'
                     ]
                 ],
             ];
@@ -1033,11 +1033,11 @@ class Verify extends BaseController
             $rules2 = [
                 'share_post_iot' => [
                     'label'     => 'share_post_ctf',
-                    'rules'     => 'uploaded[share_post_iot]|is_image[share_post_iot]|max_size[share_post_iot, 1024]',
+                    'rules'     => 'uploaded[share_post_iot]|is_image[share_post_iot]|max_size[share_post_iot, 512]',
                     'errors'    => [
-                        'uploaded'  => 'field harus diisi',
-                        'is_image'  => 'field harus diisi dengan gambar',
-                        'max_size'  => 'ukuran gambar maksimal 1024 kb'
+                        'uploaded'  => 'Field harus diisi',
+                        'is_image'  => 'Field harus diisi dengan gambar',
+                        'max_size'  => 'Ukuran gambar maksimal 512 kb'
                     ]
                 ],
             ];
@@ -1045,20 +1045,20 @@ class Verify extends BaseController
             $rules2 = [
                 'share_post_iot' => [
                     'label'     => 'share_post_iot',
-                    'rules'     => 'uploaded[share_post_iot]|is_image[share_post_iot]|max_size[share_post_iot, 1024]',
+                    'rules'     => 'uploaded[share_post_iot]|is_image[share_post_iot]|max_size[share_post_iot, 512]',
                     'errors'    => [
-                        'uploaded'  => 'field harus diisi',
-                        'is_image'  => 'field harus diisi dengan gambar',
-                        'max_size'  => 'ukuran gambar maksimal 1024 kb'
+                        'uploaded'  => 'Field harus diisi',
+                        'is_image'  => 'Field harus diisi dengan gambar',
+                        'max_size'  => 'Ukuran gambar maksimal 512 kb'
                     ]
                 ],
                 'share_post_ctf' => [
                     'label'     => 'share_post_ctf',
-                    'rules'     => 'uploaded[share_post_ctf]|is_image[share_post_ctf]|max_size[share_post_ctf, 1024]',
+                    'rules'     => 'uploaded[share_post_ctf]|is_image[share_post_ctf]|max_size[share_post_ctf, 512]',
                     'errors'    => [
-                        'uploaded'  => 'field harus diisi',
-                        'is_image'  => 'field harus diisi dengan gambar',
-                        'max_size'  => 'ukuran gambar maksimal 1024 kb'
+                        'uploaded'  => 'Field harus diisi',
+                        'is_image'  => 'Field harus diisi dengan gambar',
+                        'max_size'  => 'Ukuran gambar maksimal 512 kb'
                     ]
                 ],
             ];

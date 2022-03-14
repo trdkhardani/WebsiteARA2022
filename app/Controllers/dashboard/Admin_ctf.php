@@ -125,7 +125,6 @@ class Admin_ctf extends BaseController
                   Username : {$data['account_username']}<br>
                   Password : {$password}<br>
                   <br>
-                  Your team can join the following groups to get more information: https://discord.gg/PH2yVuq7
                   <br>
                   --<br>
                   Best regards,<br>
