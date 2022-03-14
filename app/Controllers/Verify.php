@@ -30,16 +30,16 @@ class Verify extends BaseController
     public function verify_registrasi_kti()
     {
         // Rules validasi dan custom error message
-        $fieldError = 'Field harus diisi';
-        $imgSizeError = 'Melebihi batas max 1mb';
-        $imgTypeError = 'File bukan gambar';
+        $fieldError = 'Field ini harus diisi';
+        $imgSizeError = 'File melebihi batas maksimal 500kb';
+        $imgTypeError = 'File ini bukan gambar';
         $validation_rules = [
             'nama_tim' => [
                 'label' => 'nama_tim',
                 'rules' => 'required|is_unique[kti_iot.iot_nama_tim]',
                 'errors' => [
                     'required' => $fieldError,
-                    'is_unique' => 'nama tim sudah ada'
+                    'is_unique' => 'Nama tim sudah ada'
                 ],
             ],
             'asal_institusi' => [
@@ -61,7 +61,7 @@ class Verify extends BaseController
                 'rules' => 'required|is_unique[kti_iot.iot_email_ketua]',
                 'errors' => [
                     'required' => $fieldError,
-                    'is_unique' => 'email sudah terpakai'
+                    'is_unique' => 'Email ini sudah terpakai'
                 ]
             ],
             'wa_ketua' => [
@@ -69,13 +69,12 @@ class Verify extends BaseController
                 'rules' => 'required|numeric',
                 'errors' => [
                     'required' => $fieldError,
-                    'numeric' => 'masukkan
-                     no yang benar'
+                    'numeric' => 'Masukkan format nomor yang benar'
                 ]
             ],
             'ktm_ketua' => [
                 'label' => 'ktm_ketua',
-                'rules' => 'max_size[ktm_ketua,1024]|is_image[ktm_ketua]',
+                'rules' => 'max_size[ktm_ketua,512]|is_image[ktm_ketua]',
                 'errors' => [
                     'max_size' => $imgSizeError,
                     'is_image' => $imgTypeError
@@ -83,7 +82,7 @@ class Verify extends BaseController
             ],
             'krsm_ketua' => [
                 'label' => 'krsm_ketua',
-                'rules' => 'max_size[krsm_ketua,1024]|is_image[krsm_ketua]',
+                'rules' => 'max_size[krsm_ketua,512]|is_image[krsm_ketua]',
                 'errors' => [
                     'max_size' => $imgSizeError,
                     'is_image' => $imgTypeError
@@ -91,7 +90,7 @@ class Verify extends BaseController
             ],
             'ig_ara_ketua' => [
                 'label' => 'ig_ara_ketua',
-                'rules' => 'max_size[ig_ara_ketua,1024]|is_image[ig_ara_ketua]',
+                'rules' => 'max_size[ig_ara_ketua,512]|is_image[ig_ara_ketua]',
                 'errors' => [
                     'max_size' => $imgSizeError,
                     'is_image' => $imgTypeError
@@ -99,7 +98,7 @@ class Verify extends BaseController
             ],
             'ig_hmit_ketua' => [
                 'label' => 'ig_hmit_ketua',
-                'rules' => 'max_size[ig_hmit_ketua,1024]|is_image[ig_hmit_ketua]',
+                'rules' => 'max_size[ig_hmit_ketua,512]|is_image[ig_hmit_ketua]',
                 'errors' => [
                     'max_size' => $imgSizeError,
                     'is_image' => $imgTypeError
@@ -107,7 +106,7 @@ class Verify extends BaseController
             ],
             'share_post_ketua' => [
                 'label' => 'share_post_ketua',
-                'rules' => 'max_size[share_post_ketua,1024]|is_image[share_post_ketua]',
+                'rules' => 'max_size[share_post_ketua,512]|is_image[share_post_ketua]',
                 'errors' => [
                     'max_size' => $imgSizeError,
                     'is_image' => $imgTypeError
@@ -122,7 +121,7 @@ class Verify extends BaseController
             // ],
             'ktm_anggota_1' => [
                 'label' => 'ktm_anggota_1',
-                'rules' => 'max_size[ktm_anggota_1,1024]|is_image[ktm_anggota_1]',
+                'rules' => 'max_size[ktm_anggota_1,512]|is_image[ktm_anggota_1]',
                 'errors' => [
                     'max_size' => $imgSizeError,
                     'is_image' => $imgTypeError
@@ -130,7 +129,7 @@ class Verify extends BaseController
             ],
             'krsm_anggota_1' => [
                 'label' => 'krsm_anggota_1',
-                'rules' => 'max_size[krsm_anggota_1,1024]|is_image[krsm_anggota_1]',
+                'rules' => 'max_size[krsm_anggota_1,512]|is_image[krsm_anggota_1]',
                 'errors' => [
                     'max_size' => $imgSizeError,
                     'is_image' => $imgTypeError
@@ -138,7 +137,7 @@ class Verify extends BaseController
             ],
             'ig_ara_anggota_1' => [
                 'label' => 'ig_ara_anggota_1',
-                'rules' => 'max_size[ig_ara_anggota_1,1024]|is_image[ig_ara_anggota_1]',
+                'rules' => 'max_size[ig_ara_anggota_1,512]|is_image[ig_ara_anggota_1]',
                 'errors' => [
                     'max_size' => $imgSizeError,
                     'is_image' => $imgTypeError
@@ -146,7 +145,7 @@ class Verify extends BaseController
             ],
             'ig_hmit_anggota_1' => [
                 'label' => 'ig_hmit_anggota_1',
-                'rules' => 'max_size[ig_hmit_anggota_1,1024]|is_image[ig_hmit_anggota_1]',
+                'rules' => 'max_size[ig_hmit_anggota_1,512]|is_image[ig_hmit_anggota_1]',
                 'errors' => [
                     'max_size' => $imgSizeError,
                     'is_image' => $imgTypeError
@@ -154,7 +153,7 @@ class Verify extends BaseController
             ],
             'share_post_anggota_1' => [
                 'label' => 'share_post_anggota_1',
-                'rules' => 'max_size[share_post_anggota_1,1024]|is_image[share_post_anggota_1]',
+                'rules' => 'max_size[share_post_anggota_1,512]|is_image[share_post_anggota_1]',
                 'errors' => [
                     'max_size' => $imgSizeError,
                     'is_image' => $imgTypeError
@@ -162,7 +161,7 @@ class Verify extends BaseController
             ],
             'ktm_anggota_2' => [
                 'label' => 'ktm_anggota_2',
-                'rules' => 'max_size[ktm_anggota_2,1024]|is_image[ktm_anggota_2]',
+                'rules' => 'max_size[ktm_anggota_2,512]|is_image[ktm_anggota_2]',
                 'errors' => [
                     'max_size' => $imgSizeError,
                     'is_image' => $imgTypeError
@@ -170,7 +169,7 @@ class Verify extends BaseController
             ],
             'krsm_anggota_2' => [
                 'label' => 'krsm_anggota_2',
-                'rules' => 'max_size[krsm_anggota_2,1024]|is_image[krsm_anggota_2]',
+                'rules' => 'max_size[krsm_anggota_2,512]|is_image[krsm_anggota_2]',
                 'errors' => [
                     'max_size' => $imgSizeError,
                     'is_image' => $imgTypeError
@@ -178,7 +177,7 @@ class Verify extends BaseController
             ],
             'ig_ara_anggota_2' => [
                 'label' => 'ig_ara_anggota_2',
-                'rules' => 'max_size[ig_ara_anggota_2,1024]|is_image[ig_ara_anggota_2]',
+                'rules' => 'max_size[ig_ara_anggota_2,512]|is_image[ig_ara_anggota_2]',
                 'errors' => [
                     'max_size' => $imgSizeError,
                     'is_image' => $imgTypeError
@@ -186,7 +185,7 @@ class Verify extends BaseController
             ],
             'ig_hmit_anggota_2' => [
                 'label' => 'ig_hmit_anggota_2',
-                'rules' => 'max_size[ig_hmit_anggota_2,1024]|is_image[ig_hmit_anggota_2]',
+                'rules' => 'max_size[ig_hmit_anggota_2,512]|is_image[ig_hmit_anggota_2]',
                 'errors' => [
                     'max_size' => $imgSizeError,
                     'is_image' => $imgTypeError
@@ -194,7 +193,7 @@ class Verify extends BaseController
             ],
             'share_post_anggota_2' => [
                 'label' => 'share_post_anggota_2',
-                'rules' => 'max_size[share_post_anggota_2,1024]|is_image[share_post_anggota_2]',
+                'rules' => 'max_size[share_post_anggota_2,512]|is_image[share_post_anggota_2]',
                 'errors' => [
                     'max_size' => $imgSizeError,
                     'is_image' => $imgTypeError
@@ -344,147 +343,147 @@ class Verify extends BaseController
                 'label'     => 'nama_tim',
                 'rules'     => 'required|is_unique[ctf.ctf_nama_tim]',
                 'errors'    => [
-                    'required'  => 'nama tim harus diisi',
-                    'is_unique' => 'nama tim sudah terdaftar, silahkan isi dengan nama tim yang lain'
+                    'required'  => 'Nama tim harus diisi',
+                    'is_unique' => 'Nama tim sudah terdaftar, silahkan isi dengan nama tim yang lain'
                 ]
             ],
             'asal_institusi'  => [
                 'label'     => 'asal_institusi',
                 'rules'     => 'required',
                 'errors'    => [
-                    'required'  => 'asal institusi tim harus diisi'
+                    'required'  => 'Asal institusi tim harus diisi'
                 ]
             ],
             'nama_ketua'  => [
                 'label'     => 'nama_ketua',
                 'rules'     => 'required',
                 'errors'    => [
-                    'required'  => 'nama ketua tim harus diisi'
+                    'required'  => 'Nama ketua tim harus diisi'
                 ]
             ],
             'email_ketua'  => [
                 'label'     => 'email_ketua',
                 'rules'     => 'required|is_unique[ctf.ctf_email_ketua]',
                 'errors'    => [
-                    'required'  => 'email ketua tim harus diisi',
-                    'is_unique' => 'email tersebut sudah terdaftar, silahkan isi email yang lain'
+                    'required'  => 'Email ketua tim harus diisi',
+                    'is_unique' => 'Email tersebut sudah terdaftar, silahkan isi email yang lain'
                 ]
             ],
             'wa_ketua'  => [
                 'label'     => 'wa_ketua',
                 'rules'     => 'required|numeric',
                 'errors'    => [
-                    'required'  => 'whatsapp ketua harus diisi',
-                    'numeric'   => 'harap isi dengan nomer yang benar'
+                    'required'  => 'Whatsapp ketua harus diisi',
+                    'numeric'   => 'Harap isi dengan format nomor yang benar'
                 ]
             ],
             'ktm_ketua'  => [
                 'label'     => 'ktm_ketua',
-                'rules'     => 'uploaded[ktm_ketua]|is_image[ktm_ketua]|max_size[ktm_ketua, 1024]',
+                'rules'     => 'uploaded[ktm_ketua]|is_image[ktm_ketua]|max_size[ktm_ketua, 512]',
                 'errors'    => [
-                    'uploaded'  => 'field harus diisi',
-                    'is_image'  => 'harap isi dengan file gambar',
-                    'max_size'  => 'ukuran maksimal gambar adalah 1024 kb'
+                    'uploaded'  => 'Field ini harus diisi',
+                    'is_image'  => 'Harap isi dengan file gambar',
+                    'max_size'  => 'Ukuran maksimal gambar adalah 512 kb'
                 ]
             ],
             'krsm_ketua'  => [
                 'label'     => 'krsm_ketua',
-                'rules'     => 'uploaded[krsm_ketua]|is_image[krsm_ketua]|max_size[krsm_ketua, 1024]',
+                'rules'     => 'uploaded[krsm_ketua]|is_image[krsm_ketua]|max_size[krsm_ketua, 512]',
                 'errors'    => [
-                    'uploaded'  => 'field harus diisi',
-                    'is_image'  => 'harap isi dengan file gambar',
-                    'max_size'  => 'ukuran maksimal gambar adalah 1024 kb'
+                    'uploaded'  => 'Field ini harus diisi',
+                    'is_image'  => 'Harap isi dengan file gambar',
+                    'max_size'  => 'Ukuran maksimal gambar adalah 512 kb'
                 ]
             ],
             'ig_ara_ketua'  => [
                 'label'     => 'ig_ara_ketua',
-                'rules'     => 'uploaded[ig_ara_ketua]|is_image[ig_ara_ketua]|max_size[ig_ara_ketua, 1024]',
+                'rules'     => 'uploaded[ig_ara_ketua]|is_image[ig_ara_ketua]|max_size[ig_ara_ketua, 512]',
                 'errors'    => [
-                    'uploaded'  => 'field harus diisi',
-                    'is_image'  => 'harap isi dengan file gambar',
-                    'max_size'  => 'ukuran maksimal gambar adalah 1024 kb'
+                    'uploaded'  => 'Field ini harus diisi',
+                    'is_image'  => 'Harap isi dengan file gambar',
+                    'max_size'  => 'Ukuran maksimal gambar adalah 512 kb'
                 ]
             ],
             'ig_hmit_ketua'  => [
                 'label'     => 'ig_hmit_ketua',
-                'rules'     => 'uploaded[ig_hmit_ketua]|is_image[ig_hmit_ketua]|max_size[ig_hmit_ketua, 1024]',
+                'rules'     => 'uploaded[ig_hmit_ketua]|is_image[ig_hmit_ketua]|max_size[ig_hmit_ketua, 512]',
                 'errors'    => [
-                    'uploaded'  => 'field harus diisi',
-                    'is_image'  => 'harap isi dengan file gambar',
-                    'max_size'  => 'ukuran maksimal gambar adalah 1024 kb'
+                    'uploaded'  => 'Field ini harus diisi',
+                    'is_image'  => 'Harap isi dengan file gambar',
+                    'max_size'  => 'Ukuran maksimal gambar adalah 512 kb'
                 ]
             ],
             'ktm_anggota_1'  => [
                 'label'     => 'ktm_anggota_1',
-                'rules'     => 'is_image[ktm_anggota_1]|max_size[ktm_anggota_1, 1024]',
+                'rules'     => 'is_image[ktm_anggota_1]|max_size[ktm_anggota_1, 512]',
                 'errors'    => [
-                    'is_image'  => 'harap isi dengan file gambar',
-                    'max_size'  => 'ukuran maksimal gambar adalah 1024 kb'
+                    'is_image'  => 'Harap isi dengan file gambar',
+                    'max_size'  => 'Ukuran maksimal gambar adalah 512 kb'
                 ]
             ],
             'krsm_anggota_1'  => [
                 'label'     => 'krsm_anggota_1',
-                'rules'     => 'is_image[krsm_anggota_1]|max_size[krsm_anggota_1, 1024]',
+                'rules'     => 'is_image[krsm_anggota_1]|max_size[krsm_anggota_1, 512]',
                 'errors'    => [
-                    'is_image'  => 'harap isi dengan file gambar',
-                    'max_size'  => 'ukuran maksimal gambar adalah 1024 kb'
+                    'is_image'  => 'Harap isi dengan file gambar',
+                    'max_size'  => 'Ukuran maksimal gambar adalah 512 kb'
                 ]
             ],
             'ig_ara_anggota_1'  => [
                 'label'     => 'ig_ara_anggota_1',
-                'rules'     => 'is_image[ig_ara_anggota_1]|max_size[ig_ara_anggota_1, 1024]',
+                'rules'     => 'is_image[ig_ara_anggota_1]|max_size[ig_ara_anggota_1, 512]',
                 'errors'    => [
-                    'is_image'  => 'harap isi dengan file gambar',
-                    'max_size'  => 'ukuran maksimal gambar adalah 1024 kb'
+                    'is_image'  => 'Harap isi dengan file gambar',
+                    'max_size'  => 'Ukuran maksimal gambar adalah 512 kb'
                 ]
             ],
             'ig_hmit_anggota_1'  => [
                 'label'     => 'ig_hmit_anggota_1',
-                'rules'     => 'is_image[ig_hmit_anggota_1]|max_size[ig_hmit_anggota_1, 1024]',
+                'rules'     => 'is_image[ig_hmit_anggota_1]|max_size[ig_hmit_anggota_1, 512]',
                 'errors'    => [
-                    'is_image'  => 'harap isi dengan file gambar',
-                    'max_size'  => 'ukuran maksimal gambar adalah 1024 kb'
+                    'is_image'  => 'Harap isi dengan file gambar',
+                    'max_size'  => 'Ukuran maksimal gambar adalah 512 kb'
                 ]
             ],
             'ktm_anggota_2'  => [
                 'label'     => 'ktm_anggota_2',
-                'rules'     => 'is_image[ktm_anggota_2]|max_size[ktm_anggota_2, 1024]',
+                'rules'     => 'is_image[ktm_anggota_2]|max_size[ktm_anggota_2, 512]',
                 'errors'    => [
-                    'is_image'  => 'harap isi dengan file gambar',
-                    'max_size'  => 'ukuran maksimal gambar adalah 1024 kb'
+                    'is_image'  => 'Harap isi dengan file gambar',
+                    'max_size'  => 'Ukuran maksimal gambar adalah 512 kb'
                 ]
             ],
             'krsm_anggota_2'  => [
                 'label'     => 'krsm_anggota_2',
-                'rules'     => 'is_image[krsm_anggota_2]|max_size[krsm_anggota_2, 1024]',
+                'rules'     => 'is_image[krsm_anggota_2]|max_size[krsm_anggota_2, 512]',
                 'errors'    => [
-                    'is_image'  => 'harap isi dengan file gambar',
-                    'max_size'  => 'ukuran maksimal gambar adalah 1024 kb'
+                    'is_image'  => 'Harap isi dengan file gambar',
+                    'max_size'  => 'Ukuran maksimal gambar adalah 512 kb'
                 ]
             ],
             'ig_ara_anggota_2'  => [
                 'label'     => 'ig_ara_anggota_2',
-                'rules'     => 'is_image[ig_ara_anggota_2]|max_size[ig_ara_anggota_2, 1024]',
+                'rules'     => 'is_image[ig_ara_anggota_2]|max_size[ig_ara_anggota_2, 512]',
                 'errors'    => [
-                    'is_image'  => 'harap isi dengan file gambar',
-                    'max_size'  => 'ukuran maksimal gambar adalah 1024 kb'
+                    'is_image'  => 'Harap isi dengan file gambar',
+                    'max_size'  => 'Ukuran maksimal gambar adalah 512 kb'
                 ]
             ],
             'ig_hmit_anggota_2'  => [
                 'label'     => 'ig_hmit_anggota_2',
-                'rules'     => 'is_image[ig_hmit_anggota_2]|max_size[ig_hmit_anggota_2, 1024]',
+                'rules'     => 'is_image[ig_hmit_anggota_2]|max_size[ig_hmit_anggota_2, 512]',
                 'errors'    => [
-                    'is_image'  => 'harap isi dengan file gambar',
-                    'max_size'  => 'ukuran maksimal gambar adalah 1024 kb'
+                    'is_image'  => 'Harap isi dengan file gambar',
+                    'max_size'  => 'Ukuran maksimal gambar adalah 512 kb'
                 ]
             ],
             'bukti_bayar'  => [
                 'label'     => 'bukti_bayar',
-                'rules'     => 'uploaded[bukti_bayar]|is_image[bukti_bayar]|max_size[bukti_bayar, 1024]',
+                'rules'     => 'uploaded[bukti_bayar]|is_image[bukti_bayar]|max_size[bukti_bayar, 512]',
                 'errors'    => [
-                    'uploaded'  => 'field harus diisi',
-                    'is_image'  => 'harap isi dengan file gambar',
-                    'max_size'  => 'ukuran maksimal gambar adalah 1024 kb'
+                    'uploaded'  => 'Field ini harus diisi',
+                    'is_image'  => 'Harap isi dengan file gambar',
+                    'max_size'  => 'Ukuran maksimal gambar adalah 512 kb'
                 ]
             ]
         ];
@@ -595,16 +594,16 @@ class Verify extends BaseController
     public function verify_registrasi_olim()
     {
         // Rules validasi dan custom error message
-        $fieldError = 'Field harus diisi';
-        $imgSizeError = 'Melebihi batas max 1mb';
-        $imgTypeError = 'File bukan gambar';
+        $fieldError = 'Field ini harus diisi';
+        $imgSizeError = 'Melebihi batas max 500 kb';
+        $imgTypeError = 'File ini bukan gambar';
         $validation_rules = [
             'nama_tim' => [
                 'label' => 'nama_tim',
                 'rules' => 'required|is_unique[olimpiade.olim_nama_tim]',
                 'errors' => [
                     'required' => $fieldError,
-                    'is_unique' => 'nama tim sudah ada'
+                    'is_unique' => 'Nama tim sudah ada'
                 ],
             ],
             'asal_sekolah' => [
@@ -626,7 +625,7 @@ class Verify extends BaseController
                 'rules' => 'required|is_unique[olimpiade.olim_email_ketua]',
                 'errors' => [
                     'required' => $fieldError,
-                    'is_unique' => 'email sudah terpakai'
+                    'is_unique' => 'Email ini sudah terpakai'
                 ]
             ],
             'wa_ketua' => [
@@ -634,13 +633,12 @@ class Verify extends BaseController
                 'rules' => 'required|numeric',
                 'errors' => [
                     'required' => $fieldError,
-                    'numeric' => 'masukkan
-                     no yang benar'
+                    'numeric' => 'Masukkan format nomor yang benar'
                 ]
             ],
             'kp_ketua' => [
                 'label' => 'kp_ketua',
-                'rules' => 'max_size[kp_ketua,1024]|is_image[kp_ketua]',
+                'rules' => 'max_size[kp_ketua,512]|is_image[kp_ketua]',
                 'errors' => [
                     'max_size' => $imgSizeError,
                     'is_image' => $imgTypeError
@@ -648,7 +646,7 @@ class Verify extends BaseController
             ],
             'ig_ara_ketua' => [
                 'label' => 'ig_ara_ketua',
-                'rules' => 'max_size[ig_ara_ketua,1024]|is_image[ig_ara_ketua]',
+                'rules' => 'max_size[ig_ara_ketua,512]|is_image[ig_ara_ketua]',
                 'errors' => [
                     'max_size' => $imgSizeError,
                     'is_image' => $imgTypeError
@@ -656,7 +654,7 @@ class Verify extends BaseController
             ],
             'ig_hmit_ketua' => [
                 'label' => 'ig_hmit_ketua',
-                'rules' => 'max_size[ig_hmit_ketua,1024]|is_image[ig_hmit_ketua]',
+                'rules' => 'max_size[ig_hmit_ketua,512]|is_image[ig_hmit_ketua]',
                 'errors' => [
                     'max_size' => $imgSizeError,
                     'is_image' => $imgTypeError
@@ -664,7 +662,7 @@ class Verify extends BaseController
             ],
             'kp_anggota_1' => [
                 'label' => 'kp_anggota_1',
-                'rules' => 'max_size[kp_anggota_1,1024]|is_image[kp_anggota_1]',
+                'rules' => 'max_size[kp_anggota_1,512]|is_image[kp_anggota_1]',
                 'errors' => [
                     'max_size' => $imgSizeError,
                     'is_image' => $imgTypeError
@@ -672,7 +670,7 @@ class Verify extends BaseController
             ],
             'ig_ara_anggota_1' => [
                 'label' => 'ig_ara_anggota_1',
-                'rules' => 'max_size[ig_ara_anggota_1,1024]|is_image[ig_ara_anggota_1]',
+                'rules' => 'max_size[ig_ara_anggota_1,512]|is_image[ig_ara_anggota_1]',
                 'errors' => [
                     'max_size' => $imgSizeError,
                     'is_image' => $imgTypeError
@@ -680,7 +678,7 @@ class Verify extends BaseController
             ],
             'ig_hmit_anggota_1' => [
                 'label' => 'ig_hmit_anggota_1',
-                'rules' => 'max_size[ig_hmit_anggota_1,1024]|is_image[ig_hmit_anggota_1]',
+                'rules' => 'max_size[ig_hmit_anggota_1,512]|is_image[ig_hmit_anggota_1]',
                 'errors' => [
                     'max_size' => $imgSizeError,
                     'is_image' => $imgTypeError
@@ -688,7 +686,7 @@ class Verify extends BaseController
             ],
             'kp_anggota_2' => [
                 'label' => 'kp_anggota_2',
-                'rules' => 'max_size[kp_anggota_2,1024]|is_image[kp_anggota_2]',
+                'rules' => 'max_size[kp_anggota_2,512]|is_image[kp_anggota_2]',
                 'errors' => [
                     'max_size' => $imgSizeError,
                     'is_image' => $imgTypeError
@@ -696,7 +694,7 @@ class Verify extends BaseController
             ],
             'ig_ara_anggota_2' => [
                 'label' => 'ig_ara_anggota_2',
-                'rules' => 'max_size[ig_ara_anggota_2,1024]|is_image[ig_ara_anggota_2]',
+                'rules' => 'max_size[ig_ara_anggota_2,512]|is_image[ig_ara_anggota_2]',
                 'errors' => [
                     'max_size' => $imgSizeError,
                     'is_image' => $imgTypeError
@@ -704,7 +702,7 @@ class Verify extends BaseController
             ],
             'ig_hmit_anggota_2' => [
                 'label' => 'ig_hmit_anggota_2',
-                'rules' => 'max_size[ig_hmit_anggota_2,1024]|is_image[ig_hmit_anggota_2]',
+                'rules' => 'max_size[ig_hmit_anggota_2,512]|is_image[ig_hmit_anggota_2]',
                 'errors' => [
                     'max_size' => $imgSizeError,
                     'is_image' => $imgTypeError
