@@ -31,8 +31,11 @@
   <div class="card-dashboard">
     <h4>Webinar Cyber Security</h4>
     <ul>
-      <li><i class="fas fa-user"></i> Pemateri: Haffif Rasya Fauzi</li>
-      <li><i class="fas fa-clock"></i> Waktu Pelaksanaan: 4 April 2022</li>
+      <li><i class="fa-solid fa-pencil"></i> Tema: <span class="important">A Fundamental Key for Innovation in Digital Infrastructure</span></li>
+      <li><i class="fas fa-user"></i> Pemateri 1: Deyanbunayya (Web Security Instructor dan
+        Founder Belajarsiber)</li>
+      <li><i class="fas fa-user"></i> Pemateri 2: Dendi Zuckergates (Founder Orang Siber Indonesia)</li>
+      <li><i class="fas fa-clock"></i> Waktu Pelaksanaan: 9 April 2022</li>
       <li><i class="fas fa-external-link-alt"></i> Link Meeting: <span class="important">Coming Soon</span></li>
     </ul>
   </div>
