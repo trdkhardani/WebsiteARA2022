@@ -40,7 +40,7 @@
     </header>
     <main>
       <form action="<?= base_url() ?>/Verify/verify_registrasi_webinar" method="POST" enctype="multipart/form-data">
-      <?= csrf_field() ?>
+        <?= csrf_field() ?>
         <div class="mb-3">
           <label for="nama" class="form-label">Nama <span class="text-danger">*<?= '<br>' . $validation->getError('nama') ?></span></label>
           <input type="text" class="form-control" id="nama" name="nama" value="<?= old('nama') ?>">
@@ -57,7 +57,7 @@
           <label for="whatsapp" class="form-label">Whatsapp <span class="text-danger">*<?= '<br>' . $validation->getError('whatsapp') ?></span></label>
           <input type="text" class="form-control" id="whatsapp" name="whatsapp" value="<?= old('whatsapp') ?>">
         </div>
-        <div class="mb-3">
+        <!-- <div class="mb-3">
           <label class="form-label">Pilihan Webinar <span class="text-danger">*</span></label>
           <div class="form-check" @click="handleCTF">
             <input class="form-check-input" type="radio" name="event" id="webinarCySec" value="CTF" checked>
@@ -77,15 +77,17 @@
               Keduanya
             </label>
           </div>
-        </div>
-        <div class="mb-3" v-if="isCtf">
+        </div> -->
+        <!-- add v-if when IoT has open -->
+        <input type="text" value="CTF" hidden name="event">
+        <div class="mb-3">
           <label for="share_post_ctf" class="form-label">Share Post Webinar Cyber Security di story IG <span class="text-danger">*<?= '<br>' . $validation->getError('share_post_ctf') ?></span></label>
           <input class="form-control" type="file" id="share_post_ctf" name="share_post_ctf" value="<?= old('share_post_ctf') ?>">
         </div>
-        <div class="mb-3" v-if="isIot">
+        <!-- <div class="mb-3" v-if="isIot">
           <label for="share_post_iot" class="form-label">Share Post Webinar Internet Of Things di story IG <span class="text-danger">*<?= '<br>' . $validation->getError('share_post_iot') ?></span></label>
           <input class="form-control" type="file" id="share_post_iot" name="share_post_iot" value="<?= old('share_post_iot') ?>">
-        </div>
+        </div> -->
         <div class="mb-3">
           <label for="follow_ig_ara" class="form-label">Follow IG ARA (<a href="https://www.instagram.com/ara_its/" target="_blank">Instagram ARA 2022</a>) <span class="text-danger">*<?= '<br>' . $validation->getError('follow_ig_ara') ?></span></label>
           <input class="form-control" type="file" id="follow_ig_ara" name="follow_ig_ara" value="<?= old('follow_ig_ara') ?>">
@@ -119,7 +121,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
-  <script src="https://unpkg.com/vue@3.1.1/dist/vue.global.prod.js"></script>
+  <!-- <script src="https://unpkg.com/vue@3.1.1/dist/vue.global.prod.js"></script>
 
   <script>
     const app = Vue.createApp({
@@ -151,7 +153,7 @@
     });
 
     app.mount("main");
-  </script>
+  </script> -->
 </body>
 
 </html>
