@@ -1095,7 +1095,7 @@ class Verify extends BaseController
             $data2 = [
                 'webinar_post_ctf' => $this->moveFile('uploads/webinar/post_ctf', $this->request->getFile('share_post_ctf'))
             ];
-            $subject = "[Confirmation] Webinar Capture The Flag";
+            $subject = "[Confirmation] Webinar Cyber Security";
             $message = "Dear {$data['webinar_nama']} from {$data['webinar_instansi']} ,<br>
                         <br>
                         Thank you for registering for our event, \"Webinar Capture The Flag.\"<br>
@@ -1134,7 +1134,7 @@ class Verify extends BaseController
                 'webinar_post_iot' => $this->moveFile('uploads/webinar/post_iot', $this->request->getFile('share_post_iot')),
                 'webinar_post_ctf' => $this->moveFile('uploads/webinar/post_ctf', $this->request->getFile('share_post_ctf'))
             ];
-            $subject = "[Confirmation] Webinar Capture The Flag and Webinar Internet of Things";
+            $subject = "[Confirmation] Webinar Cyber Security and Webinar Internet of Things";
             $message = "Dear {$data['webinar_nama']} from {$data['webinar_instansi']} ,<br>
                         <br>
                         Thank you for registering for our event, \"Webinar Capture The Flag\" and \"Webinar Internet of Things.\"<br>
