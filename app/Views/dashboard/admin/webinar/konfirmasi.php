@@ -26,6 +26,7 @@
     <thead>
       <tr>
         <th>No</th>
+        <th>ID Peserta</th>
         <th>Event</th>
         <th>Nama</th>
         <th>Institusi</th>
@@ -47,6 +48,7 @@
       foreach ($data as $item) { ?>
         <tr>
           <td> <?= $i++ ?> </td>
+          <td><?= $item->webinar_id; ?></td>
           <td>
             <?php if ($item->webinar_event == "CTF") { ?>
               Cyber Security

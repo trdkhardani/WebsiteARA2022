@@ -27,6 +27,7 @@
     <thead>
       <tr>
         <th>No</th>
+        <th>ID Peserta</th>
         <th>Nama</th>
         <th>Institusi</th>
         <th>WA</th>
@@ -39,6 +40,7 @@
         foreach($data as $item){ ?>
           <tr>
             <td><?= $i++ ?></td>
+            <td><?= $item->expo_id; ?></td>
             <td><?= $item->expo_nama?></td>
             <td><?= $item->expo_institusi?></td>
             <td><?= $item->expo_contact?></td>
