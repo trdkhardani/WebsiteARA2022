@@ -31,7 +31,7 @@
 <div class="card-dashboard">
   <h4>Informasi</h4>
   <ul>
-    <li><i class="fas fa-clock"></i> Deadline Pembayaran: 15 Mei - 20 Mei</li>
+    <li><i class="fas fa-clock"></i> Deadline Pembayaran: 29 Mei - 3 Juni</li>
   </ul>
 </div>
 <!-- Upload Bukti Pembayaran -->

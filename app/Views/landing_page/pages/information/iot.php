@@ -22,14 +22,14 @@
             <div data-aos="fade-right" class="isi-event">
                 <p class="fw-bold">Pendaftaran</p>
                 <p>Melalui Web ARA</p>
-                <p>1 Maret 2022 - 31 Maret 2022</p>
+                <p>1 Maret 2022 - 14 April 2022</p>
             </div>
         </div>
         <div class="event kanan mt-5">
             <div data-aos="fade-left" class="isi-event">
                 <p class="fw-bold">Pengumpulan Abstrak (Babak 1)</p>
                 <p>Melalui Web ARA</p>
-                <p>1 Maret 2022 - 31 Maret 2022</p>
+                <p>1 Maret 2022 - 14 April 2022</p>
             </div>
         </div>
 
@@ -37,28 +37,28 @@
             <div data-aos="fade-right" class="isi-event">
                 <p class="fw-bold">Seleksi Babak 1</p>
                 <p>Dilaksanakan oleh panitia</p>
-                <p>31 Maret 2022 - 2 April 2022</p>
+                <p>14 April 2022 - 16 April 2022</p>
             </div>
         </div>
         <div class="event kanan mt-5">
             <div data-aos="fade-left" class="isi-event">
                 <p class="fw-bold">Pengumuman Lolos Babak 2</p>
                 <p>Melalui Web dan Sosial Media ARA 2022</p>
-                <p>2 April 2022</p>
+                <p>16 April 2022</p>
             </div>
         </div>
 
         <div class="event kiri">
             <div data-aos="fade-right" class="isi-event">
                 <p class="fw-bold">Pembayaran Babak 2</p>
-                <p>2 April 2022 - 29 April 2022</p>
+                <p>16 April 2022 - 21 Mei 2022</p>
             </div>
         </div>
         <div class="event kanan mt-5">
             <div data-aos="fade-left" class="isi-event">
                 <p class="fw-bold">Pengumpulan KTI (Babak 2)</p>
                 <p>Melalui Web ARA</p>
-                <p>2 April 2022 - 30 April 2022</p>
+                <p>16 April 2022 - 23 Mei 2022</p>
             </div>
         </div>
 
@@ -66,27 +66,27 @@
             <div data-aos="fade-right" class="isi-event">
                 <p class="fw-bold">Seleksi Babak 2</p>
                 <p>Dilaksanakan oleh juri</p>
-                <p>9 Mei 2022 - 14 Mei 2022</p>
+                <p>23 Mei 2022 - 28 Mei 2022</p>
             </div>
         </div>
         <div class="event kanan mt-5">
             <div data-aos="fade-left" class="isi-event">
                 <p class="fw-bold">Pengumuman Finalis</p>
                 <p>Melalui Web dan Sosial Media ARA 2022</p>
-                <p>15 Mei 2022</p>
+                <p>29 Mei 2022</p>
             </div>
         </div>
 
         <div class="event kiri">
             <div data-aos="fade-right" class="isi-event">
                 <p class="fw-bold">Pembayaran Babak Final</p>
-                <p>15 Mei 2022 - 20 Mei 2022</p>
+                <p>29 Mei 2022 - 3 Juni 2022</p>
             </div>
         </div>
         <div class="event kanan mt-5">
             <div data-aos="fade-left" class="isi-event">
                 <p class="fw-bold">Technical Meeting Babak Final</p>
-                <p>18 Mei 2022</p>
+                <p>1 Juni 2022</p>
             </div>
         </div>
 
@@ -94,13 +94,14 @@
             <div data-aos="fade-right" class="isi-event">
                 <p class="fw-bold">Babak Final</p>
                 <p>Dilakukan secara online</p>
-                <p>21 Mei 2022</p>
+                <p>4 Juni 2022</p>
             </div>
         </div>
         <div class="event kanan mt-5">
             <div data-aos="fade-left" class="isi-event">
                 <p class="fw-bold">Pengumuman Pemenang</p>
                 <p>Melalui Web dan Sosial Media ARA 2022</p>
+                <p>12 Juni 2022</p>
             </div>
         </div>
 

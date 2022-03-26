@@ -31,8 +31,8 @@
 <div class="card-dashboard">
   <h4>Informasi Abstrak</h4>
   <ul>
-    <li><i class="fas fa-calendar-alt"></i> Open Registrasi: 1 Maret - 31 Maret</li>
-    <li><i class="fas fa-clock"></i> Waktu Pengumpulan: 1 Maret - 31 Maret</li>
+    <li><i class="fas fa-calendar-alt"></i> Open Registrasi: 1 Maret - 14 April</li>
+    <li><i class="fas fa-clock"></i> Waktu Pengumpulan: 1 Maret - 14 April</li>
   </ul>
 </div>
 <!-- pengumpulan abstrak -->
@@ -58,8 +58,8 @@
     <h4>Pengumpulan Abstrak</h4>
     <ul>
       <li><i class="fas fa-thumbs-up"></i> Terima kasih sudah mengumpulkan Abstrak. Pantau terus Instagram ARA untuk mengecek hasilnya.</li>
-      <li><i class="fas fa-calendar-alt"></i> Seleksi Abstrak: 31 Maret - 2 April</li>
-      <li><i class="fas fa-clock"></i> Pengumuman Lolos ke Tahap Full Paper: 2 April</li>
+      <li><i class="fas fa-calendar-alt"></i> Seleksi Abstrak: 14 April - 16 April</li>
+      <li><i class="fas fa-clock"></i> Pengumuman Lolos ke Tahap Full Paper: 16 April</li>
     </ul>
   </div>
 <?php endif; ?>
