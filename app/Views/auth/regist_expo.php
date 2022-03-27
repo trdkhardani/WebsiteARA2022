@@ -74,13 +74,13 @@
           <div class="form-check">
             <input class="form-check-input" type="radio" name="event" id="expoDay1" value="Day 1" checked>
             <label class="form-check-label" for="expoDay1">
-              Day 1 Expo
+              Day 1 Expo - UI/UX, Smart City, Cyber Security
             </label>
           </div>
           <div class="form-check">
             <input class="form-check-input" type="radio" name="event" id="handleDay2" value="Day 2">
             <label class="form-check-label" for="handleDay2">
-              Day 2 Expo
+              Day 2 Expo - Workshop IoT, Workshop Cloud
             </label>
           </div>
           <div class="form-check">

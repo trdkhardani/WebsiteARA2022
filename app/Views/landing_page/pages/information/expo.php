@@ -32,12 +32,33 @@
         <div class="event kiri mt-5">
             <div data-aos="fade-right" class="isi-event">
                 <p class="fw-bold">Day 1 EXPO</p>
+                <p>Topik: </p>
+                <ul>
+                  <li><i class="fa-solid fa-compass-drafting"></i> UI/UX Show</li>
+                  <li><i class="fa-solid fa-city"></i> Smart City</li>
+                  <li><i class="fa-solid fa-book-skull"></i> Cyber Security - Live Hacking</li>
+                </ul>
+                <p>Pembicara: </p>
+                <ul>
+                  <li>Muhammad Rifaldi - Art Director at Retrux Studio, UI/UX Designer at Decofuture</li>
+                  <li>Anis Saidatur Rochma - Gold Medalist of Smart City GEMASTIK XIV 2021, UI/UX Designer at DPTSI ITS</li>
+                  <li>Lambang Akbar Wijayadi - Gold Medalist of Cyber Security GEMASTIK XIV 2021, Penestration Tester</li>
+                </ul>
                 <p>23 April 2022</p>
             </div>
         </div>
         <div class="event kanan mt-5">
             <div data-aos="fade-left" class="isi-event">
                 <p class="fw-bold">Day 2 EXPO</p>
+                <p>Topik: </p>
+                <ul>
+                  <li><i class="fa-solid fa-desktop"></i> Workshop IoT - Hands on Micropython</li>
+                  <li><i class="fa-solid fa-cloud"></i> Workshop Cloud</li>
+                </ul>
+                <p>Pembicara: </p>
+                <ul>
+                  <li>Riza Alaudin Syah - IoT Manager at Bluebird Group</li>
+                </ul>
                 <p>24 April 2022</p>
             </div>
         </div>

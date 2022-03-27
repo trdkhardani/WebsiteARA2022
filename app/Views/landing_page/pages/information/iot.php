@@ -48,41 +48,41 @@
             </div>
         </div>
 
-        <div class="event kiri">
+        <!-- <div class="event kiri">
             <div data-aos="fade-right" class="isi-event">
                 <p class="fw-bold">Pembayaran Babak 2</p>
                 <p>16 April 2022 - 21 Mei 2022</p>
             </div>
-        </div>
-        <div class="event kanan mt-5">
-            <div data-aos="fade-left" class="isi-event">
+        </div> -->
+        <div class="event kiri mt-5">
+            <div data-aos="fade-right" class="isi-event">
                 <p class="fw-bold">Pengumpulan KTI (Babak 2)</p>
                 <p>Melalui Web ARA</p>
                 <p>16 April 2022 - 23 Mei 2022</p>
             </div>
         </div>
 
-        <div class="event kiri">
-            <div data-aos="fade-right" class="isi-event">
+        <div class="event kanan">
+            <div data-aos="fade-left" class="isi-event">
                 <p class="fw-bold">Seleksi Babak 2</p>
                 <p>Dilaksanakan oleh juri</p>
                 <p>23 Mei 2022 - 28 Mei 2022</p>
             </div>
         </div>
-        <div class="event kanan mt-5">
-            <div data-aos="fade-left" class="isi-event">
+        <div class="event kiri mt-5">
+            <div data-aos="fade-right" class="isi-event">
                 <p class="fw-bold">Pengumuman Finalis</p>
                 <p>Melalui Web dan Sosial Media ARA 2022</p>
                 <p>29 Mei 2022</p>
             </div>
         </div>
 
-        <div class="event kiri">
+        <!-- <div class="event kiri">
             <div data-aos="fade-right" class="isi-event">
                 <p class="fw-bold">Pembayaran Babak Final</p>
                 <p>29 Mei 2022 - 3 Juni 2022</p>
             </div>
-        </div>
+        </div> -->
         <div class="event kanan mt-5">
             <div data-aos="fade-left" class="isi-event">
                 <p class="fw-bold">Technical Meeting Babak Final</p>
