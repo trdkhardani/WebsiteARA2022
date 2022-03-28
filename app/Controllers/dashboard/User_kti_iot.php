@@ -143,8 +143,8 @@ class User_kti_iot extends BaseController
 
     if ($data['status_penyisihan']) {
       // Belom bayar
-      if (!$data['status_bayar_full_paper'])
-        return view('dashboard/user/kti_iot/bayar_full_paper', $data);
+      // if (!$data['status_bayar_full_paper'])
+      //   return view('dashboard/user/kti_iot/bayar_full_paper', $data);
       return view('dashboard/user/kti_iot/full_paper', $data);
     }
     // Belum full paper
@@ -152,27 +152,27 @@ class User_kti_iot extends BaseController
   }
 
   // Pembayaran full paper
-  public function payment_full_paper()
-  {
-    if (!$this->session->has('username')) {
-      return redirect()->to('/Auth/login');
-    }
-    if ($this->session->get('is_admin') == true) {
-      return redirect()->to('/Auth/login');
-    }
-    $bukti_bayar = $this->request->getFile('bukti_bayar');
-    $bayar_path = 'uploads/kti_iot/bukti_bayar/full_paper';
-    $renamed_bukti_bayar = $this->moveFile($bayar_path, $bukti_bayar);
-    $nama_tim = $this->session->get('keterangan');
-    $tim = $this->model_kti_iot->where($this->model_kti_iot->nama_tim, $nama_tim)->first();
-    $data = [
-      'iot_id' => $tim['iot_id'],
-      'iot_pembayaran_full_paper' => $renamed_bukti_bayar,
-      'iot_status_konfirmasi_full_paper' => 0,
-    ];
-    $this->model_kti_iot->save($data);
-    return redirect()->to('dashboard/user_kti_iot/full_paper');
-  }
+  // public function payment_full_paper()
+  // {
+  //   if (!$this->session->has('username')) {
+  //     return redirect()->to('/Auth/login');
+  //   }
+  //   if ($this->session->get('is_admin') == true) {
+  //     return redirect()->to('/Auth/login');
+  //   }
+  //   $bukti_bayar = $this->request->getFile('bukti_bayar');
+  //   $bayar_path = 'uploads/kti_iot/bukti_bayar/full_paper';
+  //   $renamed_bukti_bayar = $this->moveFile($bayar_path, $bukti_bayar);
+  //   $nama_tim = $this->session->get('keterangan');
+  //   $tim = $this->model_kti_iot->where($this->model_kti_iot->nama_tim, $nama_tim)->first();
+  //   $data = [
+  //     'iot_id' => $tim['iot_id'],
+  //     'iot_pembayaran_full_paper' => $renamed_bukti_bayar,
+  //     'iot_status_konfirmasi_full_paper' => 0,
+  //   ];
+  //   $this->model_kti_iot->save($data);
+  //   return redirect()->to('dashboard/user_kti_iot/full_paper');
+  // }
 
   // verifikasi input file full paper
   public function verify_full_paper()
@@ -230,33 +230,33 @@ class User_kti_iot extends BaseController
     // Cek apakah lulus final atau tidak
     if ($data['status_final']) {
       // Cek jika belum bayar
-      if (!$data['status_bayar_final'])
-        return view('dashboard/user/kti_iot/bayar_final', $data);
+      // if (!$data['status_bayar_final'])
+      //   return view('dashboard/user/kti_iot/bayar_final', $data);
       return view('dashboard/user/kti_iot/final', $data);
     } else
       return view('dashboard/user/kti_iot/belum_final', $data);
   }
 
   // Pembayaran final
-  public function payment_final()
-  {
-    if (!$this->session->has('username')) {
-      return redirect()->to('/Auth/login');
-    }
-    if ($this->session->get('is_admin') == true) {
-      return redirect()->to('/Auth/login');
-    }
-    $bukti_bayar = $this->request->getFile('bukti_bayar');
-    $bayar_path = 'uploads/kti_iot/bukti_bayar/final';
-    $renamed_bukti_bayar = $this->moveFile($bayar_path, $bukti_bayar);
-    $nama_tim = $this->session->get('keterangan');
-    $tim = $this->model_kti_iot->where($this->model_kti_iot->nama_tim, $nama_tim)->first();
-    $data = [
-      'iot_id' => $tim['iot_id'],
-      'iot_pembayaran_final' => $renamed_bukti_bayar,
-      'iot_status_konfirmasi_final' => 0
-    ];
-    $this->model_kti_iot->save($data);
-    return redirect()->to('dashboard/user_kti_iot/final');
-  }
+  // public function payment_final()
+  // {
+  //   if (!$this->session->has('username')) {
+  //     return redirect()->to('/Auth/login');
+  //   }
+  //   if ($this->session->get('is_admin') == true) {
+  //     return redirect()->to('/Auth/login');
+  //   }
+  //   $bukti_bayar = $this->request->getFile('bukti_bayar');
+  //   $bayar_path = 'uploads/kti_iot/bukti_bayar/final';
+  //   $renamed_bukti_bayar = $this->moveFile($bayar_path, $bukti_bayar);
+  //   $nama_tim = $this->session->get('keterangan');
+  //   $tim = $this->model_kti_iot->where($this->model_kti_iot->nama_tim, $nama_tim)->first();
+  //   $data = [
+  //     'iot_id' => $tim['iot_id'],
+  //     'iot_pembayaran_final' => $renamed_bukti_bayar,
+  //     'iot_status_konfirmasi_final' => 0
+  //   ];
+  //   $this->model_kti_iot->save($data);
+  //   return redirect()->to('dashboard/user_kti_iot/final');
+  // }
 }

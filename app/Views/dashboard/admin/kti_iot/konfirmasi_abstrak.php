@@ -15,15 +15,15 @@
     <li class="">
       <a href="<?= base_url() ?>/dashboard/admin_kti_iot/list_fullpaper"><i class="fas fa-list"></i> List Team Full Paper</a>
     </li>
-    <li class="">
+    <!-- <li class="">
       <a href="<?= base_url() ?>/dashboard/admin_kti_iot/konfirmasi_fullpaper"><i class="fas fa-check-circle"></i> Konfirmasi Full Paper</a>
-    </li>
+    </li> -->
     <li class="">
       <a href="<?= base_url() ?>/dashboard/admin_kti_iot/list_final"><i class="fas fa-list"></i> List Team Final</a>
     </li>
-    <li class="">
+    <!-- <li class="">
       <a href="<?= base_url() ?>/dashboard/admin_kti_iot/konfirmasi_final"><i class="fas fa-check-circle"></i> Konfirmasi Final</a>
-    </li>
+    </li> -->
   </ul>
 </div>
 <?= $this->endSection(); ?>
