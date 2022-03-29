@@ -27,6 +27,13 @@
 <!-- content -->
 <?= $this->section("content"); ?>
 <h3 class="mb-3">Final</h3>
+<!-- Selamat -->
+<div class="card-dashboard">
+  <h4>Selamat, tim anda lolos ke babak final</h4>
+  <ul>
+    <li>Segera persiapkan tim anda untuk mempresentasikan full paper anda</li>
+  </ul>
+</div>
 <!-- Technical Meeting -->
 <div class="card-dashboard">
   <h4>Technical Meeting</h4>

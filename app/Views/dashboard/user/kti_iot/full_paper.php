@@ -27,6 +27,13 @@
 <!-- content -->
 <?= $this->section("content"); ?>
 <h3 class="mb-3">Full Paper</h3>
+<!-- Selamat -->
+<div class="card-dashboard">
+  <h4>Selamat, tim anda lolos ke babak 2 / Full Paper!</h4>
+  <ul>
+    <li>Mohon segera untuk mengumpulkan full paper tim anda</li>
+  </ul>
+</div>
 <!-- Informasi -->
 <div class="card-dashboard">
   <h4>Informasi Full Paper</h4>
