@@ -174,96 +174,98 @@ class Admin_kti_iot extends BaseController
       'tahap' => 'Full Paper',
       'list_tim_full_paper' => $this->model_kti_iot->where('iot_status_konfirmasi_full_paper', 1)->findAll(),
       'terkonfirmasi' => $this->model_kti_iot->where('iot_status_konfirmasi_full_paper', 1)->countAllResults(),
-      'belum_terkonfirmasi' => $this->model_kti_iot->where('iot_status_konfirmasi_full_paper', 0)->countAllResults(),
-      'total_peserta' => $this->model_kti_iot->where('iot_status_konfirmasi_full_paper', 1)->countAllResults() + $this->model_kti_iot->where('iot_status_konfirmasi_full_paper', 0)->countAllResults()
+      'belum_terkonfirmasi' => 0,
+      // 'belum_terkonfirmasi' => $this->model_kti_iot->where('iot_status_konfirmasi_full_paper', 0)->countAllResults(),
+      'total_peserta' => $this->model_kti_iot->where('iot_status_konfirmasi_full_paper', 1)->countAllResults(),
+      // 'total_peserta' => $this->model_kti_iot->where('iot_status_konfirmasi_full_paper', 1)->countAllResults() + $this->model_kti_iot->where('iot_status_konfirmasi_full_paper', 0)->countAllResults()
     ];
     return view("dashboard/admin/kti_iot/list_fullpaper", $data);
   }
 
-  public function konfirmasi_fullpaper()
-  {
-    if (!$this->session->get('is_admin')) {
-      return redirect()->to('/Auth/login');
-    }
-    if (!$this->session->get('username')) {
-      return redirect()->to('/Auth/login');
-    }
-    $data = [
-      'lomba' => 'KTI Internet of Things',
-      'nama' => 'Admin KTI IoT',
-      'tahap' => 'Full Paper',
-      // Cari daftar tim yang sudah upload bukti bayar full paper
-      'list_tim_full_paper' => $this->model_kti_iot->where([
-        'iot_status_konfirmasi_full_paper' => 0,
-        'iot_pembayaran_full_paper is NOT NULL' => null
-      ])->findAll(),
-      'terkonfirmasi' => $this->model_kti_iot->where('iot_status_konfirmasi_full_paper', 1)->countAllResults(),
-      'belum_terkonfirmasi' => $this->model_kti_iot->where('iot_status_konfirmasi_full_paper', 0)->countAllResults(),
-      'total_peserta' => $this->model_kti_iot->where('iot_status_konfirmasi_full_paper', 1)->countAllResults() + $this->model_kti_iot->where('iot_status_konfirmasi_full_paper', 0)->countAllResults()
-    ];
-    return view("dashboard/admin/kti_iot/konfirmasi_fullpaper", $data);
-  }
+  // public function konfirmasi_fullpaper()
+  // {
+  //   if (!$this->session->get('is_admin')) {
+  //     return redirect()->to('/Auth/login');
+  //   }
+  //   if (!$this->session->get('username')) {
+  //     return redirect()->to('/Auth/login');
+  //   }
+  //   $data = [
+  //     'lomba' => 'KTI Internet of Things',
+  //     'nama' => 'Admin KTI IoT',
+  //     'tahap' => 'Full Paper',
+  //     // Cari daftar tim yang sudah upload bukti bayar full paper
+  //     'list_tim_full_paper' => $this->model_kti_iot->where([
+  //       'iot_status_konfirmasi_full_paper' => 0,
+  //       'iot_pembayaran_full_paper is NOT NULL' => null
+  //     ])->findAll(),
+  //     'terkonfirmasi' => $this->model_kti_iot->where('iot_status_konfirmasi_full_paper', 1)->countAllResults(),
+  //     'belum_terkonfirmasi' => $this->model_kti_iot->where('iot_status_konfirmasi_full_paper', 0)->countAllResults(),
+  //     'total_peserta' => $this->model_kti_iot->where('iot_status_konfirmasi_full_paper', 1)->countAllResults() + $this->model_kti_iot->where('iot_status_konfirmasi_full_paper', 0)->countAllResults()
+  //   ];
+  //   return view("dashboard/admin/kti_iot/konfirmasi_fullpaper", $data);
+  // }
 
-  public function verify_konfirmasi_full_paper($id, $status)
-  {
-    if (!$this->session->get('is_admin')) {
-      return redirect()->to('/Auth/login');
-    }
-    if (!$this->session->get('username')) {
-      return redirect()->to('/Auth/login');
-    }
-    // $id = $this->request->getVar('id');
-    // $status = $this->request->getVar('status');
-    $tim = $this->model_kti_iot->where('iot_id', $id)->first();
-    // Jika di Terima
-    if ($status) {
-      $data = [
-        'iot_id' => $tim['iot_id'],
-        'iot_status_konfirmasi_full_paper' => 1
-      ];
-      $this->model_kti_iot->save($data);
-      $subject = "[Accepted] Internet of Things (IOT)";
-      $message = "Dear {$tim['iot_nama_tim']} from {$tim['iot_institusi']} ,<br>
-                  <br>
-                  Thank you for participating for our event, \"Internet of Things (IOT).\"<br>
-                  <br>
-                  your payment to follow the full paper stage has been received. Then you can input your full paper in your dashboard. <br>
-                  <br>
-                  <br>
-                  --<br>
-                  Best regards,<br>
-                  <br>
-                  A Renewal Agents 2022";
-      $this->sendemail($tim['iot_email_ketua'], $subject, $message);
-      $this->session->setFlashdata('msg', 'berhasil menerima peserta');
-    } else {
-      //Jika ditolak, delete file bayar full paper
-      $path = 'uploads/kti_iot/bukti_bayar/full_paper/';
-      $this->delete_file($path, $tim['iot_pembayaran_full_paper']);
-      $data = [
-        'iot_id' => $tim['iot_id'],
-        'iot_pembayaran_full_paper' => null,
-        'iot_status_konfirmasi_full_paper' => null
-      ];
-      $this->model_kti_iot->save($data);
+  // public function verify_konfirmasi_full_paper($id, $status)
+  // {
+  //   if (!$this->session->get('is_admin')) {
+  //     return redirect()->to('/Auth/login');
+  //   }
+  //   if (!$this->session->get('username')) {
+  //     return redirect()->to('/Auth/login');
+  //   }
+  //   // $id = $this->request->getVar('id');
+  //   // $status = $this->request->getVar('status');
+  //   $tim = $this->model_kti_iot->where('iot_id', $id)->first();
+  //   // Jika di Terima
+  //   if ($status) {
+  //     $data = [
+  //       'iot_id' => $tim['iot_id'],
+  //       'iot_status_konfirmasi_full_paper' => 1
+  //     ];
+  //     $this->model_kti_iot->save($data);
+  //     $subject = "[Accepted] Internet of Things (IOT)";
+  //     $message = "Dear {$tim['iot_nama_tim']} from {$tim['iot_institusi']} ,<br>
+  //                 <br>
+  //                 Thank you for participating for our event, \"Internet of Things (IOT).\"<br>
+  //                 <br>
+  //                 your payment to follow the full paper stage has been received. Then you can input your full paper in your dashboard. <br>
+  //                 <br>
+  //                 <br>
+  //                 --<br>
+  //                 Best regards,<br>
+  //                 <br>
+  //                 A Renewal Agents 2022";
+  //     $this->sendemail($tim['iot_email_ketua'], $subject, $message);
+  //     $this->session->setFlashdata('msg', 'berhasil menerima peserta');
+  //   } else {
+  //     //Jika ditolak, delete file bayar full paper
+  //     $path = 'uploads/kti_iot/bukti_bayar/full_paper/';
+  //     $this->delete_file($path, $tim['iot_pembayaran_full_paper']);
+  //     $data = [
+  //       'iot_id' => $tim['iot_id'],
+  //       'iot_pembayaran_full_paper' => null,
+  //       'iot_status_konfirmasi_full_paper' => null
+  //     ];
+  //     $this->model_kti_iot->save($data);
 
-      $subject = "[Rejected] Internet of Things (IOT)";
-      $message = "Dear {$tim['iot_nama_tim']} from {$tim['iot_institusi']} ,<br>
-                  <br>
-                  Thank you for participating for our event, \"Internet of Things (IOT).\"<br>
-                  <br>
-                  unfortunately your payment requirement is invalid, so please input again in your dahsboard <br>
-                  <br>
-                  <br>
-                  --<br>
-                  Best regards,<br>
-                  <br>
-                  A Renewal Agents 2022";
-      $this->sendemail($tim['iot_email_ketua'], $subject, $message);
-      $this->session->setFlashdata('msg', 'berhasil menolak peserta');
-    }
-    return redirect()->to('dashboard/Admin_kti_iot/konfirmasi_fullpaper');
-  }
+  //     $subject = "[Rejected] Internet of Things (IOT)";
+  //     $message = "Dear {$tim['iot_nama_tim']} from {$tim['iot_institusi']} ,<br>
+  //                 <br>
+  //                 Thank you for participating for our event, \"Internet of Things (IOT).\"<br>
+  //                 <br>
+  //                 unfortunately your payment requirement is invalid, so please input again in your dahsboard <br>
+  //                 <br>
+  //                 <br>
+  //                 --<br>
+  //                 Best regards,<br>
+  //                 <br>
+  //                 A Renewal Agents 2022";
+  //     $this->sendemail($tim['iot_email_ketua'], $subject, $message);
+  //     $this->session->setFlashdata('msg', 'berhasil menolak peserta');
+  //   }
+  //   return redirect()->to('dashboard/Admin_kti_iot/konfirmasi_fullpaper');
+  // }
 
   public function list_final()
   {
@@ -279,94 +281,96 @@ class Admin_kti_iot extends BaseController
       'tahap' => 'Final',
       'list_tim_final' => $this->model_kti_iot->where('iot_status_konfirmasi_final', 1)->findAll(),
       'terkonfirmasi' => $this->model_kti_iot->where('iot_status_konfirmasi_final', 1)->countAllResults(),
-      'belum_terkonfirmasi' => $this->model_kti_iot->where('iot_status_konfirmasi_final', 0)->countAllResults(),
-      'total_peserta' => $this->model_kti_iot->where('iot_status_konfirmasi_final', 1)->countAllResults() + $this->model_kti_iot->where('iot_status_konfirmasi_final', 0)->countAllResults()
+      'belum_terkonfirmasi' => 0,
+      // 'belum_terkonfirmasi' => $this->model_kti_iot->where('iot_status_konfirmasi_final', 0)->countAllResults(),
+      'total_peserta' => $this->model_kti_iot->where('iot_status_konfirmasi_final', 1)->countAllResults(),
+      // 'total_peserta' => $this->model_kti_iot->where('iot_status_konfirmasi_final', 1)->countAllResults() + $this->model_kti_iot->where('iot_status_konfirmasi_final', 0)->countAllResults()
     ];
     return view("dashboard/admin/kti_iot/list_final", $data);
   }
 
-  public function konfirmasi_final()
-  {
-    if (!$this->session->get('is_admin')) {
-      return redirect()->to('/Auth/login');
-    }
-    if (!$this->session->get('username')) {
-      return redirect()->to('/Auth/login');
-    }
-    $data = [
-      'lomba' => 'KTI Internet of Things',
-      'nama' => 'Admin KTI IoT',
-      'tahap' => 'Final',
-      'list_tim_full_paper' => $this->model_kti_iot->where([
-        'iot_status_konfirmasi_final' => 0,
-        'iot_pembayaran_final IS NOT NULL' => null
-      ])->findAll(),
-      'terkonfirmasi' => $this->model_kti_iot->where('iot_status_konfirmasi_final', 1)->countAllResults(),
-      'belum_terkonfirmasi' => $this->model_kti_iot->where('iot_status_konfirmasi_final', 0)->countAllResults(),
-      'total_peserta' => $this->model_kti_iot->where('iot_status_konfirmasi_final', 1)->countAllResults() + $this->model_kti_iot->where('iot_status_konfirmasi_final', 0)->countAllResults()
-    ];
-    return view("dashboard/admin/kti_iot/konfirmasi_final", $data);
-  }
+  // public function konfirmasi_final()
+  // {
+  //   if (!$this->session->get('is_admin')) {
+  //     return redirect()->to('/Auth/login');
+  //   }
+  //   if (!$this->session->get('username')) {
+  //     return redirect()->to('/Auth/login');
+  //   }
+  //   $data = [
+  //     'lomba' => 'KTI Internet of Things',
+  //     'nama' => 'Admin KTI IoT',
+  //     'tahap' => 'Final',
+  //     'list_tim_full_paper' => $this->model_kti_iot->where([
+  //       'iot_status_konfirmasi_final' => 0,
+  //       'iot_pembayaran_final IS NOT NULL' => null
+  //     ])->findAll(),
+  //     'terkonfirmasi' => $this->model_kti_iot->where('iot_status_konfirmasi_final', 1)->countAllResults(),
+  //     'belum_terkonfirmasi' => $this->model_kti_iot->where('iot_status_konfirmasi_final', 0)->countAllResults(),
+  //     'total_peserta' => $this->model_kti_iot->where('iot_status_konfirmasi_final', 1)->countAllResults() + $this->model_kti_iot->where('iot_status_konfirmasi_final', 0)->countAllResults()
+  //   ];
+  //   return view("dashboard/admin/kti_iot/konfirmasi_final", $data);
+  // }
 
-  public function verify_konfirmasi_final($id, $status)
-  {
-    if (!$this->session->get('is_admin')) {
-      return redirect()->to('/Auth/login');
-    }
-    if (!$this->session->get('username')) {
-      return redirect()->to('/Auth/login');
-    }
-    // $id = $this->request->getVar('id');
-    // $status = $this->request->getVar('status');
-    $tim = $this->model_kti_iot->where('iot_id', $id)->first();
-    // Jika di Terima
-    if ($status) {
-      $data = [
-        'iot_id' => $tim['iot_id'],
-        'iot_status_konfirmasi_final' => 1
-      ];
-      $this->model_kti_iot->save($data);
+  // public function verify_konfirmasi_final($id, $status)
+  // {
+  //   if (!$this->session->get('is_admin')) {
+  //     return redirect()->to('/Auth/login');
+  //   }
+  //   if (!$this->session->get('username')) {
+  //     return redirect()->to('/Auth/login');
+  //   }
+  //   // $id = $this->request->getVar('id');
+  //   // $status = $this->request->getVar('status');
+  //   $tim = $this->model_kti_iot->where('iot_id', $id)->first();
+  //   // Jika di Terima
+  //   if ($status) {
+  //     $data = [
+  //       'iot_id' => $tim['iot_id'],
+  //       'iot_status_konfirmasi_final' => 1
+  //     ];
+  //     $this->model_kti_iot->save($data);
 
-      $subject = "[Accepted] Internet of Things (IOT)";
-      $message = "Dear {$tim['iot_nama_tim']} from {$tim['iot_institusi']} ,<br>
-                  <br>
-                  Thank you for participating for our event, \"Internet of Things (IOT).\"<br>
-                  <br>
-                  your payment to follow the final stage has been received. Lets prepare your group to be the champion! <br>
-                  <br>
-                  <br>
-                  --<br>
-                  Best regards,<br>
-                  <br>
-                  A Renewal Agents 2022";
-      $this->sendemail($tim['iot_email_ketua'], $subject, $message);
-      $this->session->setFlashdata('msg', 'berhasil menerima peserta');
-    } else {
-      //Jika ditolak, delete file bayar final
-      $path = 'uploads/kti_iot/bukti_bayar/final/';
-      $this->delete_file($path, $tim['iot_pembayaran_final']);
-      $data = [
-        'iot_id' => $tim['iot_id'],
-        'iot_pembayaran_final' => null,
-        'iot_status_konfirmasi_final' => null
-      ];
-      $this->model_kti_iot->save($data);
+  //     $subject = "[Accepted] Internet of Things (IOT)";
+  //     $message = "Dear {$tim['iot_nama_tim']} from {$tim['iot_institusi']} ,<br>
+  //                 <br>
+  //                 Thank you for participating for our event, \"Internet of Things (IOT).\"<br>
+  //                 <br>
+  //                 your payment to follow the final stage has been received. Lets prepare your group to be the champion! <br>
+  //                 <br>
+  //                 <br>
+  //                 --<br>
+  //                 Best regards,<br>
+  //                 <br>
+  //                 A Renewal Agents 2022";
+  //     $this->sendemail($tim['iot_email_ketua'], $subject, $message);
+  //     $this->session->setFlashdata('msg', 'berhasil menerima peserta');
+  //   } else {
+  //     //Jika ditolak, delete file bayar final
+  //     $path = 'uploads/kti_iot/bukti_bayar/final/';
+  //     $this->delete_file($path, $tim['iot_pembayaran_final']);
+  //     $data = [
+  //       'iot_id' => $tim['iot_id'],
+  //       'iot_pembayaran_final' => null,
+  //       'iot_status_konfirmasi_final' => null
+  //     ];
+  //     $this->model_kti_iot->save($data);
 
-      $subject = "[Rejected] Internet of Things (IOT)";
-      $message = "Dear {$tim['iot_nama_tim']} from {$tim['iot_institusi']} ,<br>
-                  <br>
-                  Thank you for participating for our event, \"Internet of Things (IOT).\"<br>
-                  <br>
-                  unfortunately your payment requirement is invalid, so please input again in your dahsboard <br>
-                  <br>
-                  <br>
-                  --<br>
-                  Best regards,<br>
-                  <br>
-                  A Renewal Agents 2022";
-      $this->sendemail($tim['iot_email_ketua'], $subject, $message);
-      $this->session->setFlashdata('msg', 'berhasil menolak peserta');
-    }
-    return redirect()->to('dashboard/Admin_kti_iot/konfirmasi_final');
-  }
+  //     $subject = "[Rejected] Internet of Things (IOT)";
+  //     $message = "Dear {$tim['iot_nama_tim']} from {$tim['iot_institusi']} ,<br>
+  //                 <br>
+  //                 Thank you for participating for our event, \"Internet of Things (IOT).\"<br>
+  //                 <br>
+  //                 unfortunately your payment requirement is invalid, so please input again in your dahsboard <br>
+  //                 <br>
+  //                 <br>
+  //                 --<br>
+  //                 Best regards,<br>
+  //                 <br>
+  //                 A Renewal Agents 2022";
+  //     $this->sendemail($tim['iot_email_ketua'], $subject, $message);
+  //     $this->session->setFlashdata('msg', 'berhasil menolak peserta');
+  //   }
+  //   return redirect()->to('dashboard/Admin_kti_iot/konfirmasi_final');
+  // }
 }
