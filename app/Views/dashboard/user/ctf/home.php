@@ -27,11 +27,11 @@
     <li><i class="fas fa-book"></i> Link: <a href="https://drive.google.com/file/d/1bNqLIt6ejWc28Ww_tcoWWBsqLJJVDWHH/view?usp=sharing" target="_blank">Lihat Disini</a></li>
   </ul>
 </div>
-<!-- <div class="card-dashboard">
+<div class="card-dashboard">
   <h4>Discord Link</h4>
   <ul>
-    <li><i class="fa-brands fa-discord"></i> Link: <a href="https://discord.gg/PH2yVuq7" target="_blank">Join dan temukan Flag!</a></li>
+    <li><i class="fa-brands fa-discord"></i> Link: <a href="https://discord.gg/58UyCPefqj" target="_blank">Join dan temukan Flag!</a></li>
   </ul>
-</div> -->
+</div>
 <?= $this->endSection(); ?>
 <!-- /end content -->
