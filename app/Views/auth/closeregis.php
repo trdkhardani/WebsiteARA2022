@@ -58,7 +58,7 @@
                 Sampai jumpa pada ARA 2023</h2>
         </p>
 
-        <a href="'<?= base_url() ?>'" class="btn btn-primary px-4 py-3 mt-4 rounded-pill">Kembali ke Home</a>
+        <a href="<?= base_url() ?>" class="btn btn-primary px-4 py-3 mt-4 rounded-pill">Kembali ke Home</a>
 
     </main>
 
