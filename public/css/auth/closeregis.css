@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap&family=Merriweather+Sans&family=Open+Sans&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
+
+.nav-gradient {
+  background-color: #161175;
+}
+
+
+
+.mohonmaaf {
+  font-family: 'Merriweather', serif;
+  text-align: center;
+  size: 48px;
+}
+@media only screen and (max-width: 992px) {
+  .navbar-2 {
+    margin-top: 28px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .navbar-toggler {
+    padding: 0;
+  }
+}
+
+.sosial-media {
+  background-color: #abe9d2;
+  width: 68px;
+  height: 68px;
+  display: block;
+  position: relative;
+}
+.sosial-media i {
+  color: #161175;
+  font-size: 24px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+footer {
+  background-color: #311175;
+}
+footer p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+}
+footer .h1 {
+  background: -webkit-gradient(linear, left top, right top, from(#ff628f), to(#7a75d9));
+  background: linear-gradient(to right, #ff628f 0%, #7a75d9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+}
+footer .sosial-media,
+footer .ke-atas {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(25%, #fff), color-stop(75%, #ffe9e9));
+  background: linear-gradient(180deg, #fff 25%, #ffe9e9 75%);
+}
+footer .sosial-media i {
+  background: -webkit-gradient(linear, left bottom, left top, from(#533ba9), to(#9b53a6));
+  background: linear-gradient(to top, #533ba9, #9b53a6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.main {
+  background-image: url('https://i.ibb.co/Wvj1fZy/BGcloseregis.png');
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.main h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.maintext {
+  margin: 50px;
+  width:15%;
+  height: auto;
+}
+
+.sadlogo {
+  margin: 40px;
+  size: 30px;
+  width:25%;
+  height: auto;
+}
+
+
