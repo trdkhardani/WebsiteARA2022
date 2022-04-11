@@ -11,7 +11,7 @@
     <meta name="author" content="Divisi Website ARA 2022">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="<?= base_url() ?>/css/auth/closeregis.css">
     <script src="https://kit.fontawesome.com/3b29c0245b.js" crossorigin="anonymous"></script>
 </head>
 
@@ -53,7 +53,7 @@
         <img class="sadlogo" src="https://i.ibb.co/sQQH79C/sadlogo.png" alt="" style="text-align: center;">
 
         <p class="maintext">
-            <h2 style="white-space: pre-line">Pendaftaran untuk event XX telah di tutup.
+            <h2 style="white-space: pre-line">Pendaftaran untuk event <?= $event ?> telah di tutup.
                 Sampai jumpa pada ARA 2023</h2>
         </p>
 
@@ -77,6 +77,7 @@
         <div class="d-grid col-3 mx-auto mt-5">
             <a id="top" href="#" class="btn ke-atas rounded-pill py-4 my-5"><i class="fas fa-arrow-up"></i> Kembali Ke
                 Atas</a>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         </div>
     </footer>
 </body>
