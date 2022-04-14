@@ -13,8 +13,8 @@ class Auth extends BaseController
       'validation' => \Config\Services::validation(),
       'event' => 'KTI IOT'
     ];
-    return view('auth/regist_kti', $data);
-    // return view('auth/closeregis', $data);
+    // return view('auth/regist_kti', $data);
+    return view('auth/closeregis', $data);
   }
 
   public function registrasi_ctf()
