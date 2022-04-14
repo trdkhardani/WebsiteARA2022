@@ -96,6 +96,10 @@
           <label for="follow_ig_hmit" class="form-label">Follow IG HMIT (<a href="https://www.instagram.com/hmit_its/" target="_blank">Instagram HMIT ITS</a>) <span class="text-danger">*<?= '<br>' . $validation->getError('follow_ig_hmit') ?></span></label>
           <input class="form-control" type="file" id="follow_ig_hmit" name="follow_ig_hmit" value="<?= old('follow_ig_hmit') ?>">
         </div>
+        <div class="mb-3">
+          <label for="share_group" class="form-label">Share 4 Sponsor <span class="text-danger">*<?= '<br>' . $validation->getError('sponsor_group[]') ?></span></label>
+          <input class="form-control" type="file" id="share_group" name="sponsor_group[]" multiple value="<?= old('share_group[]') ?>">
+        </div>
         <!-- <div class="mb-3">
           <label for="subs_yt_it" class="form-label">Subscribe Youtube HMIT <span class="text-danger">*<?= '<br>' . $validation->getError('subs_yt_it') ?></span></label>
           <input class="form-control" type="file" id="subs_yt_it" name="subs_yt_it" value="<?= old('subs_yt_it') ?>">

@@ -19,7 +19,7 @@ class CustomRules
         $this->request = $request;
     }
     
-    function count_image_2(?string $blank, string $params): bool
+    function count_image_4(?string $blank, string $params): bool
     {
 
         //$param  = explode(',', $params);
@@ -33,7 +33,7 @@ class CustomRules
         }
         $jml = count($files);
 
-        if($jml == 2)
+        if($jml == 4)
         {
             return true;
         }

@@ -989,6 +989,15 @@ class Verify extends BaseController
                     'max_size'  => 'Ukuran gambar maksimal 512 kb'
                 ]
             ],
+            'sponsor_group[]' => [
+                'label'     => 'share_group[]',
+                'rules'     => 'is_image[sponsor_group]|max_size[sponsor_group, 512]|count_image_4[sponsor_group]',
+                'errors'    => [
+                    'is_image'  => 'Field harus diisi dengan gambar',
+                    'max_size'  => 'Ukuran gambar maksimal 512 kb',
+                    'count_image_4' => 'Field ini harus diisi dengan 4 gambar'
+                ]
+            ]
             /*'subs_yt_it' => [
                 'label'     => 'subs_yt_it',
                 'rules'     => 'uploaded[subs_yt_it]|is_image[subs_yt_it]|max_size[subs_yt_it, 512]',
@@ -1082,6 +1091,10 @@ class Verify extends BaseController
             'webinar_contact'   => $this->request->getVar('whatsapp'),
             'webinar_instansi'  => $this->request->getVar('asal_institusi'),
             'webinar_status'    => 0,
+            'webinar_sponsor_1' => $this->moveFile('uploads/webinar/sponsor_1', $this->request->getFile('sponsor_group.0')),
+            'webinar_sponsor_2' => $this->moveFile('uploads/webinar/sponsor_2', $this->request->getFile('sponsor_group.1')),
+            'webinar_sponsor_3' => $this->moveFile('uploads/webinar/sponsor_3', $this->request->getFile('sponsor_group.2')),
+            'webinar_sponsor_4' => $this->moveFile('uploads/webinar/sponsor_4', $this->request->getFile('sponsor_group.3')),
             //'webinar_story'     => $this->moveFile('uploads/webinar/story', $this->request->getFile('share_post')), 
             'webinar_ig_ara'    => $this->moveFile('uploads/webinar/ig_ara', $this->request->getFile('follow_ig_ara')),
             'webinar_ig_hmit'   => $this->moveFile('uploads/webinar/ig_hmit', $this->request->getFile('follow_ig_hmit')),

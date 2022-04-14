@@ -37,6 +37,10 @@
         <th>Share Poster Webinar IOT</th>
         <th>Follow IG ARA</th>
         <th>Follow IG HMIT</th>
+        <th>Sponsor 1</th>
+        <th>Sponsor 2</th>
+        <th>Sponsor 3</th>
+        <th>Sponsor 4</th>
         <!--  <th>Subscribe Youtube IT ITS</th>
         <th>Share Poster Grup 1</th>
         <th>Share Poster Grup 2</th>  -->
@@ -79,6 +83,26 @@
           <?php } ?>
           <td><a href="<?= base_url() ?>/uploads/webinar/ig_ara/<?= $item->webinar_ig_ara ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
           <td><a href="<?= base_url() ?>/uploads/webinar/ig_hmit/<?= $item->webinar_ig_hmit ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+          <?php if ($item->webinar_sponsor_1 != NULL) { ?>
+            <td><a href="<?= base_url() ?>/uploads/webinar/sponsor_1/<?= $item->webinar_sponsor_1 ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+          <?php } else { ?>
+            <td><a> - </a></td>
+          <?php } ?>
+          <?php if ($item->webinar_sponsor_2 != NULL) { ?>
+            <td><a href="<?= base_url() ?>/uploads/webinar/sponsor_2/<?= $item->webinar_sponsor_2 ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+          <?php } else { ?>
+            <td><a> - </a></td>
+          <?php } ?>
+          <?php if ($item->webinar_sponsor_3 != NULL) { ?>
+            <td><a href="<?= base_url() ?>/uploads/webinar/sponsor_3/<?= $item->webinar_sponsor_3 ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+          <?php } else { ?>
+            <td><a> - </a></td>
+          <?php } ?>
+          <?php if ($item->webinar_sponsor_4 != NULL) { ?>
+            <td><a href="<?= base_url() ?>/uploads/webinar/sponsor_4/<?= $item->webinar_sponsor_4 ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
+          <?php } else { ?>
+            <td><a> - </a></td>
+          <?php } ?>
           <!--  <td><a href="<?= base_url() ?>/uploads/webinar/subs/<?= $item->webinar_subscribe ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
           <td><a href="<?= base_url() ?>/uploads/webinar/share_1/<?= $item->webinar_share_1 ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td>
           <td><a href="<?= base_url() ?>/uploads/webinar/share_2/<?= $item->webinar_share_2 ?>" target="_blank">Lihat <i class="fas fa-external-link-alt"></i></a></td> -->
