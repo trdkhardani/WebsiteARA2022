@@ -14,7 +14,7 @@ class Auth extends BaseController
       'event' => 'KTI IOT'
     ];
     return view('auth/regist_kti', $data);
-    //return view('auth/closeregis', $data);
+    // return view('auth/closeregis', $data);
   }
 
   public function registrasi_ctf()
@@ -60,9 +60,9 @@ class Auth extends BaseController
       'event' => 'Webinar',
       'waktu' => '16 Maret - 8 April'
     ];
-    return view('auth/regist_webinar', $data);
+    // return view('auth/regist_webinar', $data);
     // return view('auth/notyet', $data);
-    //return view('auth/closeregis', $data);
+    return view('auth/closeregis', $data);
   }
 
   public function login()

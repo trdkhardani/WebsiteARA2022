@@ -54,9 +54,10 @@
     <div class="event kanan mt-5">
       <div data-aos="fade-left" class="isi-event">
         <p class="fw-bold">Webinar Internet of Things</p>
-        <p><i class="fa-solid fa-pencil"></i> Tema: Coming soon...</p>
-        <p><i class="fas fa-user"></i> Pembicara 1: Coming soon...</p>
-        <p><i class="fas fa-user"></i> Pembicara 2: Coming soon...</p>
+        <p><i class="fa-solid fa-pencil"></i> Tema: Akselerasi Transformasi Digital Indonesia melalui Infrastruktur 5G dalam IoT</p>
+        <p><i class="fas fa-user"></i> Pembicara 1: Fariz Alemuda (Squad Leader IoT Manufacture at Telkom Indonesia)</p>
+        <p><i class="fas fa-user"></i> Pembicara 2: Kukuh Damareza (Manufacturing Excellence Executive PT Paragon)</p>
+        <p><i class="fas fa-user"></i> Pembicara 2: Evan Pradipta (IoT Engineer Qlue Smartcity)</p>
       </div>
     </div>
   </div>

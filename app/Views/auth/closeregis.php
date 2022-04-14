@@ -12,16 +12,15 @@
     <link rel="icon" href="<?= base_url() ?>/images/logo-ara.svg" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="<?= base_url() ?>/css/auth/closeregis.css">
-    <script src="https://kit.fontawesome.com/3b29c0245b.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark py-2 nav-gradient sticky-top">
         <div class="container-fluid px-3">
             <div class="col-4">
-                <a href="<?= base_url() ?>"><img src="https://i.ibb.co/HhMhkn7/ARA-navbar.png" alt="Rocket Icon"
-                        height="50" class=""></a>
+                <a href="<?= base_url() ?>"><img src="<?= base_url() ?>/images/ara-putih.svg" alt="Rocket Icon" height="50" class=""></a>
             </div>
             <button class="navbar-toggler col-2" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
@@ -47,15 +46,19 @@
         </div>
     </nav>
 
-    <main class="main"">
+    <main class="main">
         <p>
-            <h1 class= " mohonmaaf" style="font-weight: 700; font-size: 3vw;">Mohon maaf</h1>
+            <h1 class= "mohonmaaf" style="font-weight: 700; font-size: 3vw;">Mohon maaf</h1>
         </p>
-        <img class="sadlogo" src="https://i.ibb.co/sQQH79C/sadlogo.png" alt="" style="text-align: center;">
+        <img class="sadlogo" src="<?= base_url() ?>/images/belum_lulus.svg" alt="" style="text-align: center;">
 
         <p class="maintext">
-            <h2 style="white-space: pre-line">Pendaftaran untuk event <?= $event ?> telah di tutup.
+            <?php if ($event == "Webinar") { ?>
+                <h2 style="white-space: pre-line">Pendaftaran untuk Webinar Cyber Security Telah Ditutup. Pendaftaran untuk Webinar IoT akan dibuka pada 16 April 2022 - 6 Mei 2022</h2>
+            <?php } else { ?>
+                <h2 style="white-space: pre-line">Pendaftaran untuk event <?= $event ?> telah di tutup.
                 Sampai jumpa pada ARA 2023</h2>
+            <?php } ?>
         </p>
 
         <a href="<?= base_url() ?>" class="btn btn-primary px-4 py-3 mt-4 rounded-pill">Kembali ke Home</a>

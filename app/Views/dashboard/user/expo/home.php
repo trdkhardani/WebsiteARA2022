@@ -18,6 +18,13 @@
 <?= $this->section("content"); ?>
 <h3 class="mb-3">Informasi Umum</h3>
 
+<div class="card-dashboard">
+    <h4>Link group</h4>
+    <ul>
+      <li><i class="fa-brands fa-whatsapp"></i> Whatsapp Group: <a href="https://chat.whatsapp.com/HAPHHGZRUpuLaFf2Sun0qL" target="_blank">Join Disini</a></li>
+    </ul>
+</div>
+
 <?php if ($event == "Day 1") { ?>
   <!-- card dashboard -->
   <div class="card-dashboard">

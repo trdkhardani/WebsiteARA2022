@@ -107,7 +107,9 @@ class Admin_expo extends BaseController
                   <br>
                   Username : {$data['account_username']}<br>
                   Password : {$password}<br>
-                  <br>
+                  <br><br>
+                  You can join this group for more information: https://chat.whatsapp.com/HAPHHGZRUpuLaFf2Sun0qL
+                  <br><br>
                   --<br>
                   Best regards,<br>
                   <br>
