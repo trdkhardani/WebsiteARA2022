@@ -81,7 +81,7 @@
         <!-- add v-if when IoT has open -->
         <input type="text" value="IoT" hidden name="event">
         <div class="mb-3">
-          <label for="share_post_iot" class="form-label">Share Post Webinar Internet of Things di story IG <span class="text-danger">*<?= '<br>' . $validation->getError('share_post_iot') ?></span></label>
+          <label for="share_post_iot" class="form-label">Share Post Webinar Internet of Things di story IG (<a href="https://drive.google.com/file/d/12wBG60w8Ki-G3WEUxaJ6sTAmq8qdyQbM/view?usp=sharing" target="_blank">Lihat Poster</a>) <span class="text-danger">*<?= '<br>' . $validation->getError('share_post_iot') ?></span></label>
           <input class="form-control" type="file" id="share_post_iot" name="share_post_iot" value="<?= old('share_post_iot') ?>">
         </div>
         <!-- <div class="mb-3" v-if="isIot">
@@ -92,12 +92,12 @@
           <label for="follow_ig_ara" class="form-label">Follow IG ARA (<a href="https://www.instagram.com/ara_its/" target="_blank">Instagram ARA 2022</a>) <span class="text-danger">*<?= '<br>' . $validation->getError('follow_ig_ara') ?></span></label>
           <input class="form-control" type="file" id="follow_ig_ara" name="follow_ig_ara" value="<?= old('follow_ig_ara') ?>">
         </div>
-        <div class="mb-3">
+        <!-- <div class="mb-3">
           <label for="follow_ig_hmit" class="form-label">Follow IG HMIT (<a href="https://www.instagram.com/hmit_its/" target="_blank">Instagram HMIT ITS</a>) <span class="text-danger">*<?= '<br>' . $validation->getError('follow_ig_hmit') ?></span></label>
           <input class="form-control" type="file" id="follow_ig_hmit" name="follow_ig_hmit" value="<?= old('follow_ig_hmit') ?>">
-        </div>
+        </div> -->
         <div class="mb-3">
-          <label for="share_group" class="form-label">Share 4 Sponsor <span class="text-danger">*<?= '<br>' . $validation->getError('sponsor_group[]') ?></span></label>
+          <label for="share_group" class="form-label">Follow 2 Sponsor (<a href="https://www.instagram.com/paragon.id/" target="_blank">Instagram Paragon</a>) (<a href="https://www.instagram.com/kencana.indo/" target="_blank">Instagram PT Kencana</a>) <span class="text-danger">*<?= '<br>' . $validation->getError('sponsor_group[]') ?></span></label>
           <input class="form-control" type="file" id="share_group" name="sponsor_group[]" multiple value="<?= old('share_group[]') ?>">
         </div>
         <!-- <div class="mb-3">

@@ -980,7 +980,7 @@ class Verify extends BaseController
                     'max_size'  => 'Ukuran gambar maksimal 512 kb'
                 ]
             ],
-            'follow_ig_hmit' => [
+            /*'follow_ig_hmit' => [
                 'label'     => 'follow_ig_hmit',
                 'rules'     => 'uploaded[follow_ig_hmit]|is_image[follow_ig_hmit]|max_size[follow_ig_hmit, 512]',
                 'errors'    => [
@@ -988,14 +988,14 @@ class Verify extends BaseController
                     'is_image'  => 'Field  harus diisi dengan gambar',
                     'max_size'  => 'Ukuran gambar maksimal 512 kb'
                 ]
-            ],
+            ],*/
             'sponsor_group[]' => [
                 'label'     => 'share_group[]',
-                'rules'     => 'is_image[sponsor_group]|max_size[sponsor_group, 512]|count_image_4[sponsor_group]',
+                'rules'     => 'is_image[sponsor_group]|max_size[sponsor_group, 512]|count_image_2[sponsor_group]',
                 'errors'    => [
                     'is_image'  => 'Field harus diisi dengan gambar',
                     'max_size'  => 'Ukuran gambar maksimal 512 kb',
-                    'count_image_4' => 'Field ini harus diisi dengan 4 gambar'
+                    'count_image_2' => 'Field ini harus diisi dengan 2 gambar'
                 ]
             ]
             /*'subs_yt_it' => [
