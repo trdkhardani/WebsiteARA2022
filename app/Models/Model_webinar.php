@@ -23,8 +23,6 @@ class Model_webinar extends Model
         'webinar_subscribe', 
         'webinar_sponsor_1', 
         'webinar_sponsor_2', 
-        'webinar_sponsor_3', 
-        'webinar_sponsor_4', 
         'webinar_share_1', 
         'webinar_share_2', 
         'webinar_twibbon'
