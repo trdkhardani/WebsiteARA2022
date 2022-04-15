@@ -38,6 +38,7 @@
       <?php $i = 1;
       foreach ($data as $item) { ?>
         <tr>
+          <?php if ($item->webinar_event == "IoT") { ?>
           <td><?= $i++ ?></td>
           <td><?= $item->webinar_id; ?></td>
           <td>
@@ -53,6 +54,7 @@
           <td><?= $item->webinar_instansi ?></td>
           <td><?= $item->webinar_contact ?></td>
           <td><?= $item->webinar_email ?></td>
+          <?php } ?>
         </tr>
       <?php } ?>
       <!--<?php for ($i = 1; $i <= 10; $i++) { ?>

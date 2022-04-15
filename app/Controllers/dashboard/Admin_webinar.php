@@ -28,21 +28,24 @@ class Admin_webinar extends BaseController
     $data["tahap"] = "Webinar";
     $data['data'] = $this->model_custom->getall_where("webinar", 1);
     $data['total_peserta'] = $this->model_webinar->countAllResults();
-    $data['belum_terkonfirmasi'] = $this->model_custom->count_where("webinar", 0);
-    $data['terkonfirmasi'] = $this->model_custom->count_where("webinar", 1);
+    // $data['belum_terkonfirmasi'] = $this->model_custom->count_where("webinar", 0);
+    // $data['terkonfirmasi'] = $this->model_custom->count_where("webinar", 1);
+    $data['belum_terkonfirmasi'] = $this->model_custom->count_where_iot("webinar", 0);
+    $data['terkonfirmasi'] = $this->model_custom->count_where_iot("webinar", 1);
     return view('dashboard/admin/webinar/list', $data);
   }
 
   public function konfirmasi()
   {
-
     $data["lomba"] = "Webinar";
     $data["nama"] = "Admin Webinar";
     $data["tahap"] = "Webinar";
     $data['data'] = $this->model_custom->getall_where("webinar", 0);
     $data['total_peserta'] = $this->model_webinar->countAllResults();
-    $data['belum_terkonfirmasi'] = $this->model_custom->count_where("webinar", 0);
-    $data['terkonfirmasi'] = $this->model_custom->count_where("webinar", 1);
+    // $data['belum_terkonfirmasi'] = $this->model_custom->count_where("webinar", 0);
+    // $data['terkonfirmasi'] = $this->model_custom->count_where("webinar", 1);
+    $data['belum_terkonfirmasi'] = $this->model_custom->count_where_iot("webinar", 0);
+    $data['terkonfirmasi'] = $this->model_custom->count_where_iot("webinar", 1);
     return view('dashboard/admin/webinar/konfirmasi', $data);
   }
 

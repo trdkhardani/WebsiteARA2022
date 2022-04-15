@@ -79,10 +79,10 @@
           </div>
         </div> -->
         <!-- add v-if when IoT has open -->
-        <input type="text" value="CTF" hidden name="event">
+        <input type="text" value="IoT" hidden name="event">
         <div class="mb-3">
-          <label for="share_post_ctf" class="form-label">Share Post Webinar Cyber Security di story IG <span class="text-danger">*<?= '<br>' . $validation->getError('share_post_ctf') ?></span></label>
-          <input class="form-control" type="file" id="share_post_ctf" name="share_post_ctf" value="<?= old('share_post_ctf') ?>">
+          <label for="share_post_iot" class="form-label">Share Post Webinar Internet of Things di story IG <span class="text-danger">*<?= '<br>' . $validation->getError('share_post_iot') ?></span></label>
+          <input class="form-control" type="file" id="share_post_iot" name="share_post_iot" value="<?= old('share_post_iot') ?>">
         </div>
         <!-- <div class="mb-3" v-if="isIot">
           <label for="share_post_iot" class="form-label">Share Post Webinar Internet Of Things di story IG <span class="text-danger">*<?= '<br>' . $validation->getError('share_post_iot') ?></span></label>

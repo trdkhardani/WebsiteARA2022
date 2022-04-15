@@ -1041,7 +1041,7 @@ class Verify extends BaseController
         } else if ($this->request->getVar('event') == 'IoT') {
             $rules2 = [
                 'share_post_iot' => [
-                    'label'     => 'share_post_ctf',
+                    'label'     => 'share_post_iot',
                     'rules'     => 'uploaded[share_post_iot]|is_image[share_post_iot]|max_size[share_post_iot, 512]',
                     'errors'    => [
                         'uploaded'  => 'Field harus diisi',
