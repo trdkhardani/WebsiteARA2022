@@ -29,9 +29,9 @@
 <h3 class="mb-3">Final</h3>
 <!-- Selamat -->
 <div class="card-dashboard">
-  <h4>Selamat, tim anda lolos ke babak final</h4>
+  <h4>Selamat, tim anda lolos ke babak final!</h4>
   <ul>
-    <li>Segera persiapkan tim anda untuk mempresentasikan full paper anda</li>
+    <li>Segera persiapkan tim anda untuk mempresentasikan full paper anda.</li>
   </ul>
 </div>
 <!-- Technical Meeting -->
@@ -44,7 +44,7 @@
 </div>
 <!-- informasi -->
 <div class="card-dashboard">
-  <h4>Presentasi</h4>
+  <h4>Presentasi Final</h4>
   <ul>
     <li><i class="fas fa-clock"></i> Waktu: 4 Juni</li>
     <li><i class="fas fa-headset"></i> Pantau email anda untuk mengecek sesi.</li>
@@ -52,9 +52,9 @@
 </div>
 <!-- hasil akhir -->
 <div class="card-dashboard">
-  <h4>Hasil Akhir</h4>
+  <h4>Pengumuman Pemenang</h4>
   <ul>
-    <li><i class="fas fa-trophy"></i> Pantau terus Instagram ARA untuk mengecek hasil akhir.</li>
+    <li><i class="fas fa-trophy"></i> <span class="important">Coming Soon...</span></li>
   </ul>
 </div>
 <?= $this->endSection(); ?>

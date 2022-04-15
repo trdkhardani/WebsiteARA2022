@@ -31,14 +31,15 @@
 <div class="card-dashboard">
   <h4>Selamat, tim anda lolos ke babak 2 / Full Paper!</h4>
   <ul>
-    <li>Mohon segera untuk mengumpulkan full paper tim anda</li>
+    <li>Mohon segera untuk mengumpulkan full paper tim anda.</li>
+    <li>Anda dapat bergabung ke grup berikut untuk informasi lebih lanjut: <a href="https://chat.whatsapp.com/IYRQpToWSW1D0VdYDuKBzo" target="_blank">Join grup</a></li>
   </ul>
 </div>
 <!-- Informasi -->
 <div class="card-dashboard">
   <h4>Informasi Full Paper</h4>
   <ul>
-    <li><i class="fas fa-calendar-alt"></i> Pelaksanaan: 16 April - 23 April</li>
+    <li><i class="fas fa-calendar-alt"></i> Pelaksanaan: 16 April - 23 Mei</li>
   </ul>
 </div>
 <!-- pengumpulan full paper -->
