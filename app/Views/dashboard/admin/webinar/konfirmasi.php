@@ -37,8 +37,8 @@
         <th>Share Poster Webinar IOT</th>
         <th>Follow IG ARA</th>
         <th>Follow IG HMIT</th>
-        <th>Sponsor 1</th>
-        <th>Sponsor 2</th>
+        <th>Follow Sponsor 1</th>
+        <th>Follow Sponsor 2</th>
         <!--  <th>Subscribe Youtube IT ITS</th>
         <th>Share Poster Grup 1</th>
         <th>Share Poster Grup 2</th>  -->
