@@ -53,4 +53,12 @@ class Model_custom
         $builder->where('account_password', $pass);
         return !empty($builder->get()->getResult());
     }
+
+    public function count_where_iot($table, $status)
+    {
+        $builder = $this->db->table($table);
+        $builder->where($table.'_status', $status);
+        $builder->where($table.'_event', "IoT");
+        return $builder->countAllResults();
+    }
 }

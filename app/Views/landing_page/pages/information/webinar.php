@@ -58,6 +58,7 @@
         <p><i class="fas fa-user"></i> Pembicara 1: Fariz Alemuda (Squad Leader IoT Manufacture at Telkom Indonesia)</p>
         <p><i class="fas fa-user"></i> Pembicara 2: Kukuh Damareza (Manufacturing Excellence Executive PT Paragon)</p>
         <p><i class="fas fa-user"></i> Pembicara 2: Evan Pradipta (IoT Engineer Qlue Smartcity)</p>
+        <p>7 Mei 2022</p>
       </div>
     </div>
   </div>

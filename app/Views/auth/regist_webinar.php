@@ -79,10 +79,10 @@
           </div>
         </div> -->
         <!-- add v-if when IoT has open -->
-        <input type="text" value="CTF" hidden name="event">
+        <input type="text" value="IoT" hidden name="event">
         <div class="mb-3">
-          <label for="share_post_ctf" class="form-label">Share Post Webinar Cyber Security di story IG <span class="text-danger">*<?= '<br>' . $validation->getError('share_post_ctf') ?></span></label>
-          <input class="form-control" type="file" id="share_post_ctf" name="share_post_ctf" value="<?= old('share_post_ctf') ?>">
+          <label for="share_post_iot" class="form-label">Share Post Webinar Internet of Things di story IG <span class="text-danger">*<?= '<br>' . $validation->getError('share_post_iot') ?></span></label>
+          <input class="form-control" type="file" id="share_post_iot" name="share_post_iot" value="<?= old('share_post_iot') ?>">
         </div>
         <!-- <div class="mb-3" v-if="isIot">
           <label for="share_post_iot" class="form-label">Share Post Webinar Internet Of Things di story IG <span class="text-danger">*<?= '<br>' . $validation->getError('share_post_iot') ?></span></label>
@@ -95,6 +95,10 @@
         <div class="mb-3">
           <label for="follow_ig_hmit" class="form-label">Follow IG HMIT (<a href="https://www.instagram.com/hmit_its/" target="_blank">Instagram HMIT ITS</a>) <span class="text-danger">*<?= '<br>' . $validation->getError('follow_ig_hmit') ?></span></label>
           <input class="form-control" type="file" id="follow_ig_hmit" name="follow_ig_hmit" value="<?= old('follow_ig_hmit') ?>">
+        </div>
+        <div class="mb-3">
+          <label for="share_group" class="form-label">Share 4 Sponsor <span class="text-danger">*<?= '<br>' . $validation->getError('sponsor_group[]') ?></span></label>
+          <input class="form-control" type="file" id="share_group" name="sponsor_group[]" multiple value="<?= old('share_group[]') ?>">
         </div>
         <!-- <div class="mb-3">
           <label for="subs_yt_it" class="form-label">Subscribe Youtube HMIT <span class="text-danger">*<?= '<br>' . $validation->getError('subs_yt_it') ?></span></label>

@@ -51,8 +51,11 @@
   <div class="card-dashboard">
     <h4>Webinar Internet of Things</h4>
     <ul>
-      <li><i class="fas fa-user"></i> Pemateri: Haffif Rasya Fauzi</li>
-      <li><i class="fas fa-clock"></i> Waktu Pelaksanaan: 4 April 2022</li>
+      <li><i class="fa-solid fa-pencil"></i> Tema: <span class="important">Akselerasi Transformasi Digital Indonesia melalui Infrastruktur 5G dalam IoT</span></li>
+      <li><i class="fas fa-user"></i> Pemateri 1: Fariz Alemuda (Squad Leader IoT Manufacture at Telkom Indonesia)</li>
+      <li><i class="fas fa-user"></i> Pemateri 2: Kukuh Damareza (Manufacturing Excellence Executive PT Paragon)</li>
+      <li><i class="fas fa-user"></i> Pemateri 3: Evan Pradipta (IoT Engineer Qlue Smartcity)</li>
+      <li><i class="fas fa-clock"></i> Waktu Pelaksanaan: 7 Mei 2022</li>
       <li><i class="fas fa-external-link-alt"></i> Link Meeting: <span class="important">Coming Soon</span></li>
     </ul>
   </div>
