@@ -56,7 +56,7 @@ class Admin_webinar extends BaseController
 
     $path = 'uploads/webinar/';
     unlink($path . "ig_ara/" . $data[0]->webinar_ig_ara);
-    unlink($path . "ig_hmit/" . $data[0]->webinar_ig_hmit);
+    // unlink($path . "ig_hmit/" . $data[0]->webinar_ig_hmit);
     /*unlink($path . "subs/" . $data[0]->webinar_subscribe);
     unlink($path . "share_1/" . $data[0]->webinar_share_1);
     unlink($path . "share_2/" . $data[0]->webinar_share_2);
