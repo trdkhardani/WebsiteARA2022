@@ -950,10 +950,9 @@ class Verify extends BaseController
             ],
             'email' => [
                 'label'     => 'email',
-                'rules'     => 'required|is_unique[webinar.webinar_email]',
+                'rules'     => 'required',
                 'errors'    => [
                     'required'  => 'Email harus diisi',
-                    'is_unique' => 'Email sudah terdaftar'
                 ]
             ],
             'asal_institusi' => [
