@@ -144,7 +144,7 @@ class Admin_expo extends BaseController
                   Best regards,<br>
                   <br>
                   A Renewal Agents 2022";
-      //$this->sendemail("cobarega@gmail.com"/*$d->expo_email*/, $subject, $message);
+      //$this->sendemail(""/*$d->expo_email*/, $subject, $message);
     
     }
     return redirect()->to('/dashboard/admin_expo/notify');
@@ -166,7 +166,7 @@ class Admin_expo extends BaseController
                   Best regards,<br>
                   <br>
                   A Renewal Agents 2022";
-      //this->sendemail("cobarega@gmail.com"/*$d->expo_email*/, $subject, $message);
+      //this->sendemail(""/*$d->expo_email*/, $subject, $message);
     }
     return redirect()->to('/dashboard/admin_expo/notify');
   }
@@ -186,7 +186,7 @@ class Admin_expo extends BaseController
                   Best regards,<br>
                   <br>
                   A Renewal Agents 2022";
-      //$this->sendemail("cobarega@gmail.com"/*$d->expo_email*/, $subject, $message);
+      //$this->sendemail(""/*$d->expo_email*/, $subject, $message);
     
     }
     return redirect()->to('/dashboard/admin_expo/notify');
@@ -207,7 +207,7 @@ class Admin_expo extends BaseController
                   Best regards,<br>
                   <br>
                   A Renewal Agents 2022";
-      //$this->sendemail("cobarega@gmail.com"/*$d->expo_email*/, $subject, $message);
+      //$this->sendemail(""/*$d->expo_email*/, $subject, $message);
     }
     return redirect()->to('/dashboard/admin_expo/notify');
   }
