@@ -12,6 +12,9 @@
     <li class="">
       <a href="<?= base_url() ?>/dashboard/admin_expo/konfirmasi"><i class="fas fa-check-circle"></i> Konfirmasi</a>
     </li>
+    <li class="">
+      <a href="<?= base_url() ?>/dashboard/admin_expo/notify"><i class="fas fa-bell"></i> Notify</a>
+    </li>
     </li>
   </ul>
 </div>
