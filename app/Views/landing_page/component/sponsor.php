@@ -1,6 +1,6 @@
 <section data-aos-duration="1500" data-aos="fade-up" class="container">
     <small class="h3 mx-auto mb-5 d-block text-center fw-bold">Sponsor</small>
-    <div class="row justify-content-center mx-auto">
+    <div class="row justify-content-center align-items-center mx-auto">
         <div class="col-7 col-md-4 my-auto">
             <img class="px-7 py-4" src="<?= base_url() ?>/images/sponsor/L_logo Paragon Crop - 16.png" alt="">
         </div>
@@ -10,8 +10,14 @@
         <div class="col-5 col-md-2 my-auto">
             <img class="px-3 py-4" src="<?= base_url() ?>/images/sponsor/S_indigospace-sub-logo-red.png" alt="">
         </div>
+        <div class="col-5 col-md-2 my-auto">
+            <img class="px-3 py-4" src="<?= base_url() ?>/images/sponsor/S_Qlue Corporate.png" alt="">
+        </div>
         <div class="col-9 col-md-6 my-auto">
             <img class="px-3 py-4" src="<?= base_url() ?>/images/sponsor/XL_Logo Kencana Ahlinya Baja Ringan.png" alt="">
+        </div>
+        <div class="col-5 col-md-2 my-auto">
+            <img class="px-7 py-4" src="<?= base_url() ?>/images/sponsor/L_New Logo for SIG-1.png" alt="">
         </div>
     </div>
 
