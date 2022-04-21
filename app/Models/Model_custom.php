@@ -31,6 +31,12 @@ class Model_custom
         $builder->where($table.$column, $id);
         return $builder->get()->getResult();
     }
+    public function count_column_where($table, $id, $column)
+    {
+        $builder = $this->db->table($table);
+        $builder->where($table.$column, $id);
+        return $builder->countAllResults();
+    }
 
     public function delete_where($table, $id)
     {

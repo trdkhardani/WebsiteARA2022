@@ -23,10 +23,10 @@
 <!-- content -->
 <?= $this->section("content"); ?>
 <div class="">
-    <a href="<?= base_url() ?>/dashboard/admin_expo/day1" class="btn btn-sm btn-success" >day 1</a>
-    <a href="<?= base_url() ?>/dashboard/admin_expo/day2" class="btn btn-sm btn-success" >day 2</a>
-    <a href="<?= base_url() ?>/dashboard/admin_expo/day1_all" class="btn btn-sm btn-success" >day 1 - all</a>
-    <a href="<?= base_url() ?>/dashboard/admin_expo/day2_all" class="btn btn-sm btn-success" >day 2 - all</a>
+    <a href="" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#modalNotify" onclick="document.getElementById('buttNotify').href = '<?= base_url() ?>/dashboard/admin_expo/day1'; document.getElementById('ModalNotify').innerHTML = 'Apakah anda yakin ingin mengirim reminder email ke <?= $jumlah_day1 ?> peserta?'; document.getElementById('ModalNotify2').innerHTML = 'Setelah menekan tombol kirim, maka <?= $jumlah_day1 ?> peserta akan menerima email reminder tentang expo day 1';">day 1</a>
+    <a href="" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#modalNotify" onclick="document.getElementById('buttNotify').href = '<?= base_url() ?>/dashboard/admin_expo/day2'; document.getElementById('ModalNotify').innerHTML = 'Apakah anda yakin ingin mengirim reminder email ke <?= $jumlah_day2 ?> peserta?'; document.getElementById('ModalNotify2').innerHTML = 'Setelah menekan tombol kirim, maka <?= $jumlah_day2 ?> peserta akan menerima email reminder tentang expo day 2';">day 2</a>
+    <a href="" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#modalNotify" onclick="document.getElementById('buttNotify').href = '<?= base_url() ?>/dashboard/admin_expo/day1_all'; document.getElementById('ModalNotify').innerHTML = 'Apakah anda yakin ingin mengirim reminder email ke <?= $jumlah_dayall ?> peserta?'; document.getElementById('ModalNotify2').innerHTML = 'Setelah menekan tombol kirim, maka <?= $jumlah_dayall ?> peserta akan menerima email reminder tentang expo day 1';">day 1 - all</a>
+    <a href="" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#modalNotify" onclick="document.getElementById('buttNotify').href = '<?= base_url() ?>/dashboard/admin_expo/day2_all'; document.getElementById('ModalNotify').innerHTML = 'Apakah anda yakin ingin mengirim reminder email ke <?= $jumlah_dayall ?> peserta?'; document.getElementById('ModalNotify2').innerHTML = 'Setelah menekan tombol kirim, maka <?= $jumlah_dayall ?> peserta akan menerima email reminder tentang expo day 2';">day 2 - all</a>
 </div>
 
 <?= $this->endSection(); ?>

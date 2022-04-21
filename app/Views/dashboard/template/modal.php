@@ -95,3 +95,22 @@
     </div>
   </div>
 </div>
+
+<!-- for notify -->
+<div class="modal fade" id="modalNotify" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ModalNotify"></h5>
+        <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="ModalNotify2">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary shadow-none" data-bs-dismiss="modal">Gajadi</button>
+        <a type="button" class="btn btn-success shadow-none" id="buttNotify" onclick="document.getElementById('buttNotify').classList.add('disabled');">Kirim</a>
+      </div>
+    </div>
+  </div>
+</div>
