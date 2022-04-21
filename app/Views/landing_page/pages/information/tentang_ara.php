@@ -101,10 +101,16 @@
               <img class="img-fluid px-3 py-4" src="<?= base_url() ?>/images/sponsor/S_antares.png" alt="">
           </div>
           <div class="col-5 col-md-2 my-auto">
+              <img class="img-fluid px-3 py-4" src="<?= base_url() ?>/images/sponsor/S_Qlue Corporate.png" alt="">
+          </div>
+          <div class="col-5 col-md-2 my-auto">
               <img class="img-fluid px-3 py-4" src="<?= base_url() ?>/images/sponsor/S_indigospace-sub-logo-red.png" alt="">
           </div>
           <div class="col-9 col-md-6 my-auto">
               <img class="img-fluid px-3 py-4" src="<?= base_url() ?>/images/sponsor/XL_Logo Kencana Ahlinya Baja Ringan.png" alt="">
+          </div>
+          <div class="col-9 col-md-4 my-auto">
+              <img class="img-fluid px-3 py-4" src="<?= base_url() ?>/images/sponsor/L_New Logo for SIG-1.png" alt="">
           </div>
         </div>
 
