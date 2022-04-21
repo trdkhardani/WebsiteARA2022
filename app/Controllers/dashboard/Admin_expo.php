@@ -120,4 +120,95 @@ class Admin_expo extends BaseController
       return redirect()->to('/dashboard/admin_expo/konfirmasi');
     }
   }
+  public function notify()
+  {
+    $data["lomba"] = "Expo";
+    $data["nama"] = "Admin Expo IT";
+    $data["tahap"] = "Expo";
+    return view('dashboard/admin/expo/notify', $data);
+  }
+
+  public function day1()
+  {
+    $data = $this->model_custom->get_where('expo', 'day 1', '_day');
+    foreach($data as $d){
+      echo $d->expo_email."<br>";
+      $subject = "[Reminder Day 1] Expo Technology Information";
+      $message = "Dear {$d->expo_nama} from {$d->expo_institusi} ,<br>
+                  <br>
+                  Dont forget to attend in Day 1 Expo Technology Information about UI/UX, Smart City, Cyber Security
+                  <br>
+                  *link zoom/meet*
+                  <br><br>
+                  --<br>
+                  Best regards,<br>
+                  <br>
+                  A Renewal Agents 2022";
+      //$this->sendemail("dummy email"/*$d->expo_email*/, $subject, $message);
+    
+    }
+    return redirect()->to('/dashboard/admin_expo/notify');
+  }
+  
+  public function day2()
+  {
+    $data = $this->model_custom->get_where('expo', 'day 2', '_day');
+    foreach($data as $d){
+      echo $d->expo_email."<br>";
+      $subject = "[Reminder Day 2] Expo Technology Information";
+      $message = "Dear {$d->expo_nama} from {$d->expo_institusi} ,<br>
+                  <br>
+                  Dont forget to attend in Day 2 Expo Technology Information about Workshop IoT, Workshop Cloud
+                  <br>
+                  *link zoom/meet*
+                  <br><br>
+                  --<br>
+                  Best regards,<br>
+                  <br>
+                  A Renewal Agents 2022";
+      //this->sendemail("dummy email"/*$d->expo_email*/, $subject, $message);
+    }
+    return redirect()->to('/dashboard/admin_expo/notify');
+  }
+  public function day1_all()
+  {
+    $data = $this->model_custom->get_where('expo', 'all day', '_day');
+    foreach($data as $d){
+      echo $d->expo_email."<br>";
+      $subject = "[Reminder Day 1] Expo Technology Information";
+      $message = "Dear {$d->expo_nama} from {$d->expo_institusi} ,<br>
+                  <br>
+                  Dont forget to attend in Day 1 Expo Technology Information about UI/UX, Smart City, Cyber Security
+                  <br>
+                  *link zoom/meet*
+                  <br><br>
+                  --<br>
+                  Best regards,<br>
+                  <br>
+                  A Renewal Agents 2022";
+      //$this->sendemail("dummy email"/*$d->expo_email*/, $subject, $message);
+    
+    }
+    return redirect()->to('/dashboard/admin_expo/notify');
+  }
+  public function day2_all()
+  {
+    $data = $this->model_custom->get_where('expo', 'all day', '_day');
+    foreach($data as $d){
+      echo $d->expo_email."<br>";
+      $subject = "[Reminder Day 2] Expo Technology Information";
+      $message = "Dear {$d->expo_nama} from {$d->expo_institusi} ,<br>
+                  <br>
+                  Dont forget to attend in Day 2 Expo Technology Information about Workshop IoT, Workshop Cloud
+                  <br>
+                  *link zoom/meet*
+                  <br><br>
+                  --<br>
+                  Best regards,<br>
+                  <br>
+                  A Renewal Agents 2022";
+      //$this->sendemail("dummy email"/*$d->expo_email*/, $subject, $message);
+    }
+    return redirect()->to('/dashboard/admin_expo/notify');
+  }
 }
