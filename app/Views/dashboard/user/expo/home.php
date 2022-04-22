@@ -25,6 +25,13 @@
     </ul>
 </div>
 
+<div class="card-dashboard">
+    <h4>Resources Expo IT</h4>
+    <ul>
+      <li><i class="fa-solid fa-book"></i> Drive Expo IT: <a href="https://drive.google.com/drive/folders/1GSw5fGoD3FYFDRwebU4owepKYRaFIYVU?usp=sharing" target="_blank">Dapatkan resources</a></li>
+    </ul>
+</div>
+
 <?php if ($event == "Day 1") { ?>
   <!-- card dashboard -->
   <div class="card-dashboard">
@@ -43,7 +50,7 @@
         <li>Anis Saidatur Rochma - Gold Medalist of Smart City GEMASTIK XIV 2021, UI/UX Designer at DPTSI ITS</li>
         <li>Lambang Akbar Wijayadi - Gold Medalist of Cyber Security GEMASTIK XIV 2021, Penestration Tester</li>
       </ul>
-      <li><i class="fas fa-external-link-alt"></i> Link Meeting: <span class="important">Coming Soon</span></li>
+      <li><i class="fas fa-external-link-alt"></i> Link Meeting Day: <a href="https://us02web.zoom.us/j/88144452760?pwd=YkJ5MkR4RkZEVXhhUk15TVpBZnhXZz09" target="_blank">Join!</a></li>
     </ul>
   </div>
 <?php } else if ($event == "Day 2") { ?>
@@ -61,7 +68,7 @@
       <ul>
         <li>Riza Alaudin Syah - IoT Manager at Bluebird Group</li>
       </ul>
-      <li><i class="fas fa-external-link-alt"></i> Link Meeting: <span class="important">Coming Soon</span></li>
+      <li><i class="fas fa-external-link-alt"></i> Link Meeting Day 2: <a href="https://us02web.zoom.us/j/88677513904?pwd=RW91bHJhSEx6dnFScG9uYU94bFA2dz09" target="_blank">Join!</a></li>
     </ul>
   </div>
 <?php } else { ?>
@@ -82,7 +89,7 @@
         <li>Anis Saidatur Rochma - Gold Medalist of Smart City GEMASTIK XIV 2021, UI/UX Designer at DPTSI ITS</li>
         <li>Lambang Akbar Wijayadi - Gold Medalist of Cyber Security GEMASTIK XIV 2021, Penestration Tester</li>
       </ul>
-      <li><i class="fas fa-external-link-alt"></i> Link Meeting: <span class="important">Coming Soon</span></li>
+      <li><i class="fas fa-external-link-alt"></i> Link Meeting Day 1: <a href="https://us02web.zoom.us/j/88144452760?pwd=YkJ5MkR4RkZEVXhhUk15TVpBZnhXZz09" target="_blank">Join!</a></li>
     </ul>
   </div>
   <!-- card dashboard -->
@@ -99,7 +106,7 @@
       <ul>
         <li>Riza Alaudin Syah - IoT Manager at Bluebird Group</li>
       </ul>
-      <li><i class="fas fa-external-link-alt"></i> Link Meeting: <span class="important">Coming Soon</span></li>
+      <li><i class="fas fa-external-link-alt"></i> Link Meeting Day 2: <a href="https://us02web.zoom.us/j/88677513904?pwd=RW91bHJhSEx6dnFScG9uYU94bFA2dz09" target="_blank">Join!</a></li>
     </ul>
   </div>
 <?php } ?>

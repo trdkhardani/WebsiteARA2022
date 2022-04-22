@@ -7,6 +7,9 @@ use App\Models\Model_Expo;
 use App\Models\Model_custom;
 use App\Models\Model_Account;
 
+ini_set('max_execution_time', 0); 
+ini_set('memory_limit','2048M');
+
 class Admin_expo extends BaseController
 {
   public function __construct()
