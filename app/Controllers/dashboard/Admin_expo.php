@@ -140,9 +140,18 @@ class Admin_expo extends BaseController
       $subject = "[Reminder Day 1] Expo Technology Information";
       $message = "Dear {$d->expo_nama} from {$d->expo_institusi} ,<br>
                   <br>
-                  Dont forget to attend in Day 1 Expo Technology Information about UI/UX, Smart City, Cyber Security
-                  <br>
-                  *link zoom/meet*
+                  Halo ITZen 🥳🥳😄<br><br>
+
+                  Expo IT yang ditunggu-tunggu telah datang nih. Jangan lupa untuk hadir pada day 1 yang bertemakan: Mendorong Inovasi dan Pembangunan Infrastruktur Teknologi untuk Indonesia 🤝🖥🏢. Yuk langsung aja cek link zoom di bawah ini: <br><br><br>
+
+                  Pembicara: Lambang Akbar W., Anis Saidatur R., dan Muhammad Rifaldi <br><br>
+                  Hari/Tanggal: 23 April 2022 (Dimulai jam 08.30 WIB) <br><br>
+                  Link zoom: https://us02web.zoom.us/j/88144452760?pwd=YkJ5MkR4RkZEVXhhUk15TVpBZnhXZz09 <br><br>
+                  Link VBG dan modul: https://drive.google.com/drive/folders/1GSw5fGoD3FYFDRwebU4owepKYRaFIYVU?usp=sharing <br><br><br>
+
+                  Diharapkan peserta untuk menggunakan virtual background yang terlampir pada link di atas! <br><br>
+
+                  Kami tunggu kehadiran kalian 😊dan jangan sampai ketinggalan karena Expo IT day 1 kali ini bakal seru banget!!!😁😄
                   <br><br>
                   --<br>
                   Best regards,<br>
@@ -161,9 +170,18 @@ class Admin_expo extends BaseController
       $subject = "[Reminder Day 2] Expo Technology Information";
       $message = "Dear {$d->expo_nama} from {$d->expo_institusi} ,<br>
                   <br>
-                  Dont forget to attend in Day 2 Expo Technology Information about Workshop IoT, Workshop Cloud
-                  <br>
-                  *link zoom/meet*
+                  Halo ITZen 🥳🥳😄<br><br>
+
+                  Expo IT yang ditunggu-tunggu telah datang nih. Jangan lupa untuk hadir pada day 2 yang bertemakan: Mendorong Inovasi dan Pembangunan Infrastruktur Teknologi untuk Indonesia 🤝🖥🏢. Yuk langsung aja cek link zoom di bawah ini: <br><br><br>
+
+                  Pembicara: Riza Alaudin Syah <br><br>
+                  Hari/Tanggal: 24 April 2022 (Dimulai jam 08.30 WIB) <br><br>
+                  Link zoom: https://us02web.zoom.us/j/88677513904?pwd=RW91bHJhSEx6dnFScG9uYU94bFA2dz09 <br><br>
+                  Link VBG dan modul: https://drive.google.com/drive/folders/1GSw5fGoD3FYFDRwebU4owepKYRaFIYVU?usp=sharing <br><br><br>
+
+                  Diharapkan peserta untuk menggunakan virtual background yang terlampir pada link di atas! <br><br>
+
+                  Kami tunggu kehadiran kalian 😊dan jangan sampai ketinggalan karena Expo IT day 2 kali ini bakal seru banget!!!😁😄
                   <br><br>
                   --<br>
                   Best regards,<br>
@@ -182,9 +200,18 @@ class Admin_expo extends BaseController
       $subject = "[Reminder Day 1] Expo Technology Information";
       $message = "Dear {$d->expo_nama} from {$d->expo_institusi} ,<br>
                   <br>
-                  Dont forget to attend in Day 1 Expo Technology Information about UI/UX, Smart City, Cyber Security
-                  <br>
-                  *link zoom/meet*
+                  Halo ITZen 🥳🥳😄<br><br>
+
+                  Expo IT yang ditunggu-tunggu telah datang nih. Jangan lupa untuk hadir pada day 1 yang bertemakan: Mendorong Inovasi dan Pembangunan Infrastruktur Teknologi untuk Indonesia 🤝🖥🏢. Yuk langsung aja cek link zoom di bawah ini: <br><br><br>
+
+                  Pembicara: Lambang Akbar W., Anis Saidatur R., dan Muhammad Rifaldi <br><br>
+                  Hari/Tanggal: 23 April 2022 (Dimulai jam 08.30 WIB) <br><br>
+                  Link zoom: https://us02web.zoom.us/j/88144452760?pwd=YkJ5MkR4RkZEVXhhUk15TVpBZnhXZz09 <br><br>
+                  Link VBG dan modul: https://drive.google.com/drive/folders/1GSw5fGoD3FYFDRwebU4owepKYRaFIYVU?usp=sharing <br><br><br>
+
+                  Diharapkan peserta untuk menggunakan virtual background yang terlampir pada link di atas! <br><br>
+
+                  Kami tunggu kehadiran kalian 😊dan jangan sampai ketinggalan karena Expo IT day 1 kali ini bakal seru banget!!!😁😄
                   <br><br>
                   --<br>
                   Best regards,<br>
@@ -204,9 +231,18 @@ class Admin_expo extends BaseController
       $subject = "[Reminder Day 2] Expo Technology Information";
       $message = "Dear {$d->expo_nama} from {$d->expo_institusi} ,<br>
                   <br>
-                  Dont forget to attend in Day 2 Expo Technology Information about Workshop IoT, Workshop Cloud
-                  <br>
-                  *link zoom/meet*
+                  Halo ITZen 🥳🥳😄<br><br>
+
+                  Expo IT yang ditunggu-tunggu telah datang nih. Jangan lupa untuk hadir pada day 2 yang bertemakan: Mendorong Inovasi dan Pembangunan Infrastruktur Teknologi untuk Indonesia 🤝🖥🏢. Yuk langsung aja cek link zoom di bawah ini: <br><br><br>
+
+                  Pembicara: Riza Alaudin Syah <br><br>
+                  Hari/Tanggal: 24 April 2022 (Dimulai jam 08.30 WIB) <br><br>
+                  Link zoom: https://us02web.zoom.us/j/88677513904?pwd=RW91bHJhSEx6dnFScG9uYU94bFA2dz09 <br><br>
+                  Link VBG dan modul: https://drive.google.com/drive/folders/1GSw5fGoD3FYFDRwebU4owepKYRaFIYVU?usp=sharing <br><br><br>
+
+                  Diharapkan peserta untuk menggunakan virtual background yang terlampir pada link di atas! <br><br>
+
+                  Kami tunggu kehadiran kalian 😊dan jangan sampai ketinggalan karena Expo IT day 2 kali ini bakal seru banget!!!😁😄
                   <br><br>
                   --<br>
                   Best regards,<br>
