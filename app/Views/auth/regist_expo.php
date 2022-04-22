@@ -58,7 +58,7 @@
           <input type="text" class="form-control" id="whatsapp" name="whatsapp" value="<?= old('whatsapp') ?>">
         </div>
         <div class="mb-3">
-          <label for="share_post" class="form-label">Share Post Expo IT di Story IG dan tag 3 temanmu (<a href="https://www.instagram.com/p/CbkFb3jpu-q/?utm_medium=copy_link" target="_blank">Lihat Poster</a>)<span class="text-danger">*<?= '<br>' . $validation->getError('share_post') ?></span></label>
+          <label for="share_post" class="form-label">Share Post Expo IT di Story IG dan tag 3 temanmu (<a href="https://drive.google.com/file/d/1HikaYKrtOGPZNOLcRnKgy6du1InmWfK3/view?usp=sharing" target="_blank">Lihat Poster</a>)<span class="text-danger">*<?= '<br>' . $validation->getError('share_post') ?></span></label>
           <input class="form-control" type="file" id="share_post" name="share_post" value="<?= old('share_post') ?>">
         </div>
         <div class="mb-3">

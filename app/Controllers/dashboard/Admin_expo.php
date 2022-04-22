@@ -120,6 +120,7 @@ class Admin_expo extends BaseController
       return redirect()->to('/dashboard/admin_expo/konfirmasi');
     }
   }
+  
   public function notify()
   {
     $data["lomba"] = "Expo";
@@ -147,8 +148,7 @@ class Admin_expo extends BaseController
                   Best regards,<br>
                   <br>
                   A Renewal Agents 2022";
-      //$this->sendemail("dummy email"/*$d->expo_email*/, $subject, $message);
-    
+      $this->sendemail($d->expo_email, $subject, $message);
     }
     return redirect()->to('/dashboard/admin_expo/notify');
   }
@@ -169,10 +169,11 @@ class Admin_expo extends BaseController
                   Best regards,<br>
                   <br>
                   A Renewal Agents 2022";
-      //this->sendemail("dummy email"/*$d->expo_email*/, $subject, $message);
+      $this->sendemail($d->expo_email, $subject, $message);
     }
     return redirect()->to('/dashboard/admin_expo/notify');
   }
+
   public function day1_all()
   {
     $data = $this->model_custom->get_where('expo', 'all day', '_day');
@@ -189,11 +190,12 @@ class Admin_expo extends BaseController
                   Best regards,<br>
                   <br>
                   A Renewal Agents 2022";
-      //$this->sendemail("dummy email"/*$d->expo_email*/, $subject, $message);
+      $this->sendemail($d->expo_email, $subject, $message);
     
     }
     return redirect()->to('/dashboard/admin_expo/notify');
   }
+
   public function day2_all()
   {
     $data = $this->model_custom->get_where('expo', 'all day', '_day');
@@ -210,7 +212,7 @@ class Admin_expo extends BaseController
                   Best regards,<br>
                   <br>
                   A Renewal Agents 2022";
-      //$this->sendemail("dummy email"/*$d->expo_email*/, $subject, $message);
+      $this->sendemail($d->expo_email, $subject, $message);
     }
     return redirect()->to('/dashboard/admin_expo/notify');
   }
