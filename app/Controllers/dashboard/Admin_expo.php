@@ -125,6 +125,9 @@ class Admin_expo extends BaseController
     $data["lomba"] = "Expo";
     $data["nama"] = "Admin Expo IT";
     $data["tahap"] = "Expo";
+    $data["jumlah_day1"] = $this->model_custom->count_column_where('expo', 'day 1', '_day');
+    $data["jumlah_day2"] = $this->model_custom->count_column_where('expo', 'day 2', '_day');
+    $data["jumlah_dayall"] = $this->model_custom->count_column_where('expo', 'all day', '_day');
     return view('dashboard/admin/expo/notify', $data);
   }
 
