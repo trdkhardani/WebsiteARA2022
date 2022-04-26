@@ -47,9 +47,9 @@ class Auth extends BaseController
       'event' => 'ExpoIT',
       'waktu' => '20 Maret - 20 April'
     ];
-     return view('auth/regist_expo', $data);
+    // return view('auth/regist_expo', $data);
     // return view('auth/notyet', $data);
-    //return view('auth/closeregis', $data);
+    return view('auth/closeregis', $data);
   }
 
   public function registrasi_webinar()
