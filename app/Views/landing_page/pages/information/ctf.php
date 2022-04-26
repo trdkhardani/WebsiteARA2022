@@ -44,7 +44,7 @@
             <div data-aos="fade-left" class="isi-event">
                 <p class="fw-bold">Technical Meeting</p>
                 <p>Dilakukan secara online melalui platform yang disediakan</p>
-                <p>12 Mei 2022</p>
+                <p>19 Mei 2022</p>
             </div>
         </div>
 
@@ -52,14 +52,14 @@
             <div data-aos="fade-right" class="isi-event">
                 <p class="fw-bold">Pemanasan</p>
                 <p>Dilakukan secara online melalui platform yang disediakan</p>
-                <p>13 Mei 2022</p>
+                <p>20 Mei 2022</p>
             </div>
         </div>
         <div class="event kanan mt-5">
             <div data-aos="fade-left" class="isi-event">
                 <p class="fw-bold">Penyisihan</p>
                 <p>Dilakukan secara online melalui platform yang disediakan</p>
-                <p>14 Mei 2022</p>
+                <p>21 Mei 2022</p>
             </div>
         </div>
 
@@ -67,7 +67,7 @@
             <div data-aos="fade-right" class="isi-event">
                 <p class="fw-bold">Pengumuman Finalis</p>
                 <p>Melalui Web dan Sosial Media ARA 2022</p>
-                <p>20 Mei 2022</p>
+                <p>28 Mei 2022</p>
             </div>
         </div>
         <div class="event kanan mt-5">
