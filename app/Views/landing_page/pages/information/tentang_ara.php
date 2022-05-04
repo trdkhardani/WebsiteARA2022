@@ -95,7 +95,7 @@
         <h2 class="text-center mb-3">Sponsors</h2>
         <div class="row justify-content-center mx-auto mb-5" style="max-width: 768px">
           <div class="col-7 col-md-4 my-auto">
-            <img class="img-fluid px-3 py-4" src="<?= base_url() ?>/images/sponsor/L_logo Paragon Crop - 16.png" alt="">
+            <img class="img-fluid px-1 py-4" src="<?= base_url() ?>/images/sponsor/L_logo Paragon Crop - 16.png" alt="">
           </div>
           <div class="col-5 col-md-2 my-auto">
               <img class="img-fluid px-3 py-4" src="<?= base_url() ?>/images/sponsor/S_antares.png" alt="">
@@ -110,8 +110,11 @@
               <img class="img-fluid px-3 py-4" src="<?= base_url() ?>/images/sponsor/XL_Logo Kencana Ahlinya Baja Ringan.png" alt="">
           </div>
           <div class="col-9 col-md-4 my-auto">
-              <img class="img-fluid px-3 py-4" src="<?= base_url() ?>/images/sponsor/L_New Logo for SIG-1.png" alt="">
+              <img class="img-fluid px-4 py-4" src="<?= base_url() ?>/images/sponsor/L_New Logo for SIG-1.png" alt="">
           </div>
+          <div class="col-5 col-md-2 my-auto">
+            <img class="px-1 py-4 img-fluid" src="<?= base_url() ?>/images/sponsor/L_logo pama hd.png" alt="">
+        </div>
         </div>
 
         <h2 class="text-center mb-5">Media Partners</h2>

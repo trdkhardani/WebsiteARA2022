@@ -19,6 +19,9 @@
         <div class="col-5 col-md-2 my-auto">
             <img class="px-7 py-4" src="<?= base_url() ?>/images/sponsor/L_New Logo for SIG-1.png" alt="">
         </div>
+        <div class="col-5 col-md-2 my-auto">
+            <img class="px-3 py-4 img-fluid" src="<?= base_url() ?>/images/sponsor/L_logo pama hd.png" alt="">
+        </div>
     </div>
 
     <small class="h3 mx-auto mt-5 py-5 d-block text-center fw-bold">Media Partner</small>
