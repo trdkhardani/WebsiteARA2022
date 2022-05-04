@@ -1,4 +1,4 @@
-<footer data-aos="fade-down" data-aos-duration="2000" class="container-fluid py-5">
+<footer class="container-fluid py-5">
     <img class="mx-auto py-5" src="<?= base_url() ?>/images/ara-gradient.svg" alt="" width="250">
     <p class="h1 text-center fw-bold">#ARA2022</p>
     <p class="text-center text-white mt-5">Connect With Us</p>
