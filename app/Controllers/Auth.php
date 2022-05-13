@@ -35,8 +35,8 @@ class Auth extends BaseController
       'validation' => \Config\Services::validation(),
       'event' => 'Olimpiade'
     ];
-    return view('auth/regist_olim', $data);
-    //return view('auth/closeregis', $data);
+    // return view('auth/regist_olim', $data);
+    return view('auth/closeregis', $data);
   }
 
   public function registrasi_expo()

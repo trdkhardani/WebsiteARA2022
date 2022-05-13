@@ -36,7 +36,7 @@
             <div data-aos="fade-right" class="isi-event">
                 <p class="fw-bold">Pendaftaran Periode 2</p>
                 <p>Melalui website resmi ARA ITS <a class="text-white" href="https://arek.its.ac.id/ara">https://arek.its.ac.id/ara</a></p>
-                <p>1 April 2022 - Batas Waktu Tertentu</p>
+                <p>1 April 2022 - 9 Mei 2022</p>
             </div>
         </div>
 

@@ -21,6 +21,8 @@ class User_olim extends BaseController
       'ketua' => $tim['olim_nama_ketua'],
       'anggota_1' => $tim['olim_nama_anggota_1'],
       'anggota_2' => $tim['olim_nama_anggota_2'],
+      'uname' => $tim['olim_uname_lomba'],
+      'passw' => $tim['olim_passw_lomba']
     ];
     return view('dashboard/user/olimpiade/home', $data);
   }

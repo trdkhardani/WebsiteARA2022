@@ -37,7 +37,7 @@
             <div data-aos="fade-right" class="isi-event">
                 <p class="fw-bold">Pendaftaran Batch 3</p>
                 <p>Melalui website resmi ARA ITS <a class="text-white" href="https://arek.its.ac.id/ara">https://arek.its.ac.id/ara</a></p>
-                <p>23 April - Batas Waktu Tertentu</p>
+                <p>23 April - 14 Mei</p>
             </div>
         </div>
         <div class="event kanan mt-5">

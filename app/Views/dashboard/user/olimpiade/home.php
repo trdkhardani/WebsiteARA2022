@@ -24,21 +24,30 @@
 <div class="card-dashboard">
   <h4>Guide Book</h4>
   <ul>
-    <li><i class="fas fa-book"></i> Link: <a href="https://drive.google.com/file/d/1HyPGJPTjOKniRnLeVenLlyHl60-Xr4XA/view?usp=sharing" target="_blank">Download</a></li>
+    <li><i class="fas fa-book"></i> Link: <a href="https://drive.google.com/file/d/1HyPGJPTjOKniRnLeVenLlyHl60-Xr4XA/view?usp=sharing" target="_blank">https://drive.google.com/file/d/1HyPGJPTjOKniRnLeVenLlyHl60-Xr4XA/view?usp=sharing</a></li>
   </ul>
 </div>
 <!-- Modul Link -->
 <div class="card-dashboard">
   <h4>Modul</h4>
   <ul>
-    <li><i class="fa-solid fa-book"></i> Link: <a href="https://drive.google.com/file/d/1Rmrlx-0lBDHtHE-J6w2OB2rDM0QZsKrL/view?usp=drivesdk" target="_blank">Download</a></li>
+    <li><i class="fa-solid fa-book"></i> Link: <a href="https://drive.google.com/file/d/1Rmrlx-0lBDHtHE-J6w2OB2rDM0QZsKrL/view?usp=drivesdk" target="_blank">https://drive.google.com/file/d/1Rmrlx-0lBDHtHE-J6w2OB2rDM0QZsKrL/view?usp=drivesdk</a></li>
   </ul>
 </div>
 <!-- Whatsapp group -->
 <div class="card-dashboard">
   <h4>Whatsapp Group</h4>
   <ul>
-    <li><i class="fa-brands fa-whatsapp"></i> Link: <a href="https://chat.whatsapp.com/LxoqllQdG1VDhgiCa2Q3qA" target="_blank">Klik dan Bergabung</a></li>
+    <li><i class="fa-brands fa-whatsapp"></i> Link: <a href="https://chat.whatsapp.com/LxoqllQdG1VDhgiCa2Q3qA" target="_blank">https://chat.whatsapp.com/LxoqllQdG1VDhgiCa2Q3qA</a></li>
+  </ul>
+</div>
+<!-- Data Access Web -->
+<div class="card-dashboard">
+  <h4>Data Access Website Quiz Olimpiade</h4>
+  <ul>
+    <li>Website Domain: <a href="https://www.flexiquiz.com/Account/Login" target="_blank">https://www.flexiquiz.com/Account/Login</a></li>
+    <li>Your Team Username: <?= $uname ?></li>
+    <li>Your Team Password: <?= $passw ?> </li>
   </ul>
 </div>
 <?= $this->endSection(); ?>
