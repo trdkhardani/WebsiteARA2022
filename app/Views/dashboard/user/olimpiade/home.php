@@ -43,11 +43,11 @@
 </div>
 <!-- Data Access Web -->
 <div class="card-dashboard">
-  <h4>Data Access Website Quiz Olimpiade</h4>
+  <h4>Data Access Website Quiz Olimpiade - FlexiQuiz</h4>
   <ul>
-    <li>Website Domain: <a href="https://www.flexiquiz.com/Account/Login" target="_blank">https://www.flexiquiz.com/Account/Login</a></li>
-    <li>Your Team Username: <?= $uname ?></li>
-    <li>Your Team Password: <?= $passw ?> </li>
+    <li><i class="fab fa-chrome"></i> Website Domain: <a href="https://www.flexiquiz.com/Account/Login" target="_blank">https://www.flexiquiz.com/Account/Login</a></li>
+    <li><i class="fas fa-user"></i> Your Team Username: <?= $uname ?></li>
+    <li><i class="fas fa-key"></i> Your Team Password: <?= $passw ?> </li>
   </ul>
 </div>
 <?= $this->endSection(); ?>
