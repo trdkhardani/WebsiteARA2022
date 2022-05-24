@@ -48,14 +48,15 @@
     <h4>Pengumpulan Full Paper</h4>
     <ul>
       <li><i class="fas fa-exclamation-triangle"></i> Pastikan anda sudah menginputkan file yang benar. Penamaan file ada di guidebook. Format file adalah '.pdf'. File hanya bisa diinputkan satu kali.</li>
-      <li>
+<!--       <li>
         <form action="<?= base_url() ?>/dashboard/User_kti_iot/verify_full_paper" method="POST" enctype="multipart/form-data">
           <div class="mb-4">
             <input class="form-control" type="file" name="full_paper" required>
           </div>
           <button type="submit" class="btn d-block mx-auto text-white">Submit</button>
         </form>
-      </li>
+      </li> -->
+      <li>Mohon maaf, pengumpulan full paper telah ditutup!</li>
     </ul>
   </div>
 <?php endif; ?>
