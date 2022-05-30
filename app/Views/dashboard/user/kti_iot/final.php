@@ -47,7 +47,7 @@
   <h4>Presentasi Final</h4>
   <ul>
     <li><i class="fas fa-clock"></i> Waktu: 4 Juni</li>
-    <li><i class="fas fa-headset"></i> Pantau email anda untuk mengecek sesi.</li>
+    <li><i class="fas fa-headset"></i> Pantau email dan grup whatsapp untuk mengecek sesi kamu.</li>
   </ul>
 </div>
 <!-- hasil akhir -->
