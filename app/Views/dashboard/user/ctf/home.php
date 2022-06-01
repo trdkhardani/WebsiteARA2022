@@ -33,5 +33,25 @@
     <li><i class="fa-brands fa-discord"></i> Link: <a href="https://discord.gg/58UyCPefqj" target="_blank">Join dan temukan Flag!</a></li>
   </ul>
 </div>
+<!-- If conditional buat yang juara 1/2/3 -->
+<div class="card-dashboard">
+  <h4>Pengumuman juara</h4>
+  <h1>SELAMAT, TIM KAMU BERHASIL JUARA 1</h1>
+</div>
+
+<div class="card-dashboard">
+  <h4>Pengumuman juara</h4>
+  <h1>SELAMAT, TIM KAMU BERHASIL JUARA 2</h1>
+</div>
+
+<div class="card-dashboard">
+  <h4>Pengumuman juara</h4>
+  <h1>SELAMAT, TIM KAMU BERHASIL JUARA 3</h1>
+</div>
+
+<div class="card-dashboard">
+  <h4>Pengumuman juara</h4>
+  <h1>MOHON MAAF ??</h1>
+</div>
 <?= $this->endSection(); ?>
 <!-- /end content -->
