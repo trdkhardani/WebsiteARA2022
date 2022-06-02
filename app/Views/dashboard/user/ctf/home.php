@@ -34,24 +34,26 @@
   </ul>
 </div>
 <!-- If conditional buat yang juara 1/2/3 -->
+<?php if($juara == 1):?> 
+<div class="card-dashboard">
+<h4>Pengumuman juara</h4>
+  <h1>Inspect ini!</h1> <!-- Ciee juara 1 nih yeee -->
+</div>
+<?php elseif($juara == 2):?> 
 <div class="card-dashboard">
   <h4>Pengumuman juara</h4>
-  <h1>SELAMAT, TIM KAMU BERHASIL JUARA 1</h1>
+  <h1>SELAMAT, TIM KAMU BERHASIL JUARA 2</h1> 
 </div>
-
-<div class="card-dashboard">
-  <h4>Pengumuman juara</h4>
-  <h1>SELAMAT, TIM KAMU BERHASIL JUARA 2</h1>
-</div>
-
+<?php elseif($juara == 3):?> 
 <div class="card-dashboard">
   <h4>Pengumuman juara</h4>
   <h1>SELAMAT, TIM KAMU BERHASIL JUARA 3</h1>
 </div>
-
+<?php else:?> 
 <div class="card-dashboard">
   <h4>Pengumuman juara</h4>
   <h1>MOHON MAAF ??</h1>
 </div>
+<?php endif;?>
 <?= $this->endSection(); ?>
 <!-- /end content -->
